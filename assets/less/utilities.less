@@ -1,0 +1,158 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+.margin-none {
+  margin: 0;
+}
+
+.margin-tight {
+  margin: @margin-small-vertical @margin-xs-horizontal;
+}
+
+.margin-base-vertical {
+  margin-bottom: @margin-base-vertical;
+}
+
+.margin-medium-vertical {
+  margin-bottom: @margin-base-vertical;
+  
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: @margin-medium-vertical;
+  }
+}
+
+.margin-large-vertical {
+  margin-bottom: @margin-base-vertical;
+  
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: @margin-large-vertical;
+  }
+}
+
+// Floats
+// -------------------------
+
+.clearfix {
+  .clearfix();
+}
+.center-block {
+  .center-block();
+}
+.align-vertical {
+  .v-align();
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+.pull-right-sm {
+  float: none;
+  
+  @media (min-width: @screen-sm-min) {
+    float: right;
+  }
+}
+
+.pull-right-md {
+  float: none;
+  
+  @media (min-width: @screen-md-min) {
+    float: right;
+  }
+}
+
+.pull-right-lg {
+  float: none;
+  
+  @media (min-width: @screen-lg-min) {
+    float: right;
+  }
+}
+
+.pull-left-sm {
+  float: none;
+  
+  @media (min-width: @screen-sm-min) {
+    float: left;
+  }
+}
+
+.pull-left-md {
+  float: none;
+  
+  @media (min-width: @screen-md-min) {
+    float: left;
+  }
+}
+
+.pull-left-lg {
+  float: none;
+  
+  @media (min-width: @screen-lg-min) {
+    float: left;
+  }
+}
+
+.btn-full-xs {
+  width: 100%;
+  
+  @media (min-width: @screen-sm-min) {
+    width: auto;
+  }
+}
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  .text-hide();
+}
+
+.blur {
+  .blur(2px);
+}
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+.nowrap{
+  white-space: nowrap;
+}
+
+// Links
+// -------------------------
+
+.no-decoration {
+  &, 
+  &:hover, 
+  &:focus {
+    text-decoration: none;
+  }
+}
+

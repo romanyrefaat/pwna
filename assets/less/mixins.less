@@ -1,0 +1,70 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+@import "bootstrap/mixins.less";
+
+
+.blur(@size) {
+  -webkit-filter: blur(@size);
+	   -moz-filter: blur(@size);
+	     -o-filter: blur(@size);
+	    -ms-filter: blur(@size);
+	        filter: blur(@size);
+}
+
+// Common resets
+//
+// Resets needed for various Luminate Online containers
+
+.noBg-noBorder-noPadding() {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+.vertical-align() {
+  position: relative;
+  top: 50%;
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.v-align(){
+  position: relative;
+  top: 50%;
+/*  top: 0%\9;*/
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);    
+    }
+.h-align(){
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);    
+}
+.v-h-align(){
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);    
+}
+.grayscale(){
+ filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+filter: gray; /* IE6-9 */
+-webkit-filter: grayscale(100%);
+}
+.grayscale-disable(){
+ filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+-webkit-filter: grayscale(0%);
+}
+.border-radius(@radius){
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}

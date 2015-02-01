@@ -1,0 +1,601 @@
+// Luminate Online responsive stuff
+.mobile div.responsive, 
+.mobile div.responsive div.ErrorMessage.page-error>span.field-error-text {
+  width: auto;
+}
+div.responsive div.ErrorMessage.page-error>span.field-error-text {
+  .noBg-noBorder-noPadding;
+}
+
+// Donation forms
+div.donation-form-container.responsive {
+  .noBg-noBorder-noPadding;
+}
+/* ****************************** UserGlobalStyle Style Overrides ****************************** */
+
+P, LI, OL, UL, TABLE, TR, TH, TD, .Explicit, 
+BODY, TEXTAREA, INPUT, SELECT, OPTION, 
+.Hint, 
+.NoteText, 
+.ObjTitle, 
+.Smaller, 
+.SmallerC, 
+h5.dividerHeading, 
+p.dividerHeading, 
+.Divider, 
+.SectionHead, 
+a#about_ssl, a#about_ssl:link, a#about_ssl:active, a#about_ssl:hover, 
+.ListItem0, .ListItem1, 
+.Button, 
+.SmallButton, 
+.NetscapeFix, 
+LEGEND, 
+.AdvocacyInstructions, 
+input.Advocacy, 
+select.Advocacy, 
+.AdvocacyNSFix, 
+.Instructions, 
+.ProgressBox, 
+.ProgressBoxCurrent, 
+.Premiums, 
+.Upgrades, 
+.FormBoxHeader, 
+.FormBox, 
+input.FriendRaiserButtons, 
+input.AddressBookButtons, 
+p.scrollingText, 
+p.cstmTitle, 
+p.cstmHeading, span.cstmHeading, 
+p.cstmBtnText, 
+a.cstmBtnText:link, 
+a.cstmBtnText:visited, 
+a.cstmBtnText:hover, 
+.WhatNext, 
+p.giftAidMatchAmount, 
+table.GiftAidBox p, 
+TD.AlertListDescription, DIV.AlertListDescription, 
+.paraBlueSansSmall, 
+.smallBlack, 
+.smallSans, 
+.smallSansBold, 
+.smallestBlackSans, 
+.smallWhiteSans, 
+.smallWhiteBoldSans, 
+a.btn, a.btn:visited, a.editBtn, a.editBtn:visited, input.btn, input.btnMini, input.btnSm, input.btnMed, input.btnLg, 
+#login-div-content span.RequiredField, 
+#user_home_wrapper_top, 
+#user_home_wrapper_top input, 
+#user_home_wrapper_top select, 
+#user_home_wrapper_top option,
+.cons-pers td, .cons-pers p, .cons-pers label, .cons-pers fieldset, .cons-pers .Explicit
+{
+    font-family: inherit;
+    font-size: inherit;
+}
+// Links
+div.responsive a{
+    color: @link-color;
+    text-decoration: none;
+    &:link, 
+  &:visited {
+    color: @link-color;
+  }
+  
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+  
+  &:focus {
+    .tab-focus();
+  }
+}
+
+// Forms
+label {
+  white-space: normal;
+}
+label.FormLabel {
+  font-weight: bold;
+  min-width: 0;
+  width: auto;
+}
+
+div.appArea, .appArea, .appAreaNowidth
+{
+	width: auto;
+	margin: 0;
+}
+
+.ObjTitle,
+.cons-prof h3
+{
+	font-size: inherit;
+	margin: inherit;
+	padding: inherit;
+	border-bottom: inherit;
+	color: inherit;
+        .h3;
+}
+
+/* ****************************** TRPageResponsive Style Overrides ****************************** */
+
+div.campaign-banner-container,
+div.tr-page-container div.header-container,
+div.section-sub-header,
+div.tr-page-container div.section-sub-header,
+div.tr-page-container div.side-bar,
+div.tr-page-container div#personal_page_main_content,
+div.tr-page-container div.tr-page-header,
+div.tr-page-container #team_image,
+div.tr-page-container #team_page_team_name,
+div.tr-page-container .manageable-editor-window-editor
+
+{
+	display: none;
+}
+div#team_page_main_content, div.tr-page-main-content{
+    width: 100%;
+    margin: 0;
+    overflow: visible;
+}
+div#team_page_custom_html{
+    float: none;
+}
+
+div.tr-page-container{
+    color: inherit;
+    -moz-border-radius: inherit;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    border: inherit;
+    div.main-content, #entry_page_custom_html, div.tr-personal-page-footer{
+        width: auto;
+        float: none;
+        padding: 0;
+    }
+}
+
+h2.tr-page-title
+{
+	margin: inherit;
+	padding: inherit;
+}
+
+#search_part_team input.ghost-text.active 
+{
+	font-style: inherit;
+}
+
+#first_name_search_field input
+{
+	border: inherit;
+}
+
+div.required-indicator-legend
+{
+	padding: 0 0 5px 0;
+}
+div.custom-wysiwyg-text p{
+    white-space: normal;
+    word-wrap: normal;
+}
+
+/* ****************************** TR NationalTeam Style Overrides ****************************** */
+#national_company_page_main{
+    .manageable-content, #national_company_page_table_div {
+        display: none;
+    }
+}
+/* ****************************** TRRegResponsive Style Overrides ****************************** */
+
+div.registration-page-container{
+    padding-top: 1%;
+    div.section-container{
+        .noBg-noBorder-noPadding;
+        margin: 0;
+    }
+    div.section-header{
+        .noBg-noBorder-noPadding;
+        &:extend(h3);
+    }
+    div.section-sub-header{
+	background-color: inherit;
+	border-top-style: inherit;
+	border-top-width: inherit;
+	border-top-color: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	padding-top: inherit;
+	padding-bottom: inherit;
+	padding-left: inherit;
+    }
+    div.sub-section-header{
+	// border: inherit;
+	// background-color: inherit;
+    }
+    div.sub-section-container{
+	background-color: inherit;
+    }
+    div.section-footer{
+	background-color: inherit;
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+	padding: inherit;
+    }
+    div.section-body{
+        padding: 0;
+    }
+    div.sub-section-body{
+	background-color: inherit;
+	padding-bottom: inherit;
+	padding-left: inherit;
+	padding-right: inherit;
+	padding-top: inherit;
+    }
+}
+select{
+    &:extend(.form-control all);
+}
+.cardExpGroup select{
+    width: auto;
+    float: left;
+    &#responsive_payment_typecc_exp_date_MONTH{
+        margin-right: 5px;
+    }
+}
+div#cons_info_component_container div#personal_info_section_one, 
+div#cons_info_component_container div#personal_info_section_two, 
+div#cons_info_component_container div#contact_info_section_one, 
+div#cons_info_component_container div#contact_info_section_two, 
+div#registration_options_page div#user_name_pword_container, 
+div#registration_options_page div#privacy_opts_container, 
+div#registration_options_page div#tribute_component_section_one, 
+div#registration_options_page div#tribute_component_section_two, 
+div#emergency_contact_container, div#gift_notice_optin, div#email_optin
+{
+    width: 50%;
+}
+div#privacy_component_container label, div#gift_notice_optin label, div#email_opt_in_container label, div#postal_mail_opt_in_container label, div#remember_me_container label
+{
+    max-width: none;
+}
+div#user_type_login_container{
+    border-width: 0;
+}
+
+div#user_type_new_participant_registration_container #next_step
+{
+	margin-left: inherit;
+}
+#reg_payment_page #billing_addr_street1_row input, #reg_payment_page #billing_addr_street2_row input{
+    width: auto;
+    min-width: 290px;
+}
+div#team_find_new_team_attributes input[type="text"], div#team_find_new_team_attributes input[type="password"], div#team_find_new_team_company #fr_division_name{
+    margin-top: 0;
+}
+#team_find_existing_team_search_container, #team_find_existing_company_selection_container, #team_find_search_button_container {
+    display: block;
+}
+div#part_type_discount_code_section_row_container input{
+    margin-left: 10px;
+}
+div.team-roster-legend{padding: 5px 0 0 11px;}
+table.trr-table{
+    .trr-table-recruited, .trr-table-gift-amount{
+        width: 7em;
+    }
+}
+/* ****************************** ResponsiveBase Style Overrides ****************************** */
+
+div.responsive
+{
+	color: inherit;
+	font-family: inherit; 
+	font-size: inherit;
+	width: inherit;
+	margin: 0;
+}
+
+.resp-debug div.responsive
+{
+	border: inherit;
+	border-radius: inherit;
+}
+
+div.responsive textarea, 
+div.responsive input,
+div.responsive select,
+div.responsive option
+{
+	vertical-align: inherit;
+}
+div.part-type-container{
+    background: @gray-lighter;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 2px solid @gray-lighter;
+}
+div.part-type-container input{vertical-align: top !important;}
+
+div.responsive div.ErrorMessage.page-error,
+div.responsive div.ErrorMessage.page-error > span.field-error-text
+{
+	width: auto;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+
+div.responsive input.default-submit-hack
+{
+	width: 0 !important;
+	height: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	margin: 0 !important;
+}
+
+div.responsive .input-container ul
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.responsive a.step-button
+{
+ /*	display: inline-block; */
+	text-decoration: none;
+	zoom: 1;
+}
+
+div.responsive input[type="text"], 
+div.responsive input[type="number"],
+div.responsive input[type="password"],
+div.responsive textarea
+{
+	border: inherit;
+/*	padding: 5px 7px; */
+	border-radius: inherit;
+	-moz-border-radius: inherit;
+	-webkit-border-radius: inherit;
+	-webkit-box-shadow: inherit;
+	-moz-box-shadow: inherit;
+	box-shadow: inherit;
+        &:extend(.form-control all);
+}
+
+div.responsive .hidden
+{
+	display: none;
+}
+
+div.responsive button.action-button,
+div.responsive a.next-step, 
+div.responsive button.next-step,
+div.responsive a.cancel-step, 
+div.responsive button.cancel-step,
+div.responsive a.step-button, 
+div.responsive button.step-button,
+div.responsive button.action-button:hover,
+div.responsive a.next-step:hover, 
+div.responsive button.next-step:hover,
+div.responsive a.step-button:hover, 
+div.responsive button.step-button:hover,
+div.responsive a.cancel-button:hover, 
+div.responsive button.cancel-button:hover
+{
+	filter: inherit;
+	-ms-filer: inherit;
+	background-image: inherit;
+        line-height: inherit;
+	outline: none;
+        border: none;
+        border-radius: 0;
+        text-decoration: none;
+        min-width: 130px;
+        &:extend(.button-submit all);
+}
+div.responsive div.form-error{
+    margin-bottom: 4px;
+}
+#cons_birth_date_date select {
+  float: left;
+}
+
+#cons_birth_date_MONTH {
+  width: 39%;
+  margin-right: 1%;
+}
+
+#cons_birth_date_DAY {
+  width: 29%;
+  margin-right: 1%;
+}
+
+#cons_birth_date_YEAR {
+  width: 30%;
+}
+div#registration_options_page span.survey-textarea-container textarea{
+    max-width: none;
+    width: 100%;
+}
+div#cons_info_component_container {
+  div#personal_info_section_one, 
+  div#personal_info_section_two
+  {
+    width: auto;
+    float: none;
+  }
+}
+#personal_info_section_two{
+  clear: both;
+}
+#team_find_registration_type_container{
+    font-size: 1em;
+}
+div#team_find_search_results_container div.list-component-cell-column-join-link a{
+    .button;
+    .button-link;
+}
+/* ****************************** Login screen specific styles ****************************** */
+
+#appAreaNoWidthClearFix {
+    width: auto;
+}
+
+#login-div-content {
+    &, div.actions, .outer-border , .banner-header, table{
+        .noBg-noBorder-noPadding;
+        height: auto;
+    }
+    .banner-header{
+        &:extend(h3);
+        strong{
+            font-weight: normal;
+        }
+    }
+    .login-form{
+        margin-bottom: @margin-base-vertical;
+        .input-border{
+            border: none;
+            padding: 0.5em;
+        }
+        #USERNAME, #Password{
+            &:extend(.form-control all);
+        }
+        .actions{
+            padding: 0.5em;
+            background: darken(#f7f7f7,5%);
+        }
+    }
+    input.uc-button, button, .ft button{
+        .noBg-noBorder-noPadding;
+        &:extend(.button all);
+        &:extend(.button-submit all);
+    }
+    
+    // 640px
+    @media(max-width: @screen-md) {
+        table, thead, tbody, th, td, tr { 
+            display: block; 
+	}
+    }
+}
+
+/* ****************************** Donation2 form ****************************** */
+div.donation-form-container{
+    &:extend(.content-wrap all);
+    padding: 1%;
+    &.responsive{
+        padding: 1%;
+    }
+    div.tributes-caption{
+        .text-info;
+        .bg-warning;
+        .border-radius(5px);
+        text-align: center;
+        font-size: @font-size-h4;
+        line-height: 3em;
+        margin-bottom: 20px;
+    }
+}
+div.form-progress-bar, div.progress-bar-container{
+    background: @gray-lighter;
+    margin-bottom: 20px;
+    .box-shadow(1px 1px 3px rgba(0,0,0,.2));
+    div.progress-bar-step-container{
+        margin: 0;
+        padding: 5px 10px;
+        &.progress-bar-step-selectable{
+            div.progress-bar-step-number-container{
+                background: @brand-primary;
+            }
+        }
+    }
+    div.progress-bar-step-text-container{
+        max-width: 150px;
+        margin-top: 0;
+        vertical-align: middle;
+    }
+}
+div.donation-levels{
+    .clearfix;
+}
+div.donation-level-container{
+    border: none;
+    margin: 0;
+}
+div.donation-level-input-container, div.generic-repeat-label-checkbox-container{
+    padding: 0;
+}
+div.donation-level-user-entered{
+    margin-top: 0;
+    label{
+        display: none;
+    }
+}
+div.form-row{
+    &.form-text,&.form-selectlist, &.custom-field-container{
+        max-width: 600px;
+    }
+    &.form-text, &.form-row{
+        .form-content{
+            display: block;
+        }
+        textarea{height: 60px;}
+    }
+}
+div.donation-level-general-ask, div.html-caption-container{max-width: none;}
+label.FormLabel{font-weight: normal;}
+div.transaction-summary-info{width: 100%;}
+h5.summary-section-header{
+    background-color: @gray;
+}
+div.transaction-summary-entry{
+    background-color: @gray-lighter;
+}
+div.button-container{
+    padding-top: 10px;
+    button{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    @media(max-width: @screen-xs) {
+        text-align: center;
+        button{
+            float: none !important;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+#employer_street_row input, #billing_addr_street1_row input, #billing_addr_street2_row input, #billing_addr_street3_row input, #billing_addr_country_row input.ui-autocomplete-input, #donor_addr_street1_row input, #donor_addr_street2_row input, #donor_addr_street3_row input, #donor_addr_country_row input.ui-autocomplete-input, #shipping_addr_street1_row input, #shipping_addr_street2_row input, #shipping_addr_street3_row input, #shipping_addr_country_row input.ui-autocomplete-input, #tribute_notify_recip_street1_row input, #tribute_notify_recip_street2_row input, #tribute_notify_recip_street3_row input, #tribute_notify_recip_country_row input.ui-autocomplete-input, #tribute_signature_row input, #tribute_message_closing_row input, div.employer-address-container input#employer_street{width:100%;}
+
+/* ****************************** GIGYA Forms ****************************** */
+#gigyaRegisterForm, #gigyaLoginForm{
+    .fieldRequired{color: #990100;}
+    .fieldLabel{
+        display: inline-block;
+        float: none;
+        width: auto;
+        label{
+            margin-top: 5px;
+        }
+    }
+    .fieldInput input, input[type="text"]{
+        &:extend(.form-control all);
+        display: inline-block !important;
+    }
+    .Button{
+        &:extend(.button-submit all);
+        margin: 10px 0;
+    }
+    table{
+        width: 100%;
+        background-color: transparent;
+        table td:first-child{padding-right:4px;}
+    }
+}

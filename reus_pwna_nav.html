@@ -1,0 +1,66 @@
+<ul id="menu" class="[[?xx::x[[S1:cons_id]]x::::min]]">
+    <li class="t1">
+        <a href="PageServer?pagename=about_abilityfirst">Information</a>
+        <ul>
+            <li><a href="PageServer?pagename=about_abilityfirst">About AbilityFirst</a></li>
+            <li><a href="PageServer?pagename=centers_list&amp;pg=locations&amp;search_type=center">AbilityFirst Locations</a></li>
+            <li><a href="PageServer?pagename=event_details">Event Details</a></li>
+            <li><a href="PageServer?pagename=sponsors">Sponsors</a></li>
+            <li><a href="PageServer?pagename=incentives">Incentives</a></li>
+            <li><a href="PageServer?pagename=contact_us">Contact Us</a></li>
+        </ul>
+    </li>
+    <li class="t2">
+        <a href="PageServer?pagename=participate">Participate</a>
+        <ul>
+            <li><a href="PageServer?pagename=participate">Ways to Participate</a></li>
+            <li><a href="PageServer?pagename=corporate_teams">Corporate Teams</a></li>
+            <li><a href="PageServer?pagename=become_sponsor">Become a Sponsor</a></li>
+            <li><a href="PageServer?pagename=join_expo">Join our Expo</a></li>
+            <li><a href="http://[[S29:DOMAIN]]/volunteer">Volunteer</a></li>
+        </ul>
+    </li>
+    <li><a href="http://[[S29:DOMAIN]]/stroll_roll_donate">Donate</a></li>
+    [[?xx::x[[S1:cons_id]]x::<li class="t2"><a href="http://[[S29:DOMAIN]]/stroll_roll_register">Register</a></li>::]]
+    <li class="t1">
+        [[?xx::x[[S1:cons_id]]x::
+        [[?x10x::x[[S4]]x::
+        <a href="[[S8]]">Log In</a>
+        ::
+        <a href="PageServer?pagename=login&NEXTURL=[[T1:PageServer?pagename=my_centers]]">Log In</a>
+        ]]
+        ::
+        <a href="PageServer?pagename=my_centers">
+            [[?xx::x[[S1:first_name]]x::
+            [[S1:user_name]]
+            ::
+            [[S1:first_name]]
+            ]]
+        </a>
+        <ul>
+            [[?[[S80:REGISTERED]]::TRUE::
+            <li>
+                <a class="js--my-pc-link" href="PageServer?pagename=my_centers">My Participant Center</a>
+            </li>
+            <li>
+                <a class="js--my-personal-link" href="PageServer?pagename=my_centers">My Personal Page</a>
+            </li>
+            ::]]
+            <li>
+                <a class="js--my-center-link" href="PageServer?pagename=my_centers">My AbilityFirst Center</a>
+            </li>
+            <li>
+                <a href="http://[[S29:DOMAIN]]/my_profile">Edit Profile</a>
+            </li>
+            <li>
+                <a href="UserLogin?logout=&amp;NEXTURL=[[T1:[[E130:"[[S8]]" "&amp;" "&" replaceall]]]]">Log Out</a>
+            </li>
+        </ul>
+        ]]
+    </li>
+</ul>
+[[?xx::x[[S1:cons_id]]x::::
+    [[?[[S80:REGISTERED]]::TRUE::
+    <div class="hidden js--my-center-list">[[S39:0*black*12px*false*1*0*0*Centers:true:stroll_roll:2015]]</div>
+    ::]]
+]]
