@@ -5,154 +5,16 @@
 
 // Base styles
 // --------------------------------------------------
-.button,div.responsive .button, .Button {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 0; // For input.button
-  padding: 0 @padding-large-horizontal;
-  line-height: 40px;
-  font-weight: @button-font-weight;
-  color: @button-default-color;
-  background-color: @button-default-bg;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  white-space: nowrap;
-  border: none;
-  .box-shadow(none);
-  .user-select(none);
-  .transition(all 0.3s);
-
-    span{margin: 0 10px;}
-  
-  &:link, 
-  &:visited {
-    color: @button-default-color;
-  }
- 
-  &:active, 
-  &.active {
-    outline: 0;
-    background-image: none;
-    background-color: darken(@button-default-bg, 15%);
-    
-    &:focus {
-      .tab-focus();
-    }
-  }
-  
-  &:hover, 
-  &:focus {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  &.disabled, 
-  &[disabled], 
-  fieldset[disabled] & {
-    cursor: not-allowed;
-    pointer-events: none; // Future-proof disabling of clicks
-    .opacity(.65);
-    .box-shadow(none);
-  }
+.button,div.responsive .button, .Button, a.btn {
+    .box-shadow(1px 1px 3px rgba(0,0,0,.2));
+    //.border-radius(15px);
+    .transition(all 0.3s);
+    .text-uppercase;
 }
-
-.button-white {
-    color: @button-default-bg !important;
-    background-color: #fff;
-    border: 1px solid @brand-yellow;
-    border-bottom: none;
-  
-  &:link, 
-  &:visited {
-    color: @button-default-bg;
-  }
-  
-  &:hover, 
-  &:focus {
-    color: @button-default-bg;
-    .box-shadow(0px 4px 0px darken(#fff, 5%));
-  }
-  
-  &:active, 
-  &.active {
-    background-color: darken(#fff, 5%);
-  }
+a.btn-default{
+    .button-size(@padding-base-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+    //font-size: 2em;
 }
-
-// Button Sizes
-// --------------------------------------------------
-
-.button-lg ,div.responsive .button-lg{
-  line-height: @line-height-computed * 4;
-  font-size: @font-size-base * 2;
-}
-.button-sm ,div.responsive .button-sm{
-  line-height: @line-height-computed * 1.5;
-  padding: 0 @padding-base-horizontal;
-}
-
-.button-lg.button-outline {
-  line-height: ((@line-height-computed * 2.5) - 2);
-}
-
-.button-sm.button-outline {
-  line-height: ((@line-height-computed * 1.5) - 2);
-}
-
-.button--addon {
-	line-height: @input-height-base;
-}
-
-// Block button
-// --------------------------------------------------
-
-.button-block {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-// Vertically space out multiple block buttons
-.button-block + .button-block {
-  margin-top: @line-height-computed / 2;
-}
-
-// Link button
-// --------------------------------------------------
-
-.button-link,div.responsive .button-link{
-    background-color: @button-default-bg;  
-    &:active, &.active {
-        background-color: darken(@button-default-bg, 15%);
-    }
-}
-.button-submit,div.responsive .button-submit{
-    color: @black !important;
-    background-color: @brand-yellow;  
-    &:active, &.active {
-        background-color: darken(@brand-yellow, 15%);
-    }
-}
-.button-back,div.responsive .button-back{
-    color: @brand-red !important;
-    background-color: lighten(@brand-yellow, 25%);  
-    &:active, &.active {
-        background-color: lighten(@brand-yellow, 10%);
-    }
-}
-
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.button-block {
-    width: 100%;
-  }
-}
-
-.btn-group .button,.btn-group div.responsive .button{
-    margin: 5px 0;
+.btn-primary{
+    .button-size(@padding-large-vertical; @padding-base-horizontal; @font-size-large; @line-height-large; @border-radius-large);
 }

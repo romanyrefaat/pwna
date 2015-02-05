@@ -8,7 +8,8 @@
 
 @white: #ffffff;  
 @black: #000000;
-@gray-dark: #58595b;
+@black-light: #333333;
+@gray-dark: #8c8c8e;
 @gray: #a9a9a9;
 @gray-mid: #e1e2e1;
 @gray-light: #f6f6f6;
@@ -128,7 +129,7 @@
 @line-height-small:         1.5;
 
 //@border-radius-base:        0;
-@border-radius-large:       4px;
+@border-radius-large:       15px;
 @border-radius-small:       2px;
 @border-solid:              1px solid @gray;
 @border-dashed: 						1px dashed @gray;
@@ -171,35 +172,35 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-@button-font-weight:                400;
+@btn-font-weight:                400;
 
-@button-default-color:              @black;
-@button-default-bg:                 @brand-yellow;
-@button-default-border:             transparent;
+@btn-default-color:              @white;
+@btn-default-bg:                 @brand-yellow;
+@btn-default-border:             transparent;
 
-@button-primary-color:              #fff;
-@button-primary-bg:                 @brand-primary;
-@button-primary-border:             transparent;
+@btn-primary-color:              @brand-red;
+@btn-primary-bg:                 #ebebeb;
+@btn-primary-border:             transparent;
 
-@button-success-color:              #fff;
-@button-success-bg:                 @brand-success;
-@button-success-border:             transparent;
+@btn-success-color:              #fff;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             transparent;
 
-@button-info-color:                 #fff;
-@button-info-bg:                    @brand-info;
-@button-info-border:                transparent;
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                transparent;
 
-@button-warning-color:              #fff;
-@button-warning-bg:                 @brand-warning;
-@button-warning-border:             transparent;
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             transparent;
 
-@button-danger-color:               #fff;
-@button-danger-bg:                  @brand-danger;
-@button-danger-border:              transparent;
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              transparent;
 
-@button-link-disabled-color:        @gray;
+@btn-link-disabled-color:        @gray;
 
-@button-active-bg:                  @link-active-color;
+@btn-active-bg:                  @link-active-color;
 
 
 //== Forms
@@ -214,7 +215,7 @@
 //** Text color for `<input>`s
 @input-color:                    @gray-dark;
 //** `<input>` border color
-//@input-border:                   @gray;
+@input-border:                   @gray;
 //** `<input>` border radius
 @input-border-radius:            @border-radius-base;
 //** Border color for inputs on focus
@@ -244,7 +245,7 @@
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-@dropdown-bg:                    @brand-primary;
+@dropdown-bg:                    @black-light;
 //** Dropdown menu `border-color`.
 @dropdown-border:                none;
 //** Dropdown menu `border-color` **for IE8**.
@@ -255,9 +256,9 @@
 //** Dropdown link text color.
 @dropdown-link-color:            #fff;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      #fff;
+@dropdown-link-hover-color:      #000;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         @brand-accent-walk-light;
+@dropdown-link-hover-bg:         @brand-yellow;
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;
@@ -268,7 +269,7 @@
 @dropdown-link-disabled-color:   @gray;
 
 //** Text color for headers within dropdown menus.
-@dropdown-header-color:          @brand-secondary;
+@dropdown-header-color:          @gray;
 
 // Note: Deprecated @dropdown-caret-color as of v3.1.0
 @dropdown-caret-color:           #fff;
@@ -296,25 +297,25 @@
 
 // Extra small screen / phone
 // Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
-@screen-xs:                  320px;
+//@screen-xs:                  320px;
 @screen-xs-min:              @screen-xs;
 @screen-phone:               @screen-xs-min;
 
 // Small screen / tablet
 // Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
-@screen-sm:                  480px;
+//@screen-sm:                  480px;
 @screen-sm-min:              @screen-sm;
 @screen-tablet:              @screen-sm-min;
 
 // Medium screen / desktop
 // Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
-@screen-md:                  640px;
+//@screen-md:                  640px;
 @screen-md-min:              @screen-md;
 @screen-desktop:             @screen-md-min;
 
 // Large screen / wide desktop
 // Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
-@screen-lg:                  768px;
+//@screen-lg:                  768px;
 @screen-lg-min:              @screen-lg;
 @screen-lg-desktop:          @screen-lg-min;
 
@@ -334,7 +335,7 @@
 @grid-gutter-width:         30px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     @screen-md-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
@@ -362,8 +363,34 @@
 
 
 //== Navbar
-//
-//##
+// Basics of a navbar
+@navbar-height:                    60px;
+@navbar-margin-bottom:             0;
+//@navbar-default-color:             @black;
+@navbar-default-bg:                transparent;
+//@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+//@navbar-border-radius:             @border-radius-base;
+//@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
+//@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+
+// Navbar links
+@navbar-default-link-color:                @black;
+@navbar-default-link-hover-color:          @black;
+//@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         @brand-red;
+//@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+//@navbar-default-link-disabled-color:       #ccc;
+//@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+//@navbar-default-brand-color:               @navbar-default-link-color;
+//@navbar-default-brand-hover-color:         darken(@navbar-default-link-color, 10%);
+//@navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #ddd;
+@navbar-default-toggle-icon-bar-bg:        #ccc;
+@navbar-default-toggle-border-color:       #ddd;
 
 
 
@@ -825,7 +852,7 @@
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
 
-//** JDRF Walk Colors
+//** PWNA Colors
 
 // Please update dependents and then delete or organize within the sections
 // already established above in this file
@@ -838,16 +865,16 @@
 @main-container-background-color:          #fff; // This is only set once, is variable necessary?
 @primary-heading-color:                 @headings-color;
 @primary-font-color:                    @text-color;
-@primary-button-background-color:       @button-primary-bg;
-@primary-button-border-color:           @button-primary-border;
-@primary-button-color:                  @button-primary-color;
+@primary-button-background-color:       @btn-primary-bg;
+@primary-button-border-color:           @btn-primary-border;
+@primary-button-color:                  @btn-primary-color;
 @secondary-ui-color:                    @brand-secondary;
 @navbar-background:       			    rgba(255,255,255,.9);                
 @navbar-background-fallback:       		    rgb(255,255,255);      
 @hero-navigation-background:                        rgba(0,113,206,.75);
 @hero-navigation-background-fallback:               rgb(0,113,206);               
 
-//** JDRF Walk formation
+//** PWNA formation
 @padding-normal:                          @padding-base-vertical;
 @padding-loose:                           @padding-large-vertical;
 @padding-extr-loose:                      (@padding-base-vertical * 3);

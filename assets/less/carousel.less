@@ -1,0 +1,126 @@
+#home-carousel{
+    .item{
+        img{
+            min-width: 100%;
+            .center-block();
+        }
+    }
+    .carousel-indicators {
+        top: 10%;
+        right: 15%;
+        left: auto;
+        bottom: auto;
+        width: 16%;
+        position: absolute;
+        margin: 0;
+        li {
+            background-color: transparent;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            border-size: 
+            display: block;
+            height: auto;
+            width: 100%;
+            margin: 4% 0;
+            img {
+                width: 100%;
+                display: block;
+                opacity: 0.9;
+            }
+            &.active{
+                border-color: @brand-yellow;
+                border-width: 4px;
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .carousel-caption{
+        right: auto;
+        bottom: auto;
+        top: 10%;
+        left: 9%;
+        width: 31%;
+        background-color: rgba(0,0,0,0.2);
+        padding: 6% 3% 40px;
+        text-align: left;
+        font-size: @font-size-h3;
+        h4{
+            color: @white;
+            line-height: @line-height-computed*2;
+            font-size: @font-size-h3;
+        }
+        .btn{
+            margin-top: 15px;
+            text-align: left;
+            .border-radius(25px);
+            color: @black-light;
+            display: table;
+            &:hover{color: @black;}
+            span{
+                display: block;
+                margin: 0;
+                font-weight: bold;
+            }
+            .arrow{
+                .text-right;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+    @media(max-width: @screen-lg) {
+        .carousel-caption{
+            font-size: @font-size-h4;
+            width: 40%;
+            padding: 15px;
+            h4{
+                line-height: @line-height-computed;
+                font-size: @font-size-h4;
+            }
+        }
+    }
+    @media(max-width: @screen-md) {
+        .carousel-indicators{
+            top: 10px;
+            
+        }
+        .carousel-caption{
+            position: static;
+            width: 100%;
+            padding: 15px;
+            background-color: @black;
+            font-size: @font-size-h5;
+            h4{
+                line-height: @line-height-computed;
+                font-size: @font-size-h5;
+            }
+        }
+   }
+}
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            left: 0 !important;
+            .transition(opacity .4s); //adjust timing here
+        }
+        .carousel-control {
+          background-image: none; // remove background gradients on controls
+        }
+        // Fade controls with items
+        .next.left,
+        .prev.right {
+          opacity: 1;
+          z-index: 1;
+        }
+        .active.left,
+        .active.right {
+          opacity: 0;
+          z-index: 2;
+        }
+  }
+  .carousel-control {
+    z-index: 2;
+  }
+}
