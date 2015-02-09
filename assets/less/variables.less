@@ -19,11 +19,14 @@
 @brand-red: #E22427;
 @brand-yellow: #FFCD0A;
 @brand-gray: #BBBDBF;
+@brand-gray-light: #ebebeb;
 @brand-purple: #792A7E;
 @brand-turquoise: #186273;
 @brand-turquoise-lighter: #9CAEBF;
 @brand-orange: #C5664F;
 
+@turquoise-light: #40798a;//lighten(@brand-turquoise, 5%);
+@turquoise-lighter: #99afbd;//lighten(@brand-turquoise, 5%);
 
 @brand-secondary:       		#002855; 
 @brand-accent-walk-light:		#F7946A;
@@ -53,10 +56,10 @@
 // Gotham fonts served via HF&J cloud.typography.com
 // 'Gotham 4r' etc are Legacy Support fo IE8
 
-@font-family-sans-300:				'open_sansregular', 'sans-serif';
-@font-family-sans-400:				'open_sanssemibold', 'sans-serif';
-@font-family-sans-700:				'open_sansbold', 'sans-serif';
-@font-family-sans-800:				'open_sansextrabold', 'sans-serif';
+@font-family-sans-300:				'berliner_groteskregular', 'sans-serif';
+@font-family-sans-400:				'berliner_groteskregular', 'sans-serif';
+@font-family-sans-700:				'berliner_groteskregular', 'sans-serif';
+@font-family-sans-800:				'berliner_groteskregular', 'sans-serif';
 
 @font-family-sans-serif:  			@font-family-sans-300;
 @font-family-Rockwell:       			'open_sans_condensedbold', Times, serif;
@@ -84,7 +87,7 @@
 @headings-font-family:    inherit;
 @headings-font-weight:    400;
 @headings-line-height:    1.1;
-@headings-color:          @brand-primary;
+@headings-color:          @black;
 
 
 //-- Iconography
@@ -168,39 +171,7 @@
 @table-border-color:            @gray;
 
 
-//== Buttons
-//
-//## For each of Bootstrap's buttons, define text, background and border color.
 
-@btn-font-weight:                400;
-
-@btn-default-color:              @white;
-@btn-default-bg:                 @brand-yellow;
-@btn-default-border:             transparent;
-
-@btn-primary-color:              @brand-red;
-@btn-primary-bg:                 #ebebeb;
-@btn-primary-border:             transparent;
-
-@btn-success-color:              #fff;
-@btn-success-bg:                 @brand-success;
-@btn-success-border:             transparent;
-
-@btn-info-color:                 #fff;
-@btn-info-bg:                    @brand-info;
-@btn-info-border:                transparent;
-
-@btn-warning-color:              #fff;
-@btn-warning-bg:                 @brand-warning;
-@btn-warning-border:             transparent;
-
-@btn-danger-color:               #fff;
-@btn-danger-bg:                  @brand-danger;
-@btn-danger-border:              transparent;
-
-@btn-link-disabled-color:        @gray;
-
-@btn-active-bg:                  @link-active-color;
 
 
 //== Forms

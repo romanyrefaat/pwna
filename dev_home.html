@@ -17,17 +17,21 @@
                                     <a class="logo" href="#"><img class="img-responsive" src="assets/images/pwna_logo.png" alt=""/></a>
                                 </div>                        
                                 <div class="col-md-4 col-sm-8 col-xs-7 col-md-height col-middle">
-                                    <form class="top-signup">
-                                        <label for="header_email" class="col-md-12">Stay In Touch</label>
-                                        <div class="input-group col-md-12 input-group-sm">
-                                            <input type="text" class="form-control" placeholder="Enter your email address" id="header_email">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-link" type="button"><i class="fa fa-chevron-right"></i></button>
-                                            </span>
-                                        </div>
-                                    </form>
+                                    <div class="top-signup">
+                                        <label for="header_email">Stay In Touch</label>
+                                        <form class="js-signup-form sign-up luminateApi" method="POST" action="https://[[S29:SECURE_DOMAIN]][[S29:SECURE_PATH]]CRSurveyAPI" data-luminateApi='{"callback": "emailSignupCallback", "requiresAuth": "true"}'>
+                                            <input type="hidden" name="method" value="submitSurvey">
+                                            <input type="hidden" name="survey_id" value="3462">
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control" name="cons_email" placeholder="Enter your email address" id="header_email">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-link" type="submit"><span>Sign Me Up </span><i class="fa fa-chevron-right"></i></button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="text-right col-md-3 col-sm-4 col-xs-5 col-md-height col-middle"><a href="#" class="btn btn-default top-donate" role="button">Donate</a></div>
+                                <div class="text-right col-md-3 col-sm-4 col-xs-5 col-md-height col-middle"><a href="#" class="btn btn-default-pwna top-donate" role="button">Donate</a></div>
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav">
                                         <span class="sr-only">Toggle navigation</span>
@@ -81,16 +85,21 @@
                                 <li><a href="#">Resources</a></li>
                                 <li><a href="#">How To Help</a></li>                            
                             </ul>
-                            <ul class="print-share nav navbar-nav navbar-right">
-                                <li><a href="#"><i class="fa fa-print"></i></a></li>
-                                <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                            </ul>
                         </div>
                     </div>
 
                 </nav>
             </div>
         </header>
+        <div class="container social-share-container hp">
+            <div class="social-share">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-print"></i></a>
+                <a href="#"><i class="fa fa-plus"></i></a>
+            </div>
+        </div>
         <div id="home-carousel" class="carousel slide carousel-fade" data-interval="false" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#home-carousel" data-slide-to="0" class="active"><img src="assets/images/temp/slide1.jpg" alt=""></li>
@@ -140,7 +149,7 @@
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis placerat odio vel hendrerit. Etiam id sagittis massa. Fusce et tellus condimentum, commodo diam sit amet
                             </p>
-                            <a href="#" class="btn btn-primary">I want to learn more <i class="fa fa-chevron-right"></i></a>
+                            <a href="#" class="btn btn-primary-pwna">I want to learn more <i class="fa fa-chevron-right"></i></a>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
@@ -150,13 +159,14 @@
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis placerat odio vel hendrerit. Etiam id sagittis massa. Fusce et tellus condimentum, commodo diam sit amet
                             </p>
-                            <a href="#" class="btn btn-primary">I want to help <i class="fa fa-chevron-right"></i></a>
+                            <a href="#" class="btn btn-primary-pwna">I want to help <i class="fa fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-8">
                         <h4>Outreach Outcomes</h4>
+
                         <div class="col-sm-4 outcome theme1">
                             <strong>5,707</strong>
                             <span>requested for aid</span>
@@ -172,15 +182,17 @@
                     </div>
                     <div class="col-sm-4">
                         <h4>Stay In Touch</h4>
-                        <form class="sign-up" action="">
-                            <p>Join our mailing list to receive periodic updates about our work and our result.</p>
-                            <div class="input-group input-group-sm">
-                                <input type="text" class="form-control" placeholder="Enter Email Address">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-link" type="button">Sign Me Up <i class="fa fa-chevron-right"></i></button>
-                                </span>
-                            </div>
-                        </form>
+                        <div class="hp-sign-up">
+                            <form class="sign-up" action="">
+                                <label>Join our mailing list to receive periodic updates about our work and our result.</label>
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control" placeholder="Enter Email Address">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-link" type="button">Sign Me Up <i class="fa fa-chevron-right"></i></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,25 +201,20 @@
             <div class="container">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6 col-sm-7 col-xs-12">
+                        <div class="col-md-8 col-sm-7 col-xs-12">
                             <div class="row">
-                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="col-md-3 col-sm-3 col-xs-6">
                                     <p class="links-group">
-                                        <a href="#">Who We Are</a>
+                                        <a class="main" href="#">Who We Are</a>
                                         <a href="#">About Us</a>
                                         <a href="#">The PWNA Way</a>
                                         <a href="#">Our Strengths</a>
                                         <a href="#">Parter Successes</a>
                                     </p>
-                                    <p class="links-group">
-                                        <a href="#">What We Do</a>
-                                        <a href="#">Our Impact</a>
-                                        <a href="#">Resources</a>
-                                    </p>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="col-md-3 col-sm-3 col-xs-6">
                                     <p class="links-group">
-                                        <a href="#">Press</a>
+                                        <a class="main" href="#">Press</a>
                                         <a href="#">Press Releases</a>
                                         <a href="#">History</a>
                                         <a href="#">Media Stories</a>
@@ -216,32 +223,48 @@
                                         <a href="#">2014 Annual Report</a>
                                     </p>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="col-md-3 col-sm-3 col-xs-6">
                                     <p class="links-group">
-                                        <a href="#">How to Help</a>
+                                        <a class="main" href="#">What We Do</a>
+                                        <a href="#">Martial Services</a>
+                                        <a href="#">Long-Term Solutions</a>
+                                    </p>
+                                    <p class="links-group">
+                                        <a class="main" href="#">Our Impact</a>
+                                        <a href="#">Program Partners</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-6">
+                                    <p class="links-group">
+                                        <a class="main" href="#">How to Help</a>
                                         <a href="#">Monetary Donation</a>
                                         <a href="#">Planned Giving</a>
                                         <a href="#">Company Match</a>
                                     </p>
+                                    <p class="links-group">
+                                        <a class="main" href="#">Resources</a>
+                                        <a href="#">FAQ</a>
+                                        <a href="#">Member Login <i class="fa fa-lock"></i></a>
+                                    </p>
                                 </div>
                             </div>
+                            <p>
+                                <img class="img-responsive" src="assets/images/pwna_logo_footer.png" alt=""/>
+                            </p>
                         </div>
-                        <div class="col-md-6 col-sm-5 col-xs-12">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <p class="text-center"><a href="#" class="btn btn-default donate">Donate</a></p>
-                                </div>
-                                <div class="col-md-8 col-sm-12 col-xs-12">
-                                    <form class="sign-up" action="">
-                                        <p>Join our mailing list to receive periodic updates about our work and our result.</p>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control" placeholder="Enter Email Address">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-link" type="button">Sign Me Up <i class="fa fa-chevron-right"></i></button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
+                        <div class="col-md-4 col-sm-5 col-xs-12">
+                            <div class="sign-up">
+                                <label>Signup for our Email List</label>
+                                <form class="js-signup-form sign-up luminateApi" method="POST" action="https://[[S29:SECURE_DOMAIN]][[S29:SECURE_PATH]]CRSurveyAPI" data-luminateApi='{"callback": "emailSignupCallback", "requiresAuth": "true"}'>
+                                    <input type="hidden" name="method" value="submitSurvey">
+                                    <input type="hidden" name="survey_id" value="3462">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control" name="cons_email" placeholder="Enter your email address" id="header_email">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-link" type="submit"><span>Sign Me Up </span><i class="fa fa-chevron-right"></i></button>
+                                        </span>
+                                    </div>
+                                </form>
                             </div>
                             <p class="social-icons">
                                 <a href="#">
@@ -299,21 +322,20 @@
                                     </span>
                                 </a>
                             </p>
+                            <p class="donate"><a href="#" class="btn btn-default-pwna donate">Donate</a></p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row separator">
                         <div class="col-md-5">
-                            <p>
-                                <img class="img-responsive" src="assets/images/pwna_logo_footer.png" alt=""/>
+                            <p class="address">
+                                500 E. Peyton St. Sherman, TX 75090 <br/>
+                                1-800-416-8102<br/>
+                                &copy; 2015 PARTNERSHIP WITH NATIVE AMERICANS<br/>
+                                <a href="#"><u>Privacy Statement</u></a>
                             </p>
-                            <p>
-                                500 E. Peyton St. Sherman, TX 75090 Contact Us 1-800-416-8102<br/>
-                                &copy; 2015 PARTNERSHIP WITH NATIVE AMERICANS <a href="#"><u>Privacy Statement</u></a>
-                            </p>
-                            <a href="#">Member Login</a>
                         </div>
                         <div class="col-md-7 badges">
-                            Badges goes here ...
+                            <p>Badges goes here ...</p>
                         </div>
                     </div>
                 </div>

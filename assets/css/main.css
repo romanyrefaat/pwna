@@ -146,7 +146,7 @@ div.appArea,
   font-family: inherit;
   font-weight: 400;
   line-height: 1.1;
-  color: #337ab7;
+  color: #000000;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 24px;
@@ -467,7 +467,6 @@ div#cons_info_component_container div#personal_info_section_two {
 div#team_find_search_results_container div.list-component-cell-column-join-link a {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: 400;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -500,7 +499,7 @@ div#team_find_search_results_container div.list-component-cell-column-join-link 
 div#team_find_search_results_container div.list-component-cell-column-join-link a:hover,
 div#team_find_search_results_container div.list-component-cell-column-join-link a:focus,
 div#team_find_search_results_container div.list-component-cell-column-join-link a.focus {
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
 }
 div#team_find_search_results_container div.list-component-cell-column-join-link a:active,
@@ -545,7 +544,7 @@ div#team_find_search_results_container div.list-component-cell-column-join-link 
 fieldset[disabled] div#team_find_search_results_container div.list-component-cell-column-join-link a:hover,
 div#team_find_search_results_container div.list-component-cell-column-join-link a[disabled]:focus,
 fieldset[disabled] div#team_find_search_results_container div.list-component-cell-column-join-link a:focus {
-  color: #a9a9a9;
+  color: #f6f6f6;
   text-decoration: none;
 }
 /* ****************************** Login screen specific styles ****************************** */
@@ -605,9 +604,12 @@ div.donation-form-container.responsive {
 div.donation-form-container div.tributes-caption {
   color: #31708f;
   background-color: #fcf8e3;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   text-align: center;
   font-size: 18px;
   line-height: 3em;
@@ -1054,7 +1056,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'open_sansregular', 'sans-serif';
+  font-family: 'berliner_groteskregular', 'sans-serif';
   font-size: 14px;
   line-height: 1.42857143;
   color: #000000;
@@ -1069,16 +1071,25 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-a {
+a,
+A {
+  color: #e22427;
+  text-decoration: none;
+}
+a:link,
+A:link {
   color: #e22427;
   text-decoration: none;
 }
 a:hover,
-a:focus {
+A:hover,
+a:focus,
+A:focus {
   color: #a41618;
   text-decoration: underline;
 }
-a:focus {
+a:focus,
+A:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -1186,7 +1197,7 @@ div.registration-page-container div.section-header,
   font-family: inherit;
   font-weight: 400;
   line-height: 1.1;
-  color: #337ab7;
+  color: #000000;
 }
 h1 small,
 h2 small,
@@ -1522,44 +1533,7 @@ address {
   line-height: 1.42857143;
 }
 @font-face {
-  font-family: 'open_sansregular';
-  src: url('../fonts/opensans-regular-webfont.eot');
-  src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'open_sanssemibold';
-  src: url('../fonts/opensans-semibold-webfont.eot');
-  src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../fonts/opensans-semibold-webfont.woff') format('woff'), url('../fonts/opensans-semibold-webfont.ttf') format('truetype'), url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'open_sansbold';
-  src: url('../fonts/opensans-bold-webfont.eot');
-  src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-bold-webfont.woff2') format('woff2'), url('../fonts/opensans-bold-webfont.woff') format('woff'), url('../fonts/opensans-bold-webfont.ttf') format('truetype'), url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'open_sansextrabold';
-  src: url('../fonts/opensans-extrabold-webfont.eot');
-  src: url('../fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-extrabold-webfont.woff2') format('woff2'), url('../fonts/opensans-extrabold-webfont.woff') format('woff'), url('../fonts/opensans-extrabold-webfont.ttf') format('truetype'), url('../fonts/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'open_sanscondensed_light';
-  src: url('../fonts/opensans-condlight-webfont.eot');
-  src: url('../fonts/opensans-condlight-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-condlight-webfont.woff2') format('woff2'), url('../fonts/opensans-condlight-webfont.woff') format('woff'), url('../fonts/opensans-condlight-webfont.ttf') format('truetype'), url('../fonts/opensans-condlight-webfont.svg#open_sanscondensed_light') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'open_sans_condensedbold';
-  src: url('../fonts/opensans-condbold-webfont.eot');
-  src: url('../fonts/opensans-condbold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-condbold-webfont.woff2') format('woff2'), url('../fonts/opensans-condbold-webfont.woff') format('woff'), url('../fonts/opensans-condbold-webfont.ttf') format('truetype'), url('../fonts/opensans-condbold-webfont.svg#open_sans_condensedbold') format('svg');
+  font-family: 'berliner_groteskregular';
   font-weight: normal;
   font-style: normal;
 }
@@ -1574,7 +1548,7 @@ div.registration-page-container div.section-header,
   font-family: inherit;
   font-weight: 400;
   line-height: 1.1;
-  color: #337ab7;
+  color: #000000;
 }
 h1 small,
 .h1 small,
@@ -1625,9 +1599,9 @@ h6,
 .h6 {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: 'open_sansbold', 'sans-serif';
+  font-family: 'berliner_groteskregular', 'sans-serif';
   font-weight: 700;
-  color: #002855;
+  color: #000000;
 }
 h4 small,
 .h4 small,
@@ -1673,11 +1647,11 @@ p {
   margin: 0 0 10px;
 }
 .text-bold {
-  font-family: 'open_sansextrabold', 'sans-serif';
+  font-family: 'berliner_groteskregular', 'sans-serif';
   font-weight: 700;
 }
 .text-medium {
-  font-family: 'open_sansbold', 'sans-serif';
+  font-family: 'berliner_groteskregular', 'sans-serif';
   font-weight: 500;
 }
 small,
@@ -5479,7 +5453,7 @@ select[multiple].input-group-sm > #gigyaLoginForm input[type="text"] {
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: 400;
+  font-weight: normal;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -5509,7 +5483,7 @@ select[multiple].input-group-sm > #gigyaLoginForm input[type="text"] {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
 }
 .btn:active,
@@ -5530,9 +5504,9 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn-default {
-  color: #ffffff;
-  background-color: #ffcd0a;
-  border-color: transparent;
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -5540,9 +5514,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #ffffff;
-  background-color: #d6aa00;
-  border-color: rgba(0, 0, 0, 0);
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
@@ -5567,17 +5541,17 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: #ffcd0a;
-  border-color: transparent;
+  background-color: #ffffff;
+  border-color: #cccccc;
 }
 .btn-default .badge {
-  color: #ffcd0a;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #333333;
 }
 .btn-primary {
-  color: #e22427;
-  background-color: #ebebeb;
-  border-color: transparent;
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -5585,9 +5559,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: #e22427;
-  background-color: #d2d2d2;
-  border-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #204d74;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -5612,17 +5586,17 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #ebebeb;
-  border-color: transparent;
+  background-color: #337ab7;
+  border-color: #2e6da4;
 }
 .btn-primary .badge {
-  color: #ebebeb;
-  background-color: #e22427;
+  color: #337ab7;
+  background-color: #ffffff;
 }
 .btn-success {
   color: #ffffff;
   background-color: #5cb85c;
-  border-color: transparent;
+  border-color: #4cae4c;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -5632,7 +5606,7 @@ fieldset[disabled] .btn-primary.active {
 .open > .dropdown-toggle.btn-success {
   color: #ffffff;
   background-color: #449d44;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #398439;
 }
 .btn-success:active,
 .btn-success.active,
@@ -5658,7 +5632,7 @@ fieldset[disabled] .btn-success:active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
   background-color: #5cb85c;
-  border-color: transparent;
+  border-color: #4cae4c;
 }
 .btn-success .badge {
   color: #5cb85c;
@@ -5667,7 +5641,7 @@ fieldset[disabled] .btn-success.active {
 .btn-info {
   color: #ffffff;
   background-color: #5bc0de;
-  border-color: transparent;
+  border-color: #46b8da;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -5677,7 +5651,7 @@ fieldset[disabled] .btn-success.active {
 .open > .dropdown-toggle.btn-info {
   color: #ffffff;
   background-color: #31b0d5;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #269abc;
 }
 .btn-info:active,
 .btn-info.active,
@@ -5703,7 +5677,7 @@ fieldset[disabled] .btn-info:active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
   background-color: #5bc0de;
-  border-color: transparent;
+  border-color: #46b8da;
 }
 .btn-info .badge {
   color: #5bc0de;
@@ -5712,7 +5686,7 @@ fieldset[disabled] .btn-info.active {
 .btn-warning {
   color: #ffffff;
   background-color: #f0ad4e;
-  border-color: transparent;
+  border-color: #eea236;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -5722,7 +5696,7 @@ fieldset[disabled] .btn-info.active {
 .open > .dropdown-toggle.btn-warning {
   color: #ffffff;
   background-color: #ec971f;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #d58512;
 }
 .btn-warning:active,
 .btn-warning.active,
@@ -5748,7 +5722,7 @@ fieldset[disabled] .btn-warning:active,
 .btn-warning[disabled].active,
 fieldset[disabled] .btn-warning.active {
   background-color: #f0ad4e;
-  border-color: transparent;
+  border-color: #eea236;
 }
 .btn-warning .badge {
   color: #f0ad4e;
@@ -5757,7 +5731,7 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger {
   color: #ffffff;
   background-color: #d9534f;
-  border-color: transparent;
+  border-color: #d43f3a;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -5767,7 +5741,7 @@ fieldset[disabled] .btn-warning.active {
 .open > .dropdown-toggle.btn-danger {
   color: #ffffff;
   background-color: #c9302c;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #ac2925;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -5793,7 +5767,7 @@ fieldset[disabled] .btn-danger:active,
 .btn-danger[disabled].active,
 fieldset[disabled] .btn-danger.active {
   background-color: #d9534f;
-  border-color: transparent;
+  border-color: #d43f3a;
 }
 .btn-danger .badge {
   color: #d9534f;
@@ -5829,7 +5803,7 @@ fieldset[disabled] .btn-link {
 fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
-  color: #a9a9a9;
+  color: #f6f6f6;
   text-decoration: none;
 }
 .btn-lg,
@@ -5875,6 +5849,8 @@ div.responsive #login-div-content input.uc-button,
 div.responsive #login-div-content button,
 #login-div-content .ft button,
 div.responsive #login-div-content .ft button {
+  border: none;
+  background-image: none;
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s;
@@ -5882,17 +5858,335 @@ div.responsive #login-div-content .ft button {
   transition: all 0.3s;
   text-transform: uppercase;
 }
-a.btn-default {
-  padding: 10px 30px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 15px;
-}
-.btn-primary {
+a.btn-default-pwna,
+a.btn-default-pwna:link,
+a.btn-default-pwna:visited,
+a.btn-default-pwna:link:visited,
+a.btn-default-pwna:visited:link {
+  color: #ffffff;
+  background-color: #ffcd0a;
+  border-color: transparent;
   padding: 20px 15px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 15px;
+}
+a.btn-default-pwna:hover,
+a.btn-default-pwna:focus,
+a.btn-default-pwna.focus,
+a.btn-default-pwna:active,
+a.btn-default-pwna.active,
+.open > .dropdown-togglea.btn-default-pwna,
+a.btn-default-pwna:link:hover,
+a.btn-default-pwna:link:focus,
+a.btn-default-pwna:link.focus,
+a.btn-default-pwna:link:active,
+a.btn-default-pwna:link.active,
+.open > .dropdown-togglea.btn-default-pwna:link,
+a.btn-default-pwna:visited:hover,
+a.btn-default-pwna:visited:focus,
+a.btn-default-pwna:visited.focus,
+a.btn-default-pwna:visited:active,
+a.btn-default-pwna:visited.active,
+.open > .dropdown-togglea.btn-default-pwna:visited,
+a.btn-default-pwna:link:visited:hover,
+a.btn-default-pwna:link:visited:focus,
+a.btn-default-pwna:link:visited.focus,
+a.btn-default-pwna:link:visited:active,
+a.btn-default-pwna:link:visited.active,
+.open > .dropdown-togglea.btn-default-pwna:link:visited,
+a.btn-default-pwna:visited:link:hover,
+a.btn-default-pwna:visited:link:focus,
+a.btn-default-pwna:visited:link.focus,
+a.btn-default-pwna:visited:link:active,
+a.btn-default-pwna:visited:link.active,
+.open > .dropdown-togglea.btn-default-pwna:visited:link {
+  color: #ffffff;
+  background-color: #d6aa00;
+  border-color: rgba(0, 0, 0, 0);
+}
+a.btn-default-pwna:active,
+a.btn-default-pwna.active,
+.open > .dropdown-togglea.btn-default-pwna,
+a.btn-default-pwna:link:active,
+a.btn-default-pwna:link.active,
+.open > .dropdown-togglea.btn-default-pwna:link,
+a.btn-default-pwna:visited:active,
+a.btn-default-pwna:visited.active,
+.open > .dropdown-togglea.btn-default-pwna:visited,
+a.btn-default-pwna:link:visited:active,
+a.btn-default-pwna:link:visited.active,
+.open > .dropdown-togglea.btn-default-pwna:link:visited,
+a.btn-default-pwna:visited:link:active,
+a.btn-default-pwna:visited:link.active,
+.open > .dropdown-togglea.btn-default-pwna:visited:link {
+  background-image: none;
+}
+a.btn-default-pwna.disabled,
+a.btn-default-pwna[disabled],
+fieldset[disabled] a.btn-default-pwna,
+a.btn-default-pwna.disabled:hover,
+a.btn-default-pwna[disabled]:hover,
+fieldset[disabled] a.btn-default-pwna:hover,
+a.btn-default-pwna.disabled:focus,
+a.btn-default-pwna[disabled]:focus,
+fieldset[disabled] a.btn-default-pwna:focus,
+a.btn-default-pwna.disabled.focus,
+a.btn-default-pwna[disabled].focus,
+fieldset[disabled] a.btn-default-pwna.focus,
+a.btn-default-pwna.disabled:active,
+a.btn-default-pwna[disabled]:active,
+fieldset[disabled] a.btn-default-pwna:active,
+a.btn-default-pwna.disabled.active,
+a.btn-default-pwna[disabled].active,
+fieldset[disabled] a.btn-default-pwna.active,
+a.btn-default-pwna:link.disabled,
+a.btn-default-pwna:link[disabled],
+fieldset[disabled] a.btn-default-pwna:link,
+a.btn-default-pwna:link.disabled:hover,
+a.btn-default-pwna:link[disabled]:hover,
+fieldset[disabled] a.btn-default-pwna:link:hover,
+a.btn-default-pwna:link.disabled:focus,
+a.btn-default-pwna:link[disabled]:focus,
+fieldset[disabled] a.btn-default-pwna:link:focus,
+a.btn-default-pwna:link.disabled.focus,
+a.btn-default-pwna:link[disabled].focus,
+fieldset[disabled] a.btn-default-pwna:link.focus,
+a.btn-default-pwna:link.disabled:active,
+a.btn-default-pwna:link[disabled]:active,
+fieldset[disabled] a.btn-default-pwna:link:active,
+a.btn-default-pwna:link.disabled.active,
+a.btn-default-pwna:link[disabled].active,
+fieldset[disabled] a.btn-default-pwna:link.active,
+a.btn-default-pwna:visited.disabled,
+a.btn-default-pwna:visited[disabled],
+fieldset[disabled] a.btn-default-pwna:visited,
+a.btn-default-pwna:visited.disabled:hover,
+a.btn-default-pwna:visited[disabled]:hover,
+fieldset[disabled] a.btn-default-pwna:visited:hover,
+a.btn-default-pwna:visited.disabled:focus,
+a.btn-default-pwna:visited[disabled]:focus,
+fieldset[disabled] a.btn-default-pwna:visited:focus,
+a.btn-default-pwna:visited.disabled.focus,
+a.btn-default-pwna:visited[disabled].focus,
+fieldset[disabled] a.btn-default-pwna:visited.focus,
+a.btn-default-pwna:visited.disabled:active,
+a.btn-default-pwna:visited[disabled]:active,
+fieldset[disabled] a.btn-default-pwna:visited:active,
+a.btn-default-pwna:visited.disabled.active,
+a.btn-default-pwna:visited[disabled].active,
+fieldset[disabled] a.btn-default-pwna:visited.active,
+a.btn-default-pwna:link:visited.disabled,
+a.btn-default-pwna:link:visited[disabled],
+fieldset[disabled] a.btn-default-pwna:link:visited,
+a.btn-default-pwna:link:visited.disabled:hover,
+a.btn-default-pwna:link:visited[disabled]:hover,
+fieldset[disabled] a.btn-default-pwna:link:visited:hover,
+a.btn-default-pwna:link:visited.disabled:focus,
+a.btn-default-pwna:link:visited[disabled]:focus,
+fieldset[disabled] a.btn-default-pwna:link:visited:focus,
+a.btn-default-pwna:link:visited.disabled.focus,
+a.btn-default-pwna:link:visited[disabled].focus,
+fieldset[disabled] a.btn-default-pwna:link:visited.focus,
+a.btn-default-pwna:link:visited.disabled:active,
+a.btn-default-pwna:link:visited[disabled]:active,
+fieldset[disabled] a.btn-default-pwna:link:visited:active,
+a.btn-default-pwna:link:visited.disabled.active,
+a.btn-default-pwna:link:visited[disabled].active,
+fieldset[disabled] a.btn-default-pwna:link:visited.active,
+a.btn-default-pwna:visited:link.disabled,
+a.btn-default-pwna:visited:link[disabled],
+fieldset[disabled] a.btn-default-pwna:visited:link,
+a.btn-default-pwna:visited:link.disabled:hover,
+a.btn-default-pwna:visited:link[disabled]:hover,
+fieldset[disabled] a.btn-default-pwna:visited:link:hover,
+a.btn-default-pwna:visited:link.disabled:focus,
+a.btn-default-pwna:visited:link[disabled]:focus,
+fieldset[disabled] a.btn-default-pwna:visited:link:focus,
+a.btn-default-pwna:visited:link.disabled.focus,
+a.btn-default-pwna:visited:link[disabled].focus,
+fieldset[disabled] a.btn-default-pwna:visited:link.focus,
+a.btn-default-pwna:visited:link.disabled:active,
+a.btn-default-pwna:visited:link[disabled]:active,
+fieldset[disabled] a.btn-default-pwna:visited:link:active,
+a.btn-default-pwna:visited:link.disabled.active,
+a.btn-default-pwna:visited:link[disabled].active,
+fieldset[disabled] a.btn-default-pwna:visited:link.active {
+  background-color: #ffcd0a;
+  border-color: transparent;
+}
+a.btn-default-pwna .badge,
+a.btn-default-pwna:link .badge,
+a.btn-default-pwna:visited .badge,
+a.btn-default-pwna:link:visited .badge,
+a.btn-default-pwna:visited:link .badge {
+  color: #ffcd0a;
+  background-color: #ffffff;
+}
+a.btn-primary-pwna,
+a.btn-primary-pwna:link,
+a.btn-primary-pwna:visited,
+a.btn-primary-pwna:link:visited,
+a.btn-primary-pwna:visited:link {
+  color: #e22427;
+  background-color: #ebebeb;
+  border-color: transparent;
+  padding: 20px 15px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 15px;
+}
+a.btn-primary-pwna:hover,
+a.btn-primary-pwna:focus,
+a.btn-primary-pwna.focus,
+a.btn-primary-pwna:active,
+a.btn-primary-pwna.active,
+.open > .dropdown-togglea.btn-primary-pwna,
+a.btn-primary-pwna:link:hover,
+a.btn-primary-pwna:link:focus,
+a.btn-primary-pwna:link.focus,
+a.btn-primary-pwna:link:active,
+a.btn-primary-pwna:link.active,
+.open > .dropdown-togglea.btn-primary-pwna:link,
+a.btn-primary-pwna:visited:hover,
+a.btn-primary-pwna:visited:focus,
+a.btn-primary-pwna:visited.focus,
+a.btn-primary-pwna:visited:active,
+a.btn-primary-pwna:visited.active,
+.open > .dropdown-togglea.btn-primary-pwna:visited,
+a.btn-primary-pwna:link:visited:hover,
+a.btn-primary-pwna:link:visited:focus,
+a.btn-primary-pwna:link:visited.focus,
+a.btn-primary-pwna:link:visited:active,
+a.btn-primary-pwna:link:visited.active,
+.open > .dropdown-togglea.btn-primary-pwna:link:visited,
+a.btn-primary-pwna:visited:link:hover,
+a.btn-primary-pwna:visited:link:focus,
+a.btn-primary-pwna:visited:link.focus,
+a.btn-primary-pwna:visited:link:active,
+a.btn-primary-pwna:visited:link.active,
+.open > .dropdown-togglea.btn-primary-pwna:visited:link {
+  color: #e22427;
+  background-color: #d2d2d2;
+  border-color: rgba(0, 0, 0, 0);
+}
+a.btn-primary-pwna:active,
+a.btn-primary-pwna.active,
+.open > .dropdown-togglea.btn-primary-pwna,
+a.btn-primary-pwna:link:active,
+a.btn-primary-pwna:link.active,
+.open > .dropdown-togglea.btn-primary-pwna:link,
+a.btn-primary-pwna:visited:active,
+a.btn-primary-pwna:visited.active,
+.open > .dropdown-togglea.btn-primary-pwna:visited,
+a.btn-primary-pwna:link:visited:active,
+a.btn-primary-pwna:link:visited.active,
+.open > .dropdown-togglea.btn-primary-pwna:link:visited,
+a.btn-primary-pwna:visited:link:active,
+a.btn-primary-pwna:visited:link.active,
+.open > .dropdown-togglea.btn-primary-pwna:visited:link {
+  background-image: none;
+}
+a.btn-primary-pwna.disabled,
+a.btn-primary-pwna[disabled],
+fieldset[disabled] a.btn-primary-pwna,
+a.btn-primary-pwna.disabled:hover,
+a.btn-primary-pwna[disabled]:hover,
+fieldset[disabled] a.btn-primary-pwna:hover,
+a.btn-primary-pwna.disabled:focus,
+a.btn-primary-pwna[disabled]:focus,
+fieldset[disabled] a.btn-primary-pwna:focus,
+a.btn-primary-pwna.disabled.focus,
+a.btn-primary-pwna[disabled].focus,
+fieldset[disabled] a.btn-primary-pwna.focus,
+a.btn-primary-pwna.disabled:active,
+a.btn-primary-pwna[disabled]:active,
+fieldset[disabled] a.btn-primary-pwna:active,
+a.btn-primary-pwna.disabled.active,
+a.btn-primary-pwna[disabled].active,
+fieldset[disabled] a.btn-primary-pwna.active,
+a.btn-primary-pwna:link.disabled,
+a.btn-primary-pwna:link[disabled],
+fieldset[disabled] a.btn-primary-pwna:link,
+a.btn-primary-pwna:link.disabled:hover,
+a.btn-primary-pwna:link[disabled]:hover,
+fieldset[disabled] a.btn-primary-pwna:link:hover,
+a.btn-primary-pwna:link.disabled:focus,
+a.btn-primary-pwna:link[disabled]:focus,
+fieldset[disabled] a.btn-primary-pwna:link:focus,
+a.btn-primary-pwna:link.disabled.focus,
+a.btn-primary-pwna:link[disabled].focus,
+fieldset[disabled] a.btn-primary-pwna:link.focus,
+a.btn-primary-pwna:link.disabled:active,
+a.btn-primary-pwna:link[disabled]:active,
+fieldset[disabled] a.btn-primary-pwna:link:active,
+a.btn-primary-pwna:link.disabled.active,
+a.btn-primary-pwna:link[disabled].active,
+fieldset[disabled] a.btn-primary-pwna:link.active,
+a.btn-primary-pwna:visited.disabled,
+a.btn-primary-pwna:visited[disabled],
+fieldset[disabled] a.btn-primary-pwna:visited,
+a.btn-primary-pwna:visited.disabled:hover,
+a.btn-primary-pwna:visited[disabled]:hover,
+fieldset[disabled] a.btn-primary-pwna:visited:hover,
+a.btn-primary-pwna:visited.disabled:focus,
+a.btn-primary-pwna:visited[disabled]:focus,
+fieldset[disabled] a.btn-primary-pwna:visited:focus,
+a.btn-primary-pwna:visited.disabled.focus,
+a.btn-primary-pwna:visited[disabled].focus,
+fieldset[disabled] a.btn-primary-pwna:visited.focus,
+a.btn-primary-pwna:visited.disabled:active,
+a.btn-primary-pwna:visited[disabled]:active,
+fieldset[disabled] a.btn-primary-pwna:visited:active,
+a.btn-primary-pwna:visited.disabled.active,
+a.btn-primary-pwna:visited[disabled].active,
+fieldset[disabled] a.btn-primary-pwna:visited.active,
+a.btn-primary-pwna:link:visited.disabled,
+a.btn-primary-pwna:link:visited[disabled],
+fieldset[disabled] a.btn-primary-pwna:link:visited,
+a.btn-primary-pwna:link:visited.disabled:hover,
+a.btn-primary-pwna:link:visited[disabled]:hover,
+fieldset[disabled] a.btn-primary-pwna:link:visited:hover,
+a.btn-primary-pwna:link:visited.disabled:focus,
+a.btn-primary-pwna:link:visited[disabled]:focus,
+fieldset[disabled] a.btn-primary-pwna:link:visited:focus,
+a.btn-primary-pwna:link:visited.disabled.focus,
+a.btn-primary-pwna:link:visited[disabled].focus,
+fieldset[disabled] a.btn-primary-pwna:link:visited.focus,
+a.btn-primary-pwna:link:visited.disabled:active,
+a.btn-primary-pwna:link:visited[disabled]:active,
+fieldset[disabled] a.btn-primary-pwna:link:visited:active,
+a.btn-primary-pwna:link:visited.disabled.active,
+a.btn-primary-pwna:link:visited[disabled].active,
+fieldset[disabled] a.btn-primary-pwna:link:visited.active,
+a.btn-primary-pwna:visited:link.disabled,
+a.btn-primary-pwna:visited:link[disabled],
+fieldset[disabled] a.btn-primary-pwna:visited:link,
+a.btn-primary-pwna:visited:link.disabled:hover,
+a.btn-primary-pwna:visited:link[disabled]:hover,
+fieldset[disabled] a.btn-primary-pwna:visited:link:hover,
+a.btn-primary-pwna:visited:link.disabled:focus,
+a.btn-primary-pwna:visited:link[disabled]:focus,
+fieldset[disabled] a.btn-primary-pwna:visited:link:focus,
+a.btn-primary-pwna:visited:link.disabled.focus,
+a.btn-primary-pwna:visited:link[disabled].focus,
+fieldset[disabled] a.btn-primary-pwna:visited:link.focus,
+a.btn-primary-pwna:visited:link.disabled:active,
+a.btn-primary-pwna:visited:link[disabled]:active,
+fieldset[disabled] a.btn-primary-pwna:visited:link:active,
+a.btn-primary-pwna:visited:link.disabled.active,
+a.btn-primary-pwna:visited:link[disabled].active,
+fieldset[disabled] a.btn-primary-pwna:visited:link.active {
+  background-color: #ebebeb;
+  border-color: transparent;
+}
+a.btn-primary-pwna .badge,
+a.btn-primary-pwna:link .badge,
+a.btn-primary-pwna:visited .badge,
+a.btn-primary-pwna:link:visited .badge,
+a.btn-primary-pwna:visited:link .badge {
+  color: #ebebeb;
+  background-color: #e22427;
 }
 .btn-group,
 .btn-group-vertical {
@@ -8562,6 +8856,141 @@ a.list-group-item-danger.active:focus {
     width: 900px;
   }
 }
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.bootstrap-dialog {
+  /* dialog types */
+  /**
+     * Icon animation
+     * Copied from font-awesome: http://fontawesome.io/
+     **/
+  /** End of icon animation **/
+}
+.bootstrap-dialog .modal-header {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.bootstrap-dialog .bootstrap-dialog-title {
+  color: #fff;
+  display: inline-block;
+}
+.bootstrap-dialog .bootstrap-dialog-button-icon {
+  margin-right: 3px;
+}
+.bootstrap-dialog .bootstrap-dialog-close-button {
+  float: right;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  opacity: 0.9;
+}
+.bootstrap-dialog .bootstrap-dialog-close-button:hover {
+  cursor: pointer;
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+.bootstrap-dialog.type-default .modal-header {
+  background-color: #fff;
+}
+.bootstrap-dialog.type-default .bootstrap-dialog-title {
+  color: #333;
+}
+.bootstrap-dialog.type-info .modal-header {
+  background-color: #5bc0de;
+}
+.bootstrap-dialog.type-primary .modal-header {
+  background-color: #428bca;
+}
+.bootstrap-dialog.type-success .modal-header {
+  background-color: #5cb85c;
+}
+.bootstrap-dialog.type-warning .modal-header {
+  background-color: #f0ad4e;
+}
+.bootstrap-dialog.type-danger .modal-header {
+  background-color: #d9534f;
+}
+.bootstrap-dialog.size-large .bootstrap-dialog-title {
+  font-size: 24px;
+}
+.bootstrap-dialog.size-large .bootstrap-dialog-close-button {
+  font-size: 30px;
+}
+.bootstrap-dialog.size-large .bootstrap-dialog-message {
+  font-size: 18px;
+}
+.bootstrap-dialog .icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
 .popover {
   position: absolute;
   top: 0;
@@ -8570,7 +8999,7 @@ a.list-group-item-danger.active:focus {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'open_sansregular', 'sans-serif';
+  font-family: 'berliner_groteskregular', 'sans-serif';
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -8905,29 +9334,37 @@ a.list-group-item-danger.active:focus {
     bottom: 20px;
   }
 }
+#home-carousel {
+  max-width: 1800px;
+  margin: 0 auto;
+}
 #home-carousel .item img {
-  min-width: 100%;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 #home-carousel .carousel-indicators {
-  top: 10%;
-  right: 15%;
-  left: auto;
-  bottom: auto;
-  width: 16%;
-  position: absolute;
+  bottom: 5%;
   margin: 0;
+  width: 90%;
+  max-width: 992px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
 }
 #home-carousel .carousel-indicators li {
   background-color: transparent;
   -webkit-border-radius: 0;
   border-radius: 0;
   border-size: display: block;
+  width: 21%;
+  max-width: 145px;
   height: auto;
-  width: 100%;
-  margin: 4% 0;
+  margin: 0 1%;
 }
 #home-carousel .carousel-indicators li img {
   width: 100%;
@@ -8960,9 +9397,12 @@ a.list-group-item-danger.active:focus {
 #home-carousel .carousel-caption .btn {
   margin-top: 15px;
   text-align: left;
-  -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
   border-radius: 25px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   color: #333333;
   display: table;
 }
@@ -8990,9 +9430,11 @@ a.list-group-item-danger.active:focus {
     font-size: 18px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   #home-carousel .carousel-indicators {
-    top: 10px;
+    top: 0;
+    bottom: auto;
+    margin-top: 37%;
   }
   #home-carousel .carousel-caption {
     position: static;
@@ -9028,18 +9470,51 @@ a.list-group-item-danger.active:focus {
 .carousel-fade .carousel-control {
   z-index: 2;
 }
+form.sign-up .input-group .form-control,
+form.sign-up .input-group select,
+form.sign-up .input-group div.responsive input[type="text"],
+form.sign-up .input-group div.responsive input[type="number"],
+form.sign-up .input-group div.responsive input[type="password"],
+form.sign-up .input-group div.responsive textarea,
+form.sign-up .input-group #login-div-content .login-form #USERNAME,
+form.sign-up .input-group #login-div-content .login-form #Password,
+form.sign-up .input-group #gigyaRegisterForm .fieldInput input,
+form.sign-up .input-group #gigyaLoginForm .fieldInput input,
+form.sign-up .input-group #gigyaRegisterForm input[type="text"],
+form.sign-up .input-group #gigyaLoginForm input[type="text"] {
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-width: 0px;
+  z-index: 2;
+}
+form.sign-up .input-group-sm > .input-group-btn > .btn {
+  text-transform: uppercase;
+  color: inherit;
+  font-weight: bold;
+  border-width: 0px;
+  z-index: 1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+form.sign-up .input-group-sm > .input-group-btn > .btn:hover {
+  text-decoration: none;
+}
 header {
   border-top: 5px solid #186273;
 }
 header a.logo {
   display: block;
   padding-top: 18px;
-  max-width: 350px;
+  max-width: 375px;
 }
 header a.logo img {
   width: 100%;
 }
-header .top-donate {
+header .btn.top-donate {
   display: block;
   width: 100%;
   margin: 5px 0;
@@ -9060,53 +9535,60 @@ header .top-signup label {
   line-height: 30px;
   margin-bottom: 0px;
 }
-header .top-signup .form-control,
-header .top-signup select,
-header .top-signup div.responsive input[type="text"],
-header .top-signup div.responsive input[type="number"],
-header .top-signup div.responsive input[type="password"],
-header .top-signup div.responsive textarea,
-header .top-signup #login-div-content .login-form #USERNAME,
-header .top-signup #login-div-content .login-form #Password,
-header .top-signup #gigyaRegisterForm .fieldInput input,
-header .top-signup #gigyaLoginForm .fieldInput input,
-header .top-signup #gigyaRegisterForm input[type="text"],
-header .top-signup #gigyaLoginForm input[type="text"] {
-  border-top-left-radius: 13px;
-  border-bottom-left-radius: 13px;
+header .top-signup .input-group .form-control,
+header .top-signup .input-group select,
+header .top-signup .input-group div.responsive input[type="text"],
+header .top-signup .input-group div.responsive input[type="number"],
+header .top-signup .input-group div.responsive input[type="password"],
+header .top-signup .input-group div.responsive textarea,
+header .top-signup .input-group #login-div-content .login-form #USERNAME,
+header .top-signup .input-group #login-div-content .login-form #Password,
+header .top-signup .input-group #gigyaRegisterForm .fieldInput input,
+header .top-signup .input-group #gigyaLoginForm .fieldInput input,
+header .top-signup .input-group #gigyaRegisterForm input[type="text"],
+header .top-signup .input-group #gigyaLoginForm input[type="text"] {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid #a9a9a9;
   border-right-width: 0px;
-  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
-header .top-signup .form-control:focus,
-header .top-signup select:focus,
-header .top-signup div.responsive input[type="text"]:focus,
-header .top-signup div.responsive input[type="number"]:focus,
-header .top-signup div.responsive input[type="password"]:focus,
-header .top-signup div.responsive textarea:focus,
-header .top-signup #login-div-content .login-form #USERNAME:focus,
-header .top-signup #login-div-content .login-form #Password:focus,
-header .top-signup #gigyaRegisterForm .fieldInput input:focus,
-header .top-signup #gigyaLoginForm .fieldInput input:focus,
-header .top-signup #gigyaRegisterForm input[type="text"]:focus,
-header .top-signup #gigyaLoginForm input[type="text"]:focus {
+header .top-signup .input-group .form-control:focus,
+header .top-signup .input-group select:focus,
+header .top-signup .input-group div.responsive input[type="text"]:focus,
+header .top-signup .input-group div.responsive input[type="number"]:focus,
+header .top-signup .input-group div.responsive input[type="password"]:focus,
+header .top-signup .input-group div.responsive textarea:focus,
+header .top-signup .input-group #login-div-content .login-form #USERNAME:focus,
+header .top-signup .input-group #login-div-content .login-form #Password:focus,
+header .top-signup .input-group #gigyaRegisterForm .fieldInput input:focus,
+header .top-signup .input-group #gigyaLoginForm .fieldInput input:focus,
+header .top-signup .input-group #gigyaRegisterForm input[type="text"]:focus,
+header .top-signup .input-group #gigyaLoginForm input[type="text"]:focus {
   border-color: #a9a9a9;
 }
 header .top-signup .input-group-sm > .input-group-btn > .btn {
-  border: 1px solid #a9a9a9;
   border-top-right-radius: 13px;
   border-bottom-right-radius: 13px;
-  border-left-width: 0px;
+  border-width: 1px;
+  border-color: #a9a9a9;
   z-index: 1;
-  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+header .top-signup .input-group-sm > .input-group-btn > .btn span {
+  display: none !important;
 }
 @media (min-width: 992px) {
-  header .top-donate {
+  header #top-nav {
+    margin-top: -7px;
+  }
+  header .btn.top-donate {
     display: inline;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   header .top-signup {
     max-width: 250px;
@@ -9120,13 +9602,13 @@ footer .container {
   padding: 10px 0 0;
 }
 footer a {
-  color: #ffffff;
+  color: #99afbd;
 }
 footer a:link,
 footer a:hover,
 footer a:focus,
 footer a:visited {
-  color: #ffffff;
+  color: #99afbd;
 }
 footer p {
   margin-bottom: 25px;
@@ -9134,24 +9616,40 @@ footer p {
 footer p.links-group a {
   display: block;
   margin-bottom: 5px;
-  line-height: 1.33;
+  line-height: 1.2em;
+}
+footer p.links-group a.main {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+footer p.links-group a.main:link,
+footer p.links-group a.main:hover,
+footer p.links-group a.main:focus,
+footer p.links-group a.main:visited {
+  color: #ffffff;
 }
 footer .btn.donate {
   color: #186273;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
-footer form.sign-up {
-  background-color: #1c7488;
-  max-width: 320px;
+footer div.sign-up {
+  padding: 20px 30px;
+  background-color: #40798a;
+  margin-bottom: 25px;
 }
 footer .social-icons {
   text-align: center;
+}
+footer .social-icons a {
+  margin-right: 10px;
 }
 footer .social-icons a:link,
 footer .social-icons a:hover,
 footer .social-icons a:focus,
 footer .social-icons a:visited {
+  color: #ffffff;
   font-size: 0.8em;
   text-decoration: none;
 }
@@ -9162,8 +9660,34 @@ footer .social-icons .fa-inverse:hover,
 footer .social-icons .fa-inverse:focus {
   color: #ffcd0a;
 }
+footer .donate,
 footer .badges {
   text-align: center;
+}
+footer .separator {
+  border-top: 1px solid #99afbd;
+}
+footer .address {
+  font-size: 85%;
+  margin-top: 20px;
+}
+footer .address a {
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  footer .social-icons,
+  footer p.donate {
+    text-align: left;
+    padding: 0 15px;
+  }
+  footer div.sign-up,
+  footer .social-icons,
+  footer p.donate {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+  }
 }
 @media (min-width: 992px) {
   footer .container {
@@ -9173,55 +9697,89 @@ footer .badges {
     text-align: right;
   }
 }
-form.sign-up {
-  background-color: #8c8c8e;
-  color: #ffffff;
-  padding: 20px 30px;
-  margin-bottom: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-form.sign-up p {
-  margin-bottom: 5px;
-}
-form.sign-up .form-control,
-form.sign-up select,
-form.sign-up div.responsive input[type="text"],
-form.sign-up div.responsive input[type="number"],
-form.sign-up div.responsive input[type="password"],
-form.sign-up div.responsive textarea,
-form.sign-up #login-div-content .login-form #USERNAME,
-form.sign-up #login-div-content .login-form #Password,
-form.sign-up #gigyaRegisterForm .fieldInput input,
-form.sign-up #gigyaLoginForm .fieldInput input,
-form.sign-up #gigyaRegisterForm input[type="text"],
-form.sign-up #gigyaLoginForm input[type="text"] {
-  -moz-border-radius: 13px;
-  -webkit-border-radius: 13px;
-  border-radius: 13px;
-  border-top-right-radius: 13px !important;
-  border-bottom-right-radius: 13px !important;
-  border-width: 0px;
-  z-index: 2;
-}
-form.sign-up .input-group-sm > .input-group-btn > .btn {
-  text-transform: uppercase;
-  color: inherit;
-  font-weight: bold;
-  border-width: 0px;
-  z-index: 1;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-form.sign-up .input-group-sm > .input-group-btn > .btn:hover {
-  text-decoration: none;
-}
 .page-content {
   padding: 40px 0 ;
 }
+.social-share:before,
+.social-share:after {
+  content: " ";
+  display: table;
+}
+.social-share:after {
+  clear: both;
+}
+.social-share:before,
+.social-share:after {
+  content: " ";
+  display: table;
+}
+.social-share:after {
+  clear: both;
+}
+.social-share a {
+  float: left;
+  float: left !important;
+  color: #a9a9a9;
+  margin: 0 5px;
+}
+.hp .social-share {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  z-index: 10;
+  padding: 10px;
+  background-color: #ffffff;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 0px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 1px 4px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 3px rgba(0, 0, 0, 0.2);
+}
+.water-mark {
+  z-index: 1;
+}
+.water-mark:after {
+  content: "";
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+  position: absolute;
+  width: 80%;
+  max-width: 117px;
+  height: 0px;
+  padding-bottom: 100%;
+  background: url(../images/logo_water_mark.png) no-repeat center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  z-index: -1;
+}
+.social-share-container {
+  position: relative;
+}
 .block-cnt {
   max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 }
 .outcome {
@@ -9231,10 +9789,11 @@ form.sign-up .input-group-sm > .input-group-btn > .btn:hover {
   border-width: 0 0 0 10px;
   border-style: solid;
   border-color: #a9a9a9;
+  position: relative;
   padding: 10px 0;
 }
 .outcome strong {
-  font-size: 20px;
+  font-size: 40px;
 }
 .outcome span {
   display: inline-block;
@@ -9250,14 +9809,51 @@ form.sign-up .input-group-sm > .input-group-btn > .btn:hover {
 .outcome.theme3 {
   border-color: #ffcd0a;
 }
-@media (min-width: 992px) {
+@media (min-width: 480px) {
   .outcome {
+    min-height: 137px;
     border-width: 10px 0 0 0;
-    padding: 30px 0;
+    padding: 20px 0;
+    z-index: 1;
+  }
+  .outcome:after {
+    content: "";
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    filter: alpha(opacity=10);
+    position: absolute;
+    width: 80%;
+    max-width: 117px;
+    height: 0px;
+    padding-bottom: 100%;
+    background: url(../images/logo_water_mark.png) no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    z-index: -1;
   }
   .outcome span {
     display: block;
   }
+}
+.hp-sign-up {
+  background-color: #8c8c8e;
+  color: #ffffff;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 137px;
+}
+.hp-sign-up label {
+  margin-bottom: 15px;
 }
 .margin-none {
   margin: 0;

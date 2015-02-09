@@ -1,27 +1,33 @@
 #home-carousel{
+    max-width:1800px;
+        margin: 0 auto;
     .item{
         img{
-            min-width: 100%;
+            width: 100%;
+            
             .center-block();
         }
     }
     .carousel-indicators {
-        top: 10%;
-        right: 15%;
-        left: auto;
-        bottom: auto;
-        width: 16%;
-        position: absolute;
+        //left: auto;
+        bottom: 5%;
+        //top: 0;
         margin: 0;
+        width: 90%;
+        max-width: @screen-md;
+        
+        .h-align();
+        position: absolute;
         li {
             background-color: transparent;
             -webkit-border-radius: 0;
             border-radius: 0;
             border-size: 
             display: block;
+            width: 21%;
+            max-width: 145px;
             height: auto;
-            width: 100%;
-            margin: 4% 0;
+            margin: 0 1%;
             img {
                 width: 100%;
                 display: block;
@@ -81,10 +87,11 @@
             }
         }
     }
-    @media(max-width: @screen-md) {
+    @media(max-width: @screen-sm) {
         .carousel-indicators{
-            top: 10px;
-            
+            top: 0;
+            bottom: auto;
+            margin-top: 37%;
         }
         .carousel-caption{
             position: static;

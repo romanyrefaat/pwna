@@ -6,15 +6,28 @@
 // Base styles
 // --------------------------------------------------
 .button,div.responsive .button, .Button, a.btn {
+    border: none;
+    
+    background-image: none;
     .box-shadow(1px 1px 3px rgba(0,0,0,.2));
     //.border-radius(15px);
     .transition(all 0.3s);
     .text-uppercase;
 }
-a.btn-default{
-    .button-size(@padding-base-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+a.btn-default-pwna{
+    .button-variant(@white; @brand-yellow; transparent);
+    .button-size(@padding-large-vertical; @padding-base-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+    &:link,
+    &:visited{
+        &:extend(a.btn-default-pwna all);
+    }
     //font-size: 2em;
 }
-.btn-primary{
+a.btn-primary-pwna{
+    .button-variant(@brand-red; @brand-gray-light; transparent);
     .button-size(@padding-large-vertical; @padding-base-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+    &:link,
+    &:visited{
+        &:extend(a.btn-primary-pwna all);
+    }
 }

@@ -1,15 +1,32 @@
-
+form.sign-up{
+        .input-group .form-control{
+            .border-radius(13px);
+            border-width: 0px;
+            z-index: 2;
+        }
+        .input-group-sm > .input-group-btn > .btn{
+            .text-uppercase;
+            color: inherit;
+            font-weight: bold;
+            border-width: 0px;
+            z-index: 1;
+            .box-shadow(none);
+            &:hover{
+                text-decoration: none;
+            }
+        }
+}
 header{
     border-top: 5px solid @brand-turquoise;
     a.logo{
         display: block;
         padding-top: 18px;
-        max-width:350px; 
+        max-width:375px; 
         img{
             width: 100%;
         }
     }
-    .top-donate{
+    .btn.top-donate{
         .btn-block;
         margin: @margin-small-vertical 0;
         padding-left: 0;
@@ -27,28 +44,33 @@ header{
             line-height: @input-height-small;
             margin-bottom: 0px;
         }
-        .form-control{
-            border-top-left-radius: 13px;
-            border-bottom-left-radius: 13px;
+        .input-group .form-control{
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border: 1px solid @gray;
             border-right-width: 0px;
-            .box-shadow(0px 2px 6px rgba(0,0,0,.2));
+            .box-shadow(-1px 1px 2px rgba(0,0,0,.2));
             z-index: 2;
             &:focus{border-color:@gray;}
         }
         .input-group-sm > .input-group-btn > .btn{
-            border: 1px solid @input-border;
             border-top-right-radius: 13px;
             border-bottom-right-radius: 13px;
-            border-left-width: 0px;
+            border-width: 1px;
+            border-color: @gray;
             z-index: 1;
-            .box-shadow(0px 2px 6px rgba(0,0,0,.2));
+            .box-shadow(0px 1px 2px rgba(0,0,0,.2));
+            span{.hide;}
         }
     }
     @media (min-width: @screen-md-min) {
-        .top-donate{
+        #top-nav{
+            margin-top:-7px;
+        }
+        .btn.top-donate{
             display: inline;
-            padding-left: @padding-large-horizontal;
-            padding-right: @padding-large-horizontal;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         .top-signup{
             max-width: 250px;
@@ -66,12 +88,12 @@ footer{
         padding: @padding-base-vertical 0 0;
     }
     a {
-        color: @white;
+        color: @turquoise-lighter;
         &:link, 
         &:hover,
         &:focus,
         &:visited {
-          color: @white;
+          color: @turquoise-lighter;
         }
     }
     p{
@@ -81,24 +103,39 @@ footer{
         a{
             display: block;
             margin-bottom: 5px;
-            line-height: @line-height-large;
+            //line-height: @line-height-large;
+            line-height: 1.2em;
+            &.main{
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: @white;
+                &:link, 
+                &:hover,
+                &:focus,
+                &:visited {
+                  color: @white;
+                }
+            }
         }
     }
     .btn.donate{
         color: @brand-turquoise;
         .box-shadow(2px 2px 4px rgba(0,0,0,.8));
     }
-    form.sign-up{
-        background-color: lighten(@brand-turquoise, 5%);
-        max-width: 320px;
+    div.sign-up{
+        padding: @padding-large-vertical @padding-large-horizontal;
+        background-color: @turquoise-light;
+        margin-bottom: 25px;
     }
     .social-icons{
         .text-center;
         a {
+            margin-right: 10px;
             &:link, 
             &:hover,
             &:focus,
             &:visited {
+                color: @white;
                 font-size: 0.8em;
                 text-decoration: none;
             }
@@ -111,8 +148,26 @@ footer{
             }
         }
     }
-    .badges{
+    .donate, .badges{
         .text-center;
+    }
+    .separator{
+        border-top: 1px solid @turquoise-lighter;
+    }
+    .address{
+        .small;
+        margin-top: 20px;
+        a{color:@white;}
+    }
+    @media (min-width: @screen-sm-min) {
+        .social-icons, p.donate{
+            .text-left;
+            padding: 0 @padding-base-horizontal;
+        }
+        div.sign-up, .social-icons, p.donate{
+            .center-block;
+            max-width: 320px;
+        }
     }
     @media (min-width: @screen-md-min) {
         .container{
@@ -124,41 +179,56 @@ footer{
     }
 }
 
-form.sign-up{
-        background-color: @gray-dark;
-        color: @white;
-        padding: @padding-large-vertical @padding-large-horizontal;
-        margin-bottom: @margin-base-vertical;
-        .center-block;
-        p{
-            margin-bottom: 5px;
-        }
-        .form-control{
-            .border-radius(13px);
-            border-top-right-radius: 13px !important;
-            border-bottom-right-radius: 13px !important;
-            border-width: 0px;
-            z-index: 2;
-        }
-        .input-group-sm > .input-group-btn > .btn{
-            .text-uppercase;
-            color: inherit;
-            font-weight: bold;
-            border-width: 0px;
-            z-index: 1;
-            .box-shadow(none);
-            &:hover{
-                text-decoration: none;
-            }
-        }
-}
+
 .page-content{
     padding: 40px 0 ;
 }
 
+.social-share{
+    .clearfix;
+    a{
+        .pull-left;
+        color: @gray;
+        margin: 0 @margin-xs-horizontal;
+    }
+    .hp & {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        z-index: 10;
+        padding: 10px;
+        background-color: @white;
+        .border-radiuses(0px,5px,5px,0px);
+        .box-shadow(1px 4px 3px rgba(0,0,0,.2));
+    }
+}
+
+.water-mark{
+    z-index: 1;
+    &:after{
+        content: "";
+        .v-h-align();
+        .opacity(0.1);
+        position: absolute;
+        width: 80%;
+        max-width: 117px;
+        height: 0px;
+        padding-bottom: 100%;
+        background: url(../images/logo_water_mark.png) no-repeat center center;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        z-index: -1;
+    }
+}
 // homepage
+.social-share-container{
+    position: relative;
+}
 .block-cnt{
     max-width: 400px;
+    .center-block;
     margin-bottom: @padding-large-horizontal;
 }
 .outcome{
@@ -168,9 +238,11 @@ form.sign-up{
     border-width: 0 0 0 10px;
     border-style: solid;
     border-color: @gray;
+    position: relative;
     padding: 10px 0;
     strong{
-        font-size: 20px;
+        font-size: 40px;
+        
     }
     span{
         display: inline-block;
@@ -180,11 +252,24 @@ form.sign-up{
     &.theme1{border-color: @brand-red;}
     &.theme2{border-color: @brand-purple;}
     &.theme3{border-color: @brand-yellow;}
-    @media (min-width: @screen-md-min) {
+    @media (min-width: @screen-xs-min) {
+        min-height:137px;
         border-width: 10px 0 0 0;
-        padding: 30px 0;
+        padding: 20px 0;
+        .water-mark;
         span{
             display: block;
         }
+    }
+}
+.hp-sign-up{
+    background-color: @gray-dark;
+    color: @white;
+    padding: @padding-large-vertical @padding-large-horizontal;
+    margin-bottom: @margin-base-vertical;
+    .center-block;
+    height: 137px;
+    label{
+        margin-bottom: 15px;
     }
 }

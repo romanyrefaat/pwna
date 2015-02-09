@@ -1,66 +1,42 @@
-<ul id="menu" class="[[?xx::x[[S1:cons_id]]x::::min]]">
-    <li class="t1">
-        <a href="PageServer?pagename=about_abilityfirst">Information</a>
-        <ul>
-            <li><a href="PageServer?pagename=about_abilityfirst">About AbilityFirst</a></li>
-            <li><a href="PageServer?pagename=centers_list&amp;pg=locations&amp;search_type=center">AbilityFirst Locations</a></li>
-            <li><a href="PageServer?pagename=event_details">Event Details</a></li>
-            <li><a href="PageServer?pagename=sponsors">Sponsors</a></li>
-            <li><a href="PageServer?pagename=incentives">Incentives</a></li>
-            <li><a href="PageServer?pagename=contact_us">Contact Us</a></li>
+<ul class="nav navbar-nav">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Who We Are</a>
+        <ul class="dropdown-menu multi-column" role="menu">
+            <li>
+                <ul class="col-md-4">
+                    <li role="presentation" class="dropdown-header">Our Organization</li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Directors and Staff</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+                <ul class="col-md-4">
+                    <li role="presentation" class="dropdown-header">Press and Media</li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Releases</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Media Contact</a></li>
+                </ul>
+                <ul class="col-md-4">
+                    <li role="presentation" class="dropdown-header">Contact</li>
+                    <li class="text">
+                        <address>
+                            500 E. Peyton St.<br/>
+                            Sherman, TX 75090<br/>
+                            1-800-416-8102<br/>
+                            <a href="#">info@pwna.org</a>
+                        </address>
+                    </li>
+                </ul>
+            </li>
+
         </ul>
     </li>
-    <li class="t2">
-        <a href="PageServer?pagename=participate">Participate</a>
-        <ul>
-            <li><a href="PageServer?pagename=participate">Ways to Participate</a></li>
-            <li><a href="PageServer?pagename=corporate_teams">Corporate Teams</a></li>
-            <li><a href="PageServer?pagename=become_sponsor">Become a Sponsor</a></li>
-            <li><a href="PageServer?pagename=join_expo">Join our Expo</a></li>
-            <li><a href="http://[[S29:DOMAIN]]/volunteer">Volunteer</a></li>
-        </ul>
-    </li>
-    <li><a href="http://[[S29:DOMAIN]]/stroll_roll_donate">Donate</a></li>
-    [[?xx::x[[S1:cons_id]]x::<li class="t2"><a href="http://[[S29:DOMAIN]]/stroll_roll_register">Register</a></li>::]]
-    <li class="t1">
-        [[?xx::x[[S1:cons_id]]x::
-        [[?x10x::x[[S4]]x::
-        <a href="[[S8]]">Log In</a>
-        ::
-        <a href="PageServer?pagename=login&NEXTURL=[[T1:PageServer?pagename=my_centers]]">Log In</a>
-        ]]
-        ::
-        <a href="PageServer?pagename=my_centers">
-            [[?xx::x[[S1:first_name]]x::
-            [[S1:user_name]]
-            ::
-            [[S1:first_name]]
-            ]]
-        </a>
-        <ul>
-            [[?[[S80:REGISTERED]]::TRUE::
-            <li>
-                <a class="js--my-pc-link" href="PageServer?pagename=my_centers">My Participant Center</a>
-            </li>
-            <li>
-                <a class="js--my-personal-link" href="PageServer?pagename=my_centers">My Personal Page</a>
-            </li>
-            ::]]
-            <li>
-                <a class="js--my-center-link" href="PageServer?pagename=my_centers">My AbilityFirst Center</a>
-            </li>
-            <li>
-                <a href="http://[[S29:DOMAIN]]/my_profile">Edit Profile</a>
-            </li>
-            <li>
-                <a href="UserLogin?logout=&amp;NEXTURL=[[T1:[[E130:"[[S8]]" "&amp;" "&" replaceall]]]]">Log Out</a>
-            </li>
-        </ul>
-        ]]
-    </li>
+    <li class="active"><a href="#">What We Do</a></li>
+    <li><a href="#">Our Impact</a></li>
+    <li><a href="#">Resources</a></li>
+    <li><a href="#">How To Help</a></li>                            
 </ul>
-[[?xx::x[[S1:cons_id]]x::::
-    [[?[[S80:REGISTERED]]::TRUE::
-    <div class="hidden js--my-center-list">[[S39:0*black*12px*false*1*0*0*Centers:true:stroll_roll:2015]]</div>
-    ::]]
-]]
