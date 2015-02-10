@@ -147,9 +147,10 @@ div.appArea,
   font-weight: 400;
   line-height: 1.1;
   color: #000000;
+  text-transform: uppercase;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 21px;
 }
 .ObjTitle small,
 .cons-prof h3 small,
@@ -1277,17 +1278,17 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 28px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 23px;
 }
 h3,
 .h3,
 div.registration-page-container div.section-header,
 #login-div-content .banner-header {
-  font-size: 24px;
+  font-size: 21px;
 }
 h4,
 .h4 {
@@ -1549,6 +1550,7 @@ div.registration-page-container div.section-header,
   font-weight: 400;
   line-height: 1.1;
   color: #000000;
+  text-transform: uppercase;
 }
 h1 small,
 .h1 small,
@@ -1597,6 +1599,7 @@ h5,
 .h5,
 h6,
 .h6 {
+  text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'berliner_groteskregular', 'sans-serif';
@@ -1619,17 +1622,17 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 28px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 23px;
 }
 h3,
 .h3,
 div.registration-page-container div.section-header,
 #login-div-content .banner-header {
-  font-size: 24px;
+  font-size: 21px;
 }
 h4,
 .h4 {
@@ -5851,8 +5854,8 @@ div.responsive #login-div-content button,
 div.responsive #login-div-content .ft button {
   border: none;
   background-image: none;
-  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -9387,12 +9390,12 @@ button.close {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 6% 3% 40px;
   text-align: left;
-  font-size: 24px;
+  font-size: 21px;
 }
 #home-carousel .carousel-caption h4 {
   color: #ffffff;
   line-height: 40px;
-  font-size: 24px;
+  font-size: 21px;
 }
 #home-carousel .carousel-caption .btn {
   margin-top: 15px;
@@ -9502,6 +9505,40 @@ form.sign-up .input-group-sm > .input-group-btn > .btn {
 }
 form.sign-up .input-group-sm > .input-group-btn > .btn:hover {
   text-decoration: none;
+}
+.link-white,
+footer p.links-group a.main,
+footer .address a,
+.side-box a {
+  color: #ffffff;
+}
+.link-white:link,
+footer p.links-group a.main:link,
+footer .address a:link,
+.side-box a:link {
+  color: #ffffff;
+}
+.link-white:hover,
+.link-white:focus,
+footer p.links-group a.main:hover,
+footer p.links-group a.main:focus,
+footer .address a:hover,
+footer .address a:focus,
+.side-box a:hover,
+.side-box a:focus {
+  color: #ffffff;
+}
+.link-underline,
+.side-box a {
+  text-decoration: underline;
+}
+.link-underline:link,
+.link-underline:hover,
+.link-underline:focus,
+.side-box a:link,
+.side-box a:hover,
+.side-box a:focus {
+  text-decoration: underline;
 }
 header {
   border-top: 5px solid #186273;
@@ -9621,13 +9658,6 @@ footer p.links-group a {
 footer p.links-group a.main {
   font-weight: bold;
   margin-bottom: 10px;
-  color: #ffffff;
-}
-footer p.links-group a.main:link,
-footer p.links-group a.main:hover,
-footer p.links-group a.main:focus,
-footer p.links-group a.main:visited {
-  color: #ffffff;
 }
 footer .btn.donate {
   color: #186273;
@@ -9671,9 +9701,6 @@ footer .address {
   font-size: 85%;
   margin-top: 20px;
 }
-footer .address a {
-  color: #ffffff;
-}
 @media (min-width: 768px) {
   footer .social-icons,
   footer p.donate {
@@ -9698,7 +9725,10 @@ footer .address a {
   }
 }
 .page-content {
-  padding: 40px 0 ;
+  padding: 30px 0 ;
+}
+.page-content.hp {
+  padding: 40px 0;
 }
 .social-share:before,
 .social-share:after {
@@ -9774,6 +9804,12 @@ footer .address a {
 }
 .social-share-container {
   position: relative;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+.social-share-container.hp {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .block-cnt {
   max-width: 400px;
@@ -9854,6 +9890,48 @@ footer .address a {
 }
 .hp-sign-up label {
   margin-bottom: 15px;
+}
+div.page-title {
+  background-color: #e22427;
+}
+div.page-title h1 {
+  margin: 0px;
+  line-height: 2.5;
+  color: #ffffff;
+}
+.banner img {
+  float: right;
+  float: right !important;
+  margin-bottom: 30px;
+}
+.banner p {
+  font-size: 2em;
+}
+@media (min-width: 992px) {
+  .side-col {
+    padding-left: 60px;
+  }
+}
+.side-box {
+  position: relative;
+  min-height: 150px;
+  background-color: #c5664f;
+  color: #ffffff;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+}
+.side-box.fact {
+  text-align: center;
+  font-size: 1.5em;
+}
+.side-box.fact strong {
+  font-size: 1.8em;
+  display: block;
+  line-height: 1.7;
+}
+.side-box h4,
+.side-box h5 {
+  color: inherit;
 }
 .margin-none {
   margin: 0;

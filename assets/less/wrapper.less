@@ -16,6 +16,24 @@ form.sign-up{
             }
         }
 }
+.link-white{
+    color: @white;
+    &:link{
+        color: @white;
+    }
+    &:hover,
+    &:focus {
+        color: @white;
+    }
+}
+.link-underline{
+    text-decoration: underline;
+    &:link,
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
 header{
     border-top: 5px solid @brand-turquoise;
     a.logo{
@@ -108,13 +126,7 @@ footer{
             &.main{
                 font-weight: bold;
                 margin-bottom: 10px;
-                color: @white;
-                &:link, 
-                &:hover,
-                &:focus,
-                &:visited {
-                  color: @white;
-                }
+                &:extend(.link-white all);
             }
         }
     }
@@ -157,7 +169,9 @@ footer{
     .address{
         .small;
         margin-top: 20px;
-        a{color:@white;}
+        a{
+            &:extend(.link-white all);
+        }
     }
     @media (min-width: @screen-sm-min) {
         .social-icons, p.donate{
@@ -181,7 +195,10 @@ footer{
 
 
 .page-content{
-    padding: 40px 0 ;
+    padding: 30px 0 ;
+    &.hp{
+        padding: 40px 0;
+    }
 }
 
 .social-share{
@@ -225,6 +242,12 @@ footer{
 // homepage
 .social-share-container{
     position: relative;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    &.hp{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }
 .block-cnt{
     max-width: 400px;
@@ -271,5 +294,53 @@ footer{
     height: 137px;
     label{
         margin-bottom: 15px;
+    }
+}
+// Interior Page
+div.page-title{
+    background-color: @brand-red;
+    h1{
+        margin: 0px;
+        line-height: 2.5;
+        color: @white;
+    }
+}
+.banner{
+    img{
+        //.center-block;
+        .pull-right;
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 2em;
+    }
+}
+.side-col{
+    @media (min-width: @screen-md-min) {
+        padding-left: 60px;
+    }
+}
+.side-box{
+    position: relative;
+    min-height: 150px;
+    background-color: @brand-orange;
+    color: @white;
+    padding: @padding-large-vertical @padding-large-horizontal;
+    margin-bottom: 30px;
+    &.fact{
+        .text-center;
+        font-size: 1.5em;
+        strong{
+            font-size: 1.8em;
+            display: block;
+            line-height: 1.7;
+        }
+    }
+    h4,h5{
+        color: inherit;
+    }
+    a{
+        &:extend(.link-white all);
+        &:extend(.link-underline all);
     }
 }
