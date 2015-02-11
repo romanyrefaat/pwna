@@ -7,6 +7,21 @@
             
             .center-block();
         }
+        .caption-container{            
+            @media(min-width: @screen-sm) {
+                .container;
+                position: absolute;
+                top:9%;
+                left: 50%;
+                margin-left: -1 * (@container-sm/2);
+            }
+            @media(min-width: @screen-md) {
+                margin-left: -1 * (@container-md/2);
+            }
+            @media(min-width: @screen-lg) {
+                margin-left: -1 * (@container-lg/2);
+            }
+        }
     }
     .carousel-indicators {
         //left: auto;
@@ -45,29 +60,35 @@
     .carousel-caption{
         right: auto;
         bottom: auto;
-        top: 10%;
-        left: 9%;
-        width: 31%;
-        background-color: rgba(0,0,0,0.2);
-        padding: 6% 3% 40px;
+        top: 0;
+        left: 15px;
+        background-color: rgba(44,44,44,0.9);
+        padding: 2% 2%;
         text-align: left;
         font-size: @font-size-h3;
         h4{
             color: @white;
-            line-height: @line-height-computed*2;
+            line-height: @line-height-computed;
             font-size: @font-size-h3;
+            margin-top:0;
         }
         .btn{
             margin-top: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            line-height: 20px;
             text-align: left;
             .border-radius(25px);
             color: @black-light;
             display: table;
-            &:hover{color: @black;}
+            font-size: @font-size-small;
+            &:hover{background-color: @brand-gray;}
             span{
                 display: block;
                 margin: 0;
                 font-weight: bold;
+                line-height: 30px;
+                font-size: @font-size-h3;
             }
             .arrow{
                 .text-right;
@@ -79,7 +100,6 @@
     @media(max-width: @screen-lg) {
         .carousel-caption{
             font-size: @font-size-h4;
-            width: 40%;
             padding: 15px;
             h4{
                 line-height: @line-height-computed;
@@ -91,7 +111,7 @@
         .carousel-indicators{
             top: 0;
             bottom: auto;
-            margin-top: 37%;
+            margin-top: 32%;
         }
         .carousel-caption{
             position: static;

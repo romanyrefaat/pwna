@@ -104,16 +104,16 @@ input.btnLg,
   font-size: inherit;
 }
 div.responsive a {
-  color: #e22427;
+  color: #c5664f;
   text-decoration: none;
 }
 div.responsive a:link,
 div.responsive a:visited {
-  color: #e22427;
+  color: #c5664f;
 }
 div.responsive a:hover,
 div.responsive a:focus {
-  color: #a41618;
+  color: #964531;
   text-decoration: underline;
 }
 div.responsive a:focus {
@@ -483,7 +483,7 @@ div#team_find_search_results_container div.list-component-cell-column-join-link 
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #e22427;
+  color: #c5664f;
   font-weight: normal;
   border-radius: 0;
 }
@@ -537,7 +537,7 @@ div#team_find_search_results_container div.list-component-cell-column-join-link 
 }
 div#team_find_search_results_container div.list-component-cell-column-join-link a:hover,
 div#team_find_search_results_container div.list-component-cell-column-join-link a:focus {
-  color: #a41618;
+  color: #964531;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -1074,19 +1074,19 @@ textarea {
 }
 a,
 A {
-  color: #e22427;
+  color: #c5664f;
   text-decoration: none;
 }
 a:link,
 A:link {
-  color: #e22427;
+  color: #c5664f;
   text-decoration: none;
 }
 a:hover,
 A:hover,
 a:focus,
 A:focus {
-  color: #a41618;
+  color: #964531;
   text-decoration: underline;
 }
 a:focus,
@@ -5777,7 +5777,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #e22427;
+  color: #c5664f;
   font-weight: normal;
   border-radius: 0;
 }
@@ -5798,7 +5798,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #a41618;
+  color: #964531;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -5860,6 +5860,71 @@ div.responsive #login-div-content .ft button {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   text-transform: uppercase;
+  text-decoration: none !important;
+}
+.button:link .button:hover,
+.button:link div.responsive .button:hover,
+.button:link .Button:hover,
+.button:link a.btn:hover,
+div.responsive .button:link .button:hover,
+div.responsive .button:link div.responsive .button:hover,
+div.responsive .button:link .Button:hover,
+div.responsive .button:link a.btn:hover,
+.Button:link .button:hover,
+.Button:link div.responsive .button:hover,
+.Button:link .Button:hover,
+.Button:link a.btn:hover,
+a.btn:link .button:hover,
+a.btn:link div.responsive .button:hover,
+a.btn:link .Button:hover,
+a.btn:link a.btn:hover,
+.button:focus,
+div.responsive .button:focus,
+.Button:focus,
+a.btn:focus,
+#login-div-content input.uc-button:link #login-div-content input.uc-button:hover,
+#login-div-content input.uc-button:link div.responsive #login-div-content input.uc-button:hover,
+#login-div-content input.uc-button:link .Button:hover,
+#login-div-content input.uc-button:link a.btn:hover,
+div.responsive #login-div-content input.uc-button:link #login-div-content input.uc-button:hover,
+div.responsive #login-div-content input.uc-button:link div.responsive #login-div-content input.uc-button:hover,
+div.responsive #login-div-content input.uc-button:link .Button:hover,
+div.responsive #login-div-content input.uc-button:link a.btn:hover,
+.Button:link #login-div-content input.uc-button:hover,
+.Button:link div.responsive #login-div-content input.uc-button:hover,
+a.btn:link #login-div-content input.uc-button:hover,
+a.btn:link div.responsive #login-div-content input.uc-button:hover,
+#login-div-content input.uc-button:focus,
+div.responsive #login-div-content input.uc-button:focus,
+#login-div-content button:link #login-div-content button:hover,
+#login-div-content button:link div.responsive #login-div-content button:hover,
+#login-div-content button:link .Button:hover,
+#login-div-content button:link a.btn:hover,
+div.responsive #login-div-content button:link #login-div-content button:hover,
+div.responsive #login-div-content button:link div.responsive #login-div-content button:hover,
+div.responsive #login-div-content button:link .Button:hover,
+div.responsive #login-div-content button:link a.btn:hover,
+.Button:link #login-div-content button:hover,
+.Button:link div.responsive #login-div-content button:hover,
+a.btn:link #login-div-content button:hover,
+a.btn:link div.responsive #login-div-content button:hover,
+#login-div-content button:focus,
+div.responsive #login-div-content button:focus,
+#login-div-content .ft button:link #login-div-content .ft button:hover,
+#login-div-content .ft button:link div.responsive #login-div-content .ft button:hover,
+#login-div-content .ft button:link .Button:hover,
+#login-div-content .ft button:link a.btn:hover,
+div.responsive #login-div-content .ft button:link #login-div-content .ft button:hover,
+div.responsive #login-div-content .ft button:link div.responsive #login-div-content .ft button:hover,
+div.responsive #login-div-content .ft button:link .Button:hover,
+div.responsive #login-div-content .ft button:link a.btn:hover,
+.Button:link #login-div-content .ft button:hover,
+.Button:link div.responsive #login-div-content .ft button:hover,
+a.btn:link #login-div-content .ft button:hover,
+a.btn:link div.responsive #login-div-content .ft button:hover,
+#login-div-content .ft button:focus,
+div.responsive #login-div-content .ft button:focus {
+  text-decoration: none !important;
 }
 a.btn-default-pwna,
 a.btn-default-pwna:link,
@@ -5869,7 +5934,7 @@ a.btn-default-pwna:visited:link {
   color: #ffffff;
   background-color: #ffcd0a;
   border-color: transparent;
-  padding: 20px 15px;
+  padding: 8px 24px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 15px;
@@ -6034,7 +6099,7 @@ a.btn-primary-pwna:visited:link {
   color: #e22427;
   background-color: #ebebeb;
   border-color: transparent;
-  padding: 20px 15px;
+  padding: 8px 24px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 15px;
@@ -7210,7 +7275,7 @@ tbody.collapse.in {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #f9f9f9;
-  border-color: #e22427;
+  border-color: #c5664f;
 }
 .nav .nav-divider {
   height: 1px;
@@ -7373,7 +7438,7 @@ tbody.collapse.in {
 }
 .navbar {
   position: relative;
-  min-height: 60px;
+  min-height: 52px;
   margin-bottom: 0;
   border: 1px solid transparent;
 }
@@ -7480,10 +7545,10 @@ tbody.collapse.in {
 }
 .navbar-brand {
   float: left;
-  padding: 20px 15px;
+  padding: 16px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 60px;
+  height: 52px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -7503,8 +7568,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 13px;
-  margin-bottom: 13px;
+  margin-top: 9px;
+  margin-bottom: 9px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -7528,7 +7593,7 @@ tbody.collapse.in {
   }
 }
 .navbar-nav {
-  margin: 10px -15px;
+  margin: 8px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -7566,8 +7631,8 @@ tbody.collapse.in {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 .navbar-form {
@@ -7578,8 +7643,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -7754,20 +7819,20 @@ tbody.collapse.in {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .navbar-btn.btn-sm {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+.navbar-btn.btn-xs {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.navbar-btn.btn-xs {
-  margin-top: 19px;
-  margin-bottom: 19px;
-}
 .navbar-text {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 @media (min-width: 992px) {
   .navbar-text {
@@ -7810,7 +7875,7 @@ tbody.collapse.in {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #000000;
+  color: #8c8c8e;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -7851,7 +7916,7 @@ tbody.collapse.in {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #000000;
+    color: #8c8c8e;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
@@ -7871,14 +7936,14 @@ tbody.collapse.in {
   color: #000000;
 }
 .navbar-default .navbar-link:hover {
-  color: #000000;
+  color: #8c8c8e;
 }
 .navbar-default .btn-link {
   color: #000000;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #000000;
+  color: #8c8c8e;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
@@ -8233,7 +8298,7 @@ a.list-group-item:hover,
 a.list-group-item:focus {
   text-decoration: none;
   color: #000000;
-  background-color: #e22427;
+  background-color: #c5664f;
 }
 .list-group-item.disabled,
 .list-group-item.disabled:hover,
@@ -9347,6 +9412,55 @@ button.close {
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 768px) {
+  #home-carousel .item .caption-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    margin-left: -375px;
+  }
+  #home-carousel .item .caption-container > .navbar-header,
+  #home-carousel .item .caption-container > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #home-carousel .item .caption-container {
+    width: 750px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  #home-carousel .item .caption-container {
+    width: 970px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  #home-carousel .item .caption-container {
+    width: 1170px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  #home-carousel .item .caption-container > .navbar-header,
+  #home-carousel .item .caption-container > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  #home-carousel .item .caption-container {
+    margin-left: -485px;
+  }
+}
+@media (min-width: 1200px) {
+  #home-carousel .item .caption-container {
+    margin-left: -585px;
+  }
+}
 #home-carousel .carousel-indicators {
   bottom: 5%;
   margin: 0;
@@ -9384,21 +9498,24 @@ button.close {
 #home-carousel .carousel-caption {
   right: auto;
   bottom: auto;
-  top: 10%;
-  left: 9%;
-  width: 31%;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 6% 3% 40px;
+  top: 0;
+  left: 15px;
+  background-color: rgba(44, 44, 44, 0.9);
+  padding: 2% 2%;
   text-align: left;
   font-size: 21px;
 }
 #home-carousel .carousel-caption h4 {
   color: #ffffff;
-  line-height: 40px;
+  line-height: 20px;
   font-size: 21px;
+  margin-top: 0;
 }
 #home-carousel .carousel-caption .btn {
   margin-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 20px;
   text-align: left;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -9408,14 +9525,17 @@ button.close {
   background-clip: padding-box;
   color: #333333;
   display: table;
+  font-size: 12px;
 }
 #home-carousel .carousel-caption .btn:hover {
-  color: #000000;
+  background-color: #bbbdbf;
 }
 #home-carousel .carousel-caption .btn span {
   display: block;
   margin: 0;
   font-weight: bold;
+  line-height: 30px;
+  font-size: 21px;
 }
 #home-carousel .carousel-caption .btn .arrow {
   text-align: right;
@@ -9425,7 +9545,6 @@ button.close {
 @media (max-width: 1200px) {
   #home-carousel .carousel-caption {
     font-size: 18px;
-    width: 40%;
     padding: 15px;
   }
   #home-carousel .carousel-caption h4 {
@@ -9437,7 +9556,7 @@ button.close {
   #home-carousel .carousel-indicators {
     top: 0;
     bottom: auto;
-    margin-top: 37%;
+    margin-top: 32%;
   }
   #home-carousel .carousel-caption {
     position: static;
@@ -9505,6 +9624,63 @@ form.sign-up .input-group-sm > .input-group-btn > .btn {
 }
 form.sign-up .input-group-sm > .input-group-btn > .btn:hover {
   text-decoration: none;
+  color: #000000;
+}
+form.sign-up.compact .input-group .form-control,
+form.sign-up.compact .input-group select,
+form.sign-up.compact .input-group div.responsive input[type="text"],
+form.sign-up.compact .input-group div.responsive input[type="number"],
+form.sign-up.compact .input-group div.responsive input[type="password"],
+form.sign-up.compact .input-group div.responsive textarea,
+form.sign-up.compact .input-group #login-div-content .login-form #USERNAME,
+form.sign-up.compact .input-group #login-div-content .login-form #Password,
+form.sign-up.compact .input-group #gigyaRegisterForm .fieldInput input,
+form.sign-up.compact .input-group #gigyaLoginForm .fieldInput input,
+form.sign-up.compact .input-group #gigyaRegisterForm input[type="text"],
+form.sign-up.compact .input-group #gigyaLoginForm input[type="text"],
+header .top-signup form.sign-up .input-group .form-control,
+footer div.sign-up form.sign-up .input-group .form-control {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid #a9a9a9;
+  border-right-width: 0px;
+  -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+form.sign-up.compact .input-group .form-control:focus,
+form.sign-up.compact .input-group select:focus,
+form.sign-up.compact .input-group div.responsive input[type="text"]:focus,
+form.sign-up.compact .input-group div.responsive input[type="number"]:focus,
+form.sign-up.compact .input-group div.responsive input[type="password"]:focus,
+form.sign-up.compact .input-group div.responsive textarea:focus,
+form.sign-up.compact .input-group #login-div-content .login-form #USERNAME:focus,
+form.sign-up.compact .input-group #login-div-content .login-form #Password:focus,
+form.sign-up.compact .input-group #gigyaRegisterForm .fieldInput input:focus,
+form.sign-up.compact .input-group #gigyaLoginForm .fieldInput input:focus,
+form.sign-up.compact .input-group #gigyaRegisterForm input[type="text"]:focus,
+form.sign-up.compact .input-group #gigyaLoginForm input[type="text"]:focus,
+header .top-signup form.sign-up .input-group .form-control:focus,
+footer div.sign-up form.sign-up .input-group .form-control:focus {
+  border-color: #a9a9a9;
+}
+form.sign-up.compact .input-group-sm > .input-group-btn > .btn,
+header .top-signup form.sign-up .input-group-sm > .input-group-btn > .btn,
+footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn {
+  background-color: #ffffff;
+  color: inherit;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  border-width: 1px;
+  border-color: #a9a9a9;
+  z-index: 1;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+form.sign-up.compact .input-group-sm > .input-group-btn > .btn span,
+header .top-signup form.sign-up .input-group-sm > .input-group-btn > .btn span,
+footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn span {
+  display: none !important;
 }
 .link-white,
 footer p.links-group a.main,
@@ -9513,9 +9689,13 @@ footer .address a,
   color: #ffffff;
 }
 .link-white:link,
+.link-white:visited,
 footer p.links-group a.main:link,
+footer p.links-group a.main:visited,
 footer .address a:link,
-.side-box a:link {
+footer .address a:visited,
+.side-box a:link,
+.side-box a:visited {
   color: #ffffff;
 }
 .link-white:hover,
@@ -9529,12 +9709,16 @@ footer .address a:focus,
   color: #ffffff;
 }
 .link-underline,
+.page-content a,
 .side-box a {
   text-decoration: underline;
 }
 .link-underline:link,
 .link-underline:hover,
 .link-underline:focus,
+.page-content a:link,
+.page-content a:hover,
+.page-content a:focus,
 .side-box a:link,
 .side-box a:hover,
 .side-box a:focus {
@@ -9558,6 +9742,9 @@ header .btn.top-donate {
   padding-left: 0;
   padding-right: 0;
 }
+header .btn.top-donate:hover {
+  background-color: #ffcd0a;
+}
 header .top-signup {
   float: right;
   float: right !important;
@@ -9572,60 +9759,13 @@ header .top-signup label {
   line-height: 30px;
   margin-bottom: 0px;
 }
-header .top-signup .input-group .form-control,
-header .top-signup .input-group select,
-header .top-signup .input-group div.responsive input[type="text"],
-header .top-signup .input-group div.responsive input[type="number"],
-header .top-signup .input-group div.responsive input[type="password"],
-header .top-signup .input-group div.responsive textarea,
-header .top-signup .input-group #login-div-content .login-form #USERNAME,
-header .top-signup .input-group #login-div-content .login-form #Password,
-header .top-signup .input-group #gigyaRegisterForm .fieldInput input,
-header .top-signup .input-group #gigyaLoginForm .fieldInput input,
-header .top-signup .input-group #gigyaRegisterForm input[type="text"],
-header .top-signup .input-group #gigyaLoginForm input[type="text"] {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  border: 1px solid #a9a9a9;
-  border-right-width: 0px;
-  -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
-  z-index: 2;
-}
-header .top-signup .input-group .form-control:focus,
-header .top-signup .input-group select:focus,
-header .top-signup .input-group div.responsive input[type="text"]:focus,
-header .top-signup .input-group div.responsive input[type="number"]:focus,
-header .top-signup .input-group div.responsive input[type="password"]:focus,
-header .top-signup .input-group div.responsive textarea:focus,
-header .top-signup .input-group #login-div-content .login-form #USERNAME:focus,
-header .top-signup .input-group #login-div-content .login-form #Password:focus,
-header .top-signup .input-group #gigyaRegisterForm .fieldInput input:focus,
-header .top-signup .input-group #gigyaLoginForm .fieldInput input:focus,
-header .top-signup .input-group #gigyaRegisterForm input[type="text"]:focus,
-header .top-signup .input-group #gigyaLoginForm input[type="text"]:focus {
-  border-color: #a9a9a9;
-}
-header .top-signup .input-group-sm > .input-group-btn > .btn {
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
-  border-width: 1px;
-  border-color: #a9a9a9;
-  z-index: 1;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-}
-header .top-signup .input-group-sm > .input-group-btn > .btn span {
-  display: none !important;
-}
 @media (min-width: 992px) {
   header #top-nav {
     margin-top: -7px;
   }
   header .btn.top-donate {
     display: inline;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 15px 60px;
   }
   header .top-signup {
     max-width: 250px;
@@ -9642,10 +9782,13 @@ footer a {
   color: #99afbd;
 }
 footer a:link,
-footer a:hover,
 footer a:focus,
 footer a:visited {
   color: #99afbd;
+}
+footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 footer p {
   margin-bottom: 25px;
@@ -9663,11 +9806,18 @@ footer .btn.donate {
   color: #186273;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 15px 35px;
 }
 footer div.sign-up {
   padding: 20px 30px;
   background-color: #40798a;
   margin-bottom: 25px;
+}
+footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn {
+  color: #186273;
+}
+footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn:hover {
+  color: #bbbdbf;
 }
 footer .social-icons {
   text-align: center;
@@ -9690,8 +9840,7 @@ footer .social-icons .fa-inverse:hover,
 footer .social-icons .fa-inverse:focus {
   color: #ffcd0a;
 }
-footer .donate,
-footer .badges {
+footer .donate {
   text-align: center;
 }
 footer .separator {
@@ -9700,6 +9849,9 @@ footer .separator {
 footer .address {
   font-size: 85%;
   margin-top: 20px;
+}
+footer .address a:hover {
+  color: #99afbd;
 }
 @media (min-width: 768px) {
   footer .social-icons,
@@ -9710,18 +9862,14 @@ footer .address {
   footer div.sign-up,
   footer .social-icons,
   footer p.donate {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
     max-width: 320px;
+    margin-left: 10%;
   }
 }
 @media (min-width: 992px) {
   footer .container {
     padding: 30px 0 60px;
-  }
-  footer .badges {
-    text-align: right;
   }
 }
 .page-content {
@@ -9729,6 +9877,12 @@ footer .address {
 }
 .page-content.hp {
   padding: 40px 0;
+}
+.social-share {
+  left: 9px;
+  position: absolute;
+  z-index: 10;
+  top: 94px;
 }
 .social-share:before,
 .social-share:after {
@@ -9752,13 +9906,18 @@ footer .address {
   color: #a9a9a9;
   margin: 0 5px;
 }
+.social-share a:link,
+.social-share a:visited {
+  color: #a9a9a9;
+}
+.social-share a:hover {
+  color: #000000;
+}
 .hp .social-share {
-  position: absolute;
   top: 0;
   left: 15px;
-  z-index: 10;
-  padding: 10px;
-  background-color: #ffffff;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.9);
   -webkit-border-top-right-radius: 0px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -9777,10 +9936,16 @@ footer .address {
   -webkit-box-shadow: 1px 4px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 4px 3px rgba(0, 0, 0, 0.2);
 }
-.water-mark {
+.water-mark,
+.water-mark-b,
+.water-mark-w,
+.side-box.fact {
   z-index: 1;
 }
-.water-mark:after {
+.water-mark:after,
+.water-mark-b:after,
+.water-mark-w:after,
+.side-box.fact:after {
   content: "";
   position: relative;
   left: 50%;
@@ -9788,35 +9953,42 @@ footer .address {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  opacity: 0.1;
-  filter: alpha(opacity=10);
+  opacity: 0.07;
+  filter: alpha(opacity=7.000000000000001);
   position: absolute;
   width: 80%;
   max-width: 117px;
   height: 0px;
   padding-bottom: 100%;
-  background: url(../images/logo_water_mark.png) no-repeat center center;
+  background: url(../images/logo_water_mark_b.png) no-repeat center center;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
   z-index: -1;
 }
+.water-mark-w:after {
+  opacity: 0.13;
+  filter: alpha(opacity=13);
+  background-image: url(../images/logo_water_mark_w.png);
+}
 .social-share-container {
   position: relative;
-  margin-top: -15px;
-  margin-bottom: 15px;
 }
-.social-share-container.hp {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.block-cnt {
-  max-width: 400px;
+.hp-feature {
+  max-width: 425px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+}
+.hp-feature a.btn {
+  padding: 15px 35px;
+}
+@media (min-width: 992px) {
+  .hp-inform {
+    padding: 0 25px;
+  }
 }
 .outcome {
   text-align: center;
@@ -9860,14 +10032,14 @@ footer .address {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    opacity: 0.1;
-    filter: alpha(opacity=10);
+    opacity: 0.07;
+    filter: alpha(opacity=7.000000000000001);
     position: absolute;
     width: 80%;
     max-width: 117px;
     height: 0px;
     padding-bottom: 100%;
-    background: url(../images/logo_water_mark.png) no-repeat center center;
+    background: url(../images/logo_water_mark_b.png) no-repeat center center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -9891,21 +10063,30 @@ footer .address {
 .hp-sign-up label {
   margin-bottom: 15px;
 }
+.hp-sign-up form.sign-up .btn {
+  font-size: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 div.page-title {
+  background: url('../images/heading_bg.gif');
   background-color: #e22427;
 }
 div.page-title h1 {
   margin: 0px;
-  line-height: 2.5;
+  line-height: 88px;
   color: #ffffff;
 }
-.banner img {
+.callout img {
   float: right;
   float: right !important;
   margin-bottom: 30px;
 }
-.banner p {
+.callout h2 {
   font-size: 2em;
+}
+.callout p {
+  font-size: 1.8em;
 }
 @media (min-width: 992px) {
   .side-col {
@@ -9924,6 +10105,11 @@ div.page-title h1 {
   text-align: center;
   font-size: 1.5em;
 }
+.side-box.fact:after {
+  opacity: 0.13;
+  filter: alpha(opacity=13);
+  background-image: url(../images/logo_water_mark_w.png);
+}
 .side-box.fact strong {
   font-size: 1.8em;
   display: block;
@@ -9932,6 +10118,9 @@ div.page-title h1 {
 .side-box h4,
 .side-box h5 {
   color: inherit;
+}
+.side-box a:hover {
+  color: #000000;
 }
 .margin-none {
   margin: 0;

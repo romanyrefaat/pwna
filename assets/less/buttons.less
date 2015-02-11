@@ -7,16 +7,21 @@
 // --------------------------------------------------
 .button,div.responsive .button, .Button, a.btn {
     border: none;
-    
     background-image: none;
     .box-shadow(2px 2px 4px rgba(0,0,0,.2));
     //.border-radius(15px);
     .transition(all 0.3s);
     .text-uppercase;
+    text-decoration: none !important;
+    &:link
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+    }
 }
 a.btn-default-pwna{
     .button-variant(@white; @brand-yellow; transparent);
-    .button-size(@padding-large-vertical; @padding-base-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+    .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     &:link,
     &:visited{
         &:extend(a.btn-default-pwna all);
@@ -25,7 +30,7 @@ a.btn-default-pwna{
 }
 a.btn-primary-pwna{
     .button-variant(@brand-red; @brand-gray-light; transparent);
-    .button-size(@padding-large-vertical; @padding-base-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+    .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     &:link,
     &:visited{
         &:extend(a.btn-primary-pwna all);

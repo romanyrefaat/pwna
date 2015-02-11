@@ -13,12 +13,36 @@ form.sign-up{
             .box-shadow(none);
             &:hover{
                 text-decoration: none;
+                color: @black;
+            }
+        }
+        &.compact{
+            .input-group .form-control{
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                border: 1px solid @gray;
+                border-right-width: 0px;
+                .box-shadow(-1px 1px 2px rgba(0,0,0,.2));
+                z-index: 2;
+                &:focus{border-color:@gray;}
+            }
+            .input-group-sm > .input-group-btn > .btn{
+                background-color: @white;
+                color: inherit;
+                border-top-right-radius: 13px;
+                border-bottom-right-radius: 13px;
+                border-width: 1px;
+                border-color: @gray;
+                z-index: 1;
+                .box-shadow(0px 1px 2px rgba(0,0,0,.2));
+                span{.hide;}
             }
         }
 }
 .link-white{
     color: @white;
-    &:link{
+    &:link,
+    &:visited{
         color: @white;
     }
     &:hover,
@@ -49,6 +73,9 @@ header{
         margin: @margin-small-vertical 0;
         padding-left: 0;
         padding-right: 0;
+        &:hover{
+            background-color: @brand-yellow;
+        }
     }
     .top-signup{
         .pull-right;
@@ -62,23 +89,8 @@ header{
             line-height: @input-height-small;
             margin-bottom: 0px;
         }
-        .input-group .form-control{
-            border-bottom-right-radius: 0;
-            border-top-right-radius: 0;
-            border: 1px solid @gray;
-            border-right-width: 0px;
-            .box-shadow(-1px 1px 2px rgba(0,0,0,.2));
-            z-index: 2;
-            &:focus{border-color:@gray;}
-        }
-        .input-group-sm > .input-group-btn > .btn{
-            border-top-right-radius: 13px;
-            border-bottom-right-radius: 13px;
-            border-width: 1px;
-            border-color: @gray;
-            z-index: 1;
-            .box-shadow(0px 1px 2px rgba(0,0,0,.2));
-            span{.hide;}
+        form.sign-up{
+        &:extend(form.sign-up.compact all);
         }
     }
     @media (min-width: @screen-md-min) {
@@ -87,8 +99,7 @@ header{
         }
         .btn.top-donate{
             display: inline;
-            padding-left: 40px;
-            padding-right: 40px;
+            padding: 15px 60px
         }
         .top-signup{
             max-width: 250px;
@@ -108,10 +119,13 @@ footer{
     a {
         color: @turquoise-lighter;
         &:link, 
-        &:hover,
         &:focus,
         &:visited {
           color: @turquoise-lighter;
+        }
+        &:hover{
+            color: @white;
+            text-decoration: none;
         }
     }
     p{
@@ -133,11 +147,21 @@ footer{
     .btn.donate{
         color: @brand-turquoise;
         .box-shadow(2px 2px 4px rgba(0,0,0,.8));
+        padding: 15px 35px
     }
     div.sign-up{
         padding: @padding-large-vertical @padding-large-horizontal;
         background-color: @turquoise-light;
         margin-bottom: 25px;
+        form.sign-up{
+            &:extend(form.sign-up.compact all);
+            .input-group-sm > .input-group-btn > .btn{
+                color: @brand-turquoise;
+                &:hover{
+                    color: @brand-gray;
+                }
+            }
+        }
     }
     .social-icons{
         .text-center;
@@ -160,7 +184,7 @@ footer{
             }
         }
     }
-    .donate, .badges{
+    .donate{
         .text-center;
     }
     .separator{
@@ -171,6 +195,9 @@ footer{
         margin-top: 20px;
         a{
             &:extend(.link-white all);
+            &:hover{
+                color: @turquoise-lighter;
+            }
         }
     }
     @media (min-width: @screen-sm-min) {
@@ -179,16 +206,14 @@ footer{
             padding: 0 @padding-base-horizontal;
         }
         div.sign-up, .social-icons, p.donate{
-            .center-block;
+            width: 90%;
             max-width: 320px;
+            margin-left: 10%;
         }
     }
     @media (min-width: @screen-md-min) {
         .container{
             padding: @padding-large-horizontal 0 @padding-large-horizontal*2;
-        }
-        .badges{
-            .text-right;
         }
     }
 }
@@ -196,6 +221,7 @@ footer{
 
 .page-content{
     padding: 30px 0 ;
+    a{&:extend(.link-underline all);}
     &.hp{
         padding: 40px 0;
     }
@@ -203,35 +229,42 @@ footer{
 
 .social-share{
     .clearfix;
+    left: 9px;
+    position: absolute;
+    z-index: 10;
+    top: 94px;
     a{
         .pull-left;
         color: @gray;
         margin: 0 @margin-xs-horizontal;
+        &:link,
+        &:visited{
+            color: @gray;
+        }
+        &:hover{color: @black;}
     }
     .hp & {
-        position: absolute;
         top: 0;
         left: 15px;
-        z-index: 10;
-        padding: 10px;
-        background-color: @white;
+        padding: 1%;
+        background-color: rgba(255, 255, 255, 0.9);
         .border-radiuses(0px,5px,5px,0px);
         .box-shadow(1px 4px 3px rgba(0,0,0,.2));
     }
 }
 
-.water-mark{
+.water-mark, .water-mark-b{
     z-index: 1;
     &:after{
         content: "";
         .v-h-align();
-        .opacity(0.1);
+        .opacity(0.07);
         position: absolute;
         width: 80%;
         max-width: 117px;
         height: 0px;
         padding-bottom: 100%;
-        background: url(../images/logo_water_mark.png) no-repeat center center;
+        background: url(../images/logo_water_mark_b.png) no-repeat center center;
         -webkit-background-size: 100%;
         -moz-background-size: 100%;
         -o-background-size: 100%;
@@ -239,20 +272,31 @@ footer{
         z-index: -1;
     }
 }
-// homepage
-.social-share-container{
-    position: relative;
-    margin-top: -15px;
-    margin-bottom: 15px;
-    &.hp{
-        margin-top: 0px;
-        margin-bottom: 0px;
+.water-mark-w{
+    &:extend(.water-mark all);
+    &:after{
+        .opacity(0.13);
+        background-image: url(../images/logo_water_mark_w.png);
     }
 }
-.block-cnt{
-    max-width: 400px;
+.social-share-container{
+    position: relative;
+    &.hp{
+    }
+}
+// homepage
+.hp-feature{
+    max-width: 425px;
     .center-block;
     margin-bottom: @padding-large-horizontal;
+    a.btn{
+        padding: 15px 35px;
+    }
+}
+.hp-inform{
+    @media (min-width: @screen-md-min) {
+        padding: 0 25px;
+    }
 }
 .outcome{
     .text-center;
@@ -279,7 +323,7 @@ footer{
         min-height:137px;
         border-width: 10px 0 0 0;
         padding: 20px 0;
-        .water-mark;
+        .water-mark-b;
         span{
             display: block;
         }
@@ -295,24 +339,33 @@ footer{
     label{
         margin-bottom: 15px;
     }
+    form.sign-up .btn{
+        font-size: @font-size-medium;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 // Interior Page
 div.page-title{
+    background: url('../images/heading_bg.gif');
     background-color: @brand-red;
     h1{
         margin: 0px;
-        line-height: 2.5;
+        line-height: 88px;
         color: @white;
     }
 }
-.banner{
+.callout{
     img{
         //.center-block;
         .pull-right;
         margin-bottom: 30px;
     }
-    p{
+    h2{
         font-size: 2em;
+    }
+    p{
+        font-size: 1.8em;
     }
 }
 .side-col{
@@ -328,6 +381,7 @@ div.page-title{
     padding: @padding-large-vertical @padding-large-horizontal;
     margin-bottom: 30px;
     &.fact{
+        .water-mark-w;
         .text-center;
         font-size: 1.5em;
         strong{
@@ -342,5 +396,8 @@ div.page-title{
     a{
         &:extend(.link-white all);
         &:extend(.link-underline all);
+        &:hover{
+            color:@black;
+        }
     }
 }
