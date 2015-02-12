@@ -132,16 +132,17 @@ footer{
         margin-bottom: 25px;
     }
     p.links-group{
-        a{
+        a, span.main{
             display: block;
             margin-bottom: 5px;
-            //line-height: @line-height-large;
+        }
+        a.main{
+            &:extend(.link-white all);
+        }
+        a.main, span.main{
             line-height: 1.2em;
-            &.main{
-                font-weight: bold;
-                margin-bottom: 10px;
-                &:extend(.link-white all);
-            }
+            font-weight: bold;
+            margin-bottom: 10px;
         }
     }
     .btn.donate{
@@ -289,6 +290,10 @@ footer{
     max-width: 425px;
     .center-block;
     margin-bottom: @padding-large-horizontal;
+    h4{
+        margin-top: 20px;
+        line-height: 1.4;
+    }
     a.btn{
         padding: 15px 35px;
     }

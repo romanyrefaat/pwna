@@ -1,24 +1,26 @@
 <ul class="nav navbar-nav">
-    <li class="dropdown[[?pwna_who_we_are pwna_about_us::[[S334:pagename]]:: active::]]">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Who We Are</a>
+    <li class="dropdown[[?xpwna_who_we_arexpwna_about_usx::x[[S334:pagename]]x:: active::]]">
+        <a href="PageServer?pagename=pwna_who_we_are" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Who We Are</a>
         <ul class="dropdown-menu multi-column" role="menu">
             <li>
                 <ul class="col-md-4">
                     <li role="presentation" class="dropdown-header">Our Organization</li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Directors and Staff</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="PageServer?pagename=pwna_about_us">About Us</a></li>
+                    <li><a href="PageServer?pagename=pwna_way">The PWNA Way</a></li>
+                    <li><a href="PageServer?pagename=pwna_strengths">Our Strengths</a></li>
+                    <li><a href="PageServer?pagename=pwna_partner_successes">Parter Successes</a></li>
+                    <li><a href="PageServer?pagename=pwna_directors_staff">Directors and Staff</a></li>
+                    <li><a href="PageServer?pagename=pwna_careers">Careers</a></li>
+                    <li><a href="PageServer?pagename=pwna_contact_us">Contact Us</a></li>
                 </ul>
                 <ul class="col-md-4">
                     <li role="presentation" class="dropdown-header">Press and Media</li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Releases</a></li>
-                    <li><a href="#">Reports</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Stories</a></li>
-                    <li><a href="#">Media Contact</a></li>
+                    <li><a href="PageServer?pagename=pwna_press">Press</a></li>
+                    <li><a href="PageServer?pagename=pwna_press#press_releases">Releases</a></li>
+                    <li><a href="PageServer?pagename=pwna_press#">Reports</a></li>
+                    <li><a href="PageServer?pagename=pwna_press#">History</a></li>
+                    <li><a href="PageServer?pagename=pwna_press#media_stories">Stories</a></li>
+                    <li><a href="PageServer?pagename=pwna_press#media_contact">Media Contact</a></li>
                 </ul>
                 <ul class="col-md-4">
                     <li role="presentation" class="dropdown-header">Contact</li>
@@ -27,16 +29,22 @@
                             500 E. Peyton St.<br/>
                             Sherman, TX 75090<br/>
                             1-800-416-8102<br/>
-                            <a href="#">info@pwna.org</a>
+                            <a href="mailto:info@pwna.org">info@pwna.org</a>
                         </address>
                     </li>
                 </ul>
             </li>
-
         </ul>
     </li>
-    <li[[?[[S334:pagename]]::what_we_do:: class="active"::]]><a href="#">What We Do</a></li>
-    <li[[?[[S334:pagename]]::our-impact:: class="active"::]]><a href="#">Our Impact</a></li>
-    <li[[?[[S334:pagename]]::resources:: class="active"::]]><a href="#">Resources</a></li>
-    <li[[?[[S8]]::Donation2:: class="active"::]]><a href="#">How To Help</a></li>                            
+    <li[[?[[S334:pagename]]::what_we_do:: class="active"::]]><a href="PageServer?pagename=pwna_what_we_do">What We Do</a></li>
+    <li[[?[[S334:pagename]]::our-impact:: class="active"::]]><a href="PageServer?pagename=pwna_our_impact">Our Impact</a></li>
+    <li[[?[[S334:pagename]]::faq:: class="active"::]]><a href="PageServer?pagename=pwna_faq">Resources</a></li>
+    <li class="dropdown[[?[[?[[S8]]::Donation2::T::]][[?xpwna_company_matchingxpwna_planned_givingx::x[[S334:pagename]]x::T::]]::T:: active::]]">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">How To Help</a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="http://[[S29:DOMAIN]]/pwna_donate">Monetary Donation</a></li>
+            <li><a href="PageServer?pagename=pwna_planned_giving">Planned Giving</a></li>
+            <li><a href="PageServer?pagename=pwna_company_matching">Company Matching</a></li>
+        </ul>
+    </li>                            
 </ul>

@@ -36,3 +36,16 @@ a.btn-primary-pwna{
         &:extend(a.btn-primary-pwna all);
     }
 }
+.button-submit{
+    .button-variant(@brand-red; @brand-gray-light; transparent);
+    .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
+    filter: inherit;
+	-ms-filer: inherit;
+	background-image: inherit;
+        line-height: inherit;
+	outline: none;
+    &:link,
+    &:visited{
+        &:extend(a.button-submit all);
+    }
+}
