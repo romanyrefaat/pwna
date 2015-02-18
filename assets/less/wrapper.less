@@ -11,6 +11,7 @@ form.sign-up{
             border-width: 0px;
             z-index: 1;
             .box-shadow(none);
+            outline: none;
             &:hover{
                 text-decoration: none;
                 color: @black;
@@ -221,23 +222,23 @@ footer{
 
 
 .page-content{
-    padding: 30px 0 ;
+    padding: 0 0 30px;
+    //margin-top: -80px;
     a{&:extend(.link-underline all);}
     &.hp{
+        margin-top: 0;
         padding: 40px 0;
     }
 }
 
 .social-share{
-    .clearfix;
-    left: 9px;
-    position: absolute;
+    //.clearfix;
     z-index: 10;
-    top: 94px;
     a{
         .pull-left;
+        display: block;
         color: @gray;
-        margin: 0 @margin-xs-horizontal;
+        margin: 25px @margin-xs-horizontal;
         &:link,
         &:visited{
             color: @gray;
@@ -245,12 +246,22 @@ footer{
         &:hover{color: @black;}
     }
     .hp & {
+        position: absolute;
+        margin: 0;
         top: 0;
         left: 15px;
+        line-height: 15px;
         padding: 1%;
         background-color: rgba(255, 255, 255, 0.9);
         .border-radiuses(0px,5px,5px,0px);
         .box-shadow(1px 4px 3px rgba(0,0,0,.2));
+        a{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    .atclear{
+        clear: inherit;
     }
 }
 
@@ -355,27 +366,30 @@ div.page-title{
     background: url('../images/heading_bg.gif');
     background-color: @brand-red;
     h1{
-        margin: 0px;
-        line-height: 88px;
+        margin: 31px 0;
+        line-height: 26px;
         color: @white;
     }
 }
 .callout{
+    clear: both;
     img{
         //.center-block;
         .pull-right;
         margin-bottom: 30px;
+        margin-top: -40px;
     }
     h2{
-        font-size: 2em;
+        font-size: 1.9em;
+        margin-top: 0;
     }
     p{
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
 }
 .side-col{
     @media (min-width: @screen-md-min) {
-        padding-left: 60px;
+        //padding-left: 60px;
     }
 }
 .side-box{
@@ -404,5 +418,15 @@ div.page-title{
         &:hover{
             color:@black;
         }
+    }
+}
+.services{
+    h4{margin-top:0;}
+    .row{margin-bottom: 15px;}
+}
+blockquote{
+    footer{
+        background-color: @white;
+        cite    { display: block;}
     }
 }

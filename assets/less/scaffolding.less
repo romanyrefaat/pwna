@@ -51,7 +51,7 @@ a,A {
   text-decoration: none;
   
   
-  &:link{
+  &:link,&:visited{
     color: @link-color;
   text-decoration: none;
     }
@@ -114,46 +114,6 @@ img {
     height: 100%;
   }
 }
-
-// Rounded corners
-.img-rounded {
-  border-radius: @border-radius-large;
-}
-
-.img-caption {
-	position: absolute;
-	bottom: 0;
-  width: 100%;
-  padding: @padding-large-vertical 0;
-  text-align: center;
-  font-size: 1em;
-  color: @brand-secondary;
-  background-color: rgb(255,255,255);
-  background-color: rgba(255,255,255, 0.7);
-  
-  & > p { margin-bottom: 0; }
-}
-
-// Image thumbnails
-//
-// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
-.img-thumbnail {
-  padding: @thumbnail-padding;
-  line-height: @line-height-base;
-  background-color: @thumbnail-bg;
-  border: 1px solid @thumbnail-border;
-  border-radius: @thumbnail-border-radius;
-  .transition(all .2s ease-in-out);
-
-  // Keep them at most 100% wide
-  .img-responsive(inline-block);
-}
-
-// Perfect circle
-.img-circle {
-  border-radius: 50%; // set radius in percents
-}
-
 
 // Horizontal rules
 

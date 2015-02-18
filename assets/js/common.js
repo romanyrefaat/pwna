@@ -150,4 +150,13 @@
     $('.js-signup-form').each(function() {
         $(this).bindSignupForm();
     });
+    if ($(window).width() > 769) {
+        $('.navbar .dropdown > a').click(function() {
+            location.href = this.href;
+        });
+    }
+    // Fix payment type radio check due to .attr vs .prop
+    $('.payment-type-option').click(function() {
+        $(this).find('input').prop('checked', true);
+    });
 })(jQuery);
