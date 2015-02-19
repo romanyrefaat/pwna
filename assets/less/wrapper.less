@@ -365,6 +365,7 @@ footer{
 div.page-title{
     background: url('../images/heading_bg.gif');
     background-color: @brand-red;
+    min-height: 10px;
     h1{
         margin: 31px 0;
         line-height: 26px;
@@ -428,5 +429,50 @@ blockquote{
     footer{
         background-color: @white;
         cite    { display: block;}
+    }
+}
+.accordion-wrapper{
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    .accordion-title{
+        display: block;
+        position: relative;
+        padding-left:34px;
+        border:1px solid @black;
+        font-size: 1.3em;
+        span{
+            display:block;
+            padding: 8px 15px;
+            border-left: 1px solid @black;
+        }
+        &:link, &:hover, &:visited{
+            text-decoration: none;
+        }
+        
+        &:before{
+            left: 0;
+            width: 34px;
+            text-align: center;
+            .v-align();
+            position: absolute;
+            font-family: "FontAwesome";
+            content: "\f067";
+        }
+        &.active{
+            color: @white;
+            background-color: @brand-orange;
+            &:before{
+                content:"\f068";
+            }
+        }
+    }
+    .accordion-content{
+        display: none;
+        padding: 5px 32px;
+        border: 1px solid @black;
+        border-top: none;
+        p{margin: 15px 0;}
     }
 }

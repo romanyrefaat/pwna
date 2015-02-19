@@ -159,4 +159,15 @@
     $('.payment-type-option').click(function() {
         $(this).find('input').prop('checked', true);
     });
+
+   // FAQ accordion
+    $(".accordion-title").click(function() {
+        $(".accordion-title").removeClass("active");
+        $(".accordion-content").slideUp("normal");
+        if ($(this).next().is(":hidden") == true) {
+            $(this).addClass("active");
+            $(this).next().slideDown("normal")
+        }
+    });
+    $(".accordion-content").hide();
 })(jQuery);

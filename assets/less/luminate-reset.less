@@ -97,9 +97,7 @@ label {
   white-space: normal;
 }
 label.FormLabel {
-  font-weight: bold;
-  min-width: 0;
-  width: auto;
+  &:extend(label all);
 }
 
 div.appArea, .appArea, .appAreaNowidth
@@ -351,10 +349,10 @@ div.responsive a.step-button
 	zoom: 1;
 }
 
-div.responsive input[type="text"], 
-div.responsive input[type="number"],
-div.responsive input[type="password"],
-div.responsive textarea
+form input[type="text"], 
+form input[type="number"],
+form input[type="password"],
+form textarea
 {
 	border: inherit;
 /*	padding: 5px 7px; */
@@ -371,7 +369,10 @@ div.responsive .hidden
 {
 	display: none;
 }
-
+label.checkbox, label.radio{
+    display: inline-block;
+    font-weight: bold !important;
+}
 div.responsive button.action-button,
 div.responsive a.next-step, 
 div.responsive button.next-step,
@@ -385,7 +386,8 @@ div.responsive button.next-step:hover,
 div.responsive a.step-button:hover, 
 div.responsive button.step-button:hover,
 div.responsive a.cancel-button:hover, 
-div.responsive button.cancel-button:hover
+div.responsive button.cancel-button:hover,
+#EditCons .Button
 {
         &:extend(.button-submit all);
 }
@@ -454,12 +456,12 @@ div#team_find_search_results_container div.list-component-cell-column-join-link 
             border: none;
             padding: 0.5em;
         }
-        #USERNAME, #Password{
-            &:extend(.form-control all);
+        input[type="text"]{
+            margin-bottom: 10px;
         }
         .actions{
             padding: 0.5em;
-            background: darken(#f7f7f7,5%);
+            background: @white;
         }
     }
     input.uc-button, button, .ft button{
@@ -535,7 +537,6 @@ div.form-row{
     }
 }
 div.donation-level-general-ask, div.html-caption-container{max-width: none;}
-label.FormLabel{font-weight: normal;}
 div.transaction-summary-info{width: 100%;}
 h5.summary-section-header{
     background-color: @gray;
@@ -559,29 +560,3 @@ div.button-container{
     }
 }
 #employer_street_row input, #billing_addr_street1_row input, #billing_addr_street2_row input, #billing_addr_street3_row input, #billing_addr_country_row input.ui-autocomplete-input, #donor_addr_street1_row input, #donor_addr_street2_row input, #donor_addr_street3_row input, #donor_addr_country_row input.ui-autocomplete-input, #shipping_addr_street1_row input, #shipping_addr_street2_row input, #shipping_addr_street3_row input, #shipping_addr_country_row input.ui-autocomplete-input, #tribute_notify_recip_street1_row input, #tribute_notify_recip_street2_row input, #tribute_notify_recip_street3_row input, #tribute_notify_recip_country_row input.ui-autocomplete-input, #tribute_signature_row input, #tribute_message_closing_row input, div.employer-address-container input#employer_street{width:100%;}
-
-/* ****************************** GIGYA Forms ****************************** */
-#gigyaRegisterForm, #gigyaLoginForm{
-    .fieldRequired{color: #990100;}
-    .fieldLabel{
-        display: inline-block;
-        float: none;
-        width: auto;
-        label{
-            margin-top: 5px;
-        }
-    }
-    .fieldInput input, input[type="text"]{
-        &:extend(.form-control all);
-        display: inline-block !important;
-    }
-    .Button{
-        &:extend(.button-submit all);
-        margin: 10px 0;
-    }
-    table{
-        width: 100%;
-        background-color: transparent;
-        table td:first-child{padding-right:4px;}
-    }
-}
