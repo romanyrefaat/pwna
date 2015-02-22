@@ -117,59 +117,15 @@ div.appArea, .appArea, .appAreaNowidth
         .h3;
 }
 
+/* ****************************** Survey Style Overrides ****************************** */
+legend.surveyLegend{
+    border: none;
+    margin-bottom: 15px;
+}
+table input[type="text"], table textarea, table select{
+width: 98% !important;
+}
 /* ****************************** TRPageResponsive Style Overrides ****************************** */
-
-div.campaign-banner-container,
-div.tr-page-container div.header-container,
-div.section-sub-header,
-div.tr-page-container div.section-sub-header,
-div.tr-page-container div.side-bar,
-div.tr-page-container div#personal_page_main_content,
-div.tr-page-container div.tr-page-header,
-div.tr-page-container #team_image,
-div.tr-page-container #team_page_team_name,
-div.tr-page-container .manageable-editor-window-editor
-
-{
-	display: none;
-}
-div#team_page_main_content, div.tr-page-main-content{
-    width: 100%;
-    margin: 0;
-    overflow: visible;
-}
-div#team_page_custom_html{
-    float: none;
-}
-
-div.tr-page-container{
-    color: inherit;
-    -moz-border-radius: inherit;
-    -webkit-border-radius: inherit;
-    border-radius: inherit;
-    border: inherit;
-    div.main-content, #entry_page_custom_html, div.tr-personal-page-footer{
-        width: auto;
-        float: none;
-        padding: 0;
-    }
-}
-
-h2.tr-page-title
-{
-	margin: inherit;
-	padding: inherit;
-}
-
-#search_part_team input.ghost-text.active 
-{
-	font-style: inherit;
-}
-
-#first_name_search_field input
-{
-	border: inherit;
-}
 
 div.required-indicator-legend
 {
@@ -180,110 +136,16 @@ div.custom-wysiwyg-text p{
     word-wrap: normal;
 }
 
-/* ****************************** TR NationalTeam Style Overrides ****************************** */
-#national_company_page_main{
-    .manageable-content, #national_company_page_table_div {
-        display: none;
-    }
-}
 /* ****************************** TRRegResponsive Style Overrides ****************************** */
 
-div.registration-page-container{
-    padding-top: 1%;
-    div.section-container{
-        .noBg-noBorder-noPadding;
-        margin: 0;
-    }
-    div.section-header{
-        .noBg-noBorder-noPadding;
-        &:extend(h3);
-    }
-    div.section-sub-header{
-	background-color: inherit;
-	border-top-style: inherit;
-	border-top-width: inherit;
-	border-top-color: inherit;
-	font-weight: inherit;
-	font-size: inherit;
-	padding-top: inherit;
-	padding-bottom: inherit;
-	padding-left: inherit;
-    }
-    div.sub-section-header{
-	// border: inherit;
-	// background-color: inherit;
-    }
-    div.sub-section-container{
-	background-color: inherit;
-    }
-    div.section-footer{
-	background-color: inherit;
-	border-bottom-left-radius: inherit;
-	border-bottom-right-radius: inherit;
-	padding: inherit;
-    }
-    div.section-body{
-        padding: 0;
-    }
-    div.sub-section-body{
-	background-color: inherit;
-	padding-bottom: inherit;
-	padding-left: inherit;
-	padding-right: inherit;
-	padding-top: inherit;
-    }
-}
 select{
     &:extend(.form-control all);
 }
 .cardExpGroup select{
-    width: auto;
+    width: auto !important;
     float: left;
     &#responsive_payment_typecc_exp_date_MONTH{
         margin-right: 5px;
-    }
-}
-div#cons_info_component_container div#personal_info_section_one, 
-div#cons_info_component_container div#personal_info_section_two, 
-div#cons_info_component_container div#contact_info_section_one, 
-div#cons_info_component_container div#contact_info_section_two, 
-div#registration_options_page div#user_name_pword_container, 
-div#registration_options_page div#privacy_opts_container, 
-div#registration_options_page div#tribute_component_section_one, 
-div#registration_options_page div#tribute_component_section_two, 
-div#emergency_contact_container, div#gift_notice_optin, div#email_optin
-{
-    width: 50%;
-}
-div#privacy_component_container label, div#gift_notice_optin label, div#email_opt_in_container label, div#postal_mail_opt_in_container label, div#remember_me_container label
-{
-    max-width: none;
-}
-div#user_type_login_container{
-    border-width: 0;
-}
-
-div#user_type_new_participant_registration_container #next_step
-{
-	margin-left: inherit;
-}
-#reg_payment_page #billing_addr_street1_row input, #reg_payment_page #billing_addr_street2_row input{
-    width: auto;
-    min-width: 290px;
-}
-div#team_find_new_team_attributes input[type="text"], div#team_find_new_team_attributes input[type="password"], div#team_find_new_team_company #fr_division_name{
-    margin-top: 0;
-}
-#team_find_existing_team_search_container, #team_find_existing_company_selection_container, #team_find_search_button_container {
-    display: block;
-}
-div#part_type_discount_code_section_row_container input{
-    margin-left: 10px;
-}
-div.team-roster-legend{padding: 5px 0 0 11px;}
-table.trr-table{
-    .trr-table-recruited, .trr-table-gift-amount{
-        width: 7em;
     }
 }
 /* ****************************** ResponsiveBase Style Overrides ****************************** */
@@ -309,12 +171,6 @@ div.responsive select,
 div.responsive option
 {
 	vertical-align: inherit;
-}
-div.part-type-container{
-    background: @gray-lighter;
-    margin: 5px 0;
-    border-radius: 6px;
-    border: 2px solid @gray-lighter;
 }
 div.part-type-container input{vertical-align: top !important;}
 
@@ -349,22 +205,33 @@ div.responsive a.step-button
 	zoom: 1;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 4px !important;
+}
+
 form input[type="text"], 
 form input[type="number"],
 form input[type="password"],
-form textarea
-{
-	border: inherit;
-/*	padding: 5px 7px; */
-	border-radius: inherit;
-	-moz-border-radius: inherit;
-	-webkit-border-radius: inherit;
-	-webkit-box-shadow: inherit;
-	-moz-box-shadow: inherit;
-	box-shadow: inherit;
-        &:extend(.form-control all);
+form textarea,
+div.responsive input[type="text"], 
+div.responsive input[type="number"],
+div.responsive input[type="password"],
+div.responsive textarea
+    {
+            border: inherit;
+    /*	padding: 5px 7px; */
+            border-radius: inherit;
+            -moz-border-radius: inherit;
+            -webkit-border-radius: inherit;
+            -webkit-box-shadow: inherit;
+            -moz-box-shadow: inherit;
+            box-shadow: inherit;
+            &:extend(.form-control all);
+    }
+form textarea,div.responsive textarea{
+    height: 82px !important;
 }
-
 div.responsive .hidden
 {
 	display: none;
@@ -387,7 +254,8 @@ div.responsive a.step-button:hover,
 div.responsive button.step-button:hover,
 div.responsive a.cancel-button:hover, 
 div.responsive button.cancel-button:hover,
-#EditCons .Button
+#EditCons .Button,
+input[type="button"], input[type="reset"], input[type="submit"]
 {
         &:extend(.button-submit all);
 }
@@ -422,16 +290,6 @@ div#cons_info_component_container {
     width: auto;
     float: none;
   }
-}
-#personal_info_section_two{
-  clear: both;
-}
-#team_find_registration_type_container{
-    font-size: 1em;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a{
-    .btn;
-    .btn-link;
 }
 /* ****************************** Login screen specific styles ****************************** */
 

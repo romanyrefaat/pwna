@@ -99,8 +99,9 @@ header{
             margin-top:-7px;
         }
         .btn.top-donate{
-            display: inline;
-            padding: 15px 60px
+            display: inline-block;
+            padding: 15px 60px;
+            max-width: 200px;
         }
         .top-signup{
             max-width: 250px;
@@ -112,6 +113,7 @@ header{
 }
 
 footer{
+    .clearfix;
     background-color: @brand-turquoise;
     color: @white;
     .container{
@@ -374,6 +376,7 @@ div.page-title{
 }
 .callout{
     clear: both;
+    //.clearfix;
     img{
         //.center-block;
         .pull-right;
@@ -395,12 +398,12 @@ div.page-title{
 }
 .side-box{
     position: relative;
-    min-height: 150px;
     background-color: @brand-orange;
     color: @white;
     padding: @padding-large-vertical @padding-large-horizontal;
     margin-bottom: 30px;
     &.fact{
+        min-height: 150px;
         .water-mark-w;
         .text-center;
         font-size: 1.5em;

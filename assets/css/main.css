@@ -178,52 +178,17 @@ div.appArea,
 .cons-prof h3 .small {
   font-size: 65%;
 }
+/* ****************************** Survey Style Overrides ****************************** */
+legend.surveyLegend {
+  border: none;
+  margin-bottom: 15px;
+}
+table input[type="text"],
+table textarea,
+table select {
+  width: 98% !important;
+}
 /* ****************************** TRPageResponsive Style Overrides ****************************** */
-div.campaign-banner-container,
-div.tr-page-container div.header-container,
-div.section-sub-header,
-div.tr-page-container div.section-sub-header,
-div.tr-page-container div.side-bar,
-div.tr-page-container div#personal_page_main_content,
-div.tr-page-container div.tr-page-header,
-div.tr-page-container #team_image,
-div.tr-page-container #team_page_team_name,
-div.tr-page-container .manageable-editor-window-editor {
-  display: none;
-}
-div#team_page_main_content,
-div.tr-page-main-content {
-  width: 100%;
-  margin: 0;
-  overflow: visible;
-}
-div#team_page_custom_html {
-  float: none;
-}
-div.tr-page-container {
-  color: inherit;
-  -moz-border-radius: inherit;
-  -webkit-border-radius: inherit;
-  border-radius: inherit;
-  border: inherit;
-}
-div.tr-page-container div.main-content,
-div.tr-page-container #entry_page_custom_html,
-div.tr-page-container div.tr-personal-page-footer {
-  width: auto;
-  float: none;
-  padding: 0;
-}
-h2.tr-page-title {
-  margin: inherit;
-  padding: inherit;
-}
-#search_part_team input.ghost-text.active {
-  font-style: inherit;
-}
-#first_name_search_field input {
-  border: inherit;
-}
 div.required-indicator-legend {
   padding: 0 0 5px 0;
 }
@@ -231,120 +196,13 @@ div.custom-wysiwyg-text p {
   white-space: normal;
   word-wrap: normal;
 }
-/* ****************************** TR NationalTeam Style Overrides ****************************** */
-#national_company_page_main .manageable-content,
-#national_company_page_main #national_company_page_table_div {
-  display: none;
-}
 /* ****************************** TRRegResponsive Style Overrides ****************************** */
-div.registration-page-container {
-  padding-top: 1%;
-}
-div.registration-page-container div.section-container {
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-}
-div.registration-page-container div.section-header {
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-}
-div.registration-page-container div.section-sub-header {
-  background-color: inherit;
-  border-top-style: inherit;
-  border-top-width: inherit;
-  border-top-color: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  padding-top: inherit;
-  padding-bottom: inherit;
-  padding-left: inherit;
-}
-div.registration-page-container div.sub-section-container {
-  background-color: inherit;
-}
-div.registration-page-container div.section-footer {
-  background-color: inherit;
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
-  padding: inherit;
-}
-div.registration-page-container div.section-body {
-  padding: 0;
-}
-div.registration-page-container div.sub-section-body {
-  background-color: inherit;
-  padding-bottom: inherit;
-  padding-left: inherit;
-  padding-right: inherit;
-  padding-top: inherit;
-}
 .cardExpGroup select {
-  width: auto;
+  width: auto !important;
   float: left;
 }
 .cardExpGroup select#responsive_payment_typecc_exp_date_MONTH {
   margin-right: 5px;
-}
-div#cons_info_component_container div#personal_info_section_one,
-div#cons_info_component_container div#personal_info_section_two,
-div#cons_info_component_container div#contact_info_section_one,
-div#cons_info_component_container div#contact_info_section_two,
-div#registration_options_page div#user_name_pword_container,
-div#registration_options_page div#privacy_opts_container,
-div#registration_options_page div#tribute_component_section_one,
-div#registration_options_page div#tribute_component_section_two,
-div#emergency_contact_container,
-div#gift_notice_optin,
-div#email_optin {
-  width: 50%;
-}
-div#privacy_component_container label,
-div#gift_notice_optin label,
-div#email_opt_in_container label,
-div#postal_mail_opt_in_container label,
-div#remember_me_container label,
-div#privacy_component_container label.FormLabel,
-div#gift_notice_optin label.FormLabel,
-div#email_opt_in_container label.FormLabel,
-div#postal_mail_opt_in_container label.FormLabel,
-div#remember_me_container label.FormLabel {
-  max-width: none;
-}
-div#user_type_login_container {
-  border-width: 0;
-}
-div#user_type_new_participant_registration_container #next_step {
-  margin-left: inherit;
-}
-#reg_payment_page #billing_addr_street1_row input,
-#reg_payment_page #billing_addr_street2_row input {
-  width: auto;
-  min-width: 290px;
-}
-div#team_find_new_team_attributes input[type="text"],
-div#team_find_new_team_attributes input[type="password"],
-div#team_find_new_team_company #fr_division_name {
-  margin-top: 0;
-}
-#team_find_existing_team_search_container,
-#team_find_existing_company_selection_container,
-#team_find_search_button_container {
-  display: block;
-}
-div#part_type_discount_code_section_row_container input {
-  margin-left: 10px;
-}
-div.team-roster-legend {
-  padding: 5px 0 0 11px;
-}
-table.trr-table .trr-table-recruited,
-table.trr-table .trr-table-gift-amount {
-  width: 7em;
 }
 /* ****************************** ResponsiveBase Style Overrides ****************************** */
 div.responsive {
@@ -363,12 +221,6 @@ div.responsive input,
 div.responsive select,
 div.responsive option {
   vertical-align: inherit;
-}
-div.part-type-container {
-  background: #f9f9f9;
-  margin: 5px 0;
-  border-radius: 6px;
-  border: 2px solid #f9f9f9;
 }
 div.part-type-container input {
   vertical-align: top !important;
@@ -396,10 +248,18 @@ div.responsive a.step-button {
   text-decoration: none;
   zoom: 1;
 }
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 4px !important;
+}
 form input[type="text"],
 form input[type="number"],
 form input[type="password"],
-form textarea {
+form textarea,
+div.responsive input[type="text"],
+div.responsive input[type="number"],
+div.responsive input[type="password"],
+div.responsive textarea {
   border: inherit;
   /*	padding: 5px 7px; */
   border-radius: inherit;
@@ -408,6 +268,10 @@ form textarea {
   -webkit-box-shadow: inherit;
   -moz-box-shadow: inherit;
   box-shadow: inherit;
+}
+form textarea,
+div.responsive textarea {
+  height: 82px !important;
 }
 div.responsive .hidden {
   display: none;
@@ -444,96 +308,6 @@ div#cons_info_component_container div#personal_info_section_one,
 div#cons_info_component_container div#personal_info_section_two {
   width: auto;
   float: none;
-}
-#personal_info_section_two {
-  clear: both;
-}
-#team_find_registration_type_container {
-  font-size: 1em;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a {
-  display: inline-block;
-  margin-bottom: 0;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 10px 15px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #c5664f;
-  font-weight: normal;
-  border-radius: 0;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a:focus,
-div#team_find_search_results_container div.list-component-cell-column-join-link a:active:focus,
-div#team_find_search_results_container div.list-component-cell-column-join-link a.active:focus,
-div#team_find_search_results_container div.list-component-cell-column-join-link a.focus,
-div#team_find_search_results_container div.list-component-cell-column-join-link a:active.focus,
-div#team_find_search_results_container div.list-component-cell-column-join-link a.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-  outline: 0;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a:hover,
-div#team_find_search_results_container div.list-component-cell-column-join-link a:focus,
-div#team_find_search_results_container div.list-component-cell-column-join-link a.focus {
-  color: #333333;
-  text-decoration: none;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a:active,
-div#team_find_search_results_container div.list-component-cell-column-join-link a.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a.disabled,
-div#team_find_search_results_container div.list-component-cell-column-join-link a[disabled],
-fieldset[disabled] div#team_find_search_results_container div.list-component-cell-column-join-link a {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a,
-div#team_find_search_results_container div.list-component-cell-column-join-link a:active,
-div#team_find_search_results_container div.list-component-cell-column-join-link a.active,
-div#team_find_search_results_container div.list-component-cell-column-join-link a[disabled],
-fieldset[disabled] div#team_find_search_results_container div.list-component-cell-column-join-link a {
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a,
-div#team_find_search_results_container div.list-component-cell-column-join-link a:hover,
-div#team_find_search_results_container div.list-component-cell-column-join-link a:focus,
-div#team_find_search_results_container div.list-component-cell-column-join-link a:active {
-  border-color: transparent;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a:hover,
-div#team_find_search_results_container div.list-component-cell-column-join-link a:focus {
-  color: #964531;
-  text-decoration: underline;
-  background-color: transparent;
-}
-div#team_find_search_results_container div.list-component-cell-column-join-link a[disabled]:hover,
-fieldset[disabled] div#team_find_search_results_container div.list-component-cell-column-join-link a:hover,
-div#team_find_search_results_container div.list-component-cell-column-join-link a[disabled]:focus,
-fieldset[disabled] div#team_find_search_results_container div.list-component-cell-column-join-link a:focus {
-  color: #f6f6f6;
-  text-decoration: none;
 }
 /* ****************************** Login screen specific styles ****************************** */
 #appAreaNoWidthClearFix {
@@ -953,14 +727,12 @@ th {
   p,
   h2,
   h3,
-  div.registration-page-container div.section-header,
   #login-div-content .banner-header {
     orphans: 3;
     widows: 3;
   }
   h2,
   h3,
-  div.registration-page-container div.section-header,
   #login-div-content .banner-header {
     page-break-after: avoid;
   }
@@ -1111,7 +883,6 @@ h6,
 .h4,
 .h5,
 .h6,
-div.registration-page-container div.section-header,
 #login-div-content .banner-header {
   font-family: inherit;
   font-weight: 400;
@@ -1152,7 +923,6 @@ h2,
 .h2,
 h3,
 .h3,
-div.registration-page-container div.section-header,
 #login-div-content .banner-header {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -1204,7 +974,6 @@ h2,
 }
 h3,
 .h3,
-div.registration-page-container div.section-header,
 #login-div-content .banner-header {
   font-size: 21px;
 }
@@ -1462,7 +1231,6 @@ h2,
 .h2,
 h3,
 .h3,
-div.registration-page-container div.section-header,
 #login-div-content .banner-header {
   font-family: inherit;
   font-weight: 400;
@@ -1492,7 +1260,6 @@ h2,
 .h2,
 h3,
 .h3,
-div.registration-page-container div.section-header,
 #login-div-content .banner-header {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1548,7 +1315,6 @@ h2,
 }
 h3,
 .h3,
-div.registration-page-container div.section-header,
 #login-div-content .banner-header {
   font-size: 21px;
 }
@@ -2449,7 +2215,11 @@ select,
 form input[type="text"],
 form input[type="number"],
 form input[type="password"],
-form textarea {
+form textarea,
+div.responsive input[type="text"],
+div.responsive input[type="number"],
+div.responsive input[type="password"],
+div.responsive textarea {
   display: block;
   width: 100%;
   height: 42px;
@@ -2472,7 +2242,11 @@ select:focus,
 form input[type="text"]:focus,
 form input[type="number"]:focus,
 form input[type="password"]:focus,
-form textarea:focus {
+form textarea:focus,
+div.responsive input[type="text"]:focus,
+div.responsive input[type="number"]:focus,
+div.responsive input[type="password"]:focus,
+div.responsive textarea:focus {
   border-color: #337ab7;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(51, 122, 183, 0.6);
@@ -2483,7 +2257,11 @@ select::-moz-placeholder,
 form input[type="text"]::-moz-placeholder,
 form input[type="number"]::-moz-placeholder,
 form input[type="password"]::-moz-placeholder,
-form textarea::-moz-placeholder {
+form textarea::-moz-placeholder,
+div.responsive input[type="text"]::-moz-placeholder,
+div.responsive input[type="number"]::-moz-placeholder,
+div.responsive input[type="password"]::-moz-placeholder,
+div.responsive textarea::-moz-placeholder {
   color: #a9a9a9;
   opacity: 1;
 }
@@ -2492,7 +2270,11 @@ select:-ms-input-placeholder,
 form input[type="text"]:-ms-input-placeholder,
 form input[type="number"]:-ms-input-placeholder,
 form input[type="password"]:-ms-input-placeholder,
-form textarea:-ms-input-placeholder {
+form textarea:-ms-input-placeholder,
+div.responsive input[type="text"]:-ms-input-placeholder,
+div.responsive input[type="number"]:-ms-input-placeholder,
+div.responsive input[type="password"]:-ms-input-placeholder,
+div.responsive textarea:-ms-input-placeholder {
   color: #a9a9a9;
 }
 .form-control::-webkit-input-placeholder,
@@ -2500,7 +2282,11 @@ select::-webkit-input-placeholder,
 form input[type="text"]::-webkit-input-placeholder,
 form input[type="number"]::-webkit-input-placeholder,
 form input[type="password"]::-webkit-input-placeholder,
-form textarea::-webkit-input-placeholder {
+form textarea::-webkit-input-placeholder,
+div.responsive input[type="text"]::-webkit-input-placeholder,
+div.responsive input[type="number"]::-webkit-input-placeholder,
+div.responsive input[type="password"]::-webkit-input-placeholder,
+div.responsive textarea::-webkit-input-placeholder {
   color: #a9a9a9;
 }
 .form-control[disabled],
@@ -2520,7 +2306,19 @@ form input[type="password"][readonly],
 fieldset[disabled] form input[type="password"],
 form textarea[disabled],
 form textarea[readonly],
-fieldset[disabled] form textarea {
+fieldset[disabled] form textarea,
+div.responsive input[type="text"][disabled],
+div.responsive input[type="text"][readonly],
+fieldset[disabled] div.responsive input[type="text"],
+div.responsive input[type="number"][disabled],
+div.responsive input[type="number"][readonly],
+fieldset[disabled] div.responsive input[type="number"],
+div.responsive input[type="password"][disabled],
+div.responsive input[type="password"][readonly],
+fieldset[disabled] div.responsive input[type="password"],
+div.responsive textarea[disabled],
+div.responsive textarea[readonly],
+fieldset[disabled] div.responsive textarea {
   cursor: not-allowed;
   background-color: #f9f9f9;
   opacity: 1;
@@ -2530,7 +2328,11 @@ textareaselect,
 textareaform input[type="text"],
 textareaform input[type="number"],
 textareaform input[type="password"],
-textareaform textarea {
+textareaform textarea,
+textareadiv.responsive input[type="text"],
+textareadiv.responsive input[type="number"],
+textareadiv.responsive input[type="password"],
+textareadiv.responsive textarea {
   height: auto;
 }
 input[type="search"] {
@@ -2664,7 +2466,11 @@ select[multiple].input-sm {
 .form-group-sm form input[type="text"],
 .form-group-sm form input[type="number"],
 .form-group-sm form input[type="password"],
-.form-group-sm form textarea {
+.form-group-sm form textarea,
+.form-group-sm div.responsive input[type="text"],
+.form-group-sm div.responsive input[type="number"],
+.form-group-sm div.responsive input[type="password"],
+.form-group-sm div.responsive textarea {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -2676,7 +2482,11 @@ select.form-group-sm select,
 select.form-group-sm form input[type="text"],
 select.form-group-sm form input[type="number"],
 select.form-group-sm form input[type="password"],
-select.form-group-sm form textarea {
+select.form-group-sm form textarea,
+select.form-group-sm div.responsive input[type="text"],
+select.form-group-sm div.responsive input[type="number"],
+select.form-group-sm div.responsive input[type="password"],
+select.form-group-sm div.responsive textarea {
   height: 30px;
   line-height: 30px;
 }
@@ -2691,7 +2501,15 @@ select[multiple].form-group-sm form input[type="number"],
 textarea.form-group-sm form input[type="password"],
 select[multiple].form-group-sm form input[type="password"],
 textarea.form-group-sm form textarea,
-select[multiple].form-group-sm form textarea {
+select[multiple].form-group-sm form textarea,
+textarea.form-group-sm div.responsive input[type="text"],
+select[multiple].form-group-sm div.responsive input[type="text"],
+textarea.form-group-sm div.responsive input[type="number"],
+select[multiple].form-group-sm div.responsive input[type="number"],
+textarea.form-group-sm div.responsive input[type="password"],
+select[multiple].form-group-sm div.responsive input[type="password"],
+textarea.form-group-sm div.responsive textarea,
+select[multiple].form-group-sm div.responsive textarea {
   height: auto;
 }
 .form-group-sm .form-control-static {
@@ -2720,7 +2538,11 @@ select[multiple].input-lg {
 .form-group-lg form input[type="text"],
 .form-group-lg form input[type="number"],
 .form-group-lg form input[type="password"],
-.form-group-lg form textarea {
+.form-group-lg form textarea,
+.form-group-lg div.responsive input[type="text"],
+.form-group-lg div.responsive input[type="number"],
+.form-group-lg div.responsive input[type="password"],
+.form-group-lg div.responsive textarea {
   height: 66px;
   padding: 20px 30px;
   font-size: 18px;
@@ -2732,7 +2554,11 @@ select.form-group-lg select,
 select.form-group-lg form input[type="text"],
 select.form-group-lg form input[type="number"],
 select.form-group-lg form input[type="password"],
-select.form-group-lg form textarea {
+select.form-group-lg form textarea,
+select.form-group-lg div.responsive input[type="text"],
+select.form-group-lg div.responsive input[type="number"],
+select.form-group-lg div.responsive input[type="password"],
+select.form-group-lg div.responsive textarea {
   height: 66px;
   line-height: 66px;
 }
@@ -2747,7 +2573,15 @@ select[multiple].form-group-lg form input[type="number"],
 textarea.form-group-lg form input[type="password"],
 select[multiple].form-group-lg form input[type="password"],
 textarea.form-group-lg form textarea,
-select[multiple].form-group-lg form textarea {
+select[multiple].form-group-lg form textarea,
+textarea.form-group-lg div.responsive input[type="text"],
+select[multiple].form-group-lg div.responsive input[type="text"],
+textarea.form-group-lg div.responsive input[type="number"],
+select[multiple].form-group-lg div.responsive input[type="number"],
+textarea.form-group-lg div.responsive input[type="password"],
+select[multiple].form-group-lg div.responsive input[type="password"],
+textarea.form-group-lg div.responsive textarea,
+select[multiple].form-group-lg div.responsive textarea {
   height: auto;
 }
 .form-group-lg .form-control-static {
@@ -2764,7 +2598,11 @@ select[multiple].form-group-lg form textarea {
 .has-feedback form input[type="text"],
 .has-feedback form input[type="number"],
 .has-feedback form input[type="password"],
-.has-feedback form textarea {
+.has-feedback form textarea,
+.has-feedback div.responsive input[type="text"],
+.has-feedback div.responsive input[type="number"],
+.has-feedback div.responsive input[type="password"],
+.has-feedback div.responsive textarea {
   padding-right: 52.5px;
 }
 .form-control-feedback {
@@ -2810,7 +2648,11 @@ select[multiple].form-group-lg form textarea {
 .has-success form input[type="text"],
 .has-success form input[type="number"],
 .has-success form input[type="password"],
-.has-success form textarea {
+.has-success form textarea,
+.has-success div.responsive input[type="text"],
+.has-success div.responsive input[type="number"],
+.has-success div.responsive input[type="password"],
+.has-success div.responsive textarea {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -2820,7 +2662,11 @@ select[multiple].form-group-lg form textarea {
 .has-success form input[type="text"]:focus,
 .has-success form input[type="number"]:focus,
 .has-success form input[type="password"]:focus,
-.has-success form textarea:focus {
+.has-success form textarea:focus,
+.has-success div.responsive input[type="text"]:focus,
+.has-success div.responsive input[type="number"]:focus,
+.has-success div.responsive input[type="password"]:focus,
+.has-success div.responsive textarea:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
@@ -2854,7 +2700,11 @@ select[multiple].form-group-lg form textarea {
 .has-warning form input[type="text"],
 .has-warning form input[type="number"],
 .has-warning form input[type="password"],
-.has-warning form textarea {
+.has-warning form textarea,
+.has-warning div.responsive input[type="text"],
+.has-warning div.responsive input[type="number"],
+.has-warning div.responsive input[type="password"],
+.has-warning div.responsive textarea {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -2864,7 +2714,11 @@ select[multiple].form-group-lg form textarea {
 .has-warning form input[type="text"]:focus,
 .has-warning form input[type="number"]:focus,
 .has-warning form input[type="password"]:focus,
-.has-warning form textarea:focus {
+.has-warning form textarea:focus,
+.has-warning div.responsive input[type="text"]:focus,
+.has-warning div.responsive input[type="number"]:focus,
+.has-warning div.responsive input[type="password"]:focus,
+.has-warning div.responsive textarea:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -2898,7 +2752,11 @@ select[multiple].form-group-lg form textarea {
 .has-error form input[type="text"],
 .has-error form input[type="number"],
 .has-error form input[type="password"],
-.has-error form textarea {
+.has-error form textarea,
+.has-error div.responsive input[type="text"],
+.has-error div.responsive input[type="number"],
+.has-error div.responsive input[type="password"],
+.has-error div.responsive textarea {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -2908,7 +2766,11 @@ select[multiple].form-group-lg form textarea {
 .has-error form input[type="text"]:focus,
 .has-error form input[type="number"]:focus,
 .has-error form input[type="password"]:focus,
-.has-error form textarea:focus {
+.has-error form textarea:focus,
+.has-error div.responsive input[type="text"]:focus,
+.has-error div.responsive input[type="number"]:focus,
+.has-error div.responsive input[type="password"]:focus,
+.has-error div.responsive textarea:focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
@@ -2946,7 +2808,11 @@ select[multiple].form-group-lg form textarea {
   .form-inline form input[type="text"],
   .form-inline form input[type="number"],
   .form-inline form input[type="password"],
-  .form-inline form textarea {
+  .form-inline form textarea,
+  .form-inline div.responsive input[type="text"],
+  .form-inline div.responsive input[type="number"],
+  .form-inline div.responsive input[type="password"],
+  .form-inline div.responsive textarea {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -2965,7 +2831,11 @@ select[multiple].form-group-lg form textarea {
   .form-inline .input-group form input[type="text"],
   .form-inline .input-group form input[type="number"],
   .form-inline .input-group form input[type="password"],
-  .form-inline .input-group form textarea {
+  .form-inline .input-group form textarea,
+  .form-inline .input-group div.responsive input[type="text"],
+  .form-inline .input-group div.responsive input[type="number"],
+  .form-inline .input-group div.responsive input[type="password"],
+  .form-inline .input-group div.responsive textarea {
     width: auto;
   }
   .form-inline .input-group > .form-control,
@@ -2973,7 +2843,11 @@ select[multiple].form-group-lg form textarea {
   .form-inline .input-group > form input[type="text"],
   .form-inline .input-group > form input[type="number"],
   .form-inline .input-group > form input[type="password"],
-  .form-inline .input-group > form textarea {
+  .form-inline .input-group > form textarea,
+  .form-inline .input-group > div.responsive input[type="text"],
+  .form-inline .input-group > div.responsive input[type="number"],
+  .form-inline .input-group > div.responsive input[type="password"],
+  .form-inline .input-group > div.responsive textarea {
     width: 100%;
   }
   .form-inline .control-label {
@@ -4854,7 +4728,11 @@ select[multiple].form-group-lg form textarea {
 .input-group form input[type="text"],
 .input-group form input[type="number"],
 .input-group form input[type="password"],
-.input-group form textarea {
+.input-group form textarea,
+.input-group div.responsive input[type="text"],
+.input-group div.responsive input[type="number"],
+.input-group div.responsive input[type="password"],
+.input-group div.responsive textarea {
   position: relative;
   z-index: 2;
   float: left;
@@ -4868,7 +4746,11 @@ select[multiple].form-group-lg form textarea {
 .input-group-lg > form input[type="text"],
 .input-group-lg > form input[type="number"],
 .input-group-lg > form input[type="password"],
-.input-group-lg > form textarea {
+.input-group-lg > form textarea,
+.input-group-lg > div.responsive input[type="text"],
+.input-group-lg > div.responsive input[type="number"],
+.input-group-lg > div.responsive input[type="password"],
+.input-group-lg > div.responsive textarea {
   height: 66px;
   padding: 20px 30px;
   font-size: 18px;
@@ -4882,7 +4764,11 @@ select.input-group-lg > select,
 select.input-group-lg > form input[type="text"],
 select.input-group-lg > form input[type="number"],
 select.input-group-lg > form input[type="password"],
-select.input-group-lg > form textarea {
+select.input-group-lg > form textarea,
+select.input-group-lg > div.responsive input[type="text"],
+select.input-group-lg > div.responsive input[type="number"],
+select.input-group-lg > div.responsive input[type="password"],
+select.input-group-lg > div.responsive textarea {
   height: 66px;
   line-height: 66px;
 }
@@ -4901,7 +4787,15 @@ select[multiple].input-group-lg > form input[type="number"],
 textarea.input-group-lg > form input[type="password"],
 select[multiple].input-group-lg > form input[type="password"],
 textarea.input-group-lg > form textarea,
-select[multiple].input-group-lg > form textarea {
+select[multiple].input-group-lg > form textarea,
+textarea.input-group-lg > div.responsive input[type="text"],
+select[multiple].input-group-lg > div.responsive input[type="text"],
+textarea.input-group-lg > div.responsive input[type="number"],
+select[multiple].input-group-lg > div.responsive input[type="number"],
+textarea.input-group-lg > div.responsive input[type="password"],
+select[multiple].input-group-lg > div.responsive input[type="password"],
+textarea.input-group-lg > div.responsive textarea,
+select[multiple].input-group-lg > div.responsive textarea {
   height: auto;
 }
 .input-group-sm > .form-control,
@@ -4911,7 +4805,11 @@ select[multiple].input-group-lg > form textarea {
 .input-group-sm > form input[type="text"],
 .input-group-sm > form input[type="number"],
 .input-group-sm > form input[type="password"],
-.input-group-sm > form textarea {
+.input-group-sm > form textarea,
+.input-group-sm > div.responsive input[type="text"],
+.input-group-sm > div.responsive input[type="number"],
+.input-group-sm > div.responsive input[type="password"],
+.input-group-sm > div.responsive textarea {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -4925,7 +4823,11 @@ select.input-group-sm > select,
 select.input-group-sm > form input[type="text"],
 select.input-group-sm > form input[type="number"],
 select.input-group-sm > form input[type="password"],
-select.input-group-sm > form textarea {
+select.input-group-sm > form textarea,
+select.input-group-sm > div.responsive input[type="text"],
+select.input-group-sm > div.responsive input[type="number"],
+select.input-group-sm > div.responsive input[type="password"],
+select.input-group-sm > div.responsive textarea {
   height: 30px;
   line-height: 30px;
 }
@@ -4944,7 +4846,15 @@ select[multiple].input-group-sm > form input[type="number"],
 textarea.input-group-sm > form input[type="password"],
 select[multiple].input-group-sm > form input[type="password"],
 textarea.input-group-sm > form textarea,
-select[multiple].input-group-sm > form textarea {
+select[multiple].input-group-sm > form textarea,
+textarea.input-group-sm > div.responsive input[type="text"],
+select[multiple].input-group-sm > div.responsive input[type="text"],
+textarea.input-group-sm > div.responsive input[type="number"],
+select[multiple].input-group-sm > div.responsive input[type="number"],
+textarea.input-group-sm > div.responsive input[type="password"],
+select[multiple].input-group-sm > div.responsive input[type="password"],
+textarea.input-group-sm > div.responsive textarea,
+select[multiple].input-group-sm > div.responsive textarea {
   height: auto;
 }
 .input-group-addon,
@@ -4954,7 +4864,11 @@ select[multiple].input-group-sm > form textarea {
 .input-group form input[type="text"],
 .input-group form input[type="number"],
 .input-group form input[type="password"],
-.input-group form textarea {
+.input-group form textarea,
+.input-group div.responsive input[type="text"],
+.input-group div.responsive input[type="number"],
+.input-group div.responsive input[type="password"],
+.input-group div.responsive textarea {
   display: table-cell;
 }
 .input-group-addon:not(:first-child):not(:last-child),
@@ -4964,7 +4878,11 @@ select[multiple].input-group-sm > form textarea {
 .input-group form input[type="text"]:not(:first-child):not(:last-child),
 .input-group form input[type="number"]:not(:first-child):not(:last-child),
 .input-group form input[type="password"]:not(:first-child):not(:last-child),
-.input-group form textarea:not(:first-child):not(:last-child) {
+.input-group form textarea:not(:first-child):not(:last-child),
+.input-group div.responsive input[type="text"]:not(:first-child):not(:last-child),
+.input-group div.responsive input[type="number"]:not(:first-child):not(:last-child),
+.input-group div.responsive input[type="password"]:not(:first-child):not(:last-child),
+.input-group div.responsive textarea:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 .input-group-addon,
@@ -5009,7 +4927,11 @@ select[multiple].input-group-sm > form textarea {
 .input-group form input[type="text"]:first-child,
 .input-group form input[type="number"]:first-child,
 .input-group form input[type="password"]:first-child,
-.input-group form textarea:first-child {
+.input-group form textarea:first-child,
+.input-group div.responsive input[type="text"]:first-child,
+.input-group div.responsive input[type="number"]:first-child,
+.input-group div.responsive input[type="password"]:first-child,
+.input-group div.responsive textarea:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -5027,7 +4949,11 @@ select[multiple].input-group-sm > form textarea {
 .input-group form input[type="text"]:last-child,
 .input-group form input[type="number"]:last-child,
 .input-group form input[type="password"]:last-child,
-.input-group form textarea:last-child {
+.input-group form textarea:last-child,
+.input-group div.responsive input[type="text"]:last-child,
+.input-group div.responsive input[type="number"]:last-child,
+.input-group div.responsive input[type="password"]:last-child,
+.input-group div.responsive textarea:last-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5881,6 +5807,9 @@ div.responsive button.step-button:hover,
 div.responsive a.cancel-button:hover,
 div.responsive button.cancel-button:hover,
 #EditCons .Button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 #login-div-content input.uc-button,
 #login-div-content button,
 #login-div-content .ft button {
@@ -5993,6 +5922,24 @@ div.responsive button.cancel-button:hover.active,
 #EditCons .Button:active,
 #EditCons .Button.active,
 .open > .dropdown-toggle#EditCons .Button,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="button"].focus,
+input[type="button"]:active,
+input[type="button"].active,
+.open > .dropdown-toggleinput[type="button"],
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="reset"].focus,
+input[type="reset"]:active,
+input[type="reset"].active,
+.open > .dropdown-toggleinput[type="reset"],
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"].focus,
+input[type="submit"]:active,
+input[type="submit"].active,
+.open > .dropdown-toggleinput[type="submit"],
 #login-div-content input.uc-button:hover,
 #login-div-content input.uc-button:focus,
 #login-div-content input.uc-button.focus,
@@ -6063,6 +6010,15 @@ div.responsive button.cancel-button:hover.active,
 #EditCons .Button:active,
 #EditCons .Button.active,
 .open > .dropdown-toggle#EditCons .Button,
+input[type="button"]:active,
+input[type="button"].active,
+.open > .dropdown-toggleinput[type="button"],
+input[type="reset"]:active,
+input[type="reset"].active,
+.open > .dropdown-toggleinput[type="reset"],
+input[type="submit"]:active,
+input[type="submit"].active,
+.open > .dropdown-toggleinput[type="submit"],
 #login-div-content input.uc-button:active,
 #login-div-content input.uc-button.active,
 .open > .dropdown-toggle#login-div-content input.uc-button,
@@ -6362,6 +6318,60 @@ fieldset[disabled] #EditCons .Button:active,
 #EditCons .Button.disabled.active,
 #EditCons .Button[disabled].active,
 fieldset[disabled] #EditCons .Button.active,
+input[type="button"].disabled,
+input[type="button"][disabled],
+fieldset[disabled] input[type="button"],
+input[type="button"].disabled:hover,
+input[type="button"][disabled]:hover,
+fieldset[disabled] input[type="button"]:hover,
+input[type="button"].disabled:focus,
+input[type="button"][disabled]:focus,
+fieldset[disabled] input[type="button"]:focus,
+input[type="button"].disabled.focus,
+input[type="button"][disabled].focus,
+fieldset[disabled] input[type="button"].focus,
+input[type="button"].disabled:active,
+input[type="button"][disabled]:active,
+fieldset[disabled] input[type="button"]:active,
+input[type="button"].disabled.active,
+input[type="button"][disabled].active,
+fieldset[disabled] input[type="button"].active,
+input[type="reset"].disabled,
+input[type="reset"][disabled],
+fieldset[disabled] input[type="reset"],
+input[type="reset"].disabled:hover,
+input[type="reset"][disabled]:hover,
+fieldset[disabled] input[type="reset"]:hover,
+input[type="reset"].disabled:focus,
+input[type="reset"][disabled]:focus,
+fieldset[disabled] input[type="reset"]:focus,
+input[type="reset"].disabled.focus,
+input[type="reset"][disabled].focus,
+fieldset[disabled] input[type="reset"].focus,
+input[type="reset"].disabled:active,
+input[type="reset"][disabled]:active,
+fieldset[disabled] input[type="reset"]:active,
+input[type="reset"].disabled.active,
+input[type="reset"][disabled].active,
+fieldset[disabled] input[type="reset"].active,
+input[type="submit"].disabled,
+input[type="submit"][disabled],
+fieldset[disabled] input[type="submit"],
+input[type="submit"].disabled:hover,
+input[type="submit"][disabled]:hover,
+fieldset[disabled] input[type="submit"]:hover,
+input[type="submit"].disabled:focus,
+input[type="submit"][disabled]:focus,
+fieldset[disabled] input[type="submit"]:focus,
+input[type="submit"].disabled.focus,
+input[type="submit"][disabled].focus,
+fieldset[disabled] input[type="submit"].focus,
+input[type="submit"].disabled:active,
+input[type="submit"][disabled]:active,
+fieldset[disabled] input[type="submit"]:active,
+input[type="submit"].disabled.active,
+input[type="submit"][disabled].active,
+fieldset[disabled] input[type="submit"].active,
 #login-div-content input.uc-button.disabled,
 #login-div-content input.uc-button[disabled],
 fieldset[disabled] #login-div-content input.uc-button,
@@ -6435,6 +6445,9 @@ div.responsive button.step-button:hover .badge,
 div.responsive a.cancel-button:hover .badge,
 div.responsive button.cancel-button:hover .badge,
 #EditCons .Button .badge,
+input[type="button"] .badge,
+input[type="reset"] .badge,
+input[type="submit"] .badge,
 #login-div-content input.uc-button .badge,
 #login-div-content button .badge,
 #login-div-content .ft button .badge {
@@ -7197,7 +7210,11 @@ tbody.collapse.in {
   .navbar-form form input[type="text"],
   .navbar-form form input[type="number"],
   .navbar-form form input[type="password"],
-  .navbar-form form textarea {
+  .navbar-form form textarea,
+  .navbar-form div.responsive input[type="text"],
+  .navbar-form div.responsive input[type="number"],
+  .navbar-form div.responsive input[type="password"],
+  .navbar-form div.responsive textarea {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -7216,7 +7233,11 @@ tbody.collapse.in {
   .navbar-form .input-group form input[type="text"],
   .navbar-form .input-group form input[type="number"],
   .navbar-form .input-group form input[type="password"],
-  .navbar-form .input-group form textarea {
+  .navbar-form .input-group form textarea,
+  .navbar-form .input-group div.responsive input[type="text"],
+  .navbar-form .input-group div.responsive input[type="number"],
+  .navbar-form .input-group div.responsive input[type="password"],
+  .navbar-form .input-group div.responsive textarea {
     width: auto;
   }
   .navbar-form .input-group > .form-control,
@@ -7224,7 +7245,11 @@ tbody.collapse.in {
   .navbar-form .input-group > form input[type="text"],
   .navbar-form .input-group > form input[type="number"],
   .navbar-form .input-group > form input[type="password"],
-  .navbar-form .input-group > form textarea {
+  .navbar-form .input-group > form textarea,
+  .navbar-form .input-group > div.responsive input[type="text"],
+  .navbar-form .input-group > div.responsive input[type="number"],
+  .navbar-form .input-group > div.responsive input[type="password"],
+  .navbar-form .input-group > div.responsive textarea {
     width: 100%;
   }
   .navbar-form .control-label {
@@ -7520,6 +7545,9 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444444;
 }
+.navbar-toggle {
+  margin: 0;
+}
 .navbar-collapse {
   text-align: left;
 }
@@ -7736,515 +7764,6 @@ nav .navbar-nav.print-share li {
 }
 .alert-danger .alert-link {
   color: #843534;
-}
-.list-group {
-  margin-bottom: 20px;
-  padding-left: 0;
-}
-.list-group-item {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  background-color: #fcfbfb;
-  border: 1px solid #e1e2e1;
-}
-.list-group-item:first-child {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-}
-.list-group-item:last-child {
-  margin-bottom: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-a.list-group-item {
-  color: #000000;
-}
-a.list-group-item .list-group-item-heading {
-  color: #337ab7;
-}
-a.list-group-item:hover,
-a.list-group-item:focus {
-  text-decoration: none;
-  color: #000000;
-  background-color: #c5664f;
-}
-.list-group-item.disabled,
-.list-group-item.disabled:hover,
-.list-group-item.disabled:focus {
-  background-color: #f9f9f9;
-  color: #f6f6f6;
-  cursor: not-allowed;
-}
-.list-group-item.disabled .list-group-item-heading,
-.list-group-item.disabled:hover .list-group-item-heading,
-.list-group-item.disabled:focus .list-group-item-heading {
-  color: inherit;
-}
-.list-group-item.disabled .list-group-item-text,
-.list-group-item.disabled:hover .list-group-item-text,
-.list-group-item.disabled:focus .list-group-item-text {
-  color: #f6f6f6;
-}
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  z-index: 2;
-  color: #ffffff;
-  background-color: #337ab7;
-  border-color: #337ab7;
-}
-.list-group-item.active .list-group-item-heading,
-.list-group-item.active:hover .list-group-item-heading,
-.list-group-item.active:focus .list-group-item-heading,
-.list-group-item.active .list-group-item-heading > small,
-.list-group-item.active:hover .list-group-item-heading > small,
-.list-group-item.active:focus .list-group-item-heading > small,
-.list-group-item.active .list-group-item-heading > .small,
-.list-group-item.active:hover .list-group-item-heading > .small,
-.list-group-item.active:focus .list-group-item-heading > .small {
-  color: inherit;
-}
-.list-group-item.active .list-group-item-text,
-.list-group-item.active:hover .list-group-item-text,
-.list-group-item.active:focus .list-group-item-text {
-  color: #c7ddef;
-}
-.list-group-item-success {
-  color: #3c763d;
-  background-color: #dff0d8;
-}
-a.list-group-item-success {
-  color: #3c763d;
-}
-a.list-group-item-success .list-group-item-heading {
-  color: inherit;
-}
-a.list-group-item-success:hover,
-a.list-group-item-success:focus {
-  color: #3c763d;
-  background-color: #d0e9c6;
-}
-a.list-group-item-success.active,
-a.list-group-item-success.active:hover,
-a.list-group-item-success.active:focus {
-  color: #fff;
-  background-color: #3c763d;
-  border-color: #3c763d;
-}
-.list-group-item-info {
-  color: #31708f;
-  background-color: #d9edf7;
-}
-a.list-group-item-info {
-  color: #31708f;
-}
-a.list-group-item-info .list-group-item-heading {
-  color: inherit;
-}
-a.list-group-item-info:hover,
-a.list-group-item-info:focus {
-  color: #31708f;
-  background-color: #c4e3f3;
-}
-a.list-group-item-info.active,
-a.list-group-item-info.active:hover,
-a.list-group-item-info.active:focus {
-  color: #fff;
-  background-color: #31708f;
-  border-color: #31708f;
-}
-.list-group-item-warning {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-}
-a.list-group-item-warning {
-  color: #8a6d3b;
-}
-a.list-group-item-warning .list-group-item-heading {
-  color: inherit;
-}
-a.list-group-item-warning:hover,
-a.list-group-item-warning:focus {
-  color: #8a6d3b;
-  background-color: #faf2cc;
-}
-a.list-group-item-warning.active,
-a.list-group-item-warning.active:hover,
-a.list-group-item-warning.active:focus {
-  color: #fff;
-  background-color: #8a6d3b;
-  border-color: #8a6d3b;
-}
-.list-group-item-danger {
-  color: #a94442;
-  background-color: #f2dede;
-}
-a.list-group-item-danger {
-  color: #a94442;
-}
-a.list-group-item-danger .list-group-item-heading {
-  color: inherit;
-}
-a.list-group-item-danger:hover,
-a.list-group-item-danger:focus {
-  color: #a94442;
-  background-color: #ebcccc;
-}
-a.list-group-item-danger.active,
-a.list-group-item-danger.active:hover,
-a.list-group-item-danger.active:focus {
-  color: #fff;
-  background-color: #a94442;
-  border-color: #a94442;
-}
-.list-group-item-heading {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.list-group-item-text {
-  margin-bottom: 0;
-  line-height: 1.3;
-}
-.panel {
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.panel-body {
-  padding: 15px;
-}
-.panel-heading {
-  padding: 10px 15px;
-  border-bottom: 1px solid transparent;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-}
-.panel-heading > .dropdown .dropdown-toggle {
-  color: inherit;
-}
-.panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 16px;
-  color: inherit;
-}
-.panel-title > a,
-.panel-title > small,
-.panel-title > .small,
-.panel-title > small > a,
-.panel-title > .small > a {
-  color: inherit;
-}
-.panel-footer {
-  padding: 10px 15px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #dddddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.panel > .list-group,
-.panel > .panel-collapse > .list-group {
-  margin-bottom: 0;
-}
-.panel > .list-group .list-group-item,
-.panel > .panel-collapse > .list-group .list-group-item {
-  border-width: 1px 0;
-  border-radius: 0;
-}
-.panel > .list-group:first-child .list-group-item:first-child,
-.panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
-  border-top: 0;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-}
-.panel > .list-group:last-child .list-group-item:last-child,
-.panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
-  border-bottom: 0;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.panel-heading + .list-group .list-group-item:first-child {
-  border-top-width: 0;
-}
-.list-group + .panel-footer {
-  border-top-width: 0;
-}
-.panel > .table,
-.panel > .table-responsive > .table,
-.panel > .panel-collapse > .table {
-  margin-bottom: 0;
-}
-.panel > .table caption,
-.panel > .table-responsive > .table caption,
-.panel > .panel-collapse > .table caption {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.panel > .table:first-child,
-.panel > .table-responsive:first-child > .table:first-child {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-}
-.panel > .table:first-child > thead:first-child > tr:first-child,
-.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
-.panel > .table:first-child > tbody:first-child > tr:first-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-.panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
-.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
-.panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
-.panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
-.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
-.panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
-  border-top-left-radius: 3px;
-}
-.panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
-.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
-.panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
-.panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
-.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
-.panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
-  border-top-right-radius: 3px;
-}
-.panel > .table:last-child,
-.panel > .table-responsive:last-child > .table:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.panel > .table:last-child > tbody:last-child > tr:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
-.panel > .table:last-child > tfoot:last-child > tr:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
-.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
-.panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
-.panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
-.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
-.panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
-  border-bottom-left-radius: 3px;
-}
-.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
-.panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
-.panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
-.panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
-  border-bottom-right-radius: 3px;
-}
-.panel > .panel-body + .table,
-.panel > .panel-body + .table-responsive,
-.panel > .table + .panel-body,
-.panel > .table-responsive + .panel-body {
-  border-top: 1px solid #a9a9a9;
-}
-.panel > .table > tbody:first-child > tr:first-child th,
-.panel > .table > tbody:first-child > tr:first-child td {
-  border-top: 0;
-}
-.panel > .table-bordered,
-.panel > .table-responsive > .table-bordered {
-  border: 0;
-}
-.panel > .table-bordered > thead > tr > th:first-child,
-.panel > .table-responsive > .table-bordered > thead > tr > th:first-child,
-.panel > .table-bordered > tbody > tr > th:first-child,
-.panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,
-.panel > .table-bordered > tfoot > tr > th:first-child,
-.panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-.panel > .table-bordered > thead > tr > td:first-child,
-.panel > .table-responsive > .table-bordered > thead > tr > td:first-child,
-.panel > .table-bordered > tbody > tr > td:first-child,
-.panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
-.panel > .table-bordered > tfoot > tr > td:first-child,
-.panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
-  border-left: 0;
-}
-.panel > .table-bordered > thead > tr > th:last-child,
-.panel > .table-responsive > .table-bordered > thead > tr > th:last-child,
-.panel > .table-bordered > tbody > tr > th:last-child,
-.panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,
-.panel > .table-bordered > tfoot > tr > th:last-child,
-.panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-.panel > .table-bordered > thead > tr > td:last-child,
-.panel > .table-responsive > .table-bordered > thead > tr > td:last-child,
-.panel > .table-bordered > tbody > tr > td:last-child,
-.panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
-.panel > .table-bordered > tfoot > tr > td:last-child,
-.panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
-  border-right: 0;
-}
-.panel > .table-bordered > thead > tr:first-child > td,
-.panel > .table-responsive > .table-bordered > thead > tr:first-child > td,
-.panel > .table-bordered > tbody > tr:first-child > td,
-.panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,
-.panel > .table-bordered > thead > tr:first-child > th,
-.panel > .table-responsive > .table-bordered > thead > tr:first-child > th,
-.panel > .table-bordered > tbody > tr:first-child > th,
-.panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {
-  border-bottom: 0;
-}
-.panel > .table-bordered > tbody > tr:last-child > td,
-.panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
-.panel > .table-bordered > tfoot > tr:last-child > td,
-.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
-.panel > .table-bordered > tbody > tr:last-child > th,
-.panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
-.panel > .table-bordered > tfoot > tr:last-child > th,
-.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
-  border-bottom: 0;
-}
-.panel > .table-responsive {
-  border: 0;
-  margin-bottom: 0;
-}
-.panel-group {
-  margin-bottom: 20px;
-}
-.panel-group .panel {
-  margin-bottom: 0;
-  border-radius: 4px;
-}
-.panel-group .panel + .panel {
-  margin-top: 5px;
-}
-.panel-group .panel-heading {
-  border-bottom: 0;
-}
-.panel-group .panel-heading + .panel-collapse > .panel-body,
-.panel-group .panel-heading + .panel-collapse > .list-group {
-  border-top: 1px solid #dddddd;
-}
-.panel-group .panel-footer {
-  border-top: 0;
-}
-.panel-group .panel-footer + .panel-collapse .panel-body {
-  border-bottom: 1px solid #dddddd;
-}
-.panel-default {
-  border-color: #dddddd;
-}
-.panel-default > .panel-heading {
-  color: #8c8c8e;
-  background-color: #f5f5f5;
-  border-color: #dddddd;
-}
-.panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #dddddd;
-}
-.panel-default > .panel-heading .badge {
-  color: #f5f5f5;
-  background-color: #8c8c8e;
-}
-.panel-default > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #dddddd;
-}
-.panel-primary {
-  border-color: #337ab7;
-}
-.panel-primary > .panel-heading {
-  color: #ffffff;
-  background-color: #337ab7;
-  border-color: #337ab7;
-}
-.panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #337ab7;
-}
-.panel-primary > .panel-heading .badge {
-  color: #337ab7;
-  background-color: #ffffff;
-}
-.panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #337ab7;
-}
-.panel-success {
-  border-color: #d6e9c6;
-}
-.panel-success > .panel-heading {
-  color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-}
-.panel-success > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #d6e9c6;
-}
-.panel-success > .panel-heading .badge {
-  color: #dff0d8;
-  background-color: #3c763d;
-}
-.panel-success > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #d6e9c6;
-}
-.panel-info {
-  border-color: #bce8f1;
-}
-.panel-info > .panel-heading {
-  color: #31708f;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-}
-.panel-info > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #bce8f1;
-}
-.panel-info > .panel-heading .badge {
-  color: #d9edf7;
-  background-color: #31708f;
-}
-.panel-info > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #bce8f1;
-}
-.panel-warning {
-  border-color: #faebcc;
-}
-.panel-warning > .panel-heading {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-}
-.panel-warning > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #faebcc;
-}
-.panel-warning > .panel-heading .badge {
-  color: #fcf8e3;
-  background-color: #8a6d3b;
-}
-.panel-warning > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #faebcc;
-}
-.panel-danger {
-  border-color: #ebccd1;
-}
-.panel-danger > .panel-heading {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
-}
-.panel-danger > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #ebccd1;
-}
-.panel-danger > .panel-heading .badge {
-  color: #f2dede;
-  background-color: #a94442;
-}
-.panel-danger > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #ebccd1;
 }
 .embed-responsive {
   position: relative;
@@ -8529,126 +8048,6 @@ button.close {
     transform: rotate(359deg);
   }
 }
-.popover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1010;
-  display: none;
-  max-width: 276px;
-  padding: 1px;
-  font-family: 'berliner_groteskregular', 'sans-serif';
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857143;
-  text-align: left;
-  background-color: #ffffff;
-  background-clip: padding-box;
-  border: 1px solid #a9a9a9;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  white-space: normal;
-}
-.popover.top {
-  margin-top: -10px;
-}
-.popover.right {
-  margin-left: 10px;
-}
-.popover.bottom {
-  margin-top: 10px;
-}
-.popover.left {
-  margin-left: -10px;
-}
-.popover-title {
-  margin: 0;
-  padding: 8px 14px;
-  font-size: 14px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
-  border-radius: 14px 14px 0 0;
-}
-.popover-content {
-  padding: 9px 14px;
-}
-.popover > .arrow,
-.popover > .arrow:after {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-.popover > .arrow {
-  border-width: 11px;
-}
-.popover > .arrow:after {
-  border-width: 10px;
-  content: "";
-}
-.popover.top > .arrow {
-  left: 50%;
-  margin-left: -11px;
-  border-bottom-width: 0;
-  border-top-color: #767676;
-  border-top-color: #a9a9a9;
-  bottom: -11px;
-}
-.popover.top > .arrow:after {
-  content: " ";
-  bottom: 1px;
-  margin-left: -10px;
-  border-bottom-width: 0;
-  border-top-color: #ffffff;
-}
-.popover.right > .arrow {
-  top: 50%;
-  left: -11px;
-  margin-top: -11px;
-  border-left-width: 0;
-  border-right-color: #767676;
-  border-right-color: #a9a9a9;
-}
-.popover.right > .arrow:after {
-  content: " ";
-  left: 1px;
-  bottom: -10px;
-  border-left-width: 0;
-  border-right-color: #ffffff;
-}
-.popover.bottom > .arrow {
-  left: 50%;
-  margin-left: -11px;
-  border-top-width: 0;
-  border-bottom-color: #767676;
-  border-bottom-color: #a9a9a9;
-  top: -11px;
-}
-.popover.bottom > .arrow:after {
-  content: " ";
-  top: 1px;
-  margin-left: -10px;
-  border-top-width: 0;
-  border-bottom-color: #ffffff;
-}
-.popover.left > .arrow {
-  top: 50%;
-  right: -11px;
-  margin-top: -11px;
-  border-right-width: 0;
-  border-left-color: #767676;
-  border-left-color: #a9a9a9;
-}
-.popover.left > .arrow:after {
-  content: " ";
-  right: 1px;
-  border-right-width: 0;
-  border-left-color: #ffffff;
-  bottom: -10px;
-}
 .carousel {
   position: relative;
 }
@@ -8873,6 +8272,7 @@ button.close {
   }
 }
 #home-carousel {
+  overflow: hidden;
   max-width: 1800px;
   margin: 0 auto;
 }
@@ -8947,7 +8347,7 @@ button.close {
   background-color: transparent;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-size: display: block;
+  display: inline-block;
   width: 21%;
   max-width: 145px;
   height: auto;
@@ -9067,7 +8467,11 @@ form.sign-up .input-group select,
 form.sign-up .input-group form input[type="text"],
 form.sign-up .input-group form input[type="number"],
 form.sign-up .input-group form input[type="password"],
-form.sign-up .input-group form textarea {
+form.sign-up .input-group form textarea,
+form.sign-up .input-group div.responsive input[type="text"],
+form.sign-up .input-group div.responsive input[type="number"],
+form.sign-up .input-group div.responsive input[type="password"],
+form.sign-up .input-group div.responsive textarea {
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   border-radius: 13px;
@@ -9097,6 +8501,10 @@ form.sign-up.compact .input-group form input[type="text"],
 form.sign-up.compact .input-group form input[type="number"],
 form.sign-up.compact .input-group form input[type="password"],
 form.sign-up.compact .input-group form textarea,
+form.sign-up.compact .input-group div.responsive input[type="text"],
+form.sign-up.compact .input-group div.responsive input[type="number"],
+form.sign-up.compact .input-group div.responsive input[type="password"],
+form.sign-up.compact .input-group div.responsive textarea,
 header .top-signup form.sign-up .input-group .form-control,
 footer div.sign-up form.sign-up .input-group .form-control {
   border-bottom-right-radius: 0;
@@ -9113,6 +8521,10 @@ form.sign-up.compact .input-group form input[type="text"]:focus,
 form.sign-up.compact .input-group form input[type="number"]:focus,
 form.sign-up.compact .input-group form input[type="password"]:focus,
 form.sign-up.compact .input-group form textarea:focus,
+form.sign-up.compact .input-group div.responsive input[type="text"]:focus,
+form.sign-up.compact .input-group div.responsive input[type="number"]:focus,
+form.sign-up.compact .input-group div.responsive input[type="password"]:focus,
+form.sign-up.compact .input-group div.responsive textarea:focus,
 header .top-signup form.sign-up .input-group .form-control:focus,
 footer div.sign-up form.sign-up .input-group .form-control:focus {
   border-color: #a9a9a9;
@@ -9218,8 +8630,9 @@ header .top-signup label.FormLabel {
     margin-top: -7px;
   }
   header .btn.top-donate {
-    display: inline;
+    display: inline-block;
     padding: 15px 60px;
+    max-width: 200px;
   }
   header .top-signup {
     max-width: 250px;
@@ -9228,6 +8641,22 @@ header .top-signup label.FormLabel {
 footer {
   background-color: #186273;
   color: #ffffff;
+}
+footer:before,
+footer:after {
+  content: " ";
+  display: table;
+}
+footer:after {
+  clear: both;
+}
+footer:before,
+footer:after {
+  content: " ";
+  display: table;
+}
+footer:after {
+  clear: both;
 }
 footer .container {
   padding: 10px 0 0;
@@ -9550,13 +8979,13 @@ div.page-title h1 {
 }
 .side-box {
   position: relative;
-  min-height: 150px;
   background-color: #c5664f;
   color: #ffffff;
   padding: 20px 30px;
   margin-bottom: 30px;
 }
 .side-box.fact {
+  min-height: 150px;
   text-align: center;
   font-size: 1.5em;
 }
@@ -9691,8 +9120,6 @@ blockquote footer cite {
 .navbar-header:after,
 .navbar-collapse:before,
 .navbar-collapse:after,
-.panel-body:before,
-.panel-body:after,
 .modal-footer:before,
 .modal-footer:after {
   content: " ";
@@ -9710,7 +9137,6 @@ blockquote footer cite {
 .navbar:after,
 .navbar-header:after,
 .navbar-collapse:after,
-.panel-body:after,
 .modal-footer:after {
   clear: both;
 }
@@ -10088,176 +9514,4 @@ blockquote footer cite {
   .hidden-print {
     display: none !important;
   }
-}
-.animated-slow {
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-.animated {
-  -webkit-animation-duration: .2s;
-  animation-duration: .2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-@-webkit-keyframes slideInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-2000px);
-    transform: translateY(-2000px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes slideInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-2000px);
-    -ms-transform: translateY(-2000px);
-    transform: translateY(-2000px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-.slideInDown {
-  -webkit-animation-name: slideInDown;
-  animation-name: slideInDown;
-}
-@-webkit-keyframes slideOutUp {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-2000px);
-    transform: translateY(-2000px);
-  }
-}
-@keyframes slideOutUp {
-  0% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-2000px);
-    -ms-transform: translateY(-2000px);
-    transform: translateY(-2000px);
-  }
-}
-.slideOutUp {
-  -webkit-animation-name: slideOutUp;
-  animation-name: slideOutUp;
-}
-@-webkit-keyframes slideOutDown {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(2000px);
-    transform: translateY(2000px);
-  }
-}
-@keyframes slideOutDown {
-  0% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(2000px);
-    -ms-transform: translateY(2000px);
-    transform: translateY(2000px);
-  }
-}
-.slideOutDown {
-  -webkit-animation-name: slideOutDown;
-  animation-name: slideOutDown;
-}
-@-webkit-keyframes slideInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(2000px);
-    transform: translateY(2000px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes slideInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(2000px);
-    -ms-transform: translateY(2000px);
-    transform: translateY(2000px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-.slideInUp {
-  -webkit-animation-name: slideInUp;
-  animation-name: slideInUp;
-}
-.hover-effect--scale {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.hover-effect--scale:hover,
-.hover-effect--scale:focus {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-@media (min-width: 992px) {
-  .hover-effect--md-scale {
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  .hover-effect--md-scale:hover,
-  .hover-effect--md-scale:focus {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-}
-#js--carousel__wrapper {
-  position: relative;
-  height: 120px;
-  overflow: hidden;
-}
-#js--carousel__body {
-  position: absolute;
-}
-#js--carousel__list {
-  margin-left: 15px;
-}
-#js--carousel__list > li {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.js--c_img img {
-  max-height: 75px;
-  vertical-align: top;
-}
-.sponsors-event__arrow--left,
-.sponsors-event__arrow--right {
-  position: relative;
-  z-index: 4;
 }
