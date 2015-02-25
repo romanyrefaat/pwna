@@ -2,6 +2,12 @@
 // ########## PAGE LOAD HANDLERS ##########
 // ########################################
 (function($) {
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
     function alertError(message) {
         BootstrapDialog.show({
             type: BootstrapDialog.TYPE_DANGER,
@@ -19,18 +25,27 @@
     function modal2Error(modal, message) {
         modal.enableButtons(true);
         modal.setClosable(true);
-        $('.bootstrap-dialog').removeClass('type-info,type-default').addClass('type-danger');
-        $('.bootstrap-dialog-footer-buttons .btn').removeClass('btn-primary,btn-default').addClass('btn-danger');
+        $('.bootstrap-dialog').removeClass('type-info type-default').addClass('type-danger');
+        $('.bootstrap-dialog-footer-buttons .btn').removeClass('btn-primary btn-default').addClass('btn-danger');
         $('.bootstrap-dialog-title').html('<i class="fa fa-times"></i> Error');
         $('.bootstrap-dialog-message').html(message);
     }
     function modal2Success(modal, message) {
         modal.enableButtons(true);
         modal.setClosable(true);
-        $('.bootstrap-dialog').removeClass('type-info,type-default').addClass('type-success');
-        $('.bootstrap-dialog-footer-buttons .btn').removeClass('btn-primary,btn-danger,btn-default').addClass('btn-success');
+        $('.bootstrap-dialog').removeClass('type-info type-default').addClass('type-success');
+        $('.bootstrap-dialog-footer-buttons .btn').removeClass('btn-primary btn-danger btn-default').addClass('btn-success');
         $('.bootstrap-dialog-title').html('<i class="fa fa-check"></i> Success');
         $('.bootstrap-dialog-message').html(message);
+    }
+    function resolvePWNAPageLinks(){
+        if(getParameterByName("pagename") == 'pwna'){
+            $('.page-content a[href*="?pagename"]').each(function(){
+                var href = $(this).attr('href');
+                href = href.replace('pagename=', 'pagename=pwna&page=');
+                $(this).attr('href', href);
+            });
+        }
     }
     $.fn.bindLuminateForm = function(options) {
         var settings = $.extend({
@@ -150,6 +165,17 @@
     $('.js-signup-form').each(function() {
         $(this).bindSignupForm();
     });
+    resolvePWNAPageLinks();
+    
+    //Announcement alert ..
+    if($.trim($('.announcement .box').html()).length){
+        $('.announcement').addClass('expand');
+        $('.announcement .container-fluid').slideToggle('slow');
+        $('.dismiss').click(function(e){
+            $('.announcement').fadeOut('fast', function () { $('.announcement').removeClass('expand'); });
+            e.preventDefault();
+        });
+    }
     if ($(window).width() > 769) {
         $('.navbar .dropdown > a').click(function() {
             location.href = this.href;
@@ -160,7 +186,7 @@
         $(this).find('input').prop('checked', true);
     });
 
-   // FAQ accordion
+    // FAQ accordion
     $(".accordion-title").click(function() {
         $(".accordion-title").removeClass("active");
         $(".accordion-content").slideUp("normal");
