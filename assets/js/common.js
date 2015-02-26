@@ -34,7 +34,7 @@
         modal.enableButtons(true);
         modal.setClosable(true);
         $('.bootstrap-dialog').removeClass('type-info type-default').addClass('type-success');
-        $('.bootstrap-dialog-footer-buttons .btn').removeClass('btn-primary btn-danger btn-default').addClass('btn-success');
+        $('.bootstrap-dialog-footer-buttons .btn').removeClass('btn-danger btn-default').addClass('btn-primary');
         $('.bootstrap-dialog-title').html('<i class="fa fa-check"></i> Success');
         $('.bootstrap-dialog-message').html(message);
     }
@@ -166,7 +166,7 @@
         $(this).bindSignupForm();
     });
     resolvePWNAPageLinks();
-    
+    $('input, textarea').placeholder();
     //Announcement alert ..
     if($.trim($('.announcement .box').html()).length){
         $('.announcement').addClass('expand');

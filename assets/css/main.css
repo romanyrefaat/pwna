@@ -7365,6 +7365,10 @@ footer .address a:hover {
   position: relative;
   padding: 10px 0;
   line-height: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .outcome strong {
   font-size: 20px;
@@ -7452,6 +7456,11 @@ div.page-title h1 {
   line-height: 26px;
   color: #ffffff;
   background-color: #e22427;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .callout {
   clear: both;
