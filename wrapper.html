@@ -85,7 +85,7 @@
                                 <a href="PageServer?pagename=pwna_partner_successes">Partner Successes</a>
                                 <a href="PageServer?pagename=pwna_directors_staff">Directors and Staff</a>
                                 [[?comment::yes::<li><a href="PageServer?pagename=pwna_careers">Careers</a></li>::]]
-                                <a href="PageServer?pagename=pwna_contact">Contact Us</a>
+                            <a href="PageServer?pagename=pwna_contact">Contact Us</a>
                             </p>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-6">
@@ -112,7 +112,7 @@
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <p class="links-group">
-                                <span class="main">How to Help</span>
+                                <a class="main" href="PageServer?pagename=pwna_how_to_help">How to Help</a>
                                 <a href="http://[[S29:DOMAIN]]/pwna_donate">Monetary Donation</a>
                                 <a href="PageServer?pagename=pwna_planned_giving">Planned Giving</a>
                                 <a href="PageServer?pagename=pwna_company_matching">Company Matching</a>
@@ -120,8 +120,16 @@
                             <p class="links-group">
                                 <span class="main">Resources</span>
                                 <a href="PageServer?pagename=pwna_faq">FAQ</a>
-                                <a href="UserLogin">Member Login <i class="fa fa-lock"></i></a>
+                                [[?xx::x[[S1:cons_id]]x::<a href="UserLogin?NEXTURL=[[T1:[[E130:"[[S8]]" "&amp;" "&" replaceall]]]]">Member Login <i class="fa fa-lock"></i></a>::]]
                             </p>
+                            [[?xx::x[[S1:cons_id]]x::::
+                            <p>
+                                Welcome[[?xxnullx::x[[S1:first_name]]x::::, [[S1:first_name]]]]<br/>
+                                <span class="profile">
+                                    [<a href="UserLogin?logout=&amp;NEXTURL=[[T1:[[E130:"[[S8]]" "&amp;" "&" replaceall]]]]">Log Out</a> | <a href="[[S11:81]][[?[[S11:81]]::?::&amp;::?]]dispMode=edit">change profile</a>]
+                                </span>
+                            </p>
+                            ]]
                         </div>
                     </div>
                     <p>
@@ -134,6 +142,7 @@
                         <label>Signup for our Email List</label>
                         [[S51:reus_pwna_signup]]
                     </div>
+                    [[?comment::yes::
                     <p class="social-icons">
                         <a href="#">
                             <span class="fa-stack fa-2x">
@@ -190,6 +199,7 @@
                             </span>
                         </a>
                     </p>
+                    ::]]
                     <p class="donate"><a href="http://[[S29:DOMAIN]]/pwna_donate" class="btn btn-default-pwna donate">Donate</a></p>
                 </div>
             </div>
@@ -199,7 +209,7 @@
                         13318 Airpark Drive - Elkwood, VA 22718<br/>
                         1-800-416-8102<br/>
                         &copy; 2015 PARTNERSHIP WITH NATIVE AMERICANS<br/>
-                        <a href="#"><u>Privacy Statement</u></a>
+                        <a href="PageServer?pagename=pwna&page=privacypolicy"><u>Privacy Statement</u></a>
                     </p>
                 </div>
                 <div class="col-md-7">

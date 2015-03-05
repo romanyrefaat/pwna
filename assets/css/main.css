@@ -7075,6 +7075,10 @@ footer p.links-group span.main {
   display: block;
   margin-bottom: 5px;
 }
+.profile footer p.links-group a,
+.profile footer p.links-group span.main {
+  display: inline;
+}
 footer p.links-group a.main,
 footer p.links-group span.main {
   line-height: 1.2em;
