@@ -3188,6 +3188,73 @@ select[multiple].input-group-sm > div.responsive textarea {
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+a.label:hover,
+a.label:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.label:empty {
+  display: none;
+}
+.btn .label {
+  position: relative;
+  top: -1px;
+}
+.label-default {
+  background-color: #a9a9a9;
+}
+.label-default[href]:hover,
+.label-default[href]:focus {
+  background-color: #909090;
+}
+.label-primary {
+  background-color: #337ab7;
+}
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #286090;
+}
+.label-success {
+  background-color: #5cb85c;
+}
+.label-success[href]:hover,
+.label-success[href]:focus {
+  background-color: #449d44;
+}
+.label-info {
+  background-color: #5bc0de;
+}
+.label-info[href]:hover,
+.label-info[href]:focus {
+  background-color: #31b0d5;
+}
+.label-warning {
+  background-color: #f0ad4e;
+}
+.label-warning[href]:hover,
+.label-warning[href]:focus {
+  background-color: #ec971f;
+}
+.label-danger {
+  background-color: #d9534f;
+}
+.label-danger[href]:hover,
+.label-danger[href]:focus {
+  background-color: #c9302c;
+}
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -6934,6 +7001,13 @@ header .top-signup form.sign-up .input-group-sm > .input-group-btn > .btn span,
 footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn span {
   display: none !important;
 }
+.label-pwna {
+  background-color: #186273;
+}
+.label-pwna[href]:hover,
+.label-pwna[href]:focus {
+  background-color: #0f3e49;
+}
 .link-white,
 footer p.links-group a.main,
 footer .address a,
@@ -7477,6 +7551,10 @@ div.page-title h1 {
 .callout h2 {
   font-size: 1.9em;
   margin-top: 0;
+}
+.callout h2 small,
+.callout h2 .small {
+  color: inherit;
 }
 .callout p {
   font-size: 1.5em;
