@@ -1,10 +1,52 @@
-<form class="js-signup-form sign-up luminateApi" method="POST" action="https://[[S29:SECURE_DOMAIN]][[S29:SECURE_PATH]]CRSurveyAPI" data-luminateApi='{"callback": "emailSignupCallback", "requiresAuth": "true"}'>
+<form class="js-signup-form sign-up" method="POST" action="" onsubmit="return false;">
     <input type="hidden" name="method" value="submitSurvey">
     <input type="hidden" name="survey_id" value="3462">
-    <div class="input-group input-group-sm">
+    <div class="js-step-1 input-group input-group-sm">
         <input type="text" class="form-control" name="cons_email" placeholder="Enter your email address" id="header_email">
         <span class="input-group-btn">
             <button class="btn btn-link" type="submit"><span>Sign Me Up </span><i class="fa fa-chevron-right"></i></button>
         </span>
+    </div>
+    <div class="js-step-2 hidden">
+        <div class="clearfix"><small class="text-muted pull-right">* = Required Fields</small></div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <p class="js-entered-email form-control-static"></p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">* Name</label>
+            <div class="col-sm-5">
+                <input class="form-control required" type="text" name="cons_first_name" placeholder="First Name">
+            </div>
+            <div class="col-sm-5">
+                <input class="form-control required" type="text" name="cons_last_name" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Street 1</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="cons_street1">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Street 2</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="cons_street2">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">City/State/Zip</label>
+            <div class="col-sm-3">
+                <input class="form-control" type="text" name="cons_city" placeholder="City">
+            </div>
+            <div class="col-sm-4">
+                [[S103:state:id=cons_state, name=cons_state]]
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control" type="text" name="cons_zip_code" placeholder="Zip">
+            </div>
+        </div>
     </div>
 </form>

@@ -154,7 +154,7 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
             var hasErrors = false, errMessages = [];
             formElem.find('.required').each(function() {
                 var fieldName = $(this).attr('name');
-                $(this).parent('.input-group').removeClass('has-error');
+                $(this).parent().removeClass('has-error');
                 $('label[for="' + fieldName + '"]').removeClass('error');
                 if ($(this).attr('type') === 'radio') {
                     if (!$('input[name="' + fieldName + '"]:checked').val()) {
@@ -164,7 +164,7 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
                 } else {
                     var fieldValue = $.trim($(this).val());
                     if (fieldValue === '') {
-                        $(this).parent('.input-group').addClass('has-error');
+                        $(this).parent().addClass('has-error');
                         hasErrors = true;
                     }
                 }
@@ -172,7 +172,7 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
             var customValidationErrors = luminateExtend.utils.ensureArray(settings.customFormValidation());
             if (customValidationErrors.length > 0) {
                 hasErrors = true;
-                errMessages.push(customValidationErrors);
+                errMessages.push.apply(errMessages, customValidationErrors);
             }
             if (hasErrors) {
                 if (errMessages.length > 0) {
@@ -180,7 +180,7 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
                     if (errMessages.length > 1) {
                         errorsList = $('<ul></ul>');
                         for (var i = 0; i < errMessages.length; i++) {
-                            errorsList.append($('<li>' + errMessages[i] + '</li>'));
+                            errorsList.append($('<li class="text-danger">' + errMessages[i] + '</li>'));
                         }
                     } else {
                         errorsList = $('<div class="text-danger">' + errMessages[0] + '</div>');
@@ -220,16 +220,55 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
         return this;
     }
     $.fn.bindSignupForm = function() {
-        var elem = $(this);
-        elem.bindLuminateForm({
-            customFormValidation: function() {
-                var errors = [];
-                var emailField = elem.find('input[name="cons_email"]');
-                if ($.trim(emailField.val()) === '') {
-                    errors.push('Please enter your email address.');
-                }
-                return errors;
+        var elem = $(this),
+                form = elem.clone();
+        elem.unbind('submit').bind('submit', function(e) {
+            var emailValue = elem.find('input[name="cons_email"]').val();
+            if ($.trim(emailValue) === '') {
+                alertError('Please enter your email address.');
+            } else if (emailValue.indexOf('@') === -1 || emailValue.indexOf('.') === -1) {
+                alertError('Please enter a valid email address.');
+            } else {
+                BootstrapDialog.show({
+                    type: BootstrapDialog.TYPE_INFO,
+                    closable: true,
+                    title: 'Signup for our Email List',
+                    message: function(dialogRef) {
+                        var $message = $('<div></div>').append(form);
+                        form.addClass('luminateApi form-horizontal').attr('action', luminateExtend.global.path.secure + 'CRSurveyAPI').attr('data-luminateApi', '{"callback": "emailSignupCallback", "requiresAuth": "true"}');
+                        form.find('.js-step-1').addClass('hidden');
+                        form.find('.js-step-2').removeClass('hidden');
+                        form.find('.js-entered-email').text(emailValue);
+                        form.find('input[name="cons_email"]').val(emailValue);
+                        return $message;
+                    },
+                    buttons: [{
+                            label: 'Sign me up',
+                            cssClass: 'btn-primary',
+                            action: function(dialogRef) {
+                                form.bindLuminateForm({
+                                    customFormValidation: function() {
+                                        var errors = [];
+                                        var firstNameValue = form.find('input[name="cons_first_name"]').val(),
+                                                lastNameValue = form.find('input[name="cons_last_name"]').val();
+                                        if ($.trim(firstNameValue) === '') {
+                                            errors.push('Please enter your first name.');
+                                        }
+                                        if ($.trim(lastNameValue) === '') {
+                                            errors.push('Please enter your last name.');
+                                        }
+                                        return errors;
+                                    }
+                                }).submit();
+                            }
+                        }],
+                    onshown: function(dialogRef) {
+                        window.luminateStep1Form = elem;
+                        window.luminateStep2Dialog = dialogRef;
+                    }
+                });
             }
+            e.preventDefault();
         });
         return this;
     }
@@ -250,7 +289,9 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
                 modal2Error(window.luminateSubmitDialog, errorMessage);
             }
             else {
+                window.luminateStep2Dialog.close();
                 window.luminateSubmitForm.get(0).reset();
+                window.luminateStep1Form.get(0).reset();
                 modal2Success(window.luminateSubmitDialog, 'Thank you for signing up!')
             }
             // TODO: Check if we remove sign up forms after submission
@@ -317,4 +358,11 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
         }
     });
     $(".accordion-content").hide();
+
+    //Addthis scroll Y fix
+    $('.addthis_button_compact, .addthis_bubble_style').mousemove(function(e) {
+        $('#at15s').css({
+            'top': e.pageY
+        });
+    });
 })(jQuery);
