@@ -15,8 +15,9 @@ nav{
         vertical-align: top;
         >li>a{
             font-size: 20px;
-            font-weight: bold;
+            font-weight: 400;
             .text-uppercase;
+            font-family: @font-family-oswald;
         }
         .open .dropdown-menu{
             background-color: @dropdown-bg;
@@ -33,6 +34,8 @@ nav{
     .dropdown-menu{
                     border-radius: 0px;
                     a{
+                        font-size: @font-size-base;
+                        font-family: inherit;
                     }
                     &.multi-column{
                         min-width: auto;

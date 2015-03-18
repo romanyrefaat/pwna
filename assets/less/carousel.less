@@ -76,26 +76,31 @@
         }
         .btn{
             margin-top: 15px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            line-height: 16px;
+            padding: 8px 20px;
             text-align: left;
-            .border-radius(25px);
+            .border-radius(20px);
             color: @black-light;
             display: table;
-            font-size: @font-size-small;
             &:hover{background-color: @brand-gray;}
-            span{
-                display: block;
+            >span{
+                display: table-cell;
                 margin: 0;
-                font-weight: bold;
-                line-height: 23px;
-                font-size: @font-size-h3;
+                line-height: 28px;
+                font-size: 25px;
+                font-weight: 400;
+                vertical-align: middle;
+                span{
+                    display: block;
+                    line-height: 17px;
+                    font-size: 15px;
+                    font-weight: 300;
+                }
             }
-            .arrow{
+            .fa{
                 .text-right;
                 display: table-cell;
                 vertical-align: middle;
+                font-size: 2.4em;
             }
         }
     }

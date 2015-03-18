@@ -115,7 +115,8 @@ header{
         }
         .btn.top-donate{
             display: inline-block;
-            padding: 15px 60px;
+            padding: 10px 60px;
+            font-size: 25px;
             max-width: 200px;
         }
         .top-signup{
@@ -151,6 +152,7 @@ footer{
     }
     p.links-group{
         a, span.main{
+            font-size: @font-size-small;
             display: block;
             margin-bottom: 5px;
             .profile &{
@@ -162,7 +164,7 @@ footer{
         }
         a.main, span.main{
             line-height: 1.2em;
-            font-weight: bold;
+            font-weight: 700;
             margin-bottom: 10px;
         }
     }
@@ -177,12 +179,18 @@ footer{
     .btn.donate{
         color: @brand-turquoise;
         .box-shadow(2px 2px 4px rgba(0,0,0,.8));
-        padding: 15px 35px
+        font-size: 25px;
+        padding: 10px 35px
     }
     div.sign-up{
-        padding: @padding-large-vertical @padding-large-horizontal;
+        padding: 15px 30px 20px;
         background-color: @turquoise-light;
         margin-bottom: 25px;
+        label{
+            font-size: @font-size-small;
+            margin-bottom: 12px;
+            padding-left: 10px;
+        }
         form.sign-up{
             &:extend(form.sign-up.compact all);
             .input-group-sm > .input-group-btn > .btn{
@@ -202,7 +210,7 @@ footer{
             &:focus,
             &:visited {
                 color: @white;
-                font-size: 0.8em;
+                font-size: 1.5em;
                 text-decoration: none;
             }
         }
@@ -220,13 +228,41 @@ footer{
     .separator{
         border-top: 1px solid @turquoise-lighter;
     }
+    img.logo{
+        max-width: 311px;
+    }
     .address{
-        .small;
+        font-size: 80%;
+        font-weight: 700;
         margin-top: 20px;
+        line-height: 18px;
         a{
             &:extend(.link-white all);
+            font-size: 85%;
+            font-weight: inherit;
             &:hover{
                 color: @turquoise-lighter;
+                font-size: 85%;
+                font-weight: inherit;
+            }
+        }
+    }
+    .badges {
+        .img{
+            position: relative;
+            .pull-right;
+            margin: 15px 0;
+            img{width: 100%;}
+        }
+        .rollover{
+            background: url('../images/footer_badges_on.png') no-repeat;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            &.dummy{
+                cursor: default;
             }
         }
     }
@@ -256,6 +292,18 @@ footer{
     &.hp{
         margin-top: 0;
         padding: 40px 0;
+    }
+    .login-prompt{
+        .center-block;
+        width: 80%;
+        padding: 50px 0;
+        #li_comp_usr{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 400px;
+            border: none;
+        }
+        #li_comp_usr_rmbrTd{.hide;}
     }
 }
 
@@ -367,14 +415,21 @@ footer{
     h4{
         margin-top: 20px;
         line-height: 1.4;
+        font-size: 22px;
+    }
+    p{
+        font-size: @font-size-large;
     }
     a.btn{
-        padding: 15px 35px;
+        padding: 15px 22px;
     }
 }
 .hp-inform{
     @media (min-width: @screen-md-min) {
         padding: 0 25px;
+    }
+    h4{
+        font-size: 22px;
     }
     a.btn{
         margin-top: 10px;
@@ -443,7 +498,10 @@ div.page-title{
     background-color: @brand-red;
     min-height: 10px;
     h1{
-        margin: 31px 0;
+        font-family: @font-family-oswald;
+        font-weight: 300;
+        padding: 10px 15px;
+        margin: 21px -15px;
         line-height: 26px;
         color: @white;
         background-color: @brand-red;
@@ -511,6 +569,46 @@ div.page-title{
         &:hover{
             color:@black;
         }
+    }
+}
+.payment-type-element-container{
+    margin-top: 15px;
+    .payment-field-container{
+        border: 2px solid @brand-gray;
+        padding: 0 15px 10px;
+        margin-top: -2px;
+        span.internal-payment, span.external-payment{
+            margin-right: 0;
+            margin-left: -1px;
+            .border-radius(0px);
+            border: none;
+            .pull-left;
+            span.payment-type-option{
+                border: 2px solid @brand-gray !important;
+                .border-radius(0px);
+                height: 47px;
+            }
+        }
+        span.internal-payment span.payment-type-option.selected{
+            border-bottom-color: @white !important;
+        }
+    }
+    .payment-type-selection-container{
+        .clearfix;
+        border: none;
+        padding: 0;
+        margin: 0;
+        h3{
+            .pull-left;
+            margin: 0;
+            padding-right: 10px;
+            line-height: 47px;
+            text-transform: none;
+        }
+        .form-content, .form-row{
+            margin: 0;
+        }
+        
     }
 }
 .services{

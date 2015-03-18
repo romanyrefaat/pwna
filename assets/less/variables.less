@@ -56,13 +56,14 @@
 // Gotham fonts served via HF&J cloud.typography.com
 // 'Gotham 4r' etc are Legacy Support fo IE8
 
-@font-family-sans-300:				'berliner_groteskregular', 'sans-serif';
-@font-family-sans-400:				'berliner_groteskregular', 'sans-serif';
-@font-family-sans-700:				'berliner_groteskregular', 'sans-serif';
-@font-family-sans-800:				'berliner_groteskregular', 'sans-serif';
+@font-family-signika:				'Signika';
+@font-family-oswald:				'Oswald';
+@font-family-sans-300:				'Open Sans', 'sans-serif';
+@font-family-sans-400:				'Open Sans', 'sans-serif';
+@font-family-sans-700:				'Open Sans', 'sans-serif';
+@font-family-sans-800:				'Open Sans', 'sans-serif';
 
 @font-family-sans-serif:  			@font-family-sans-300;
-@font-family-Rockwell:       			'open_sans_condensedbold', Times, serif;
 @font-family-base:        			@font-family-sans-serif;
 
 @font-size-base:          14px;
@@ -84,8 +85,8 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
-@headings-font-weight:    400;
+@headings-font-family:    @font-family-signika;
+@headings-font-weight:    600;
 @headings-line-height:    1.1;
 @headings-color:          @black;
 
@@ -172,6 +173,7 @@
 
 
 //== Buttons
+@btn-font-weight:                400;
 @btn-primary-bg:                @brand-yellow;
 
 //== Forms

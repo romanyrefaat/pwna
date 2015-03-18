@@ -5,13 +5,13 @@
 
 // Base styles
 // --------------------------------------------------
-.button,div.responsive .button, .Button, a.btn {
+.button,div.responsive .button, .Button, a.btn, button {
     border: none;
     background-image: none;
     .box-shadow(2px 2px 4px rgba(0,0,0,.2));
     //.border-radius(15px);
     .transition(all 0.3s);
-    font-weight: normal;
+    font-family: @font-family-oswald;
     .text-uppercase;
     text-decoration: none !important;
     outline: 0;
@@ -23,10 +23,15 @@
         outline: 0;
         text-decoration: none !important;
     }
+    .fa-chevron-right{
+        font-size: 1.5em;
+        margin-left: 5px;
+        vertical-align: text-top;
+    }
 }
 a.btn-default-pwna{
     .button-variant(@white; @brand-yellow; transparent);
-    .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
+    .button-size(8px; 24px; 19px; @line-height-large; @border-radius-large);
     &:hover{background-color: @brand-gray;}
     &:link,
     &:visited{

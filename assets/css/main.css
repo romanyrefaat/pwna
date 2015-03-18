@@ -1,3 +1,6 @@
+@import url(//fonts.googleapis.com/css?family=Signika:400,600,700);
+@import url(//fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
 .mobile div.responsive,
 .mobile div.responsive div.ErrorMessage.page-error > span.field-error-text {
   width: auto;
@@ -141,8 +144,8 @@ div.appArea,
   border-bottom: inherit;
   color: inherit;
   margin-bottom: 10px;
-  font-family: inherit;
-  font-weight: 400;
+  font-family: 'Signika';
+  font-weight: 600;
   line-height: 1.1;
   color: #000000;
   text-transform: uppercase;
@@ -407,6 +410,71 @@ div.progress-bar-container div.progress-bar-step-text-container {
   max-width: 150px;
   margin-top: 0;
   vertical-align: middle;
+}
+div.form-info-message {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+div.form-info-message h4 {
+  margin-top: 0;
+  color: inherit;
+}
+div.form-info-message .alert-link {
+  font-weight: bold;
+}
+div.form-info-message > p,
+div.form-info-message > ul {
+  margin-bottom: 0;
+}
+div.form-info-message > p + p {
+  margin-top: 5px;
+}
+div.form-info-message hr {
+  border-top-color: #a6e1ec;
+}
+div.form-info-message .alert-link {
+  color: #245269;
+}
+div.errorMessageContainer {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+div.errorMessageContainer h4 {
+  margin-top: 0;
+  color: inherit;
+}
+div.errorMessageContainer .alert-link {
+  font-weight: bold;
+}
+div.errorMessageContainer > p,
+div.errorMessageContainer > ul {
+  margin-bottom: 0;
+}
+div.errorMessageContainer > p + p {
+  margin-top: 5px;
+}
+div.errorMessageContainer hr {
+  border-top-color: #e4b9c0;
+}
+div.errorMessageContainer .alert-link {
+  color: #843534;
+}
+div.errorMessageContainer div.ErrorMessage.page-error {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
 }
 div.donation-levels:before,
 div.donation-levels:after {
@@ -780,7 +848,7 @@ html {
   height: 100%;
 }
 body {
-  font-family: 'berliner_groteskregular', 'sans-serif';
+  font-family: 'Open Sans', 'sans-serif';
   font-size: 14px;
   line-height: 1.42857143;
   color: #000000;
@@ -889,8 +957,8 @@ h6,
 .h5,
 .h6,
 #login-div-content .banner-header {
-  font-family: inherit;
-  font-weight: 400;
+  font-family: 'Signika';
+  font-weight: 600;
   line-height: 1.1;
   color: #000000;
 }
@@ -1225,11 +1293,6 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
-@font-face {
-  font-family: 'berliner_groteskregular';
-  font-weight: normal;
-  font-style: normal;
-}
 h1,
 .h1,
 h2,
@@ -1237,8 +1300,8 @@ h2,
 h3,
 .h3,
 #login-div-content .banner-header {
-  font-family: inherit;
-  font-weight: 400;
+  font-family: 'Signika';
+  font-weight: 600;
   line-height: 1.1;
   color: #000000;
   text-transform: uppercase;
@@ -1292,8 +1355,6 @@ h6,
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: 'berliner_groteskregular', 'sans-serif';
-  font-weight: 700;
   color: #000000;
 }
 h4 small,
@@ -1338,13 +1399,13 @@ h6,
 p {
   margin: 0 0 20px;
 }
-.text-bold {
-  font-family: 'berliner_groteskregular', 'sans-serif';
-  font-weight: 700;
+.text-simi-bold {
+  font-family: 'Signika';
+  font-weight: 600;
 }
-.text-medium {
-  font-family: 'berliner_groteskregular', 'sans-serif';
-  font-weight: 500;
+.text-bold {
+  font-family: 'Signika';
+  font-weight: 800;
 }
 small,
 .small {
@@ -3258,7 +3319,7 @@ a.label:focus {
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: normal;
+  font-weight: 400;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -3649,6 +3710,7 @@ input[type="button"].btn-block {
 div.responsive .button,
 .Button,
 a.btn,
+button,
 #login-div-content input.uc-button,
 div.responsive #login-div-content input.uc-button,
 #login-div-content button,
@@ -3662,7 +3724,7 @@ div.responsive #login-div-content .ft button {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  font-weight: normal;
+  font-family: 'Oswald';
   text-transform: uppercase;
   text-decoration: none !important;
   outline: 0;
@@ -3673,66 +3735,103 @@ div.responsive #login-div-content .ft button {
 .button:link div.responsive .button:hover,
 .button:link .Button:hover,
 .button:link a.btn:hover,
+.button:link button:hover,
 div.responsive .button:link .button:hover,
 div.responsive .button:link div.responsive .button:hover,
 div.responsive .button:link .Button:hover,
 div.responsive .button:link a.btn:hover,
+div.responsive .button:link button:hover,
 .Button:link .button:hover,
 .Button:link div.responsive .button:hover,
 .Button:link .Button:hover,
 .Button:link a.btn:hover,
+.Button:link button:hover,
 a.btn:link .button:hover,
 a.btn:link div.responsive .button:hover,
 a.btn:link .Button:hover,
 a.btn:link a.btn:hover,
+a.btn:link button:hover,
+button:link .button:hover,
+button:link div.responsive .button:hover,
+button:link .Button:hover,
+button:link a.btn:hover,
+button:link button:hover,
 .button:focus,
 div.responsive .button:focus,
 .Button:focus,
 a.btn:focus,
+button:focus,
 #login-div-content input.uc-button:link #login-div-content input.uc-button:hover,
 #login-div-content input.uc-button:link div.responsive #login-div-content input.uc-button:hover,
 #login-div-content input.uc-button:link .Button:hover,
 #login-div-content input.uc-button:link a.btn:hover,
+#login-div-content input.uc-button:link button:hover,
 div.responsive #login-div-content input.uc-button:link #login-div-content input.uc-button:hover,
 div.responsive #login-div-content input.uc-button:link div.responsive #login-div-content input.uc-button:hover,
 div.responsive #login-div-content input.uc-button:link .Button:hover,
 div.responsive #login-div-content input.uc-button:link a.btn:hover,
+div.responsive #login-div-content input.uc-button:link button:hover,
 .Button:link #login-div-content input.uc-button:hover,
 .Button:link div.responsive #login-div-content input.uc-button:hover,
 a.btn:link #login-div-content input.uc-button:hover,
 a.btn:link div.responsive #login-div-content input.uc-button:hover,
+button:link #login-div-content input.uc-button:hover,
+button:link div.responsive #login-div-content input.uc-button:hover,
 #login-div-content input.uc-button:focus,
 div.responsive #login-div-content input.uc-button:focus,
 #login-div-content button:link #login-div-content button:hover,
 #login-div-content button:link div.responsive #login-div-content button:hover,
 #login-div-content button:link .Button:hover,
 #login-div-content button:link a.btn:hover,
+#login-div-content button:link button:hover,
 div.responsive #login-div-content button:link #login-div-content button:hover,
 div.responsive #login-div-content button:link div.responsive #login-div-content button:hover,
 div.responsive #login-div-content button:link .Button:hover,
 div.responsive #login-div-content button:link a.btn:hover,
+div.responsive #login-div-content button:link button:hover,
 .Button:link #login-div-content button:hover,
 .Button:link div.responsive #login-div-content button:hover,
 a.btn:link #login-div-content button:hover,
 a.btn:link div.responsive #login-div-content button:hover,
+button:link #login-div-content button:hover,
+button:link div.responsive #login-div-content button:hover,
 #login-div-content button:focus,
 div.responsive #login-div-content button:focus,
 #login-div-content .ft button:link #login-div-content .ft button:hover,
 #login-div-content .ft button:link div.responsive #login-div-content .ft button:hover,
 #login-div-content .ft button:link .Button:hover,
 #login-div-content .ft button:link a.btn:hover,
+#login-div-content .ft button:link button:hover,
 div.responsive #login-div-content .ft button:link #login-div-content .ft button:hover,
 div.responsive #login-div-content .ft button:link div.responsive #login-div-content .ft button:hover,
 div.responsive #login-div-content .ft button:link .Button:hover,
 div.responsive #login-div-content .ft button:link a.btn:hover,
+div.responsive #login-div-content .ft button:link button:hover,
 .Button:link #login-div-content .ft button:hover,
 .Button:link div.responsive #login-div-content .ft button:hover,
 a.btn:link #login-div-content .ft button:hover,
 a.btn:link div.responsive #login-div-content .ft button:hover,
+button:link #login-div-content .ft button:hover,
+button:link div.responsive #login-div-content .ft button:hover,
 #login-div-content .ft button:focus,
 div.responsive #login-div-content .ft button:focus {
   outline: 0;
   text-decoration: none !important;
+}
+.button .fa-chevron-right,
+div.responsive .button .fa-chevron-right,
+.Button .fa-chevron-right,
+a.btn .fa-chevron-right,
+button .fa-chevron-right,
+#login-div-content input.uc-button .fa-chevron-right,
+div.responsive #login-div-content input.uc-button .fa-chevron-right,
+#login-div-content button .fa-chevron-right,
+div.responsive #login-div-content button .fa-chevron-right,
+#login-div-content .ft button .fa-chevron-right,
+div.responsive #login-div-content .ft button .fa-chevron-right {
+  font-size: 1.5em;
+  margin-left: 5px;
+  vertical-align: text-top;
 }
 a.btn-default-pwna,
 a.btn-default-pwna:link,
@@ -3743,7 +3842,7 @@ a.btn-default-pwna:visited:link {
   background-color: #ffcd0a;
   border-color: transparent;
   padding: 8px 24px;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.33;
   border-radius: 15px;
 }
@@ -6007,8 +6106,9 @@ nav .navbar-nav {
 }
 nav .navbar-nav > li > a {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
+  font-family: 'Oswald';
 }
 nav .navbar-nav .open .dropdown-menu {
   background-color: #333333;
@@ -6021,6 +6121,10 @@ nav .navbar-nav.print-share li {
 }
 .dropdown .dropdown-menu {
   border-radius: 0px;
+}
+.dropdown .dropdown-menu a {
+  font-size: 14px;
+  font-family: inherit;
 }
 .dropdown .dropdown-menu.multi-column {
   min-width: auto;
@@ -6837,34 +6941,39 @@ button.close {
 }
 #home-carousel .carousel-caption .btn {
   margin-top: 15px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  line-height: 16px;
+  padding: 8px 20px;
   text-align: left;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   color: #333333;
   display: table;
-  font-size: 12px;
 }
 #home-carousel .carousel-caption .btn:hover {
   background-color: #bbbdbf;
 }
-#home-carousel .carousel-caption .btn span {
-  display: block;
+#home-carousel .carousel-caption .btn > span {
+  display: table-cell;
   margin: 0;
-  font-weight: bold;
-  line-height: 23px;
-  font-size: 21px;
+  line-height: 28px;
+  font-size: 25px;
+  font-weight: 400;
+  vertical-align: middle;
 }
-#home-carousel .carousel-caption .btn .arrow {
+#home-carousel .carousel-caption .btn > span span {
+  display: block;
+  line-height: 17px;
+  font-size: 15px;
+  font-weight: 300;
+}
+#home-carousel .carousel-caption .btn .fa {
   text-align: right;
   display: table-cell;
   vertical-align: middle;
+  font-size: 2.4em;
 }
 @media (max-width: 1200px) {
   #home-carousel .carousel-caption {
@@ -7102,7 +7211,8 @@ header .top-signup label.FormLabel {
   }
   header .btn.top-donate {
     display: inline-block;
-    padding: 15px 60px;
+    padding: 10px 60px;
+    font-size: 25px;
     max-width: 200px;
   }
   header .top-signup {
@@ -7149,6 +7259,7 @@ footer p {
 }
 footer p.links-group a,
 footer p.links-group span.main {
+  font-size: 12px;
   display: block;
   margin-bottom: 5px;
 }
@@ -7159,7 +7270,7 @@ footer p.links-group span.main {
 footer p.links-group a.main,
 footer p.links-group span.main {
   line-height: 1.2em;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 footer a.nrc {
@@ -7196,12 +7307,19 @@ footer .btn.donate {
   color: #186273;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  padding: 15px 35px;
+  font-size: 25px;
+  padding: 10px 35px;
 }
 footer div.sign-up {
-  padding: 20px 30px;
+  padding: 15px 30px 20px;
   background-color: #40798a;
   margin-bottom: 25px;
+}
+footer div.sign-up label,
+footer div.sign-up label.FormLabel {
+  font-size: 12px;
+  margin-bottom: 12px;
+  padding-left: 10px;
 }
 footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn {
   color: #186273;
@@ -7220,7 +7338,7 @@ footer .social-icons a:hover,
 footer .social-icons a:focus,
 footer .social-icons a:visited {
   color: #ffffff;
-  font-size: 0.8em;
+  font-size: 1.5em;
   text-decoration: none;
 }
 footer .social-icons .fa-inverse {
@@ -7236,12 +7354,42 @@ footer .donate {
 footer .separator {
   border-top: 1px solid #99afbd;
 }
+footer img.logo {
+  max-width: 311px;
+}
 footer .address {
-  font-size: 85%;
+  font-size: 80%;
+  font-weight: 700;
   margin-top: 20px;
+  line-height: 18px;
+}
+footer .address a {
+  font-size: 85%;
+  font-weight: inherit;
 }
 footer .address a:hover {
   color: #99afbd;
+  font-size: 85%;
+  font-weight: inherit;
+}
+footer .badges .img {
+  position: relative;
+  float: right !important;
+  margin: 15px 0;
+}
+footer .badges .img img {
+  width: 100%;
+}
+footer .badges .rollover {
+  background: url('../images/footer_badges_on.png') no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+footer .badges .rollover.dummy {
+  cursor: default;
 }
 @media (min-width: 768px) {
   footer .social-icons,
@@ -7268,6 +7416,22 @@ footer .address a:hover {
 .page-content.hp {
   margin-top: 0;
   padding: 40px 0;
+}
+.page-content .login-prompt {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 50px 0;
+}
+.page-content .login-prompt #li_comp_usr {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+}
+.page-content .login-prompt #li_comp_usr_rmbrTd {
+  display: none !important;
 }
 .social-share {
   z-index: 10;
@@ -7424,14 +7588,21 @@ footer .address a:hover {
 .hp-feature h4 {
   margin-top: 20px;
   line-height: 1.4;
+  font-size: 22px;
+}
+.hp-feature p {
+  font-size: 18px;
 }
 .hp-feature a.btn {
-  padding: 15px 35px;
+  padding: 15px 22px;
 }
 @media (min-width: 992px) {
   .hp-inform {
     padding: 0 25px;
   }
+}
+.hp-inform h4 {
+  font-size: 22px;
 }
 .hp-inform a.btn {
   margin-top: 10px;
@@ -7533,7 +7704,10 @@ div.page-title {
   min-height: 10px;
 }
 div.page-title h1 {
-  margin: 31px 0;
+  font-family: 'Oswald';
+  font-weight: 300;
+  padding: 10px 15px;
+  margin: 21px -15px;
   line-height: 26px;
   color: #ffffff;
   background-color: #e22427;
@@ -7611,6 +7785,73 @@ div.page-title h1 {
 }
 .side-box a:hover {
   color: #000000;
+}
+.payment-type-element-container {
+  margin-top: 15px;
+}
+.payment-type-element-container .payment-field-container {
+  border: 2px solid #bbbdbf;
+  padding: 0 15px 10px;
+  margin-top: -2px;
+}
+.payment-type-element-container .payment-field-container span.internal-payment,
+.payment-type-element-container .payment-field-container span.external-payment {
+  margin-right: 0;
+  margin-left: -1px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: none;
+  float: left !important;
+}
+.payment-type-element-container .payment-field-container span.internal-payment span.payment-type-option,
+.payment-type-element-container .payment-field-container span.external-payment span.payment-type-option {
+  border: 2px solid #bbbdbf !important;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  height: 47px;
+}
+.payment-type-element-container .payment-field-container span.internal-payment span.payment-type-option.selected {
+  border-bottom-color: #ffffff !important;
+}
+.payment-type-element-container .payment-type-selection-container {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.payment-type-element-container .payment-type-selection-container:before,
+.payment-type-element-container .payment-type-selection-container:after {
+  content: " ";
+  display: table;
+}
+.payment-type-element-container .payment-type-selection-container:after {
+  clear: both;
+}
+.payment-type-element-container .payment-type-selection-container:before,
+.payment-type-element-container .payment-type-selection-container:after {
+  content: " ";
+  display: table;
+}
+.payment-type-element-container .payment-type-selection-container:after {
+  clear: both;
+}
+.payment-type-element-container .payment-type-selection-container h3 {
+  float: left !important;
+  margin: 0;
+  padding-right: 10px;
+  line-height: 47px;
+  text-transform: none;
+}
+.payment-type-element-container .payment-type-selection-container .form-content,
+.payment-type-element-container .payment-type-selection-container .form-row {
+  margin: 0;
 }
 .services h4 {
   margin-top: 0;
