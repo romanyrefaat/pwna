@@ -844,7 +844,6 @@ html {
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: scrollbar;
-  overflow: hidden;
   height: 100%;
 }
 body {
@@ -6088,7 +6087,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444444;
 }
 .navbar-toggle {
-  margin: 0;
+  margin: 8px 0;
 }
 .navbar-collapse {
   text-align: left;
@@ -7175,25 +7174,59 @@ footer .address a:focus,
 }
 header {
   border-top: 5px solid #186273;
+  background-color: #fff;
+  -webkit-transition: top 0.5s ease-in-out;
+  -o-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out;
+}
+header .navbar {
+  padding: 0 15px;
+}
+header .cell1 {
+  width: 30%;
+}
+header .cell2 {
+  width: 55%;
+}
+header .cell3 {
+  width: 15%;
 }
 header a.logo {
   display: block;
   padding-top: 18px;
   max-width: 375px;
 }
+@media (max-width: 992px) {
+  header a.logo {
+    padding: 12px 0;
+  }
+}
 header a.logo img {
   width: 100%;
 }
 header .btn.top-donate {
-  display: block;
-  width: 100%;
+  font-size: 15px;
   margin: 5px 0;
   padding-left: 0;
   padding-right: 0;
+  width: 100%;
+  max-width: 100px;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  header .btn.top-donate {
+    font-size: 20px;
+    max-width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  header .btn.top-donate {
+    font-size: 25px;
+  }
 }
 header .top-signup {
-  float: right !important;
   width: 100%;
+  margin: 0 auto;
   margin-bottom: 15px;
 }
 header .top-signup label,
@@ -7205,18 +7238,56 @@ header .top-signup label.FormLabel {
   line-height: 30px;
   margin-bottom: 0px;
 }
+header.fixed {
+  padding-bottom: 0;
+  position: fixed;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  z-index: 9999;
+  border-top: none;
+  border-bottom: 5px solid #186273;
+}
+header.fixed.animate {
+  top: 0;
+}
+header.fixed .fixed-hide {
+  display: none !important;
+}
+header.fixed a.logo {
+  padding: 2px 0;
+}
+header.fixed #top-nav {
+  margin-top: 0;
+  position: relative;
+}
 @media (min-width: 992px) {
-  header #top-nav {
-    margin-top: -7px;
+  header {
+    padding-bottom: 52px;
   }
-  header .btn.top-donate {
-    display: inline-block;
-    padding: 10px 60px;
-    font-size: 25px;
-    max-width: 200px;
+  header #top-nav {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
   }
   header .top-signup {
     max-width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  header .cell1,
+  header .cell3 {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  header .cell1 {
+    width: 35%;
+  }
+  header .cell3 {
+    width: 65%;
+    padding-left: 10px;
   }
 }
 footer {
@@ -7920,6 +7991,142 @@ blockquote footer:before {
 }
 .accordion-wrapper .accordion-content p {
   margin: 15px 0;
+}
+.multilevelpushmenu_wrapper {
+  position: absolute;
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.multilevelpushmenu_wrapper .levelHolderClass {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  background: #186273;
+  width: auto;
+  min-height: 100%;
+  font-size: 1em;
+  zoom: 1;
+}
+.multilevelpushmenu_wrapper .ltr {
+  margin-left: -100%;
+  left: 0;
+  -moz-box-shadow: 5px 0 5px -5px #1f4164;
+  -webkit-box-shadow: 5px 0 5px -5px #1f4164;
+  box-shadow: 5px 0 5px -5px #1f4164;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#1f4164, direction=90, strength=2);
+}
+.multilevelpushmenu_wrapper .rtl {
+  margin-right: -100%;
+  right: 0;
+  -moz-box-shadow: 5px 0 5px 5px #1f4164;
+  -webkit-box-shadow: 5px 0 5px 5px #1f4164;
+  box-shadow: 5px 0 5px 5px #1f4164;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#1f4164, direction=270, strength=2);
+}
+.multilevelpushmenu_wrapper .multilevelpushmenu_inactive {
+  background: #186273;
+}
+.multilevelpushmenu_wrapper h2 {
+  font-size: 1.2em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #ffcd0a;
+  padding: 0 .4em 0 .4em;
+}
+.multilevelpushmenu_wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.multilevelpushmenu_wrapper li {
+  cursor: pointer;
+  border-top: 1px solid #fff;
+  padding: .4em .4em .4em .4em;
+  -webkit-transition: background ease-in-out .3s, box-shadow ease-in-out .3s;
+  -o-transition: background ease-in-out .3s, box-shadow ease-in-out .3s;
+  transition: background ease-in-out .3s, box-shadow ease-in-out .3s;
+}
+.multilevelpushmenu_wrapper li:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0);
+}
+.multilevelpushmenu_wrapper li:first-child {
+  border-top: none;
+}
+.multilevelpushmenu_wrapper a {
+  display: block;
+  outline: none;
+  overflow: hidden;
+  font-size: 1.2em;
+  line-height: 1em;
+  padding: .2em .2em;
+  text-decoration: none;
+  color: #fff;
+}
+.multilevelpushmenu_wrapper a:hover {
+  color: #ffe;
+}
+.multilevelpushmenu_wrapper .backItemClass {
+  display: block;
+  padding: .4em .4em .4em .4em;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.multilevelpushmenu_wrapper .backItemClass a,
+.multilevelpushmenu_wrapper .backItemClass a:link,
+.multilevelpushmenu_wrapper .backItemClass a:hover,
+.multilevelpushmenu_wrapper .backItemClass a:visited {
+  color: #bbbdbf;
+}
+.multilevelpushmenu_wrapper .floatRight {
+  float: right;
+}
+.multilevelpushmenu_wrapper .floatLeft {
+  float: left;
+}
+.multilevelpushmenu_wrapper .cursorPointer {
+  cursor: pointer;
+}
+.multilevelpushmenu_wrapper .iconSpacing_ltr {
+  padding: 0 .4em 0 0;
+}
+.multilevelpushmenu_wrapper .iconSpacing_rtl {
+  padding: 0 0 0 .4em;
+}
+.pg-container {
+  position: relative;
+  overflow: hidden;
+}
+.mp-pusher {
+  position: relative;
+}
+.mp-pusher .push-toggle {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+}
+.pushed.mp-pusher .push-toggle {
+  display: block;
+}
+#mp-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-height: 100%;
+  z-index: 3;
 }
 .print .full-print {
   width: 100%;

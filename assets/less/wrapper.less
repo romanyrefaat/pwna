@@ -79,23 +79,46 @@ form.sign-up{
 }
 header{
     border-top: 5px solid @brand-turquoise;
+    background-color: #fff;
+    .transition(top 0.5s ease-in-out);
+    .navbar{
+        padding: 0 15px;
+    }
+    .cell1{width: 30%;}
+        .cell2{width: 55%;}
+        .cell3{width: 15%;}
     a.logo{
         display: block;
         padding-top: 18px;
-        max-width:375px; 
+        max-width:375px;
+        @media (max-width: @screen-md) {
+            padding: 12px 0;
+        }
         img{
             width: 100%;
         }
     }
     .btn.top-donate{
-        .btn-block;
+        
+        font-size: 15px;
         margin: @margin-small-vertical 0;
         padding-left: 0;
         padding-right: 0;
+        width: 100%;
+        max-width: 100px;
+        display: inline-block;
+        @media (min-width: @screen-sm-min) {
+            font-size: 20px;
+            max-width: 200px;
+        }
+        @media (min-width: @screen-md-min) {
+            font-size: 25px;
+            
+        }
     }
     .top-signup{
-        .pull-right;
         width: 100%;
+        margin: 0 auto;
         margin-bottom: @margin-small-vertical*3;
         label{
             color: @gray-dark;
@@ -109,21 +132,55 @@ header{
         &:extend(form.sign-up.compact all);
         }
     }
-    @media (min-width: @screen-md-min) {
-        #top-nav{
-            margin-top:-7px;
+    &.fixed{
+        padding-bottom: 0;
+        position: fixed;
+        left: 0;
+        top: -100px;
+        width: 100%;
+        z-index: 9999;
+        border-top: none;
+        border-bottom: 5px solid @brand-turquoise;
+        &.animate{
+            top: 0;
         }
-        .btn.top-donate{
-            display: inline-block;
-            padding: 10px 60px;
-            font-size: 25px;
-            max-width: 200px;
+        .fixed-hide{.hide;}
+        
+        a.logo{
+            padding: 2px 0;
+        }
+        #top-nav{
+            margin-top:0;
+            position: relative;
+        }
+    }
+    @media (min-width: @screen-md-min) {
+        padding-bottom: @line-height-computed + @navbar-padding-vertical * 2;
+        #top-nav{
+            position: absolute;
+            width: 100%;
+            top:100%;
+            left: 0;
         }
         .top-signup{
             max-width: 250px;
             label{
                 //.text-left;
             }
+        }
+    }
+    @media (max-width: @screen-sm-min) {
+        .cell1,.cell3{
+            width: 50%;
+        }
+    }
+    @media (max-width: @screen-xs-min) {
+        .cell1{
+            width: 35%;
+        }
+        .cell3{
+            width: 65%;
+            padding-left: 10px;
         }
     }
 }
