@@ -6087,7 +6087,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444444;
 }
 .navbar-toggle {
-  margin: 8px 0;
+  margin: 6px 0;
+  padding: 4px 7px;
+  color: #c5664f;
 }
 .navbar-collapse {
   text-align: left;
@@ -7172,6 +7174,10 @@ footer .address a:focus,
 .bootstrap-dialog.type-success .modal-header {
   background-color: #ffcd0a;
 }
+.pg-container {
+  position: relative;
+  overflow: hidden;
+}
 header {
   border-top: 5px solid #186273;
   background-color: #fff;
@@ -7242,7 +7248,7 @@ header.fixed {
   padding-bottom: 0;
   position: fixed;
   left: 0;
-  top: -100px;
+  top: -52px;
   width: 100%;
   z-index: 9999;
   border-top: none;
@@ -7256,10 +7262,17 @@ header.fixed .fixed-hide {
 }
 header.fixed a.logo {
   padding: 2px 0;
+  max-width: 185px;
+}
+header.fixed .btn.top-donate {
+  font-size: 15px;
 }
 header.fixed #top-nav {
   margin-top: 0;
   position: relative;
+}
+header.fixed nav .navbar-nav > li > a {
+  font-size: 18px;
 }
 @media (min-width: 992px) {
   header {
@@ -8030,9 +8043,9 @@ blockquote footer:before {
   background: #186273;
 }
 .multilevelpushmenu_wrapper h2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1em;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffcd0a;
   padding: 0 .4em 0 .4em;
 }
@@ -8060,7 +8073,7 @@ blockquote footer:before {
   display: block;
   outline: none;
   overflow: hidden;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1em;
   padding: .2em .2em;
   text-decoration: none;
@@ -8099,10 +8112,6 @@ blockquote footer:before {
 }
 .multilevelpushmenu_wrapper .iconSpacing_rtl {
   padding: 0 0 0 .4em;
-}
-.pg-container {
-  position: relative;
-  overflow: hidden;
 }
 .mp-pusher {
   position: relative;

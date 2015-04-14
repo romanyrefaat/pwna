@@ -77,6 +77,10 @@ form.sign-up{
         }
     }
 }
+.pg-container {
+    position: relative;
+    overflow: hidden;
+}
 header{
     border-top: 5px solid @brand-turquoise;
     background-color: #fff;
@@ -113,7 +117,6 @@ header{
         }
         @media (min-width: @screen-md-min) {
             font-size: 25px;
-            
         }
     }
     .top-signup{
@@ -136,7 +139,7 @@ header{
         padding-bottom: 0;
         position: fixed;
         left: 0;
-        top: -100px;
+        top: -52px;
         width: 100%;
         z-index: 9999;
         border-top: none;
@@ -148,10 +151,17 @@ header{
         
         a.logo{
             padding: 2px 0;
+            max-width: 185px;
+        }
+        .btn.top-donate{
+            font-size:15px;
         }
         #top-nav{
             margin-top:0;
             position: relative;
+        }
+        nav .navbar-nav > li > a{
+            font-size: 18px;
         }
     }
     @media (min-width: @screen-md-min) {
