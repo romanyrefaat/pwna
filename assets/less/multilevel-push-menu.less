@@ -14,6 +14,7 @@
         min-height: 100%;
         font-size: 1em;
         zoom: 1;
+        z-index: 1;
     }
     .ltr {
         margin-left: -100%;
@@ -45,6 +46,10 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        &.programs{
+            background-color: @gray-lighter;
+            span{.hide;}
+        }
     }
     li {
         cursor: pointer;
@@ -71,6 +76,9 @@
         &:hover {
             color: #ffe;
         }
+    }
+    .social-pages a{
+            display: inline-block;
     }
     .backItemClass {
         display: block;

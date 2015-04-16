@@ -20,6 +20,7 @@ nav{
             font-weight: 400;
             .text-uppercase;
             font-family: @font-family-oswald;
+            .transition(all 0.3s ease);
         }
         .open .dropdown-menu{
             background-color: @dropdown-bg;
@@ -79,13 +80,47 @@ nav{
                     }
                 }
 }
+.navbar-default .navbar-nav.secondary{
+    >li{
+        margin: 0 5px;
+        >a{
+            font-size: 16px;
+            font-family: @font-family-signika;
+            color: @brand-turquoise;
+            padding: 7px;
+        }
+        &.active>a{
+            color: @brand-red;
+        }
+        &.dropdown{
+            .dropdown-menu{
+                .h-align();
+                position: absolute;
+                background-color: @white;
+                border: 1px solid @brand-turquoise;
+                padding: 0px;
+                >li>a{
+                    padding: 3px 7px;
+                    color: @black;
+                    &:hover{
+                        background: @gray-light;
+                    }
+                }
+                &.programs>li>a{
+                    padding: 7px 5px;
+                    span{.hide;}
+                }
+            }
+        }
+    }
+}
 @media (min-width: @screen-md-min) {
     .navbar-default{
         border-width: 0px;
         .navbar-nav {
             display: inline-block;
             float: none;
-            &:not(.print-share) > li:not(:last-child) > a:after{
+            &:not(.secondary) > li:not(:last-child) > a:after{
                 content: "";
                 width: 1px;
                 height: 70%;
@@ -137,6 +172,16 @@ nav{
                         border-left: 7px solid transparent;
                         border-bottom-color: @black-light;
                         content: '';
+                    }
+                }                
+            }
+            &.secondary .dropdown{
+                &:hover{
+                    >a{
+                        background-color: @gray;
+                    }
+                    &:before{
+                        border-bottom-color: @brand-turquoise;
                     }
                 }
             }

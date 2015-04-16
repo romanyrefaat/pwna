@@ -1,9 +1,9 @@
 (function($) {
-    var navMenu = $('<nav><h2 class="hide"><i class="fa fa-reorder"></i>All Categories</h2></nav>').append($('#top-nav>ul').clone().removeAttr('class'));
+    var navMenu = $('<nav><h2 class="hide"><i class="fa fa-reorder"></i>All Categories</h2></nav>').append($('ul.nav.primary').clone().removeAttr('class').append($('ul.nav.secondary>li').clone()).append($('<li></li>').append($('header .social-pages').clone())));
     //$('ul.dropdown-menu', navMenu).removeAttr('class');.wrap('<div class="mp-level"></div>');
     $('li', navMenu).removeAttr('class');
     $('ul.dropdown-menu', navMenu).each(function() {
-        $(this).removeAttr('class');
+        $(this).removeClass('dropdown-menu');
         $(this).parent().prepend('<h2>' + $(this).parent().find('.dropdown-toggle').text() + '</h2>');
         //$(this).parent().prepend('<a href="#" class="mp-back"><i class="fa fa-angle-left"></i> Back</a><h2>' + $(this).find('.dropdown-toggle').text() + '</h2>');
 //        $(this).prepend('<h2>' + $(this).parent().find('.dropdown-toggle').text() + '</h2>');

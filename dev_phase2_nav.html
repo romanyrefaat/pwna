@@ -14,74 +14,122 @@
     </head>
     <body>
 
-        <header>
+        <header class="p2">
             <div class="container">
                 <nav class="navbar navbar-default navbar-static-top">
                     <div class="row">
                         <div class="row-xs-height">
                             <div class="cell1 col-xs-height col-middle">
-                                <a class="logo pull-left" href="#"><img class="img-responsive" src="assets/images/pwna_logo.png" alt=""/></a>
+                                <a class="logo pull-left" href="#"><img class="img-responsive" src="assets/images/pwna_logo.png" alt="Partnership With Native Americans"/></a>
                             </div>
-                            <div class="cell2 col-xs-height col-middle hidden-sm hidden-xs">
-                                <div class="top-signup fixed-hide">
-                                    <label for="header_email">Stay In Touch</label>
-                                    <form class="js-signup-form sign-up luminateApi" method="POST" action="https://[[S29:SECURE_DOMAIN]][[S29:SECURE_PATH]]CRSurveyAPI" data-luminateApi='{"callback": "emailSignupCallback", "requiresAuth": "true"}'>
-                                        <input type="hidden" name="method" value="submitSurvey">
-                                        <input type="hidden" name="survey_id" value="3462">
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control" name="cons_email" placeholder="Enter your email address" id="header_email">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-link" type="submit"><span>Sign Me Up </span><i class="fa fa-chevron-right"></i></button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="collapse navbar-collapse" id="top-nav">
-                                    <ul class="nav navbar-nav">
+                            <div class="cell2 col-xs-height col-top">
+                                <div class="fixed-hide hidden-sm hidden-xs text-center">
+                                    <ul class="nav navbar-nav secondary">
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">OUR SERVICES</a>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ABOUT PWNA</a>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">K-12 Education</a></li>
-                                                <li><a href="#">Health</a></li>
-                                                <li><a href="#">Food & Water</a></li>
-                                                <li><a href="#">Holidays</a></li>
-                                                <li><a href="#">Emergency Services</a></li>
-                                                <li><a href="#">Capacity Building</a></li>
-                                                <li><a href="#">Higher Education</a></li>
-                                                <li><a href="#">Community Investment</a></li>
+                                                <li><a href="#">The PWNA Way</a></li>
+                                                <li><a href="#">Our Strengths</a></li>
+                                                <li><a href="#">Directors & Key Staff</a></li>
+                                                <li><a href="#">PWNA FAQ</a></li>
+                                                <li><a href="#">History</a></li>
+                                                <li><a href="#">Contact Us</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown active">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Impact & Results</a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Material Services Impact</a></li>
-                                                <li><a href="#">Long-Term Solutions Impact</a></li>
-                                                <li><a href="#">Service Area 60 Reservations</a></li>
-                                                <li><a href="#">PWNA Reports</a></li>
-                                                <li><a href="#">Program Goals</a></li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROGRAMS</a>
+                                            <ul class="dropdown-menu programs" role="menu">
+                                                <li><a href="#"><img src="assets/images/pro_npra_logo.png"/></a></li>
+                                                <li><a href="#"><img src="assets/images/pro_swra_logo.png"/></a></li>
+                                                <li><a href="#"><img src="assets/images/pro_aief_logo.png"/></a></li>
+                                                <li><a href="#"><img src="assets/images/pro_rar_logo.png"/></a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTRIBUTE</a>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">RESOURCES</a>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Foundation Grants</a></li>
-                                                <li><a href="#">Corporate Giving</a></li>
-                                                <li><a href="#">Gift In Kind</a></li>
-                                                <li><a href="#">Planned Giving</a></li>
-                                                <li><a href="#">Monthly Giving</a></li>
+                                                <li><a href="#">Native Americans Today</a></li>
+                                                <li><a href="#">Northwest Reservations</a></li>
+                                                <li><a href="#">Southwest Reservations</a></li>
+                                                <li><a href="#">History, Culture & Important Events</a></li>
+                                                <li><a href="#">Native American Biographies</a></li>
+                                                <li><a href="#">Suggested Reading & Resources</a></li>
+                                                <li><a href="#">History of Education</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">NEWS & BLOG</a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Blog</a></li>
+                                                <li><a href="#">Press Releases</a></li>
+                                                <li><a href="#">News Stories</a></li>
+                                                <li><a href="#">Media Center</a></li>
+                                                <li><a href="#">Photos</a></li>
                                             </ul>
                                         </li>
                                     </ul>
+                                    <div class="site-search">
+                                        <form>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Search for...">
+                                                <span class="input-group-btn">
+                                                    <button class="btn" type="button"><i class="fa fa-search"></i></button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                        <a class="js-search-toggle ico" href="#"><i class="fa"></i></a>
+                                    </div>
+                                    <div class="social-pages text-center">
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cell3 col-xs-height col-middle">
-                                <div class="row">
-                                    <div class="text-right col-md-12 col-sm-8 col-xs-8"><a href="#" class="btn btn-default-pwna top-donate" role="button">Donate</a></div>
-                                    <div class="col-sm-4 col-xs-4">
-                                        <button id="trigger" data-toggle="collapse" class="navbar-toggle" type="button">
+                                <div id="top-nav">
+                                    <div class="nav-donate">
+                                        <button id="trigger" data-toggle="collapse" class="navbar-toggle pull-right" type="button">
                                             <span class="sr-only">Toggle navigation</span>
                                             <i class="fa fa-bars fa-2x"></i>
                                         </button>
+                                        <a href="#" class="btn btn-default-pwna top-donate" role="button">Donate</a>
+                                    </div>
+                                    <div class="collapse navbar-collapse">
+                                        <ul class="nav navbar-nav primary">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">OUR SERVICES</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">K-12 Education</a></li>
+                                                    <li><a href="#">Health</a></li>
+                                                    <li><a href="#">Food & Water</a></li>
+                                                    <li><a href="#">Holidays</a></li>
+                                                    <li><a href="#">Emergency Services</a></li>
+                                                    <li><a href="#">Capacity Building</a></li>
+                                                    <li><a href="#">Higher Education</a></li>
+                                                    <li><a href="#">Community Investment</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown active">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Impact & Results</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Material Services Impact</a></li>
+                                                    <li><a href="#">Long-Term Solutions Impact</a></li>
+                                                    <li><a href="#">Service Area 60 Reservations</a></li>
+                                                    <li><a href="#">PWNA Reports</a></li>
+                                                    <li><a href="#">Program Goals</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTRIBUTE</a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Foundation Grants</a></li>
+                                                    <li><a href="#">Corporate Giving</a></li>
+                                                    <li><a href="#">Gift In Kind</a></li>
+                                                    <li><a href="#">Planned Giving</a></li>
+                                                    <li><a href="#">Monthly Giving</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -151,51 +199,66 @@
                     <div class="container">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-md-8 col-sm-7 col-xs-12">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
                                     <div class="row">
                                         <div class="col-md-3 col-sm-3 col-xs-6">
-                                            <p class="links-group">
-                                                <a class="main" href="#">Who We Are</a>
-                                                <a href="#">About Us</a>
-                                                <a href="#">The PWNA Way</a>
-                                                <a href="#">Our Strengths</a>
-                                                <a href="#">Parter Successes</a>
-                                            </p>
+                                            <ul class="links-group">
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">OUR SERVICES</a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">K-12 Education</a></li>
+                                                        <li><a href="#">Health</a></li>
+                                                        <li><a href="#">Food & Water</a></li>
+                                                        <li><a href="#">Holidays</a></li>
+                                                        <li><a href="#">Emergency Services</a></li>
+                                                        <li><a href="#">Capacity Building</a></li>
+                                                        <li><a href="#">Higher Education</a></li>
+                                                        <li><a href="#">Community Investment</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                         <div class="col-md-3 col-sm-3 col-xs-6">
-                                            <p class="links-group">
-                                                <a class="main" href="#">Press</a>
-                                                <a href="#">Press Releases</a>
-                                                <a href="#">History</a>
-                                                <a href="#">Media Stories</a>
-                                                <a href="#">Blog</a>
-                                                <a href="#">Media Contact</a>
-                                                <a href="#">2014 Annual Report</a>
-                                            </p>
+                                            <ul class="links-group">
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Impact & Results</a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Material Services Impact</a></li>
+                                                        <li><a href="#">Long-Term Solutions Impact</a></li>
+                                                        <li><a href="#">Service Area 60 Reservations</a></li>
+                                                        <li><a href="#">PWNA Reports</a></li>
+                                                        <li><a href="#">Program Goals</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="visible-xs clearfix"></div>
+                                        <div class="col-md-3 col-sm-3 col-xs-6">
+                                            <ul class="links-group">
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTRIBUTE</a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Foundation Grants</a></li>
+                                                        <li><a href="#">Corporate Giving</a></li>
+                                                        <li><a href="#">Gift In Kind</a></li>
+                                                        <li><a href="#">Planned Giving</a></li>
+                                                        <li><a href="#">Monthly Giving</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                         <div class="col-md-3 col-sm-3 col-xs-6">
-                                            <p class="links-group">
-                                                <a class="main" href="#">What We Do</a>
-                                                <a href="#">Martial Services</a>
-                                                <a href="#">Long-Term Solutions</a>
-                                            </p>
-                                            <p class="links-group">
-                                                <a class="main" href="#">Our Impact</a>
-                                                <a href="#">Program Partners</a>
-                                            </p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-6">
-                                            <p class="links-group">
-                                                <a class="main" href="#">How to Help</a>
-                                                <a href="#">Monetary Donation</a>
-                                                <a href="#">Planned Giving</a>
-                                                <a href="#">Company Match</a>
-                                            </p>
-                                            <p class="links-group">
-                                                <a class="main" href="#">Resources</a>
-                                                <a href="#">FAQ</a>
-                                                <a href="#">Member Login <i class="fa fa-lock"></i></a>
-                                            </p>
+                                            <ul class="links-group">
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROGRAMS</a>
+                                                    <ul class="dropdown-menu programs" role="menu">
+                                                        <li><a href="#">Reservation Animal Rescue</a></li>
+                                                        <li><a href="#">American Indian Education Fund</a></li>
+                                                        <li><a href="#">Northern Plains Reservation Aid</a></li>
+                                                        <li><a href="#">Southwest Reservation Aid</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <p>
@@ -203,77 +266,83 @@
                                         <a class="nrc" href="#">Formerly NATIONAL RELIEF CHARITIES</a>
                                     </p>
                                 </div>
-                                <div class="col-md-4 col-sm-5 col-xs-12">
-                                    <div class="sign-up">
-                                        <label>Signup for our Email List</label>
-                                        <form class="js-signup-form sign-up luminateApi" method="POST" action="https://[[S29:SECURE_DOMAIN]][[S29:SECURE_PATH]]CRSurveyAPI" data-luminateApi='{"callback": "emailSignupCallback", "requiresAuth": "true"}'>
-                                            <input type="hidden" name="method" value="submitSurvey">
-                                            <input type="hidden" name="survey_id" value="3462">
-                                            <div class="input-group input-group-sm">
-                                                <input type="text" class="form-control" name="cons_email" placeholder="Enter your email address" id="header_email">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-link" type="submit"><span>Sign Me Up </span><i class="fa fa-chevron-right"></i></button>
-                                                </span>
+                                <div class="col-md-3 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-6">
+                                            <div class="sign-up">
+                                                <label>Signup for our Email List</label>
+                                                <form class="js-signup-form sign-up luminateApi" method="POST" action="https://[[S29:SECURE_DOMAIN]][[S29:SECURE_PATH]]CRSurveyAPI" data-luminateApi='{"callback": "emailSignupCallback", "requiresAuth": "true"}'>
+                                                    <input type="hidden" name="method" value="submitSurvey">
+                                                    <input type="hidden" name="survey_id" value="3462">
+                                                    <div class="input-group input-group-sm">
+                                                        <input type="text" class="form-control" name="cons_email" placeholder="Enter your email address" id="header_email">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-link" type="submit"><span>Sign Me Up </span><i class="fa fa-chevron-right"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </form>
                                             </div>
-                                        </form>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6">
+                                            <p class="social-icons">
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-rss fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-facebook fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-twitter fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-youtube fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-linkedin fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-tumblr fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-google-plus fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-pinterest-p fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa-stack">
+                                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                                        <i class="fa fa-share fa-lg fa-stack-1x fa-inverse"></i>
+                                                    </span>
+                                                </a>
+                                            </p>
+                                            <p class="donate"><a href="#" class="btn btn-default-pwna donate">Donate</a></p>
+                                        </div>
                                     </div>
-                                    <p class="social-icons">
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-rss fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-facebook fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-twitter fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-youtube fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-linkedin fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-tumblr fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-google-plus fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-pinterest-p fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-circle fa-stack-2x"></i>
-                                                <i class="fa fa-share fa-lg fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
-                                    </p>
-                                    <p class="donate"><a href="#" class="btn btn-default-pwna donate">Donate</a></p>
                                 </div>
                             </div>
                             <div class="row separator">
@@ -311,6 +380,5 @@
         <script type="text/javascript" src="assets/js/plugin/jquery.placeholder.min.js"></script>
         <script type="text/javascript" src="assets/js/plugin/jquery.multilevelpushmenu.min.js"></script>
         <script type="text/javascript" src="assets/js/common.js"></script>
-        <script type="text/javascript" src="assets/js/phase2.js"></script>
     </body>
 </html>
