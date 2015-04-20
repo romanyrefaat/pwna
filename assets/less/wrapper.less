@@ -483,7 +483,10 @@ footer{
 .page-content{
     padding: 0 0 30px;
     //margin-top: -80px;
-    a{&:extend(.link-underline all);}
+    a{
+        &:extend(.link-underline all);
+        font-size: inherit;
+    }
     &.hp{
         margin-top: 0;
         padding: 40px 0;
@@ -566,6 +569,56 @@ footer{
     position: relative;
     z-index: 2;
     &.hp{
+    }
+}
+.img-txt-listing{
+    .make-row();
+    .img{
+        .pull-left;
+        max-width: 150px;
+        min-width: 100px;
+        padding-bottom: 9px;
+        .ratio{
+            position: relative;
+            overflow: hidden;
+            height: 0;
+            padding-bottom: 100%;
+            img{
+                .v-align();
+                position: absolute;
+                left:0;
+            }
+        }
+        @media (min-width: @screen-md-min) {
+            padding-right: 0;
+            min-width: auto;
+        }
+    }
+}
+.banner{
+    position: relative;
+    margin-bottom: 15px;
+    .caption{
+        background-color: @brand-turquoise;
+        color: @white;
+        padding: 15px;
+        @media (min-width: @screen-sm-min) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            .rgba(@brand-turquoise, 0.9);
+        }
+        @media (min-width: @screen-md-min) {
+            width: 30%;
+        }
+        a{
+            .button-variant(@brand-yellow, transparent, transparent);
+        }
+        h2, h2 small{
+            color: inherit;
+        }
     }
 }
 // homepage
@@ -714,17 +767,48 @@ div.page-title{
         margin-top: -40px;
     }
     h2{
-        font-size: 1.9em;
+        font-size: 1.8em;
         margin-top: 0;
         small, .small{color: inherit;}
     }
     p{
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 }
 .side-col{
     @media (min-width: @screen-md-min) {
         //padding-left: 60px;
+    }
+}
+ul.side-nav{
+    background-color: @brand-orange;
+    color: @white;
+    padding: @padding-large-vertical @padding-large-horizontal;
+    margin-bottom: 30px;
+    list-style: none;
+    a{
+        &, &:link, &:hover, &:visited{
+            color: @white;
+            text-decoration: none;
+        }
+        
+    }
+    >li>a{
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    ul{
+        .dropdown-menu-reset;
+        list-style: none;
+        padding: 0;
+        a{
+            margin-bottom: 5px;
+            font-size: 1.2em;
+            &:hover{
+                color:@black;
+            }
+        }
     }
 }
 .side-box{
