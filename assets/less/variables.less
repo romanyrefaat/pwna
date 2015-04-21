@@ -223,9 +223,9 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    @black-light;
 //** Dropdown menu `border-color`.
-@dropdown-border:                none;
+@dropdown-border:                @dropdown-bg;
 //** Dropdown menu `border-color` **for IE8**.
-@dropdown-fallback-border:       none;
+@dropdown-fallback-border:       @dropdown-bg;
 //** Divider color for between dropdown items.
 @dropdown-divider-bg:            @brand-secondary;
 
@@ -659,8 +659,8 @@
 @list-group-border-radius:      @border-radius-base;
 
 //** Background color of single list elements on hover
-@list-group-hover-bg:           @link-color;
-@list-group-hover-color:        #fff;
+//@list-group-hover-bg:           @brand-gray;
+//@list-group-hover-color:        #fff;
 //** Text color of active list elements
 @list-group-active-color:       @component-active-color;
 //** Background color of active list elements

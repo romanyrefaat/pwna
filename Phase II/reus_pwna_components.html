@@ -1,38 +1,74 @@
 <!--CALLOUT-->
 <div class="row callout">
     <div class="col-md-7 col-sm-6 col-xs-12 pull-right">
-        <img class="img-responsive" src="img-src" alt="img-alt"/>
+        <img class="img-responsive" src="@src" alt="@alt"/>
     </div>
     <div class="container col-md-5 col-sm-6 col-xs-12 ">
-        Content
+        @content
     </div>
 </div>
 <!--/CALLOUT-->
 <!--BANNER-->
 <div class="banner">
-    <img class="img-responsive" src="img-src" alt="img-alt"/>
+    <img class="img-responsive" src="@src" alt="@alt"/>
     <div class="caption">
-        Content
+        @content
     </div>
 </div>
 <!--/BANNER-->
 <!--PANEL-->
 <div class="panel panel-pwna-default">
     <div class="panel-heading">
-        <h4 class="panel-title"><span class="pull-right small"><a class="css_view_all" href="lnk_view_all">View All</a></span>Panel Title</h4>
+        <h4 class="panel-title"><span class="pull-right small"><a class="css_view_all" href="@title-link">View All</a></span>@title</h4>
     </div>
     <div class="panel-body">
-        Panel Content
+        @content
     </div>
 </div>
 <!--/PANEL-->
-<!--H-IMG-TEXT-->
-<div class="img-txt-listing">
-    <div class="col-sm-2 img">
-        <div class="ratio"><img class="img-responsive" alt="img-alt" src="img-src"></div>
+<!--LISTING-PANEL-->
+<div class="panel panel-pwna-default">
+    <div class="panel-heading">
+        <h4 class="panel-title"><span class="pull-right small"><a class="css_view_all" href="@title-link">View All</a></span>@title</h4>
     </div>
-    <div class="col-md-10 txt">
-        Content
+    <div class="list-group">
+        @content
     </div>
 </div>
-<!--/H-IMG-TEXT-->
+<!--/LISTING-PANEL-->
+<!--LIST-ITEM-->
+<div class="list-group-item">
+    <div class="img-txt-listing">
+        <div class="col-sm-2 img">
+            <div class="ratio"><img class="img-responsive" alt="@alt" src="@src"></div>
+        </div>
+        <div class="col-md-10 txt">
+            @content
+        </div>
+    </div>
+</div>
+<!--/LIST-ITEM-->
+<!--LINK-LIST-ITEM-->
+<a class="list-group-item story-list-item" href="@more-href" target="_self">
+    <div class="img-txt-listing">
+        <div class="col-sm-2 img">
+            <div class="ratio"><img class="img-responsive" alt="@alt" src="@src"></div>
+        </div>
+        <div class="col-md-10 txt">
+            @content
+        </div>
+    </div>
+</a>
+<!--/LINK-LIST-ITEM-->
+<!--LINK-LARGE-LIST-ITEM-->
+<a class="list-group-item story-list-item large" href="@more-href">
+    <div class="img">
+        <div class="ratio">
+            <img class="img-responsive" alt="@alt" src="@src">
+        </div>
+    </div>
+    <div class="caption">
+        @content
+    </div>
+</a>
+<!--/LINK-LARGE-LIST-ITEM-->
