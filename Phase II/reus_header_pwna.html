@@ -7,26 +7,34 @@
                         <a class="logo pull-left" href="PageServer?pagename=pwna_home"><img class="img-responsive" src="../pwna_assets/images/pwna_logo.png" alt="Partnership With Native Americans"/></a>
                     </div>
                     <div class="cell2 col-xs-height col-top">
-                        <div class="fixed-hide hidden-sm hidden-xs text-center">
-                            <ul class="nav navbar-nav secondary">
-                                [[E130:[[T8:[[S51:reus_pwna_sitemap]]]] dup dup "<!--SECONDARY-->" indexof swap "<!--/SECONDARY-->" indexof substring]]
-                            </ul>
-                            <div class="site-search">
-                                <form>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search for...">
-                                        <span class="input-group-btn">
-                                            <button class="btn" type="button"><i class="fa fa-search"></i></button>
-                                        </span>
-                                    </div>
-                                </form>
-                                <a class="js-search-toggle ico" href="#"><i class="fa"></i></a>
+                        <div class="fixed-hide hidden-sm hidden-xs text-center nav-and-social">
+                            <div class="second-nav-container">
+                                <ul class="nav navbar-nav secondary">
+                                    [[E130:[[T8:[[S51:reus_pwna_sitemap]]]] dup dup "<!--SECONDARY-->" indexof swap "<!--/SECONDARY-->" indexof substring]]
+                                </ul>
+                                <div class="js-search-panel site-search">
+                                    <form action="http://[[S29:DOMAIN]]/site/Search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="query" placeholder="Search for...">
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                    <a class="js-search-toggle ico" href="#"><i class="fa"></i></a>
+                                </div>
                             </div>
-                            <div class="social-pages text-center">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-envelope-o"></i></a>
+                            <div class="social-container">
+                                <div class="js-signup-panel signup-form">
+                                    <a class="js-signup-toggle toggle" href="#"><i class="fa fa-close"></i></a>
+                                    [[S51:reus_pwna_signup]]
+                                </div>
+                                <div class="social-pages text-center">
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a class="js-signup-toggle" href="#"><i class="fa fa-envelope-o"></i></a>
+                                </div>
                             </div>
                         </div>
                         <div id="top-nav">
