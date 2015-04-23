@@ -5229,8 +5229,8 @@ tbody.collapse.in {
   list-style: none;
   font-size: 14px;
   text-align: left;
-  background-color: #333333;
-  border: 1px solid #333333;
+  background-color: #c5664f;
+  border: 1px solid #c5664f;
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -6115,7 +6115,7 @@ nav .navbar-nav > li > a {
   transition: all 0.3s ease;
 }
 nav .navbar-nav .open .dropdown-menu {
-  background-color: #333333;
+  background-color: #c5664f;
 }
 nav .navbar-nav.print-share {
   text-align: center;
@@ -6241,8 +6241,8 @@ nav .navbar-nav.print-share li {
     color: #a9a9a9;
   }
   .navbar-default .navbar-nav .dropdown .dropdown-menu {
-    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.7);
     position: absolute;
     min-width: 100%;
   }
@@ -6256,15 +6256,19 @@ nav .navbar-nav.print-share li {
   .navbar-default .navbar-nav .dropdown:hover > a:hover,
   .navbar-default .navbar-nav .dropdown:hover > a:visited {
     color: #ffffff;
-    background-color: #a9a9a9;
+    background-color: #c5664f;
     -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px 2px #8c8c8e;
+  }
+  .navbar-default .navbar-nav .dropdown:hover > a:after {
+    background-color: #c5664f !important;
   }
   .navbar-default .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
   }
   .navbar-default .navbar-nav .dropdown:hover:before {
+    display: none;
     position: relative;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
@@ -6274,7 +6278,6 @@ nav .navbar-nav.print-share li {
     z-index: 2;
     position: absolute;
     bottom: -1px;
-    display: inline-block;
     border-right: 7px solid transparent;
     border-bottom: 7px solid #333333;
     border-left: 7px solid transparent;
@@ -6285,6 +6288,7 @@ nav .navbar-nav.print-share li {
     background-color: #a9a9a9;
   }
   .navbar-default .navbar-nav.secondary .dropdown:hover:before {
+    display: inline-block;
     border-bottom-color: #186273;
   }
   .navbar-collapse {

@@ -713,6 +713,9 @@ footer .address a:focus,
   position: relative;
   overflow: hidden;
 }
+a.anchor {
+  padding-top: 57px;
+}
 header {
   border-top: 5px solid #186273;
   background-color: #fff;
@@ -1628,6 +1631,22 @@ fieldset[disabled] .banner .caption a.active {
 }
 .panel-pwna-default > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #a9a9a9;
+}
+.panel-heading:before,
+.panel-heading:after {
+  content: " ";
+  display: table;
+}
+.panel-heading:after {
+  clear: both;
+}
+.panel-heading:before,
+.panel-heading:after {
+  content: " ";
+  display: table;
+}
+.panel-heading:after {
+  clear: both;
 }
 a.story-list-item {
   text-decoration: none !important;

@@ -101,6 +101,9 @@ form.sign-up{
     position: relative;
     overflow: hidden;
 }
+a.anchor{
+    padding-top: @header-fixed-nav-height + @header-fixed-nav-border-bottom-size;
+}
 header{
     border-top: 5px solid @brand-turquoise;
     background-color: #fff;
@@ -318,11 +321,11 @@ header{
         padding-bottom: 0;
         position: fixed;
         left: 0;
-        top: -52px;
+        top: 0-@header-fixed-nav-height;
         width: 100%;
         z-index: 9999;
         border-top: none;
-        border-bottom: 5px solid @brand-turquoise;
+        border-bottom: @header-fixed-nav-border-bottom-size solid @brand-turquoise;
         &.animate{
             top: 0;
         }
@@ -690,6 +693,9 @@ footer{
 }
 .panel-pwna-default {
   .panel-variant(@gray; @white; @brand-orange; @gray);
+}
+.panel-heading {
+    .clearfix;
 }
 a.story-list-item{
     text-decoration: none !important;
