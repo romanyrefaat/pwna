@@ -38,7 +38,7 @@
     @header-search-toggle-width: 40px;
     @header-search-toggle-height: 42px;
     @header-search-form-width: 187px;
-@large-story-list-item-bg: @brand-gray;
+@large-story-list-item-bg: transparent;
 //== Scaffolding
 //
 // ## Settings for some of the most global styles.
@@ -235,9 +235,9 @@
 //** Dropdown link text color.
 @dropdown-link-color:            #fff;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      #000;
+@dropdown-link-hover-color:      @brand-yellow;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         @brand-yellow;
+@dropdown-link-hover-bg:         darken(@dropdown-bg, 10%);
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;

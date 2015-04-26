@@ -35,51 +35,27 @@ nav{
 }
 .dropdown{
     .dropdown-menu{
-                    border: none;
-                    border-radius: 0px;
-                    a{
-                        font-size: @font-size-base;
-                        font-family: inherit;
-                    }
-                    &.multi-column{
-                        min-width: auto;
-                        padding: 15px 0;
-                        .dropdown-header{
-                            padding: 3px 20px 3px 5px;
-                            font-size: @font-size-base;
-                            border-bottom: 1px solid @gray;
-                            line-height: @line-height-base*1.5;
-                            margin-bottom: 5px;
-                        }
-                         ul>li{
-                            list-style: none;
-                            white-space: nowrap;
-                            a{
-                                display: block;
-                                padding: 3px 20px 3px 5px;
-                                clear: both;
-                                font-weight: normal;
-                                line-height: @line-height-base;
-                                color: @dropdown-link-color;
-                                white-space: nowrap;
-                                &:hover,
-                                &:focus {
-                                  text-decoration: none;
-                                  color: @dropdown-link-hover-color;
-                                  background-color: @dropdown-link-hover-bg;
-                                }
-                            }
-                            &.text{
-                                color: @white;
-                                a{
-                                    display: inline-block;
-                                    padding: 0px;
-                                    text-decoration: underline;
-                                }
-                            }
-                         }
-                    }
+        border: none;
+        border-radius: 0px;
+        li{
+            >a{
+                .transition(all 0.2s ease-in-out);
+                &:after{
+                content: "\f105";
+                font-family: 'FontAwesome';
+                padding-left: 8px;
+                padding-right: 2px;
+                font-size: 1.3em;
+                font-weight: 700;
+                color: lighten(@brand-orange, 15%);
                 }
+                &:hover:after{
+                    padding-left: 10px;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
 }
 .navbar-default .navbar-nav.secondary{
     >li{
@@ -97,14 +73,18 @@ nav{
             .dropdown-menu{
                 .h-align();
                 position: absolute;
-                background-color: @white;
-                border: 1px solid @brand-turquoise;
-                padding: 0px;
+                background-color: darken(@header-secondary-nav-color, 8%);
+                .border-radiuses(0, 10px, 10px , 0);
+                overflow: hidden;
+                //padding: 5px 0;
                 >li>a{
                     padding: 3px 7px;
-                    color: @black;
+                    color: @brand-turquoise;
                     &:hover{
-                        background: @gray-light;
+                        background: @header-secondary-nav-color;
+                    }
+                    &:after{
+                        .hide;
                     }
                 }
                 &.programs>li>a{
@@ -147,8 +127,53 @@ nav{
                     .box-shadow(0px 5px 4px rgba(0,0,0,.7));
                     position: absolute;
                     min-width: 100%;
-                    &.multi-column{
-                        min-width: 635px;
+                    border: none;
+                    border-radius: 0px;
+                }
+                &.multi-column{
+                    position: static;
+                    .dropdown-menu{
+                        min-width: 685px;
+                        padding: 15px 0;
+                        left: 50%;
+                        .translate(-50%, 0);
+                        color: @white;
+                        .dropdown-header{
+                            padding: 3px 20px 3px 5px;
+                            font-size: @font-size-base;
+                            color: @black;
+                            border-bottom: 1px solid @black;
+                            line-height: @line-height-base*1.5;
+                            margin-bottom: 5px;
+                        }
+                        ul{
+                            border-left: 1px solid @white;
+                            >li{
+                                list-style: none;
+                                white-space: nowrap;
+                                a{
+                                    display: block;
+                                    padding: 3px 20px 3px 5px;
+                                    clear: both;
+                                    font-weight: normal;
+                                    line-height: @line-height-base;
+                                    color: @dropdown-link-color;
+                                    white-space: nowrap;
+                                    &:hover, &:focus {
+                                        text-decoration: none;
+                                        color: @dropdown-link-hover-color;
+                                        background-color: @dropdown-link-hover-bg;
+                                    }
+                                 }
+                                 &.text{
+                                    a{
+                                        display: inline-block;
+                                        padding: 0px;
+                                        text-decoration: underline;
+                                    }
+                                 }
+                            }
+                        }
                     }
                 }
                 &:hover {
@@ -182,10 +207,12 @@ nav{
             &.secondary .dropdown{
                 &:hover{
                     >a{
-                        background-color: @gray;
+                       background-color: darken(@header-secondary-nav-color, 8%);
+                       color: @brand-turquoise;
+                       .box-shadow(none);
                     }
                     &:before{
-                        display: inline-block;
+                        //display: inline-block;
                         border-bottom-color: @brand-turquoise;
                     }
                 }
