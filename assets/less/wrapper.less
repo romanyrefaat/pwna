@@ -1,6 +1,11 @@
 .modal-open {
   overflow: auto; 
 }
+.modal-dialog{
+    @media (min-width: @screen-sm-min) {
+        margin-top: 80px;
+    }
+}
 form.sign-up{
         .input-group .form-control{
             .border-radius(13px);
@@ -103,6 +108,23 @@ form.sign-up{
 }
 a.anchor{
     padding-top: @header-fixed-nav-height + @header-fixed-nav-border-bottom-size;
+}
+.right-arrow{
+    &:after{
+        content: '\f105';
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        text-decoration: none;
+        //float: right;
+        padding-left: 5px;
+        padding-right: 5px;
+        .transition(all 0.3s ease-in-out);
+    }
+}
+.dbl-right-arrow:extend(.right-arrow all) {
+    &:after{
+        content: '\f101';
+    }
 }
 header{
     border-top: 5px solid @brand-turquoise;
@@ -422,6 +444,7 @@ footer{
             a{
                 margin-bottom: 5px;
                 line-height: 1em;
+                &:after{.hide;}
             }
         }
         a, span.main{
@@ -669,10 +692,17 @@ footer{
     }
 }
 .panel-pwna-default {
-  .panel-variant(@gray; @white; @brand-orange; @gray);
-}
-.panel-heading {
-    .clearfix;
+    .panel-variant(transparent; @brand-orange; transparent; transparent);
+    .box-shadow(none);
+    .panel-heading {
+        .clearfix;
+        a{
+            color: @brand-turquoise;
+            text-decoration: none;
+            font-weight: 700;
+            .right-arrow;
+        }
+    }
 }
 div.story-list-item{
     //.make-row();
@@ -685,7 +715,7 @@ div.story-list-item{
         color: inherit;;
         .transition(all 0.3s ease-in-out);
         &:hover{
-            
+            background-color: @gray-lighter;
         }
     }
     .img{
@@ -693,18 +723,21 @@ div.story-list-item{
         //.make-xs-column(4; @gutter: @grid-gutter-width);
         max-width: 150px;
         min-width: 100px;
-        padding: 0 10px 5px 0;
+        overflow: hidden;
+        margin: 0 10px 5px 0;
         .ratio{
             position: relative;
             overflow: hidden;
             height: 0;
             
             padding-bottom: 100%;
-            .transition(all 0.1s ease-in-out);
+            .transition(all 0.25s ease-in-out);
             img{
-                .v-align();
+                .v-h-align();
                 position: absolute;
-                left:0;
+                width: 150%;
+                max-width: none;
+                //left:0;
             }
         }
         @media (min-width: @screen-sm-min) {
@@ -721,15 +754,9 @@ div.story-list-item{
             font-weight: 700;
             text-decoration: underline;
             color: @brand-red;
+            &:extend(.dbl-right-arrow all);
             &:after{
-                content: '\f101';
-                font-family: 'FontAwesome';
-                font-weight: normal;
-                text-decoration: none;
                 float: right;
-                padding-left: 5px;
-                padding-right: 5px;
-                .transition(all 0.3s ease-in-out);
             }
         }
         @media (min-width: @screen-sm-min) {
@@ -741,7 +768,7 @@ div.story-list-item{
     }
     &:hover{
         .img .ratio{
-            .scale(1.05);
+            .scale(1.2);
         }
         .caption .more:after{
             padding-left: 10px;
@@ -752,32 +779,33 @@ div.story-list-item{
         padding: 15px 0;
         a{
             padding: 0;
+            &:hover{
+                background: transparent;
+            }
         }
         .img{
             background-color: @large-story-list-item-bg;
             float: none !important;
-            overflow: hidden;
+            //overflow: hidden;
             display: table-cell;
             width: 25%;
             min-width: 100px;
             vertical-align: middle;
-            padding: 0;
+            margin: 0;
             .transition(all 0.3s ease-in-out);
             .ratio{
-                .transition(all 0.3s ease-in-out);
-                position: relative;
-                height: 0;
+                //.transition(all 0.3s ease-in-out);
                 padding-bottom: 65%;
                 img{
-                    .v-h-align();
-                    position: absolute;
+                    //.v-h-align();
+                    //position: absolute;
                     width: 100%;
                     min-width: 100%;
                 }
             }
         }
         .caption{
-            padding: 15px;
+            padding-top: 15px;
             background-color: @large-story-list-item-bg;
             display: table-cell;
             vertical-align: top;
@@ -802,9 +830,7 @@ div.story-list-item{
             .img, .caption{
                 background-color: darken(@large-story-list-item-bg, 5%);
             }
-            .img .ratio{
-                .scale(1.2);
-            }
+            //.img .ratio{.scale(1.2);}
             .caption{
                 &:before{
                     top: -23px;
@@ -841,8 +867,16 @@ div.story-list-item{
 }
 .dropdown-menu .story-list-item{
     color: inherit;
+    a{
+        &:hover{
+                background: transparent;
+            }
+    }
     .img{
         min-width: 150px;
+        .ratio{
+            .transition(none);
+        }
     }
     .caption{
         .more{
@@ -853,6 +887,10 @@ div.story-list-item{
 }
 .full-row{
     position: relative;
+    padding: 20px 0;
+    >*{
+        position: relative;
+    }
     &:before{
         content: "";
         display: block;
@@ -869,6 +907,8 @@ div.story-list-item{
     overflow: hidden;
     >div{
         box-shadow: 1px 1px 0 @white;
+        .border-radius(0);
+        margin: 0;
     }
 }
 // homepage
@@ -1046,15 +1086,15 @@ ul.side-nav{
             font-size: 14px;
             text-decoration: none;
             display: block;
+            .right-arrow;
             &:after{
-                content: "\f105";
-                font-family: 'FontAwesome';
+                font-size: 1.2em;
+                font-weight: 700;
+                float: none;
                 padding-left: 8px;
                 padding-right: 2px;
-                font-size: 1.3em;
-                font-weight: 700;
                 color: lighten(@brand-orange, 15%) !important;
-                }
+            }
         }
         &:hover{
                 color:@black;
@@ -1133,6 +1173,12 @@ ul.side-nav{
             color:@black;
         }
     }
+}
+#pwna_map {
+    height:0;
+    width:100%;
+    padding-bottom: 40%;
+    margin-bottom: 15px;
 }
 .payment-type-element-container{
     margin-top: 15px;
