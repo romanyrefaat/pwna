@@ -626,7 +626,6 @@ footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn span {
 footer .links-group > li > a,
 footer .links-group a.main,
 footer .address a,
-.announcement a,
 .side-box a {
   color: #ffffff;
 }
@@ -638,8 +637,6 @@ footer .links-group a.main:link,
 footer .links-group a.main:visited,
 footer .address a:link,
 footer .address a:visited,
-.announcement a:link,
-.announcement a:visited,
 .side-box a:link,
 .side-box a:visited {
   color: #ffffff;
@@ -652,8 +649,6 @@ footer .links-group a.main:hover,
 footer .links-group a.main:focus,
 footer .address a:hover,
 footer .address a:focus,
-.announcement a:hover,
-.announcement a:focus,
 .side-box a:hover,
 .side-box a:focus {
   color: #ffffff;
@@ -1868,6 +1863,20 @@ div.story-list-item.large:hover .caption:before,
   margin-top: 25px;
   color: inherit;
 }
+.news-item {
+  margin-bottom: 15px;
+}
+.news-item .author,
+.news-item .date {
+  display: block;
+  font-size: 85%;
+}
+.news-item .author {
+  font-style: italic;
+}
+.news-item .date {
+  color: #a9a9a9;
+}
 .full-row {
   position: relative;
   padding: 20px 0;
@@ -1904,15 +1913,12 @@ div.story-list-item.large:hover .caption:before,
 .announcement {
   position: relative;
   z-index: 2;
-  color: #ffffff;
+  color: #000000;
 }
 .announcement .container-fluid {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  background-color: #c5664f;
+  background-color: #ffcd0a;
   z-index: 10;
 }
 .expand.announcement .container-fluid {
@@ -2120,6 +2126,8 @@ ul.side-nav {
   padding: 0 0 15px;
   margin-bottom: 30px;
   list-style: none;
+  position: relative;
+  z-index: 1;
 }
 ul.side-nav a,
 ul.side-nav a:link,
@@ -2272,6 +2280,9 @@ ul.side-nav li.current a {
   width: 100%;
   padding-bottom: 40%;
   margin-bottom: 15px;
+}
+#pwna_map .map-info {
+  width: 300px;
 }
 .payment-type-element-container {
   margin-top: 15px;
@@ -2557,6 +2568,9 @@ blockquote footer:before {
 }
 .print .full-print {
   width: 100%;
+}
+.print .hide-print {
+  display: none !important;
 }
 .print .accordion-wrapper .accordion-content {
   display: block;
