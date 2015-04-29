@@ -1458,6 +1458,12 @@ a.text-warning:hover {
 a.text-danger:hover {
   color: #843534;
 }
+.text-alert {
+  color: #c5664f;
+}
+a.text-alert:hover {
+  color: #a94e38;
+}
 .bg-primary {
   color: #fff;
   background-color: #337ab7;

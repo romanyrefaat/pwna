@@ -1894,6 +1894,9 @@ div.story-list-item.large:hover .caption:before,
   top: 0;
   background-color: #f6f6f6;
 }
+.full-row hr {
+  border-color: #ffffff;
+}
 .stroies-large-list,
 .inner-grid {
   background-color: #f6f6f6;

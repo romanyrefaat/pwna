@@ -704,6 +704,37 @@ footer{
         }
     }
 }
+.panel-accordion {
+    .panel-variant(transparent; @black; transparent; transparent);
+    .box-shadow(none);
+    border-bottom: 1px solid @brand-gray;
+    .panel-group &{
+        .border-radius(0);
+    }
+    .panel-heading {
+        padding: 0;
+        line-height: 25px;
+        margin-bottom: 5px;
+        h4, a{
+            font-family: @font-family-signika;
+            color: inherit;
+            text-decoration: none;
+            line-height: inherit;
+            font-weight: normal;
+            font-size: 20px;
+            &:after{.hide;}
+            .badge{
+                background-color: @brand-gray;
+                color: @white;
+                margin: 0 5px;
+            }
+        }
+        
+    }
+    .panel-body{
+        padding: 0 8px 8px;
+    }
+}
 div.story-list-item{
     //.make-row();
     color: @black;
@@ -913,6 +944,9 @@ div.story-list-item{
         left: -150%;
         top: 0;
         background-color: @gray-light;
+    }
+    hr{
+        border-color: @white;
     }
 }
 .stroies-large-list, .inner-grid{
