@@ -3383,7 +3383,7 @@ var map;
 function initMap() {
     var mapOptions = {
         center: new google.maps.LatLng(41.393294, -103.472901),
-        zoom: 4,
+        zoom: 5,
         zoomControl: true,
         zoomControlOptions: {
             style: google.maps.ZoomControlStyle.SMALL,
@@ -3400,7 +3400,7 @@ function initMap() {
             opened: false,
         },
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"labels.text","stylers":[{"color":"#ff0000"},{"saturation":"50"},{"gamma":"8.34"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#0f252e"},{"lightness":17}]}]
+        styles: [{"featureType": "all", "elementType": "labels.text.fill", "stylers": [{"saturation": 36}, {"color": "#000000"}, {"lightness": 40}]}, {"featureType": "all", "elementType": "labels.text.stroke", "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16}]}, {"featureType": "all", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative", "elementType": "geometry.fill", "stylers": [{"color": "#000000"}, {"lightness": 20}]}, {"featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{"color": "#000000"}, {"lightness": 17}, {"weight": 1.2}]}, {"featureType": "landscape", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 20}]}, {"featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{"visibility": "simplified"}]}, {"featureType": "landscape.man_made", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}]}, {"featureType": "landscape.man_made", "elementType": "labels.text", "stylers": [{"color": "#ff0000"}, {"saturation": "50"}, {"gamma": "8.34"}]}, {"featureType": "poi", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 21}]}, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#000000"}, {"lightness": 17}]}, {"featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{"color": "#000000"}, {"lightness": 29}, {"weight": 0.2}]}, {"featureType": "road.arterial", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 18}]}, {"featureType": "road.local", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 16}]}, {"featureType": "transit", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 19}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#0f252e"}, {"lightness": 17}]}]
     }
     var mapElement = document.getElementById('pwna_map');
     var map = new google.maps.Map(mapElement, mapOptions);
@@ -3421,52 +3421,24 @@ function initMap() {
         bermudaTriangle.setMap(map);
     }
 
-    var locations = [
-        ['Blackfoot Nation', 'Population Census 10,000', 'Tribe: Blackfoot', 'undefined', 'undefined', 46.8796822, -110.3625658, 'https://mapbuildr.com/assets/img/markers/default.png'],
-        ['Crow Agency Reservation', 'Tribe: Crow', 'Population Census: 6,894', 'undefined', 'undefined', 48.0090814507565, -112.3849192107208, 'https://mapbuildr.com/assets/img/markers/solid-pin-orange.png'],
-        ['Colorado River Indian Res.', 'Population Census: 7,466', 'Tribe: Colorado River', 'undefined', 'undefined', 34.0489281, -111.0937311, 'https://mapbuildr.com/assets/img/markers/solid-pin-purple.png']
-    ];
-    for (i = 0; i < locations.length; i++) {
-        if (locations[i][1] == 'undefined') {
-            description = '';
-        } else {
-            description = locations[i][1];
-        }
-        if (locations[i][2] == 'undefined') {
-            telephone = '';
-        } else {
-            telephone = locations[i][2];
-        }
-        if (locations[i][3] == 'undefined') {
-            email = '';
-        } else {
-            email = locations[i][3];
-        }
-        if (locations[i][4] == 'undefined') {
-            web = '';
-        } else {
-            web = locations[i][4];
-        }
-        if (locations[i][7] == 'undefined') {
-            markericon = '';
-        } else {
-            markericon = locations[i][7];
-        }
-        marker = new google.maps.Marker({
-            icon: markericon,
-            position: new google.maps.LatLng(locations[i][5], locations[i][6]),
-            map: map,
-            title: locations[i][0],
-            desc: description,
-            tel: telephone,
-            email: email,
-            web: web
+    jQuery.getJSON((document.location.hostname === "localhost" ? '' : '/') + 'pwna_assets/js/locations.json', function(data) {
+        console.log('success');
+        jQuery.each(data, function(i, location) {
+            var Coordinates = location['Coordinates'].split(',');
+            //console.log(location['Marker']);
+            var marker = new google.maps.Marker({
+                icon: location['Marker'],
+                position: new google.maps.LatLng(Coordinates[0], Coordinates[1]),
+                map: map
+            });
+            link = '';
+            bindInfoWindow(marker, map, location);
         });
-        link = '';
-        bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
-    }
+    }).error(function() {
+        console.log('error');
+    });
     var iw;
-    function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+    function bindInfoWindow(marker, map, location) {
         var infoWindowVisible = (function() {
             var currentlyVisible = false;
             return function(visible) {
@@ -3479,7 +3451,18 @@ function initMap() {
         iw = new google.maps.InfoWindow();
 
         var getHTML = function() {
-            return '<div class="map-info"><h4>' + title + '</h4><p>' + desc + '<p><p>' + telephone + '<p></div>';
+            return '<div class="map-info">' +
+                    '<h4>' + location['Reservation Name'] + '</h4>' +
+                    '<p>' +
+                    '<strong>State:</strong> ' + location['State'] + '<br/>' +
+                    '<strong>Tribe Name:</strong> ' + location['Tribe Name'] + '<br/>' +
+                    '<strong>Population:</strong> ' + location['Population'] + '<br/>' +
+                    '<strong>% Below Poverty:</strong> ' + location['% Below Poverty'] + '<br/>' +
+                    '<strong>Tribal Enrollment:</strong> ' + location['Tribal Enrollment'] + '<br/>' +
+                    '<strong>Size (acres):</strong> ' + location['Size (acres)'] + '<br/>' +
+                    '<strong>Communities/Chapters/Towns:</strong> ' + location['Communities/Chapters/Towns'] + '<br/>' +
+                    '</p>' +
+                    '</div>';
         }
 
         google.maps.event.addListener(marker, 'mouseover', function() {

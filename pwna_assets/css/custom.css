@@ -1811,7 +1811,8 @@ div.story-list-item.large .img .ratio img,
 }
 div.story-list-item.large .caption,
 .stroies-large-list .story-list-item .caption {
-  padding-top: 15px;
+  padding-top: 0;
+  padding-left: 15px;
   background-color: transparent;
   display: table-cell;
   vertical-align: top;
@@ -1864,6 +1865,11 @@ div.story-list-item.large:hover .caption:before,
   .stroies-large-list .story-list-item .img {
     max-width: 280px;
   }
+  div.story-list-item.large .caption,
+  .stroies-large-list .story-list-item .caption {
+    padding-top: 15px;
+    padding-left: 0;
+  }
   div.story-list-item.large .caption:before,
   .stroies-large-list .story-list-item .caption:before {
     display: block !important;
@@ -1872,6 +1878,14 @@ div.story-list-item.large:hover .caption:before,
 .stroies-large-list {
   margin-left: -15px;
   margin-right: -15px;
+}
+.stroies-large-list .story-list-item {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media (min-width: 768px) {
   .stroies-large-list .story-list-item {
@@ -1918,6 +1932,12 @@ div.story-list-item.large:hover .caption:before,
 .dropdown-menu .story-list-item .caption .more {
   margin-top: 25px;
   color: inherit;
+}
+.dropdown-menu .story-list-item:hover .img .ratio {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 .news-item {
   margin-bottom: 15px;
@@ -2337,7 +2357,7 @@ ul.side-nav li.current a {
 #pwna_map {
   height: 0;
   width: 100%;
-  padding-bottom: 40%;
+  padding-bottom: 50%;
   margin-bottom: 15px;
 }
 #pwna_map .map-info {

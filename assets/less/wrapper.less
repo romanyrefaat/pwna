@@ -836,7 +836,8 @@ div.story-list-item{
             }
         }
         .caption{
-            padding-top: 15px;
+            padding-top: 0;
+            padding-left: 15px;
             background-color: @large-story-list-item-bg;
             display: table-cell;
             vertical-align: top;
@@ -878,8 +879,12 @@ div.story-list-item{
             .img{
                 max-width: 280px;
             }
-            .caption:before{
-                .show;
+            .caption{
+                padding-top: 15px;
+                padding-left: 0;
+                &:before{
+                    .show;
+                }
             }
         }
     }
@@ -888,6 +893,7 @@ div.story-list-item{
     .make-row();
     .story-list-item{
         &:extend(div.story-list-item.large all);
+        .make-xs-column(12; @gutter: @grid-gutter-width);
         @media (min-width: @screen-sm-min) {
             .make-sm-column(6; @gutter: @grid-gutter-width);
         }
@@ -914,6 +920,11 @@ div.story-list-item{
             margin-top: 25px;
             color: inherit;
         }
+    }
+    &:hover{
+        .img .ratio{
+                    .scale(1);
+                }
     }
 }
 .news-item{
@@ -1226,7 +1237,7 @@ ul.side-nav{
 #pwna_map {
     height:0;
     width:100%;
-    padding-bottom: 40%;
+    padding-bottom: 50%;
     margin-bottom: 15px;
     .map-info{
         width: 300px;

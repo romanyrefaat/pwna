@@ -1,6 +1,6 @@
 // Include gulp
 var gulp = require('gulp');
-var dest = 'dist/';
+var dest = '../pwna_assets/';
 // Include plugins
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
@@ -10,6 +10,7 @@ var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var notify = require('gulp-notify');
+var xlsxj = require("xlsx-to-json");
 
 gulp.task('less', function() {
     return gulp.src([
@@ -60,6 +61,19 @@ gulp.task('images', function() {
             .pipe(cache(imagemin({optimizationLevel: 5, progressive: true, interlaced: true})))
             .pipe(gulp.dest(dest + 'images'));
 });
+
+gulp.task('map_json', function() {
+    xlsxj({
+        input: "js/map/PWNA MAP Information.xlsx", // input xls 
+        output: dest + "js/locations.json"
+    }, function(err, result) {
+        if (err) {
+            console.error(err);
+        } else {
+            //console.log(result);
+        }
+    });
+});
 // Watch for changes in files
 gulp.task('watch', function() {
     // Watch .less files
@@ -70,4 +84,4 @@ gulp.task('watch', function() {
     gulp.watch('images/**/*', ['images']);
 });
 // Default Task
-gulp.task('default', ['less', 'scripts', 'images', 'watch']);
+gulp.task('default', ['less', 'scripts', 'images', 'map_json', 'watch']);
