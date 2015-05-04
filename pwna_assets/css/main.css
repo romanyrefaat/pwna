@@ -3835,6 +3835,55 @@ div.responsive #login-div-content .ft button .fa-chevron-right {
   margin-left: 5px;
   vertical-align: text-top;
 }
+button.btn-default-pwna {
+  color: #ffffff;
+  background-color: #ffcd0a;
+  border-color: transparent;
+  padding: 8px 24px;
+  font-size: 19px;
+  line-height: 1.33;
+  border-radius: 15px;
+}
+button.btn-default-pwna:hover,
+button.btn-default-pwna:focus,
+button.btn-default-pwna.focus,
+button.btn-default-pwna:active,
+button.btn-default-pwna.active,
+.open > .dropdown-togglebutton.btn-default-pwna {
+  color: #ffffff;
+  background-color: #d6aa00;
+  border-color: rgba(0, 0, 0, 0);
+}
+button.btn-default-pwna:active,
+button.btn-default-pwna.active,
+.open > .dropdown-togglebutton.btn-default-pwna {
+  background-image: none;
+}
+button.btn-default-pwna.disabled,
+button.btn-default-pwna[disabled],
+fieldset[disabled] button.btn-default-pwna,
+button.btn-default-pwna.disabled:hover,
+button.btn-default-pwna[disabled]:hover,
+fieldset[disabled] button.btn-default-pwna:hover,
+button.btn-default-pwna.disabled:focus,
+button.btn-default-pwna[disabled]:focus,
+fieldset[disabled] button.btn-default-pwna:focus,
+button.btn-default-pwna.disabled.focus,
+button.btn-default-pwna[disabled].focus,
+fieldset[disabled] button.btn-default-pwna.focus,
+button.btn-default-pwna.disabled:active,
+button.btn-default-pwna[disabled]:active,
+fieldset[disabled] button.btn-default-pwna:active,
+button.btn-default-pwna.disabled.active,
+button.btn-default-pwna[disabled].active,
+fieldset[disabled] button.btn-default-pwna.active {
+  background-color: #ffcd0a;
+  border-color: transparent;
+}
+button.btn-default-pwna .badge {
+  color: #ffcd0a;
+  background-color: #ffffff;
+}
 a.btn-default-pwna,
 a.btn-default-pwna:link,
 a.btn-default-pwna:visited,

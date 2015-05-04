@@ -1573,48 +1573,61 @@ fieldset[disabled] .banner .caption a.active {
 .banner .caption h2 small {
   color: inherit;
 }
-.panel-pwna-default {
+.panel-pwna-default,
+.panel-pwna-transparent {
   border-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.panel-pwna-default > .panel-heading {
+.panel-pwna-default > .panel-heading,
+.panel-pwna-transparent > .panel-heading {
   color: #c5664f;
   background-color: transparent;
   border-color: transparent;
 }
-.panel-pwna-default > .panel-heading + .panel-collapse > .panel-body {
+.panel-pwna-default > .panel-heading + .panel-collapse > .panel-body,
+.panel-pwna-transparent > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: transparent;
 }
-.panel-pwna-default > .panel-heading .badge {
+.panel-pwna-default > .panel-heading .badge,
+.panel-pwna-transparent > .panel-heading .badge {
   color: transparent;
   background-color: #c5664f;
 }
-.panel-pwna-default > .panel-footer + .panel-collapse > .panel-body {
+.panel-pwna-default > .panel-footer + .panel-collapse > .panel-body,
+.panel-pwna-transparent > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: transparent;
 }
 .panel-pwna-default .panel-heading:before,
-.panel-pwna-default .panel-heading:after {
+.panel-pwna-default .panel-heading:after,
+.panel-pwna-transparent .panel-heading:before,
+.panel-pwna-transparent .panel-heading:after {
   content: " ";
   display: table;
 }
-.panel-pwna-default .panel-heading:after {
+.panel-pwna-default .panel-heading:after,
+.panel-pwna-transparent .panel-heading:after {
   clear: both;
 }
 .panel-pwna-default .panel-heading:before,
-.panel-pwna-default .panel-heading:after {
+.panel-pwna-default .panel-heading:after,
+.panel-pwna-transparent .panel-heading:before,
+.panel-pwna-transparent .panel-heading:after {
   content: " ";
   display: table;
 }
-.panel-pwna-default .panel-heading:after {
+.panel-pwna-default .panel-heading:after,
+.panel-pwna-transparent .panel-heading:after {
   clear: both;
 }
-.panel-pwna-default .panel-heading a {
+.panel-pwna-default .panel-heading a,
+.panel-pwna-transparent .panel-heading a {
   color: #186273;
   text-decoration: none;
   font-weight: 700;
 }
-.panel-pwna-default .panel-heading a:after {
+.panel-pwna-default .panel-heading a:after,
+.panel-pwna-transparent .panel-heading a:after {
   content: '\f105';
   font-family: 'FontAwesome';
   font-weight: normal;
@@ -1624,6 +1637,9 @@ fieldset[disabled] .banner .caption a.active {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+.panel-pwna-transparent {
+  background-color: transparent;
 }
 .panel-accordion {
   border-color: transparent;
@@ -1677,6 +1693,7 @@ fieldset[disabled] .banner .caption a.active {
   background-color: #bbbdbf;
   color: #ffffff;
   margin: 0 5px;
+  vertical-align: middle;
 }
 .panel-accordion .panel-body {
   padding: 0 8px 8px;
@@ -1777,7 +1794,7 @@ div.story-list-item:hover .caption .more:after {
 }
 div.story-list-item.large,
 .stroies-large-list .story-list-item {
-  padding: 15px 0;
+  padding: 0 0 15px;
 }
 div.story-list-item.large a,
 .stroies-large-list .story-list-item a {
@@ -1880,6 +1897,7 @@ div.story-list-item.large:hover .caption:before,
   margin-right: -15px;
 }
 .stroies-large-list .story-list-item {
+  padding-top: 15px;
   position: relative;
   float: left;
   width: 100%;
@@ -2182,7 +2200,6 @@ div.page-title h1 {
 .callout img {
   float: right !important;
   margin-bottom: 30px;
-  margin-top: -40px;
 }
 .callout h2 {
   font-size: 1.8em;

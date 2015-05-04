@@ -43,7 +43,7 @@ function initMap() {
         bermudaTriangle.setMap(map);
     }
 
-    jQuery.getJSON((document.location.hostname === "localhost" ? '' : '/') + 'pwna_assets/js/locations.json', function(data) {
+    jQuery.getJSON((document.location.hostname === "localhost" ? '' : '/') + 'pwna_assets/js/locations.json?t=' + new Date().getTime(), function(data) {
         console.log('success');
         jQuery.each(data, function(i, location) {
             var Coordinates = location['Coordinates'].split(',');
