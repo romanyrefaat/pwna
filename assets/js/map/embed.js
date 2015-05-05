@@ -22,7 +22,131 @@ function initMap() {
             opened: false,
         },
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: [{"featureType": "all", "elementType": "labels.text.fill", "stylers": [{"saturation": 36}, {"color": "#000000"}, {"lightness": 40}]}, {"featureType": "all", "elementType": "labels.text.stroke", "stylers": [{"visibility": "on"}, {"color": "#000000"}, {"lightness": 16}]}, {"featureType": "all", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative", "elementType": "geometry.fill", "stylers": [{"color": "#000000"}, {"lightness": 20}]}, {"featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{"color": "#000000"}, {"lightness": 17}, {"weight": 1.2}]}, {"featureType": "landscape", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 20}]}, {"featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{"visibility": "simplified"}]}, {"featureType": "landscape.man_made", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}]}, {"featureType": "landscape.man_made", "elementType": "labels.text", "stylers": [{"color": "#ff0000"}, {"saturation": "50"}, {"gamma": "8.34"}]}, {"featureType": "poi", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 21}]}, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#000000"}, {"lightness": 17}]}, {"featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{"color": "#000000"}, {"lightness": 29}, {"weight": 0.2}]}, {"featureType": "road.arterial", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 18}]}, {"featureType": "road.local", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 16}]}, {"featureType": "transit", "elementType": "geometry", "stylers": [{"color": "#000000"}, {"lightness": 19}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#0f252e"}, {"lightness": 17}]}]
+        styles: [
+            {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 65
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 51
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 30
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 40
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "hue": "#ffff00"
+                    },
+                    {
+                        "lightness": -25
+                    },
+                    {
+                        "saturation": -97
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "lightness": -25
+                    },
+                    {
+                        "saturation": -100
+                    }
+                ]
+            }
+        ]
     }
     var mapElement = document.getElementById('pwna_map');
     var map = new google.maps.Map(mapElement, mapOptions);
@@ -42,14 +166,14 @@ function initMap() {
 
         bermudaTriangle.setMap(map);
     }
-
-    jQuery.getJSON((document.location.hostname === "localhost" ? '' : '/') + 'pwna_assets/js/locations.json?t=' + new Date().getTime(), function(data) {
+    var urlPath = document.location.hostname === "localhost" ? '' : '/', imgPath = urlPath + 'pwna_assets/images/reservations/';
+    jQuery.getJSON(urlPath + 'pwna_assets/js/locations.json?t=' + new Date().getTime(), function(data) {
         console.log('success');
         jQuery.each(data, function(i, location) {
             var Coordinates = location['Coordinates'].split(',');
             //console.log(location['Marker']);
             var marker = new google.maps.Marker({
-                icon: location['Marker'],
+                icon: imgPath + location['Marker'],
                 position: new google.maps.LatLng(Coordinates[0], Coordinates[1]),
                 map: map
             });
@@ -76,6 +200,7 @@ function initMap() {
             return '<div class="map-info">' +
                     '<h4>' + location['Reservation Name'] + '</h4>' +
                     '<p>' +
+                    '<img src="' + imgPath + location['Image'] + '" alt="' + location['Reservation Name'] + '"/>' +
                     '<strong>State:</strong> ' + location['State'] + '<br/>' +
                     '<strong>Tribe Name:</strong> ' + location['Tribe Name'] + '<br/>' +
                     '<strong>Population:</strong> ' + location['Population'] + '<br/>' +
@@ -87,23 +212,25 @@ function initMap() {
                     '</div>';
         }
 
-        google.maps.event.addListener(marker, 'mouseover', function() {
-            var html = getHTML();
-            if (iw && html == iw.getContent()) {
-                return;
-            }
-            if (iw && html != iw.getContent()) {
-                iw.close();
-            }
-            iw.setContent(html);
-            iw.open(map, marker);
-        });
+//        google.maps.event.addListener(marker, 'mouseover', function() {
+//            var html = getHTML();
+//            if (iw && html == iw.getContent()) {
+//                return;
+//            }
+//            if (iw && html != iw.getContent()) {
+//                iw.close();
+//            }
+//            iw.setContent(html);
+//            iw.open(map, marker);
+//        });
         google.maps.event.addListener(marker, 'click', function() {
             if (getHTML() == iw.getContent()) {
                 iw.setContent('');
                 iw.close(map, marker);
             } else {
-                google.maps.event.trigger(marker, 'mouseover');
+                //google.maps.event.trigger(marker, 'mouseover');
+                iw.setContent(getHTML());
+                iw.open(map, marker);
             }
 
         });

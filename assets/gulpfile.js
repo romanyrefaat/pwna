@@ -15,7 +15,8 @@ var xlsxj = require("xlsx-to-json");
 gulp.task('less', function() {
     return gulp.src([
         'less/main.less',
-        'less/custom.less'
+        'less/custom.less',
+        'less/custom-rar.less'
     ])
             .pipe(less().on("error", notify.onError(function(error) {
         return "Error compiling LESS: " + error.message;

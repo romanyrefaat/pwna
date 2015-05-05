@@ -1,3 +1,12 @@
+@import "mixins.less";
+@import "bootstrap/type.less";
+@import "utilities.less";
+@import "multilevel-push-menu.less";
+@import "print.less";
+@import "bootstrap/forms.less";
+@import "bootstrap/navbar.less";
+@import "navbar.less";
+@import "bootstrap/dropdowns.less";
 .modal-open {
   overflow: auto; 
 }
@@ -127,7 +136,7 @@ a.anchor{
     }
 }
 header{
-    border-top: 5px solid @brand-turquoise;
+    border-top: 5px solid @theme-header-border-color;
     background-color: #fff;
     .transition(top 0.5s ease-in-out);
     .navbar{
@@ -329,7 +338,7 @@ header{
         background-color: @white;
         a{
             .pull-left;
-            color: @brand-turquoise;
+            color: @theme-header-social-color;
             width: @header-search-toggle-width;
             text-align: center;
             .transition(color 0.2s ease-in-out);
@@ -347,7 +356,7 @@ header{
         width: 100%;
         z-index: 9999;
         border-top: none;
-        border-bottom: @header-fixed-nav-border-bottom-size solid @brand-turquoise;
+        border-bottom: @header-fixed-nav-border-bottom-size solid @theme-header-border-color;
         &.animate{
             top: 0;
         }
@@ -413,17 +422,17 @@ header{
 
 footer{
     .clearfix;
-    background-color: @brand-turquoise;
+    background-color: @theme-footer-bg-color;
     color: @white;
     .container{
         padding: @padding-base-vertical 0 0;
     }
     a {
-        color: @turquoise-lighter;
+        color: lighten(@theme-footer-bg-color, 50%);
         &:link, 
         &:focus,
         &:visited {
-          color: @turquoise-lighter;
+          color: lighten(@theme-footer-bg-color, 50%);
         }
         &:hover{
             color: @white;
@@ -471,14 +480,14 @@ footer{
         margin-top: 8px;
     }
     .btn.donate{
-        color: @brand-turquoise;
+        color: @theme-footer-bg-color;
         .box-shadow(2px 2px 4px rgba(0,0,0,.8));
         font-size: 25px;
         padding: 10px 35px
     }
     div.sign-up{
         padding: 15px 30px 20px;
-        background-color: @turquoise-light;
+        background-color: lighten(@theme-footer-bg-color, 5%);
         margin-bottom: 25px;
         label{
             font-size: @font-size-small;
@@ -488,7 +497,7 @@ footer{
         form.sign-up{
             &:extend(form.sign-up.compact all);
             .input-group-sm > .input-group-btn > .btn{
-                color: @brand-turquoise;
+                color: @theme-footer-bg-color;
                 &:hover{
                     color: @brand-gray;
                 }
@@ -509,7 +518,7 @@ footer{
             }
         }
         .fa-inverse{
-            color: @brand-turquoise;
+            color: @theme-footer-bg-color;
             &:hover,
             &:focus, {
                 color: @brand-yellow;
@@ -520,7 +529,7 @@ footer{
         .text-center;
     }
     .separator{
-        border-top: 1px solid @turquoise-lighter;
+        border-top: 1px solid lighten(@theme-footer-bg-color, 50%);
     }
     img.logo{
         max-width: 311px;
@@ -535,7 +544,7 @@ footer{
             font-size: 85%;
             font-weight: inherit;
             &:hover{
-                color: @turquoise-lighter;
+                color: lighten(@theme-footer-bg-color, 50%);
                 font-size: 85%;
                 font-weight: inherit;
             }
@@ -669,7 +678,7 @@ footer{
     position: relative;
     margin-bottom: 15px;
     .caption{
-        background-color: @brand-turquoise;
+        background-color: @theme-caption-bg-color;
         color: @white;
         padding: 15px;
         @media (min-width: @screen-sm-min) {
@@ -678,7 +687,7 @@ footer{
             left: 0;
             width: 40%;
             height: 100%;
-            .rgba(@brand-turquoise, 0.9);
+            .rgba(@theme-caption-bg-color, 0.9);
         }
         @media (min-width: @screen-md-min) {
             width: 30%;
@@ -1096,8 +1105,8 @@ div.story-list-item{
 }
 // Interior Page
 div.page-title{
-    background: url('../images/heading_bg.gif');
-    background-color: @brand-red;
+    background: @theme-page-title-bg-image;
+    background-color: @theme-page-title-bg-color;
     min-height: 10px;
     h1{
         font-family: @font-family-oswald;
@@ -1106,7 +1115,7 @@ div.page-title{
         margin: 21px -15px;
         line-height: 26px;
         color: @white;
-        background-color: @brand-red;
+        background-color: @theme-page-title-bg-color;
         display: inline-block;
         .user-select(none);
     }
@@ -1246,7 +1255,14 @@ ul.side-nav{
     padding-bottom: 50%;
     margin-bottom: 15px;
     .map-info{
-        width: 300px;
+        width: 320px;
+        img{
+            .pull-right;
+            .img-responsive;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 120px;
+        }
     }
 }
 .payment-type-element-container{
