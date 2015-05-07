@@ -64,7 +64,8 @@ nav{
             font-size: 16px;
             font-family: @font-family-signika;
             color: @brand-turquoise;
-            padding: 7px;
+            padding: 0 7px;
+            line-height: 75px;
         }
         &.active>a{
             color: @brand-red;
@@ -80,7 +81,7 @@ nav{
                 >li>a{
                     padding: 3px 7px;
                     color: @brand-turquoise;
-                    &:hover{
+                    &:hover, &:active{
                         background: @header-secondary-nav-color;
                     }
                     &:after{
@@ -208,13 +209,13 @@ nav{
             &.secondary .dropdown{
                 &:hover{
                     >a{
-                       background-color: darken(@header-secondary-nav-color, 8%);
+                       background-color: transparent;
                        color: @brand-turquoise;
                        .box-shadow(none);
                     }
                     &:before{
-                        //display: inline-block;
-                        border-bottom-color: @brand-turquoise;
+                        display: inline-block;
+                        border-bottom-color: darken(@header-secondary-nav-color, 8%);
                     }
                 }
             }

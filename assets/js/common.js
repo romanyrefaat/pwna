@@ -9,12 +9,13 @@
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
     function equalHeights() {
-        $('.story-list-item .caption').matchHeight({
-            byRow: true,
-            property: 'height',
-            target: null,
-            remove: false
-        });
+        $('.story-list-item .caption').conformity({mode: 'height'});
+//        $('.story-list-item .caption').matchHeight({
+//            byRow: true,
+//            property: 'height',
+//            target: null,
+//            remove: false
+//        });
     }
     function headerNavHandlers() {
         var navMenu = $('<nav></nav>');
@@ -408,8 +409,6 @@
     // jQuery RWD Image Maps
     $('img[usemap]').rwdImageMaps();
 
-    // Match heights
-    equalHeights();
 
     // accordion expand collapse ico
     $('.collapse').on('shown.bs.collapse', function() {
@@ -417,4 +416,7 @@
     }).on('hidden.bs.collapse', function() {
         $(this).parent().find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
     });
+    $(window).bind("orientationchange resize", function(event) {
+        equalHeights();
+    }).trigger('resize');
 })(jQuery);

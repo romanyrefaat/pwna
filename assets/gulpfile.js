@@ -32,7 +32,8 @@ gulp.task('scripts', function() {
         'js/plugin/jquery.placeholder.js',
         'js/plugin/bootstrap-dialog.js',
         'js/plugin/jquery.multilevelpushmenu.js',
-        'js/plugin/jquery.matchHeight.js',
+        'js/plugin/conformity.js',
+//        'js/plugin/jquery.matchHeight.js',
         'js/plugin/printPage.js',
         'js/plugin/rwdImageMaps.js',
         'js/common.js'

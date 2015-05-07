@@ -2985,7 +2985,7 @@ select[multiple].form-group-lg div.responsive textarea {
 }
 table {
   max-width: 100%;
-  background-color: #fcfbfb;
+  background-color: transparent;
 }
 th {
   text-align: left;
@@ -3031,7 +3031,7 @@ th {
   border-top: 0;
 }
 .table .table {
-  background-color: #fcfbfb;
+  background-color: transparent;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -3058,7 +3058,7 @@ th {
 }
 .table-striped > thead > tr > th,
 .table-striped > thead > tr > td {
-  background-color: #e6dede;
+  background-color: rgba(0, 0, 0, 0);
 }
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
@@ -4099,7 +4099,7 @@ div.responsive #login-div-content button,
 #login-div-content .ft button,
 div.responsive #login-div-content .ft button {
   border: none;
-  background-image: none;
+  background: none;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s;
@@ -4137,6 +4137,11 @@ button:link div.responsive .button:hover,
 button:link .Button:hover,
 button:link a.btn:hover,
 button:link button:hover,
+.button:visited,
+div.responsive .button:visited,
+.Button:visited,
+a.btn:visited,
+button:visited,
 .button:focus,
 div.responsive .button:focus,
 .Button:focus,
@@ -4158,6 +4163,8 @@ a.btn:link #login-div-content input.uc-button:hover,
 a.btn:link div.responsive #login-div-content input.uc-button:hover,
 button:link #login-div-content input.uc-button:hover,
 button:link div.responsive #login-div-content input.uc-button:hover,
+#login-div-content input.uc-button:visited,
+div.responsive #login-div-content input.uc-button:visited,
 #login-div-content input.uc-button:focus,
 div.responsive #login-div-content input.uc-button:focus,
 #login-div-content button:link #login-div-content button:hover,
@@ -4176,6 +4183,8 @@ a.btn:link #login-div-content button:hover,
 a.btn:link div.responsive #login-div-content button:hover,
 button:link #login-div-content button:hover,
 button:link div.responsive #login-div-content button:hover,
+#login-div-content button:visited,
+div.responsive #login-div-content button:visited,
 #login-div-content button:focus,
 div.responsive #login-div-content button:focus,
 #login-div-content .ft button:link #login-div-content .ft button:hover,
@@ -4194,8 +4203,11 @@ a.btn:link #login-div-content .ft button:hover,
 a.btn:link div.responsive #login-div-content .ft button:hover,
 button:link #login-div-content .ft button:hover,
 button:link div.responsive #login-div-content .ft button:hover,
+#login-div-content .ft button:visited,
+div.responsive #login-div-content .ft button:visited,
 #login-div-content .ft button:focus,
 div.responsive #login-div-content .ft button:focus {
+  background: none;
   outline: 0;
   text-decoration: none !important;
 }
@@ -4214,232 +4226,183 @@ div.responsive #login-div-content .ft button .fa-chevron-right {
   margin-left: 5px;
   vertical-align: text-top;
 }
-button.btn-default-pwna {
+.btn.btn-default-pwna,
+.btn.btn-default-pwna:link,
+.btn.btn-default-pwna:visited,
+.btn.btn-default-pwna:link:visited,
+.btn.btn-default-pwna:visited:link {
   color: #ffffff;
   background-color: #ffcd0a;
   border-color: transparent;
   padding: 8px 24px;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.33;
   border-radius: 15px;
 }
-button.btn-default-pwna:hover,
-button.btn-default-pwna:focus,
-button.btn-default-pwna.focus,
-button.btn-default-pwna:active,
-button.btn-default-pwna.active,
-.open > .dropdown-togglebutton.btn-default-pwna {
+.btn.btn-default-pwna:hover,
+.btn.btn-default-pwna:focus,
+.btn.btn-default-pwna.focus,
+.btn.btn-default-pwna:active,
+.btn.btn-default-pwna.active,
+.open > .dropdown-toggle.btn.btn-default-pwna,
+.btn.btn-default-pwna:link:hover,
+.btn.btn-default-pwna:link:focus,
+.btn.btn-default-pwna:link.focus,
+.btn.btn-default-pwna:link:active,
+.btn.btn-default-pwna:link.active,
+.open > .dropdown-toggle.btn.btn-default-pwna:link,
+.btn.btn-default-pwna:visited:hover,
+.btn.btn-default-pwna:visited:focus,
+.btn.btn-default-pwna:visited.focus,
+.btn.btn-default-pwna:visited:active,
+.btn.btn-default-pwna:visited.active,
+.open > .dropdown-toggle.btn.btn-default-pwna:visited,
+.btn.btn-default-pwna:link:visited:hover,
+.btn.btn-default-pwna:link:visited:focus,
+.btn.btn-default-pwna:link:visited.focus,
+.btn.btn-default-pwna:link:visited:active,
+.btn.btn-default-pwna:link:visited.active,
+.open > .dropdown-toggle.btn.btn-default-pwna:link:visited,
+.btn.btn-default-pwna:visited:link:hover,
+.btn.btn-default-pwna:visited:link:focus,
+.btn.btn-default-pwna:visited:link.focus,
+.btn.btn-default-pwna:visited:link:active,
+.btn.btn-default-pwna:visited:link.active,
+.open > .dropdown-toggle.btn.btn-default-pwna:visited:link {
   color: #ffffff;
   background-color: #d6aa00;
   border-color: rgba(0, 0, 0, 0);
 }
-button.btn-default-pwna:active,
-button.btn-default-pwna.active,
-.open > .dropdown-togglebutton.btn-default-pwna {
+.btn.btn-default-pwna:active,
+.btn.btn-default-pwna.active,
+.open > .dropdown-toggle.btn.btn-default-pwna,
+.btn.btn-default-pwna:link:active,
+.btn.btn-default-pwna:link.active,
+.open > .dropdown-toggle.btn.btn-default-pwna:link,
+.btn.btn-default-pwna:visited:active,
+.btn.btn-default-pwna:visited.active,
+.open > .dropdown-toggle.btn.btn-default-pwna:visited,
+.btn.btn-default-pwna:link:visited:active,
+.btn.btn-default-pwna:link:visited.active,
+.open > .dropdown-toggle.btn.btn-default-pwna:link:visited,
+.btn.btn-default-pwna:visited:link:active,
+.btn.btn-default-pwna:visited:link.active,
+.open > .dropdown-toggle.btn.btn-default-pwna:visited:link {
   background-image: none;
 }
-button.btn-default-pwna.disabled,
-button.btn-default-pwna[disabled],
-fieldset[disabled] button.btn-default-pwna,
-button.btn-default-pwna.disabled:hover,
-button.btn-default-pwna[disabled]:hover,
-fieldset[disabled] button.btn-default-pwna:hover,
-button.btn-default-pwna.disabled:focus,
-button.btn-default-pwna[disabled]:focus,
-fieldset[disabled] button.btn-default-pwna:focus,
-button.btn-default-pwna.disabled.focus,
-button.btn-default-pwna[disabled].focus,
-fieldset[disabled] button.btn-default-pwna.focus,
-button.btn-default-pwna.disabled:active,
-button.btn-default-pwna[disabled]:active,
-fieldset[disabled] button.btn-default-pwna:active,
-button.btn-default-pwna.disabled.active,
-button.btn-default-pwna[disabled].active,
-fieldset[disabled] button.btn-default-pwna.active {
+.btn.btn-default-pwna.disabled,
+.btn.btn-default-pwna[disabled],
+fieldset[disabled] .btn.btn-default-pwna,
+.btn.btn-default-pwna.disabled:hover,
+.btn.btn-default-pwna[disabled]:hover,
+fieldset[disabled] .btn.btn-default-pwna:hover,
+.btn.btn-default-pwna.disabled:focus,
+.btn.btn-default-pwna[disabled]:focus,
+fieldset[disabled] .btn.btn-default-pwna:focus,
+.btn.btn-default-pwna.disabled.focus,
+.btn.btn-default-pwna[disabled].focus,
+fieldset[disabled] .btn.btn-default-pwna.focus,
+.btn.btn-default-pwna.disabled:active,
+.btn.btn-default-pwna[disabled]:active,
+fieldset[disabled] .btn.btn-default-pwna:active,
+.btn.btn-default-pwna.disabled.active,
+.btn.btn-default-pwna[disabled].active,
+fieldset[disabled] .btn.btn-default-pwna.active,
+.btn.btn-default-pwna:link.disabled,
+.btn.btn-default-pwna:link[disabled],
+fieldset[disabled] .btn.btn-default-pwna:link,
+.btn.btn-default-pwna:link.disabled:hover,
+.btn.btn-default-pwna:link[disabled]:hover,
+fieldset[disabled] .btn.btn-default-pwna:link:hover,
+.btn.btn-default-pwna:link.disabled:focus,
+.btn.btn-default-pwna:link[disabled]:focus,
+fieldset[disabled] .btn.btn-default-pwna:link:focus,
+.btn.btn-default-pwna:link.disabled.focus,
+.btn.btn-default-pwna:link[disabled].focus,
+fieldset[disabled] .btn.btn-default-pwna:link.focus,
+.btn.btn-default-pwna:link.disabled:active,
+.btn.btn-default-pwna:link[disabled]:active,
+fieldset[disabled] .btn.btn-default-pwna:link:active,
+.btn.btn-default-pwna:link.disabled.active,
+.btn.btn-default-pwna:link[disabled].active,
+fieldset[disabled] .btn.btn-default-pwna:link.active,
+.btn.btn-default-pwna:visited.disabled,
+.btn.btn-default-pwna:visited[disabled],
+fieldset[disabled] .btn.btn-default-pwna:visited,
+.btn.btn-default-pwna:visited.disabled:hover,
+.btn.btn-default-pwna:visited[disabled]:hover,
+fieldset[disabled] .btn.btn-default-pwna:visited:hover,
+.btn.btn-default-pwna:visited.disabled:focus,
+.btn.btn-default-pwna:visited[disabled]:focus,
+fieldset[disabled] .btn.btn-default-pwna:visited:focus,
+.btn.btn-default-pwna:visited.disabled.focus,
+.btn.btn-default-pwna:visited[disabled].focus,
+fieldset[disabled] .btn.btn-default-pwna:visited.focus,
+.btn.btn-default-pwna:visited.disabled:active,
+.btn.btn-default-pwna:visited[disabled]:active,
+fieldset[disabled] .btn.btn-default-pwna:visited:active,
+.btn.btn-default-pwna:visited.disabled.active,
+.btn.btn-default-pwna:visited[disabled].active,
+fieldset[disabled] .btn.btn-default-pwna:visited.active,
+.btn.btn-default-pwna:link:visited.disabled,
+.btn.btn-default-pwna:link:visited[disabled],
+fieldset[disabled] .btn.btn-default-pwna:link:visited,
+.btn.btn-default-pwna:link:visited.disabled:hover,
+.btn.btn-default-pwna:link:visited[disabled]:hover,
+fieldset[disabled] .btn.btn-default-pwna:link:visited:hover,
+.btn.btn-default-pwna:link:visited.disabled:focus,
+.btn.btn-default-pwna:link:visited[disabled]:focus,
+fieldset[disabled] .btn.btn-default-pwna:link:visited:focus,
+.btn.btn-default-pwna:link:visited.disabled.focus,
+.btn.btn-default-pwna:link:visited[disabled].focus,
+fieldset[disabled] .btn.btn-default-pwna:link:visited.focus,
+.btn.btn-default-pwna:link:visited.disabled:active,
+.btn.btn-default-pwna:link:visited[disabled]:active,
+fieldset[disabled] .btn.btn-default-pwna:link:visited:active,
+.btn.btn-default-pwna:link:visited.disabled.active,
+.btn.btn-default-pwna:link:visited[disabled].active,
+fieldset[disabled] .btn.btn-default-pwna:link:visited.active,
+.btn.btn-default-pwna:visited:link.disabled,
+.btn.btn-default-pwna:visited:link[disabled],
+fieldset[disabled] .btn.btn-default-pwna:visited:link,
+.btn.btn-default-pwna:visited:link.disabled:hover,
+.btn.btn-default-pwna:visited:link[disabled]:hover,
+fieldset[disabled] .btn.btn-default-pwna:visited:link:hover,
+.btn.btn-default-pwna:visited:link.disabled:focus,
+.btn.btn-default-pwna:visited:link[disabled]:focus,
+fieldset[disabled] .btn.btn-default-pwna:visited:link:focus,
+.btn.btn-default-pwna:visited:link.disabled.focus,
+.btn.btn-default-pwna:visited:link[disabled].focus,
+fieldset[disabled] .btn.btn-default-pwna:visited:link.focus,
+.btn.btn-default-pwna:visited:link.disabled:active,
+.btn.btn-default-pwna:visited:link[disabled]:active,
+fieldset[disabled] .btn.btn-default-pwna:visited:link:active,
+.btn.btn-default-pwna:visited:link.disabled.active,
+.btn.btn-default-pwna:visited:link[disabled].active,
+fieldset[disabled] .btn.btn-default-pwna:visited:link.active {
   background-color: #ffcd0a;
   border-color: transparent;
 }
-button.btn-default-pwna .badge {
+.btn.btn-default-pwna .badge,
+.btn.btn-default-pwna:link .badge,
+.btn.btn-default-pwna:visited .badge,
+.btn.btn-default-pwna:link:visited .badge,
+.btn.btn-default-pwna:visited:link .badge {
   color: #ffcd0a;
   background-color: #ffffff;
 }
-a.btn-default-pwna,
-a.btn-default-pwna:link,
-a.btn-default-pwna:visited,
-a.btn-default-pwna:link:visited,
-a.btn-default-pwna:visited:link {
-  color: #ffffff;
-  background-color: #ffcd0a;
-  border-color: transparent;
-  padding: 8px 24px;
-  font-size: 19px;
-  line-height: 1.33;
-  border-radius: 15px;
-}
-a.btn-default-pwna:hover,
-a.btn-default-pwna:focus,
-a.btn-default-pwna.focus,
-a.btn-default-pwna:active,
-a.btn-default-pwna.active,
-.open > .dropdown-togglea.btn-default-pwna,
-a.btn-default-pwna:link:hover,
-a.btn-default-pwna:link:focus,
-a.btn-default-pwna:link.focus,
-a.btn-default-pwna:link:active,
-a.btn-default-pwna:link.active,
-.open > .dropdown-togglea.btn-default-pwna:link,
-a.btn-default-pwna:visited:hover,
-a.btn-default-pwna:visited:focus,
-a.btn-default-pwna:visited.focus,
-a.btn-default-pwna:visited:active,
-a.btn-default-pwna:visited.active,
-.open > .dropdown-togglea.btn-default-pwna:visited,
-a.btn-default-pwna:link:visited:hover,
-a.btn-default-pwna:link:visited:focus,
-a.btn-default-pwna:link:visited.focus,
-a.btn-default-pwna:link:visited:active,
-a.btn-default-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-default-pwna:link:visited,
-a.btn-default-pwna:visited:link:hover,
-a.btn-default-pwna:visited:link:focus,
-a.btn-default-pwna:visited:link.focus,
-a.btn-default-pwna:visited:link:active,
-a.btn-default-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-default-pwna:visited:link {
-  color: #ffffff;
-  background-color: #d6aa00;
-  border-color: rgba(0, 0, 0, 0);
-}
-a.btn-default-pwna:active,
-a.btn-default-pwna.active,
-.open > .dropdown-togglea.btn-default-pwna,
-a.btn-default-pwna:link:active,
-a.btn-default-pwna:link.active,
-.open > .dropdown-togglea.btn-default-pwna:link,
-a.btn-default-pwna:visited:active,
-a.btn-default-pwna:visited.active,
-.open > .dropdown-togglea.btn-default-pwna:visited,
-a.btn-default-pwna:link:visited:active,
-a.btn-default-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-default-pwna:link:visited,
-a.btn-default-pwna:visited:link:active,
-a.btn-default-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-default-pwna:visited:link {
-  background-image: none;
-}
-a.btn-default-pwna.disabled,
-a.btn-default-pwna[disabled],
-fieldset[disabled] a.btn-default-pwna,
-a.btn-default-pwna.disabled:hover,
-a.btn-default-pwna[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:hover,
-a.btn-default-pwna.disabled:focus,
-a.btn-default-pwna[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:focus,
-a.btn-default-pwna.disabled.focus,
-a.btn-default-pwna[disabled].focus,
-fieldset[disabled] a.btn-default-pwna.focus,
-a.btn-default-pwna.disabled:active,
-a.btn-default-pwna[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:active,
-a.btn-default-pwna.disabled.active,
-a.btn-default-pwna[disabled].active,
-fieldset[disabled] a.btn-default-pwna.active,
-a.btn-default-pwna:link.disabled,
-a.btn-default-pwna:link[disabled],
-fieldset[disabled] a.btn-default-pwna:link,
-a.btn-default-pwna:link.disabled:hover,
-a.btn-default-pwna:link[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:link:hover,
-a.btn-default-pwna:link.disabled:focus,
-a.btn-default-pwna:link[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:link:focus,
-a.btn-default-pwna:link.disabled.focus,
-a.btn-default-pwna:link[disabled].focus,
-fieldset[disabled] a.btn-default-pwna:link.focus,
-a.btn-default-pwna:link.disabled:active,
-a.btn-default-pwna:link[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:link:active,
-a.btn-default-pwna:link.disabled.active,
-a.btn-default-pwna:link[disabled].active,
-fieldset[disabled] a.btn-default-pwna:link.active,
-a.btn-default-pwna:visited.disabled,
-a.btn-default-pwna:visited[disabled],
-fieldset[disabled] a.btn-default-pwna:visited,
-a.btn-default-pwna:visited.disabled:hover,
-a.btn-default-pwna:visited[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:visited:hover,
-a.btn-default-pwna:visited.disabled:focus,
-a.btn-default-pwna:visited[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:visited:focus,
-a.btn-default-pwna:visited.disabled.focus,
-a.btn-default-pwna:visited[disabled].focus,
-fieldset[disabled] a.btn-default-pwna:visited.focus,
-a.btn-default-pwna:visited.disabled:active,
-a.btn-default-pwna:visited[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:visited:active,
-a.btn-default-pwna:visited.disabled.active,
-a.btn-default-pwna:visited[disabled].active,
-fieldset[disabled] a.btn-default-pwna:visited.active,
-a.btn-default-pwna:link:visited.disabled,
-a.btn-default-pwna:link:visited[disabled],
-fieldset[disabled] a.btn-default-pwna:link:visited,
-a.btn-default-pwna:link:visited.disabled:hover,
-a.btn-default-pwna:link:visited[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:link:visited:hover,
-a.btn-default-pwna:link:visited.disabled:focus,
-a.btn-default-pwna:link:visited[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:link:visited:focus,
-a.btn-default-pwna:link:visited.disabled.focus,
-a.btn-default-pwna:link:visited[disabled].focus,
-fieldset[disabled] a.btn-default-pwna:link:visited.focus,
-a.btn-default-pwna:link:visited.disabled:active,
-a.btn-default-pwna:link:visited[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:link:visited:active,
-a.btn-default-pwna:link:visited.disabled.active,
-a.btn-default-pwna:link:visited[disabled].active,
-fieldset[disabled] a.btn-default-pwna:link:visited.active,
-a.btn-default-pwna:visited:link.disabled,
-a.btn-default-pwna:visited:link[disabled],
-fieldset[disabled] a.btn-default-pwna:visited:link,
-a.btn-default-pwna:visited:link.disabled:hover,
-a.btn-default-pwna:visited:link[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:visited:link:hover,
-a.btn-default-pwna:visited:link.disabled:focus,
-a.btn-default-pwna:visited:link[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:visited:link:focus,
-a.btn-default-pwna:visited:link.disabled.focus,
-a.btn-default-pwna:visited:link[disabled].focus,
-fieldset[disabled] a.btn-default-pwna:visited:link.focus,
-a.btn-default-pwna:visited:link.disabled:active,
-a.btn-default-pwna:visited:link[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:visited:link:active,
-a.btn-default-pwna:visited:link.disabled.active,
-a.btn-default-pwna:visited:link[disabled].active,
-fieldset[disabled] a.btn-default-pwna:visited:link.active {
-  background-color: #ffcd0a;
-  border-color: transparent;
-}
-a.btn-default-pwna .badge,
-a.btn-default-pwna:link .badge,
-a.btn-default-pwna:visited .badge,
-a.btn-default-pwna:link:visited .badge,
-a.btn-default-pwna:visited:link .badge {
-  color: #ffcd0a;
-  background-color: #ffffff;
-}
-a.btn-default-pwna:hover,
-a.btn-default-pwna:link:hover,
-a.btn-default-pwna:visited:hover,
-a.btn-default-pwna:link:visited:hover,
-a.btn-default-pwna:visited:link:hover {
+.btn.btn-default-pwna:hover,
+.btn.btn-default-pwna:link:hover,
+.btn.btn-default-pwna:visited:hover,
+.btn.btn-default-pwna:link:visited:hover,
+.btn.btn-default-pwna:visited:link:hover {
   background-color: #bbbdbf;
 }
-a.btn-primary-pwna,
-a.btn-primary-pwna:link,
-a.btn-primary-pwna:visited,
-a.btn-primary-pwna:link:visited,
-a.btn-primary-pwna:visited:link {
+.btn.btn-primary-pwna,
+.btn.btn-primary-pwna:link,
+.btn.btn-primary-pwna:visited,
+.btn.btn-primary-pwna:link:visited,
+.btn.btn-primary-pwna:visited:link {
   color: #e22427;
   background-color: #ebebeb;
   border-color: transparent;
@@ -4448,163 +4411,163 @@ a.btn-primary-pwna:visited:link {
   line-height: 1.33;
   border-radius: 15px;
 }
-a.btn-primary-pwna:hover,
-a.btn-primary-pwna:focus,
-a.btn-primary-pwna.focus,
-a.btn-primary-pwna:active,
-a.btn-primary-pwna.active,
-.open > .dropdown-togglea.btn-primary-pwna,
-a.btn-primary-pwna:link:hover,
-a.btn-primary-pwna:link:focus,
-a.btn-primary-pwna:link.focus,
-a.btn-primary-pwna:link:active,
-a.btn-primary-pwna:link.active,
-.open > .dropdown-togglea.btn-primary-pwna:link,
-a.btn-primary-pwna:visited:hover,
-a.btn-primary-pwna:visited:focus,
-a.btn-primary-pwna:visited.focus,
-a.btn-primary-pwna:visited:active,
-a.btn-primary-pwna:visited.active,
-.open > .dropdown-togglea.btn-primary-pwna:visited,
-a.btn-primary-pwna:link:visited:hover,
-a.btn-primary-pwna:link:visited:focus,
-a.btn-primary-pwna:link:visited.focus,
-a.btn-primary-pwna:link:visited:active,
-a.btn-primary-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-primary-pwna:link:visited,
-a.btn-primary-pwna:visited:link:hover,
-a.btn-primary-pwna:visited:link:focus,
-a.btn-primary-pwna:visited:link.focus,
-a.btn-primary-pwna:visited:link:active,
-a.btn-primary-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-primary-pwna:visited:link {
+.btn.btn-primary-pwna:hover,
+.btn.btn-primary-pwna:focus,
+.btn.btn-primary-pwna.focus,
+.btn.btn-primary-pwna:active,
+.btn.btn-primary-pwna.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna,
+.btn.btn-primary-pwna:link:hover,
+.btn.btn-primary-pwna:link:focus,
+.btn.btn-primary-pwna:link.focus,
+.btn.btn-primary-pwna:link:active,
+.btn.btn-primary-pwna:link.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna:link,
+.btn.btn-primary-pwna:visited:hover,
+.btn.btn-primary-pwna:visited:focus,
+.btn.btn-primary-pwna:visited.focus,
+.btn.btn-primary-pwna:visited:active,
+.btn.btn-primary-pwna:visited.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna:visited,
+.btn.btn-primary-pwna:link:visited:hover,
+.btn.btn-primary-pwna:link:visited:focus,
+.btn.btn-primary-pwna:link:visited.focus,
+.btn.btn-primary-pwna:link:visited:active,
+.btn.btn-primary-pwna:link:visited.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna:link:visited,
+.btn.btn-primary-pwna:visited:link:hover,
+.btn.btn-primary-pwna:visited:link:focus,
+.btn.btn-primary-pwna:visited:link.focus,
+.btn.btn-primary-pwna:visited:link:active,
+.btn.btn-primary-pwna:visited:link.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna:visited:link {
   color: #e22427;
   background-color: #d2d2d2;
   border-color: rgba(0, 0, 0, 0);
 }
-a.btn-primary-pwna:active,
-a.btn-primary-pwna.active,
-.open > .dropdown-togglea.btn-primary-pwna,
-a.btn-primary-pwna:link:active,
-a.btn-primary-pwna:link.active,
-.open > .dropdown-togglea.btn-primary-pwna:link,
-a.btn-primary-pwna:visited:active,
-a.btn-primary-pwna:visited.active,
-.open > .dropdown-togglea.btn-primary-pwna:visited,
-a.btn-primary-pwna:link:visited:active,
-a.btn-primary-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-primary-pwna:link:visited,
-a.btn-primary-pwna:visited:link:active,
-a.btn-primary-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-primary-pwna:visited:link {
+.btn.btn-primary-pwna:active,
+.btn.btn-primary-pwna.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna,
+.btn.btn-primary-pwna:link:active,
+.btn.btn-primary-pwna:link.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna:link,
+.btn.btn-primary-pwna:visited:active,
+.btn.btn-primary-pwna:visited.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna:visited,
+.btn.btn-primary-pwna:link:visited:active,
+.btn.btn-primary-pwna:link:visited.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna:link:visited,
+.btn.btn-primary-pwna:visited:link:active,
+.btn.btn-primary-pwna:visited:link.active,
+.open > .dropdown-toggle.btn.btn-primary-pwna:visited:link {
   background-image: none;
 }
-a.btn-primary-pwna.disabled,
-a.btn-primary-pwna[disabled],
-fieldset[disabled] a.btn-primary-pwna,
-a.btn-primary-pwna.disabled:hover,
-a.btn-primary-pwna[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:hover,
-a.btn-primary-pwna.disabled:focus,
-a.btn-primary-pwna[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:focus,
-a.btn-primary-pwna.disabled.focus,
-a.btn-primary-pwna[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna.focus,
-a.btn-primary-pwna.disabled:active,
-a.btn-primary-pwna[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:active,
-a.btn-primary-pwna.disabled.active,
-a.btn-primary-pwna[disabled].active,
-fieldset[disabled] a.btn-primary-pwna.active,
-a.btn-primary-pwna:link.disabled,
-a.btn-primary-pwna:link[disabled],
-fieldset[disabled] a.btn-primary-pwna:link,
-a.btn-primary-pwna:link.disabled:hover,
-a.btn-primary-pwna:link[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:link:hover,
-a.btn-primary-pwna:link.disabled:focus,
-a.btn-primary-pwna:link[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:link:focus,
-a.btn-primary-pwna:link.disabled.focus,
-a.btn-primary-pwna:link[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna:link.focus,
-a.btn-primary-pwna:link.disabled:active,
-a.btn-primary-pwna:link[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:link:active,
-a.btn-primary-pwna:link.disabled.active,
-a.btn-primary-pwna:link[disabled].active,
-fieldset[disabled] a.btn-primary-pwna:link.active,
-a.btn-primary-pwna:visited.disabled,
-a.btn-primary-pwna:visited[disabled],
-fieldset[disabled] a.btn-primary-pwna:visited,
-a.btn-primary-pwna:visited.disabled:hover,
-a.btn-primary-pwna:visited[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:visited:hover,
-a.btn-primary-pwna:visited.disabled:focus,
-a.btn-primary-pwna:visited[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:visited:focus,
-a.btn-primary-pwna:visited.disabled.focus,
-a.btn-primary-pwna:visited[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna:visited.focus,
-a.btn-primary-pwna:visited.disabled:active,
-a.btn-primary-pwna:visited[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:visited:active,
-a.btn-primary-pwna:visited.disabled.active,
-a.btn-primary-pwna:visited[disabled].active,
-fieldset[disabled] a.btn-primary-pwna:visited.active,
-a.btn-primary-pwna:link:visited.disabled,
-a.btn-primary-pwna:link:visited[disabled],
-fieldset[disabled] a.btn-primary-pwna:link:visited,
-a.btn-primary-pwna:link:visited.disabled:hover,
-a.btn-primary-pwna:link:visited[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:link:visited:hover,
-a.btn-primary-pwna:link:visited.disabled:focus,
-a.btn-primary-pwna:link:visited[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:link:visited:focus,
-a.btn-primary-pwna:link:visited.disabled.focus,
-a.btn-primary-pwna:link:visited[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna:link:visited.focus,
-a.btn-primary-pwna:link:visited.disabled:active,
-a.btn-primary-pwna:link:visited[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:link:visited:active,
-a.btn-primary-pwna:link:visited.disabled.active,
-a.btn-primary-pwna:link:visited[disabled].active,
-fieldset[disabled] a.btn-primary-pwna:link:visited.active,
-a.btn-primary-pwna:visited:link.disabled,
-a.btn-primary-pwna:visited:link[disabled],
-fieldset[disabled] a.btn-primary-pwna:visited:link,
-a.btn-primary-pwna:visited:link.disabled:hover,
-a.btn-primary-pwna:visited:link[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:visited:link:hover,
-a.btn-primary-pwna:visited:link.disabled:focus,
-a.btn-primary-pwna:visited:link[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:visited:link:focus,
-a.btn-primary-pwna:visited:link.disabled.focus,
-a.btn-primary-pwna:visited:link[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna:visited:link.focus,
-a.btn-primary-pwna:visited:link.disabled:active,
-a.btn-primary-pwna:visited:link[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:visited:link:active,
-a.btn-primary-pwna:visited:link.disabled.active,
-a.btn-primary-pwna:visited:link[disabled].active,
-fieldset[disabled] a.btn-primary-pwna:visited:link.active {
+.btn.btn-primary-pwna.disabled,
+.btn.btn-primary-pwna[disabled],
+fieldset[disabled] .btn.btn-primary-pwna,
+.btn.btn-primary-pwna.disabled:hover,
+.btn.btn-primary-pwna[disabled]:hover,
+fieldset[disabled] .btn.btn-primary-pwna:hover,
+.btn.btn-primary-pwna.disabled:focus,
+.btn.btn-primary-pwna[disabled]:focus,
+fieldset[disabled] .btn.btn-primary-pwna:focus,
+.btn.btn-primary-pwna.disabled.focus,
+.btn.btn-primary-pwna[disabled].focus,
+fieldset[disabled] .btn.btn-primary-pwna.focus,
+.btn.btn-primary-pwna.disabled:active,
+.btn.btn-primary-pwna[disabled]:active,
+fieldset[disabled] .btn.btn-primary-pwna:active,
+.btn.btn-primary-pwna.disabled.active,
+.btn.btn-primary-pwna[disabled].active,
+fieldset[disabled] .btn.btn-primary-pwna.active,
+.btn.btn-primary-pwna:link.disabled,
+.btn.btn-primary-pwna:link[disabled],
+fieldset[disabled] .btn.btn-primary-pwna:link,
+.btn.btn-primary-pwna:link.disabled:hover,
+.btn.btn-primary-pwna:link[disabled]:hover,
+fieldset[disabled] .btn.btn-primary-pwna:link:hover,
+.btn.btn-primary-pwna:link.disabled:focus,
+.btn.btn-primary-pwna:link[disabled]:focus,
+fieldset[disabled] .btn.btn-primary-pwna:link:focus,
+.btn.btn-primary-pwna:link.disabled.focus,
+.btn.btn-primary-pwna:link[disabled].focus,
+fieldset[disabled] .btn.btn-primary-pwna:link.focus,
+.btn.btn-primary-pwna:link.disabled:active,
+.btn.btn-primary-pwna:link[disabled]:active,
+fieldset[disabled] .btn.btn-primary-pwna:link:active,
+.btn.btn-primary-pwna:link.disabled.active,
+.btn.btn-primary-pwna:link[disabled].active,
+fieldset[disabled] .btn.btn-primary-pwna:link.active,
+.btn.btn-primary-pwna:visited.disabled,
+.btn.btn-primary-pwna:visited[disabled],
+fieldset[disabled] .btn.btn-primary-pwna:visited,
+.btn.btn-primary-pwna:visited.disabled:hover,
+.btn.btn-primary-pwna:visited[disabled]:hover,
+fieldset[disabled] .btn.btn-primary-pwna:visited:hover,
+.btn.btn-primary-pwna:visited.disabled:focus,
+.btn.btn-primary-pwna:visited[disabled]:focus,
+fieldset[disabled] .btn.btn-primary-pwna:visited:focus,
+.btn.btn-primary-pwna:visited.disabled.focus,
+.btn.btn-primary-pwna:visited[disabled].focus,
+fieldset[disabled] .btn.btn-primary-pwna:visited.focus,
+.btn.btn-primary-pwna:visited.disabled:active,
+.btn.btn-primary-pwna:visited[disabled]:active,
+fieldset[disabled] .btn.btn-primary-pwna:visited:active,
+.btn.btn-primary-pwna:visited.disabled.active,
+.btn.btn-primary-pwna:visited[disabled].active,
+fieldset[disabled] .btn.btn-primary-pwna:visited.active,
+.btn.btn-primary-pwna:link:visited.disabled,
+.btn.btn-primary-pwna:link:visited[disabled],
+fieldset[disabled] .btn.btn-primary-pwna:link:visited,
+.btn.btn-primary-pwna:link:visited.disabled:hover,
+.btn.btn-primary-pwna:link:visited[disabled]:hover,
+fieldset[disabled] .btn.btn-primary-pwna:link:visited:hover,
+.btn.btn-primary-pwna:link:visited.disabled:focus,
+.btn.btn-primary-pwna:link:visited[disabled]:focus,
+fieldset[disabled] .btn.btn-primary-pwna:link:visited:focus,
+.btn.btn-primary-pwna:link:visited.disabled.focus,
+.btn.btn-primary-pwna:link:visited[disabled].focus,
+fieldset[disabled] .btn.btn-primary-pwna:link:visited.focus,
+.btn.btn-primary-pwna:link:visited.disabled:active,
+.btn.btn-primary-pwna:link:visited[disabled]:active,
+fieldset[disabled] .btn.btn-primary-pwna:link:visited:active,
+.btn.btn-primary-pwna:link:visited.disabled.active,
+.btn.btn-primary-pwna:link:visited[disabled].active,
+fieldset[disabled] .btn.btn-primary-pwna:link:visited.active,
+.btn.btn-primary-pwna:visited:link.disabled,
+.btn.btn-primary-pwna:visited:link[disabled],
+fieldset[disabled] .btn.btn-primary-pwna:visited:link,
+.btn.btn-primary-pwna:visited:link.disabled:hover,
+.btn.btn-primary-pwna:visited:link[disabled]:hover,
+fieldset[disabled] .btn.btn-primary-pwna:visited:link:hover,
+.btn.btn-primary-pwna:visited:link.disabled:focus,
+.btn.btn-primary-pwna:visited:link[disabled]:focus,
+fieldset[disabled] .btn.btn-primary-pwna:visited:link:focus,
+.btn.btn-primary-pwna:visited:link.disabled.focus,
+.btn.btn-primary-pwna:visited:link[disabled].focus,
+fieldset[disabled] .btn.btn-primary-pwna:visited:link.focus,
+.btn.btn-primary-pwna:visited:link.disabled:active,
+.btn.btn-primary-pwna:visited:link[disabled]:active,
+fieldset[disabled] .btn.btn-primary-pwna:visited:link:active,
+.btn.btn-primary-pwna:visited:link.disabled.active,
+.btn.btn-primary-pwna:visited:link[disabled].active,
+fieldset[disabled] .btn.btn-primary-pwna:visited:link.active {
   background-color: #ebebeb;
   border-color: transparent;
 }
-a.btn-primary-pwna .badge,
-a.btn-primary-pwna:link .badge,
-a.btn-primary-pwna:visited .badge,
-a.btn-primary-pwna:link:visited .badge,
-a.btn-primary-pwna:visited:link .badge {
+.btn.btn-primary-pwna .badge,
+.btn.btn-primary-pwna:link .badge,
+.btn.btn-primary-pwna:visited .badge,
+.btn.btn-primary-pwna:link:visited .badge,
+.btn.btn-primary-pwna:visited:link .badge {
   color: #ebebeb;
   background-color: #e22427;
 }
-a.btn-secondary-pwna,
-a.btn-secondary-pwna:link,
-a.btn-secondary-pwna:visited,
-a.btn-secondary-pwna:link:visited,
-a.btn-secondary-pwna:visited:link {
+.btn.btn-secondary-pwna,
+.btn.btn-secondary-pwna:link,
+.btn.btn-secondary-pwna:visited,
+.btn.btn-secondary-pwna:link:visited,
+.btn.btn-secondary-pwna:visited:link {
   color: #ffffff;
   background-color: #9caebf;
   border-color: transparent;
@@ -4613,155 +4576,155 @@ a.btn-secondary-pwna:visited:link {
   line-height: 1.33;
   border-radius: 15px;
 }
-a.btn-secondary-pwna:hover,
-a.btn-secondary-pwna:focus,
-a.btn-secondary-pwna.focus,
-a.btn-secondary-pwna:active,
-a.btn-secondary-pwna.active,
-.open > .dropdown-togglea.btn-secondary-pwna,
-a.btn-secondary-pwna:link:hover,
-a.btn-secondary-pwna:link:focus,
-a.btn-secondary-pwna:link.focus,
-a.btn-secondary-pwna:link:active,
-a.btn-secondary-pwna:link.active,
-.open > .dropdown-togglea.btn-secondary-pwna:link,
-a.btn-secondary-pwna:visited:hover,
-a.btn-secondary-pwna:visited:focus,
-a.btn-secondary-pwna:visited.focus,
-a.btn-secondary-pwna:visited:active,
-a.btn-secondary-pwna:visited.active,
-.open > .dropdown-togglea.btn-secondary-pwna:visited,
-a.btn-secondary-pwna:link:visited:hover,
-a.btn-secondary-pwna:link:visited:focus,
-a.btn-secondary-pwna:link:visited.focus,
-a.btn-secondary-pwna:link:visited:active,
-a.btn-secondary-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-secondary-pwna:link:visited,
-a.btn-secondary-pwna:visited:link:hover,
-a.btn-secondary-pwna:visited:link:focus,
-a.btn-secondary-pwna:visited:link.focus,
-a.btn-secondary-pwna:visited:link:active,
-a.btn-secondary-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-secondary-pwna:visited:link {
+.btn.btn-secondary-pwna:hover,
+.btn.btn-secondary-pwna:focus,
+.btn.btn-secondary-pwna.focus,
+.btn.btn-secondary-pwna:active,
+.btn.btn-secondary-pwna.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna,
+.btn.btn-secondary-pwna:link:hover,
+.btn.btn-secondary-pwna:link:focus,
+.btn.btn-secondary-pwna:link.focus,
+.btn.btn-secondary-pwna:link:active,
+.btn.btn-secondary-pwna:link.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna:link,
+.btn.btn-secondary-pwna:visited:hover,
+.btn.btn-secondary-pwna:visited:focus,
+.btn.btn-secondary-pwna:visited.focus,
+.btn.btn-secondary-pwna:visited:active,
+.btn.btn-secondary-pwna:visited.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna:visited,
+.btn.btn-secondary-pwna:link:visited:hover,
+.btn.btn-secondary-pwna:link:visited:focus,
+.btn.btn-secondary-pwna:link:visited.focus,
+.btn.btn-secondary-pwna:link:visited:active,
+.btn.btn-secondary-pwna:link:visited.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna:link:visited,
+.btn.btn-secondary-pwna:visited:link:hover,
+.btn.btn-secondary-pwna:visited:link:focus,
+.btn.btn-secondary-pwna:visited:link.focus,
+.btn.btn-secondary-pwna:visited:link:active,
+.btn.btn-secondary-pwna:visited:link.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna:visited:link {
   color: #ffffff;
   background-color: #7d95ab;
   border-color: rgba(0, 0, 0, 0);
 }
-a.btn-secondary-pwna:active,
-a.btn-secondary-pwna.active,
-.open > .dropdown-togglea.btn-secondary-pwna,
-a.btn-secondary-pwna:link:active,
-a.btn-secondary-pwna:link.active,
-.open > .dropdown-togglea.btn-secondary-pwna:link,
-a.btn-secondary-pwna:visited:active,
-a.btn-secondary-pwna:visited.active,
-.open > .dropdown-togglea.btn-secondary-pwna:visited,
-a.btn-secondary-pwna:link:visited:active,
-a.btn-secondary-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-secondary-pwna:link:visited,
-a.btn-secondary-pwna:visited:link:active,
-a.btn-secondary-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-secondary-pwna:visited:link {
+.btn.btn-secondary-pwna:active,
+.btn.btn-secondary-pwna.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna,
+.btn.btn-secondary-pwna:link:active,
+.btn.btn-secondary-pwna:link.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna:link,
+.btn.btn-secondary-pwna:visited:active,
+.btn.btn-secondary-pwna:visited.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna:visited,
+.btn.btn-secondary-pwna:link:visited:active,
+.btn.btn-secondary-pwna:link:visited.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna:link:visited,
+.btn.btn-secondary-pwna:visited:link:active,
+.btn.btn-secondary-pwna:visited:link.active,
+.open > .dropdown-toggle.btn.btn-secondary-pwna:visited:link {
   background-image: none;
 }
-a.btn-secondary-pwna.disabled,
-a.btn-secondary-pwna[disabled],
-fieldset[disabled] a.btn-secondary-pwna,
-a.btn-secondary-pwna.disabled:hover,
-a.btn-secondary-pwna[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:hover,
-a.btn-secondary-pwna.disabled:focus,
-a.btn-secondary-pwna[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:focus,
-a.btn-secondary-pwna.disabled.focus,
-a.btn-secondary-pwna[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna.focus,
-a.btn-secondary-pwna.disabled:active,
-a.btn-secondary-pwna[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:active,
-a.btn-secondary-pwna.disabled.active,
-a.btn-secondary-pwna[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna.active,
-a.btn-secondary-pwna:link.disabled,
-a.btn-secondary-pwna:link[disabled],
-fieldset[disabled] a.btn-secondary-pwna:link,
-a.btn-secondary-pwna:link.disabled:hover,
-a.btn-secondary-pwna:link[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:link:hover,
-a.btn-secondary-pwna:link.disabled:focus,
-a.btn-secondary-pwna:link[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:link:focus,
-a.btn-secondary-pwna:link.disabled.focus,
-a.btn-secondary-pwna:link[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna:link.focus,
-a.btn-secondary-pwna:link.disabled:active,
-a.btn-secondary-pwna:link[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:link:active,
-a.btn-secondary-pwna:link.disabled.active,
-a.btn-secondary-pwna:link[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna:link.active,
-a.btn-secondary-pwna:visited.disabled,
-a.btn-secondary-pwna:visited[disabled],
-fieldset[disabled] a.btn-secondary-pwna:visited,
-a.btn-secondary-pwna:visited.disabled:hover,
-a.btn-secondary-pwna:visited[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:visited:hover,
-a.btn-secondary-pwna:visited.disabled:focus,
-a.btn-secondary-pwna:visited[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:visited:focus,
-a.btn-secondary-pwna:visited.disabled.focus,
-a.btn-secondary-pwna:visited[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna:visited.focus,
-a.btn-secondary-pwna:visited.disabled:active,
-a.btn-secondary-pwna:visited[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:visited:active,
-a.btn-secondary-pwna:visited.disabled.active,
-a.btn-secondary-pwna:visited[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna:visited.active,
-a.btn-secondary-pwna:link:visited.disabled,
-a.btn-secondary-pwna:link:visited[disabled],
-fieldset[disabled] a.btn-secondary-pwna:link:visited,
-a.btn-secondary-pwna:link:visited.disabled:hover,
-a.btn-secondary-pwna:link:visited[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:link:visited:hover,
-a.btn-secondary-pwna:link:visited.disabled:focus,
-a.btn-secondary-pwna:link:visited[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:link:visited:focus,
-a.btn-secondary-pwna:link:visited.disabled.focus,
-a.btn-secondary-pwna:link:visited[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna:link:visited.focus,
-a.btn-secondary-pwna:link:visited.disabled:active,
-a.btn-secondary-pwna:link:visited[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:link:visited:active,
-a.btn-secondary-pwna:link:visited.disabled.active,
-a.btn-secondary-pwna:link:visited[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna:link:visited.active,
-a.btn-secondary-pwna:visited:link.disabled,
-a.btn-secondary-pwna:visited:link[disabled],
-fieldset[disabled] a.btn-secondary-pwna:visited:link,
-a.btn-secondary-pwna:visited:link.disabled:hover,
-a.btn-secondary-pwna:visited:link[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:visited:link:hover,
-a.btn-secondary-pwna:visited:link.disabled:focus,
-a.btn-secondary-pwna:visited:link[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:visited:link:focus,
-a.btn-secondary-pwna:visited:link.disabled.focus,
-a.btn-secondary-pwna:visited:link[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna:visited:link.focus,
-a.btn-secondary-pwna:visited:link.disabled:active,
-a.btn-secondary-pwna:visited:link[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:visited:link:active,
-a.btn-secondary-pwna:visited:link.disabled.active,
-a.btn-secondary-pwna:visited:link[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna:visited:link.active {
+.btn.btn-secondary-pwna.disabled,
+.btn.btn-secondary-pwna[disabled],
+fieldset[disabled] .btn.btn-secondary-pwna,
+.btn.btn-secondary-pwna.disabled:hover,
+.btn.btn-secondary-pwna[disabled]:hover,
+fieldset[disabled] .btn.btn-secondary-pwna:hover,
+.btn.btn-secondary-pwna.disabled:focus,
+.btn.btn-secondary-pwna[disabled]:focus,
+fieldset[disabled] .btn.btn-secondary-pwna:focus,
+.btn.btn-secondary-pwna.disabled.focus,
+.btn.btn-secondary-pwna[disabled].focus,
+fieldset[disabled] .btn.btn-secondary-pwna.focus,
+.btn.btn-secondary-pwna.disabled:active,
+.btn.btn-secondary-pwna[disabled]:active,
+fieldset[disabled] .btn.btn-secondary-pwna:active,
+.btn.btn-secondary-pwna.disabled.active,
+.btn.btn-secondary-pwna[disabled].active,
+fieldset[disabled] .btn.btn-secondary-pwna.active,
+.btn.btn-secondary-pwna:link.disabled,
+.btn.btn-secondary-pwna:link[disabled],
+fieldset[disabled] .btn.btn-secondary-pwna:link,
+.btn.btn-secondary-pwna:link.disabled:hover,
+.btn.btn-secondary-pwna:link[disabled]:hover,
+fieldset[disabled] .btn.btn-secondary-pwna:link:hover,
+.btn.btn-secondary-pwna:link.disabled:focus,
+.btn.btn-secondary-pwna:link[disabled]:focus,
+fieldset[disabled] .btn.btn-secondary-pwna:link:focus,
+.btn.btn-secondary-pwna:link.disabled.focus,
+.btn.btn-secondary-pwna:link[disabled].focus,
+fieldset[disabled] .btn.btn-secondary-pwna:link.focus,
+.btn.btn-secondary-pwna:link.disabled:active,
+.btn.btn-secondary-pwna:link[disabled]:active,
+fieldset[disabled] .btn.btn-secondary-pwna:link:active,
+.btn.btn-secondary-pwna:link.disabled.active,
+.btn.btn-secondary-pwna:link[disabled].active,
+fieldset[disabled] .btn.btn-secondary-pwna:link.active,
+.btn.btn-secondary-pwna:visited.disabled,
+.btn.btn-secondary-pwna:visited[disabled],
+fieldset[disabled] .btn.btn-secondary-pwna:visited,
+.btn.btn-secondary-pwna:visited.disabled:hover,
+.btn.btn-secondary-pwna:visited[disabled]:hover,
+fieldset[disabled] .btn.btn-secondary-pwna:visited:hover,
+.btn.btn-secondary-pwna:visited.disabled:focus,
+.btn.btn-secondary-pwna:visited[disabled]:focus,
+fieldset[disabled] .btn.btn-secondary-pwna:visited:focus,
+.btn.btn-secondary-pwna:visited.disabled.focus,
+.btn.btn-secondary-pwna:visited[disabled].focus,
+fieldset[disabled] .btn.btn-secondary-pwna:visited.focus,
+.btn.btn-secondary-pwna:visited.disabled:active,
+.btn.btn-secondary-pwna:visited[disabled]:active,
+fieldset[disabled] .btn.btn-secondary-pwna:visited:active,
+.btn.btn-secondary-pwna:visited.disabled.active,
+.btn.btn-secondary-pwna:visited[disabled].active,
+fieldset[disabled] .btn.btn-secondary-pwna:visited.active,
+.btn.btn-secondary-pwna:link:visited.disabled,
+.btn.btn-secondary-pwna:link:visited[disabled],
+fieldset[disabled] .btn.btn-secondary-pwna:link:visited,
+.btn.btn-secondary-pwna:link:visited.disabled:hover,
+.btn.btn-secondary-pwna:link:visited[disabled]:hover,
+fieldset[disabled] .btn.btn-secondary-pwna:link:visited:hover,
+.btn.btn-secondary-pwna:link:visited.disabled:focus,
+.btn.btn-secondary-pwna:link:visited[disabled]:focus,
+fieldset[disabled] .btn.btn-secondary-pwna:link:visited:focus,
+.btn.btn-secondary-pwna:link:visited.disabled.focus,
+.btn.btn-secondary-pwna:link:visited[disabled].focus,
+fieldset[disabled] .btn.btn-secondary-pwna:link:visited.focus,
+.btn.btn-secondary-pwna:link:visited.disabled:active,
+.btn.btn-secondary-pwna:link:visited[disabled]:active,
+fieldset[disabled] .btn.btn-secondary-pwna:link:visited:active,
+.btn.btn-secondary-pwna:link:visited.disabled.active,
+.btn.btn-secondary-pwna:link:visited[disabled].active,
+fieldset[disabled] .btn.btn-secondary-pwna:link:visited.active,
+.btn.btn-secondary-pwna:visited:link.disabled,
+.btn.btn-secondary-pwna:visited:link[disabled],
+fieldset[disabled] .btn.btn-secondary-pwna:visited:link,
+.btn.btn-secondary-pwna:visited:link.disabled:hover,
+.btn.btn-secondary-pwna:visited:link[disabled]:hover,
+fieldset[disabled] .btn.btn-secondary-pwna:visited:link:hover,
+.btn.btn-secondary-pwna:visited:link.disabled:focus,
+.btn.btn-secondary-pwna:visited:link[disabled]:focus,
+fieldset[disabled] .btn.btn-secondary-pwna:visited:link:focus,
+.btn.btn-secondary-pwna:visited:link.disabled.focus,
+.btn.btn-secondary-pwna:visited:link[disabled].focus,
+fieldset[disabled] .btn.btn-secondary-pwna:visited:link.focus,
+.btn.btn-secondary-pwna:visited:link.disabled:active,
+.btn.btn-secondary-pwna:visited:link[disabled]:active,
+fieldset[disabled] .btn.btn-secondary-pwna:visited:link:active,
+.btn.btn-secondary-pwna:visited:link.disabled.active,
+.btn.btn-secondary-pwna:visited:link[disabled].active,
+fieldset[disabled] .btn.btn-secondary-pwna:visited:link.active {
   background-color: #9caebf;
   border-color: transparent;
 }
-a.btn-secondary-pwna .badge,
-a.btn-secondary-pwna:link .badge,
-a.btn-secondary-pwna:visited .badge,
-a.btn-secondary-pwna:link:visited .badge,
-a.btn-secondary-pwna:visited:link .badge {
+.btn.btn-secondary-pwna .badge,
+.btn.btn-secondary-pwna:link .badge,
+.btn.btn-secondary-pwna:visited .badge,
+.btn.btn-secondary-pwna:link:visited .badge,
+.btn.btn-secondary-pwna:visited:link .badge {
   color: #9caebf;
   background-color: #ffffff;
 }
@@ -5953,7 +5916,7 @@ tbody.collapse.in {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #fcfbfb;
+  background-color: transparent;
   border: 1px solid #e1e2e1;
 }
 .list-group-item:first-child {
@@ -7068,23 +7031,27 @@ button.close {
   position: absolute;
 }
 #home-carousel .carousel-indicators li {
-  background-color: transparent;
-  -webkit-border-radius: 0;
-  border-radius: 0;
+  background-color: #bbbdbf;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 2px solid #d5d7d8;
   display: inline-block;
-  width: 21%;
+  width: 15px;
   max-width: 150px;
-  height: auto;
+  height: 15px;
   margin: 0 1%;
 }
 #home-carousel .carousel-indicators li img {
   width: 100%;
-  display: block;
+  display: none;
   opacity: 0.9;
 }
 #home-carousel .carousel-indicators li.active {
-  border-color: #ffcd0a;
-  border-width: 4px;
+  background-color: #ffcd0a;
 }
 #home-carousel .carousel-indicators li.active img {
   opacity: 1;
@@ -7094,12 +7061,12 @@ button.close {
   bottom: auto;
   top: 0;
   left: 15px;
-  background-color: #2c2c2c;
-  background-color: rgba(44, 44, 44, 0.9);
+  background-color: #868a8e;
+  background-color: rgba(134, 138, 142, 0.8);
   zoom: 1;
   background-color: transparent\9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#e62c2c2c, endColorstr=#e62c2c2c)";
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e62c2c2c, endColorstr=#e62c2c2c);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc868a8e, endColorstr=#cc868a8e)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc868a8e, endColorstr=#cc868a8e);
   padding: 2% 2%;
   text-align: left;
   font-size: 18px;
@@ -7156,7 +7123,7 @@ button.close {
     font-size: 18px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #home-carousel .carousel-indicators {
     top: 0;
     bottom: auto;
@@ -7166,7 +7133,7 @@ button.close {
     position: static;
     width: 100%;
     padding: 15px;
-    background-color: #000000;
+    background-color: #868a8e;
     font-size: 14px;
   }
   #home-carousel .carousel-caption h4 {

@@ -36,22 +36,21 @@
         .h-align();
         position: absolute;
         li {
-            background-color: transparent;
-            -webkit-border-radius: 0;
-            border-radius: 0;
+            background-color: @brand-gray;
+            .border-radius(50%);
+            border: 2px solid lighten(@brand-gray, 10%);
             display: inline-block;
-            width: 21%;
+            width: 15px;
             max-width: 150px;
-            height: auto;
+            height: 15px;
             margin: 0 1%;
             img {
                 width: 100%;
-                display: block;
+                display: none;
                 opacity: 0.9;
             }
             &.active{
-                border-color: @brand-yellow;
-                border-width: 4px;
+                background-color: @brand-yellow;
                 img {
                     opacity: 1;
                 }
@@ -63,8 +62,7 @@
         bottom: auto;
         top: 0;
         left: 15px;
-        background-color: rgba(44,44,44,0.9);
-        .rgba(#2c2c2c, 0.9);
+        .rgba(darken(@brand-gray, 20%), 0.8);
         padding: 2% 2%;
         text-align: left;
         font-size: 18px;
@@ -114,7 +112,7 @@
             }
         }
     }
-    @media(max-width: @screen-sm) {
+    @media(max-width: @screen-xs-max) {
         .carousel-indicators{
             top: 0;
             bottom: auto;
@@ -124,7 +122,7 @@
             position: static;
             width: 100%;
             padding: 15px;
-            background-color: @black;
+            background-color: darken(@brand-gray, 20%);
             font-size: @font-size-h5;
             h4{
                 line-height: @line-height-computed;

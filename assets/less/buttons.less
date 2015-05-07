@@ -7,7 +7,7 @@
 // --------------------------------------------------
 .button,div.responsive .button, .Button, a.btn, button {
     border: none;
-    background-image: none;
+    background: none;
     .box-shadow(2px 2px 4px rgba(0,0,0,.2));
     //.border-radius(15px);
     .transition(all 0.3s);
@@ -19,7 +19,9 @@
     behavior: url(/pwna_assets/css/PIE.htc);
     &:link
     &:hover,
+    &:visited,
     &:focus {
+        background: none;
         outline: 0;
         text-decoration: none !important;
     }
@@ -29,34 +31,30 @@
         vertical-align: text-top;
     }
 }
-button.btn-default-pwna{
+.btn.btn-default-pwna{
     .button-variant(@white; @brand-yellow; transparent);
-    .button-size(8px; 24px; 19px; @line-height-large; @border-radius-large);
-}
-a.btn-default-pwna{
-    .button-variant(@white; @brand-yellow; transparent);
-    .button-size(8px; 24px; 19px; @line-height-large; @border-radius-large);
+    .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     &:hover{background-color: @brand-gray;}
     &:link,
     &:visited{
-        &:extend(a.btn-default-pwna all);
+        &:extend(.btn.btn-default-pwna all);
     }
     //font-size: 2em;
 }
-a.btn-primary-pwna{
+.btn.btn-primary-pwna{
     .button-variant(@brand-red; @brand-gray-light; transparent);
     .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     &:link,
     &:visited{
-        &:extend(a.btn-primary-pwna all);
+        &:extend(.btn.btn-primary-pwna all);
     }
 }
-a.btn-secondary-pwna{
+.btn.btn-secondary-pwna{
     .button-variant(@white; @brand-turquoise-lighter; transparent);
     .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     &:link,
     &:visited{
-        &:extend(a.btn-secondary-pwna all);
+        &:extend(.btn.btn-secondary-pwna all);
     }
 }
 .button-submit{

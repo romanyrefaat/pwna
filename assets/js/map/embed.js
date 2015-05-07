@@ -199,7 +199,7 @@ function initMap() {
         var getHTML = function() {
             return '<div class="map-info">' +
                     '<h4>' + location['Reservation Name'] + '</h4>' +
-                    '<p>' +
+                    '<p class="clearfix">' +
                     '<img src="' + imgPath + location['Image'] + '" alt="' + location['Reservation Name'] + '"/>' +
                     '<strong>State:</strong> ' + location['State'] + '<br/>' +
                     '<strong>Tribe Name:</strong> ' + location['Tribe Name'] + '<br/>' +
@@ -208,27 +208,30 @@ function initMap() {
                     '<strong>Tribal Enrollment:</strong> ' + location['Tribal Enrollment'] + '<br/>' +
                     '<strong>Size (acres):</strong> ' + location['Size (acres)'] + '<br/>' +
                     '<strong>Communities/Chapters/Towns:</strong> ' + location['Communities/Chapters/Towns'] + '<br/>' +
+                    (location['Link'] ? '<a class="pull-right" href="' + location['Link'] + '">Learn More <i class="fa fa-chevron-circle-right"></i></a>' : '') +
                     '</p>' +
                     '</div>';
         }
 
-//        google.maps.event.addListener(marker, 'mouseover', function() {
-//            var html = getHTML();
-//            if (iw && html == iw.getContent()) {
-//                return;
-//            }
-//            if (iw && html != iw.getContent()) {
-//                iw.close();
-//            }
-//            iw.setContent(html);
-//            iw.open(map, marker);
-//        });
+        if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            google.maps.event.addListener(marker, 'mouseover', function() {
+                var html = getHTML();
+                if (iw && html == iw.getContent()) {
+                    return;
+                }
+                if (iw && html != iw.getContent()) {
+                    iw.close();
+                }
+                iw.setContent(html);
+                iw.open(map, marker);
+            });
+        }
         google.maps.event.addListener(marker, 'click', function() {
             if (getHTML() == iw.getContent()) {
                 iw.setContent('');
                 iw.close(map, marker);
             } else {
-                //google.maps.event.trigger(marker, 'mouseover');
+//                google.maps.event.trigger(marker, 'mouseover');
                 iw.setContent(getHTML());
                 iw.open(map, marker);
             }
