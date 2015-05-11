@@ -46,6 +46,7 @@ gulp.task('scripts', function() {
     })))
             .pipe(gulp.dest(dest + 'js'));
     gulp.src([
+        'js/map/progressBar.js',
         'js/map/states.js',
         'js/map/embed.js'
     ])

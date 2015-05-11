@@ -535,6 +535,7 @@ footer{
         border-top: 1px solid @theme-footer-link-color;
     }
     img.logo{
+        width: 100%;
         max-width: 311px;
     }
     .address{
@@ -858,13 +859,13 @@ div.story-list-item{
         }
         .img{
             background-color: @large-story-list-item-bg;
-            float: none !important;
+            //float: none !important;
             //overflow: hidden;
-            display: table-cell;
+            //display: table-cell;
             width: 25%;
             min-width: 100px;
             vertical-align: middle;
-            margin: 0;
+            //margin: 0;
             .transition(all 0.3s ease-in-out);
             .ratio{
                 //.transition(all 0.3s ease-in-out);
@@ -881,7 +882,7 @@ div.story-list-item{
             padding-top: 0;
             padding-left: 15px;
             background-color: @large-story-list-item-bg;
-            display: table-cell;
+            //display: table-cell;
             vertical-align: top;
             position: relative;
             .transition(all 0.3s ease-in-out);
@@ -924,6 +925,7 @@ div.story-list-item{
             .caption{
                 padding-top: 15px;
                 padding-left: 0;
+                clear: left;
                 &:before{
                     .show;
                 }
@@ -1265,6 +1267,37 @@ ul.side-nav{
     width:100%;
     padding-bottom: 50%;
     margin-bottom: 15px;
+    position: relative;
+    min-height: 330px;
+    .map-filter{
+        .clearfix;
+        .rgba(@brand-gray, 0.9);
+        padding:0 10px 10px 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 30%;
+        min-width: 200px;
+        max-width: 300px;
+        .translate(100%, -100%);
+        .opacity(0);
+        .transition(all 0.5s ease-in-out);
+        &.on{
+            .translate(0, 0);
+            .opacity(1);
+        }
+        label{
+            margin: 10px 0;
+        }
+    }
+    .toggle{
+        position: absolute;
+        top: 2px;
+        right: 8px;
+        z-index: 2;
+        color: @brand-orange;
+    }
     .map-info{
         width: 320px;
         img{

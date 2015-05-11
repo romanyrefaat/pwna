@@ -1,3 +1,167 @@
+
+/**
+ * ProgressBar for Google Maps v3
+ * @version 1.1
+ *
+ * by José Fernando Calcerrada.
+ *
+ * Licensed under the GPL licenses:
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ *
+ * Chagelog
+ *
+ * v1.1
+ * - IE fixed
+ *
+ */
+
+progressBar = function(opts) {
+
+  var options = progressBar.combineOptions(opts, {
+    height:       '1.3em',
+    width:        '150px',
+    top:          '30px',
+    right:        '5px',
+    colorBar:     '#68C',
+    background:   '#FFF',
+    fontFamily:   'Arial, sans-serif',
+    fontSize:     '12px'
+  });
+
+  var current = 0;
+  var total = 0;
+
+  var shadow = '1px 1px #888';
+
+
+  var div = document.createElement('div');
+  div.id  = 'pg_div';
+  var dstyle = div.style;
+  div.style.cssText = 'box-shadow: ' + shadow + '; '
+                    + '-webkit-box-shadow: ' + shadow + '; '
+                    + '-moz-box-shadow: ' + shadow + '; ';
+  dstyle.display     = 'none';
+  dstyle.width       = options.width;
+  dstyle.height      = options.height;
+  dstyle.marginRight = '6px';
+  dstyle.border      = '1px solid #BBB';
+  dstyle.background  = options.background;
+  dstyle.fontSize    = options.fontSize;
+  dstyle.textAlign   = 'left';
+
+  var text = document.createElement('div');
+  text.id  = 'pg_text';
+  var tstyle = text.style;
+  tstyle.position      = 'absolute';
+  tstyle.width         = '100%';
+  tstyle.border        = '5px';
+  tstyle.textAlign     = 'center';
+  tstyle.verticalAlign = 'bottom';
+
+  var bar = document.createElement('div');
+  bar.id                    = 'pg_bar';
+  bar.style.height          = options.height;
+  bar.style.backgroundColor = options.colorBar;
+
+  div.appendChild(text);
+  div.appendChild(bar);
+
+
+  var draw = function(mapDiv) {
+    div.style.cssText = control.style.cssText +
+      'z-index: 20; position: absolute; '+
+      'top: '+options.top+'; right: '+options.right+'; ';
+      document.getElementById(mapDiv).children[0].appendChild(div);
+  }
+
+  var start = function(total_) {
+    if (parseInt(total_) === total_ && total_ > 0) {
+      total = total_;
+      current = 0;
+      bar.style.width = '0%';
+      text.innerHTML = 'Loading...';
+      div.style.display = 'block';
+    }
+
+    return total;
+  }
+
+  var updateBar = function(increase) {
+    if (parseInt(increase) === increase && total) {
+      current += parseInt(increase);
+      if (current > total) {
+        current = total;
+      } else if (current < 0) {
+        current = 0;
+      }
+
+      bar.style.width = Math.round((current/total)*100)+'%';
+      text.innerHTML = current+' / '+total;
+
+    } else if (!total){
+      return total;
+    }
+
+    return current;
+  }
+
+  var hide = function() {
+    div.style.display = 'none';
+  }
+
+  var getDiv = function() {
+    return div;
+  }
+
+  var getTotal = function() {
+    return total;
+  }
+
+  var setTotal = function(total_) {
+    total = total_;
+  }
+
+  var getCurrent = function() {
+    return current;
+  }
+
+  var setCurrent = function(current_) {
+    return updateBar(current_-current);
+  }
+
+  return {
+    draw:         draw,
+    start:        start,
+    updateBar:    updateBar,
+    hide:         hide,
+    getDiv:       getDiv,
+    getTotal:     getTotal,
+    setTotal:     setTotal,
+    getCurrent:   getCurrent,
+    setCurrent:   setCurrent
+  }
+
+}
+
+progressBar.combineOptions = function (overrides, defaults) {
+  var result = {};
+  if (!!overrides) {
+    for (var prop in overrides) {
+      if (overrides.hasOwnProperty(prop)) {
+        result[prop] = overrides[prop];
+      }
+    }
+  }
+  if (!!defaults) {
+    for (prop in defaults) {
+      if (defaults.hasOwnProperty(prop) && (result[prop] === undefined)) {
+        result[prop] = defaults[prop];
+      }
+    }
+  }
+  return result;
+}
 var statesobj = {
 //    "Alaska": [new google.maps.LatLng(70.0187, -141.0205),
 //        new google.maps.LatLng(70.1292, -141.7291),
@@ -3530,9 +3694,10 @@ function initMap() {
     }
     var mapElement = document.getElementById('pwna_map');
     var map = new google.maps.Map(mapElement, mapOptions);
-
+    var pb = new progressBar();
+    map.controls[google.maps.ControlPosition.RIGHT].push(pb.getDiv());
     // Construct the polygon.
-    var states = ['Montana', 'Idaho', 'North Dakota', 'Wyoming', 'South Dakota', 'Utah', 'Colorado', 'Nebraska', 'California', 'Arizona', 'New Mexico'];
+    var states = ['Montana', 'Idaho', 'North Dakota', 'Wyoming', 'South Dakota', 'Utah', 'Nebraska', 'California', 'Arizona', 'New Mexico'];
     for (i = 0; i < states.length; i++) {
         bermudaTriangle = new google.maps.Polygon({
             paths: statesobj[states[i]],
@@ -3547,22 +3712,89 @@ function initMap() {
         bermudaTriangle.setMap(map);
     }
     var urlPath = document.location.hostname === "localhost" ? '' : '/', imgPath = urlPath + 'pwna_assets/images/reservations/';
+    var locations = [];
     jQuery.getJSON(urlPath + 'pwna_assets/js/locations.json?t=' + new Date().getTime(), function(data) {
-        console.log('success');
+        //console.log('success');
+        pb.start(data.length);
         jQuery.each(data, function(i, location) {
-            var Coordinates = location['Coordinates'].split(',');
-            //console.log(location['Marker']);
-            var marker = new google.maps.Marker({
-                icon: imgPath + location['Marker'],
-                position: new google.maps.LatLng(Coordinates[0], Coordinates[1]),
-                map: map
-            });
-            link = '';
-            bindInfoWindow(marker, map, location);
+            setTimeout(function() {
+                pb.updateBar(1);
+                var Coordinates = location['Coordinates'].split(',');
+                //console.log(location['Marker']);
+                var marker = new google.maps.Marker({
+                    icon: imgPath + location['Marker'],
+                    position: new google.maps.LatLng(Coordinates[0], Coordinates[1]),
+                    map: map
+                });
+                link = '';
+                bindInfoWindow(marker, map, location);
+                location['mapMarker'] = marker;
+                locations.push(location);
+                if (i === pb.getTotal() - 1) {
+                    pb.hide();
+                    buildFilterNav(locations, 'Service Area,State,Tribe Name');
+                }
+            }, 50 + (i * 50));
         });
     }).error(function() {
         console.log('error');
     });
+
+    function buildFilterNav(locations, columns) {
+        var cols = columns.split(','),
+                filterNav = jQuery('<div class="map-filter"></div>'),
+                buildFilterList = function(select, column, parentColumn, parentValue) {
+            for (i = 0; i < locations.length; i++) {
+                if (typeof parentColumn !== 'undefined' && typeof parentValue !== 'undefined' && locations[i][parentColumn].indexOf(parentValue) < 0) {
+                    continue;
+                }
+                var optionVal = locations[i][column].split(',');
+                for (v = 0; v < optionVal.length; v++) {
+                    if (jQuery('option', select).filter(':contains("' + optionVal[v] + '")').length === 0) {
+                        select.append('<option>' + optionVal[v] + '</option>');
+                    }
+                }
+            }
+        };
+        for (x = 0; x < cols.length; x++) {
+            var select = jQuery('<select name="' + cols[x] + '"></select>');
+            select.append('<option>All</option>');
+            if (x === 0) {
+                buildFilterList(select, cols[x]);
+            }
+            select.change(function() {
+                var idx = jQuery(this).parent().index(), showAll = true;
+                if (idx < cols.length - 1) {
+                    jQuery('select:gt(' + idx + ')', filterNav).find("option:gt(0)").remove();
+                    buildFilterList(jQuery('select:eq(' + (idx + 1) + ')', filterNav), cols[idx + 1], jQuery(this).attr('name'), jQuery(this).val());
+                }
+                jQuery('select', filterNav).each(function() {
+                    var column = jQuery(this).attr('name'), value = jQuery(this).val();
+                    showAll = showAll && jQuery(this).val() === 'All';
+                    for (i = 0; i < locations.length; i++) {
+                        if (jQuery(this).val() !== 'All') {
+                            if ((column === 'State' && locations[i][column].indexOf(value) < 0) || (column !== 'State' && locations[i][column] !== value)) {
+                                locations[i]['mapMarker'].setVisible(false);
+                            } else {
+                                locations[i]['mapMarker'].setVisible(true);
+                            }
+                        } else if (showAll) {
+                            locations[i]['mapMarker'].setVisible(true);
+                        }
+                    }
+                });
+            });
+            filterNav.append(jQuery('<div><label>' + cols[x] + '</label></div>').append(select));
+        }
+        var filterToggle = jQuery('<a class="toggle" href="#"><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-search fa-stack-1x fa-inverse"></i></span></a>')
+        filterToggle.click(function(e) {
+            e.preventDefault();
+            filterNav.toggleClass('on');
+            jQuery(this).find('.fa-stack-1x').toggleClass('fa-search fa-close')
+        });
+        jQuery('#pwna_map').prepend(filterToggle).prepend(filterNav);
+    }
+
     var iw;
     function bindInfoWindow(marker, map, location) {
         var infoWindowVisible = (function() {
@@ -3593,7 +3825,7 @@ function initMap() {
                     '</div>';
         }
 
-        if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             google.maps.event.addListener(marker, 'mouseover', function() {
                 var html = getHTML();
                 if (iw && html == iw.getContent()) {

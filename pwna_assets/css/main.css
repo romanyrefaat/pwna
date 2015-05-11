@@ -184,6 +184,7 @@ legend.surveyLegend {
   margin-bottom: 15px;
 }
 table input[type="text"],
+table input[type="password"],
 table textarea,
 table select {
   width: 98% !important;
