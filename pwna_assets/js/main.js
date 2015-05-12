@@ -2947,11 +2947,12 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
                 $header.addClass('fixed').delay(300).queue(function() {
                     if ($(document).scrollTop() >= initialHeaderHeight) {
                         $header.addClass("animate").dequeue();
-
+                        $('body').addClass('fixed-header');
                     }
                     else {
                         $header.removeClass('fixed').dequeue();
                         $('.pg-container').css('margin-top', '0');
+                        $('body').removeClass('fixed-header');
                     }
                 });
                 if ($('#mp-pusher').hasClass('pushed')) {
@@ -2965,6 +2966,7 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
                 $header.removeClass('animate');
                 $header.removeClass('fixed');
                 $('.pg-container').css('margin-top', '0');
+                $('body').removeClass('fixed-header');
                 $mobileNav.css('top', '0');
             }
         };
@@ -3272,6 +3274,47 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
     // jQuery RWD Image Maps
     $('img[usemap]').rwdImageMaps();
 
+    $('.js-donate-programs').click(function(e) {
+        e.preventDefault();
+        //var contentLoaded = false, imagesLoaded = false;
+        var loading = new BootstrapDialog({
+            message: '<div class="text-center"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>',
+            cssClass: 'donate-overlay',
+            size: BootstrapDialog.SIZE_SMALL,
+            closable: false,
+            onshown: function(dialogRef) {
+                var message = $('<div class="overlay-content"></div>').load('/site/PageServer?pagename=reus_pwna_programs&mode=donate&pgwrap=n', function() {
+                    var close = $('<a class="btn-close" href="#"><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-close fa-stack-1x fa-inverse"></i></span></a>');
+                    message.prepend('<h2>Make a Donation</h2>').prepend(close);
+                    var dialog = new BootstrapDialog({
+                        message: message,
+                        size: BootstrapDialog.SIZE_WIDE,
+                        cssClass: 'donate-overlay',
+                        animate: false,
+                        closable: false,
+                        onshow: function(dialogRef) {
+                            loading.close();
+                        },
+                        onshown: function(dialogRef) {
+                            dialogRef.getMessage().find('.btn-close').on('click', {dialogRef: dialogRef}, function(event) {
+                                event.data.dialogRef.close();
+                                event.preventDefault();
+                            });
+                            equalHeights();
+                        }
+                    });
+                    dialog.realize();
+                    dialog.getModalHeader().hide();
+                    dialog.getModalFooter().hide();
+                    dialog.open();
+                });
+            }
+        });
+        loading.realize();
+        loading.getModalHeader().hide();
+        loading.getModalFooter().hide();
+        loading.open();
+    });
 
     // accordion expand collapse ico
     $('.collapse').on('shown.bs.collapse', function() {

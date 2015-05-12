@@ -150,7 +150,7 @@ function initMap() {
     }
     var mapElement = document.getElementById('pwna_map');
     var map = new google.maps.Map(mapElement, mapOptions);
-    var pb = new progressBar();
+    var pb = new progressBar({colorBar: '#c5664f'});
     map.controls[google.maps.ControlPosition.RIGHT].push(pb.getDiv());
     // Construct the polygon.
     var states = ['Montana', 'Idaho', 'North Dakota', 'Wyoming', 'South Dakota', 'Utah', 'Nebraska', 'California', 'Arizona', 'New Mexico'];
@@ -213,16 +213,20 @@ function initMap() {
             }
         };
         for (x = 0; x < cols.length; x++) {
-            var select = jQuery('<select name="' + cols[x] + '"></select>');
+            var select = jQuery('<select name="' + cols[x] + '"></select>')
+                    , selectDiv = jQuery('<div><label>' + cols[x] + '</label></div>').hide();
             select.append('<option>All</option>');
             if (x === 0) {
                 buildFilterList(select, cols[x]);
+                selectDiv.show();
             }
             select.change(function() {
                 var idx = jQuery(this).parent().index(), showAll = true;
                 if (idx < cols.length - 1) {
                     jQuery('select:gt(' + idx + ')', filterNav).find("option:gt(0)").remove();
                     buildFilterList(jQuery('select:eq(' + (idx + 1) + ')', filterNav), cols[idx + 1], jQuery(this).attr('name'), jQuery(this).val());
+                    jQuery('>div', filterNav).show();
+                    jQuery('select option:only-child', filterNav).closest('div').hide();
                 }
                 jQuery('select', filterNav).each(function() {
                     var column = jQuery(this).attr('name'), value = jQuery(this).val();
@@ -240,7 +244,7 @@ function initMap() {
                     }
                 });
             });
-            filterNav.append(jQuery('<div><label>' + cols[x] + '</label></div>').append(select));
+            filterNav.append(selectDiv.append(select));
         }
         var filterToggle = jQuery('<a class="toggle" href="#"><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-search fa-stack-1x fa-inverse"></i></span></a>')
         filterToggle.click(function(e) {

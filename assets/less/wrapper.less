@@ -10,10 +10,8 @@
 .modal-open {
   overflow: auto; 
 }
-.modal-dialog{
-    @media (min-width: @screen-sm-min) {
-        margin-top: 80px;
-    }
+.fixed-header .modal-dialog{
+    margin-top: 70px;
 }
 form.sign-up{
         .input-group .form-control{
@@ -134,6 +132,22 @@ a.anchor{
 .dbl-right-arrow:extend(.right-arrow all) {
     &:after{
         content: '\f101';
+    }
+}
+.donate-overlay{
+    .modal-body{
+        background-color: @brand-turquoise;
+        color: @white;
+    }
+    .overlay-content{
+        .clearfix;
+        h1, h2{ 
+            color: @white;
+            margin: 6px 0 20px;
+        }
+    }
+    .btn-close{
+        .pull-right;
     }
 }
 header{
@@ -820,6 +834,7 @@ div.story-list-item{
     }
     .caption{
         //.make-xs-column(8; @gutter: @grid-gutter-width);
+        padding-bottom: 1px;
         p{
             .clearfix;
         }

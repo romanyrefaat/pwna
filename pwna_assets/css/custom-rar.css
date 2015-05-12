@@ -2145,10 +2145,8 @@ nav .navbar-nav.print-share li {
 .modal-open {
   overflow: auto;
 }
-@media (min-width: 768px) {
-  .modal-dialog {
-    margin-top: 80px;
-  }
+.fixed-header .modal-dialog {
+  margin-top: 70px;
 }
 form.sign-up .input-group .form-control {
   -webkit-border-radius: 13px;
@@ -2317,6 +2315,34 @@ div.story-list-item .caption .more:after {
 .dbl-right-arrow:after,
 div.story-list-item .caption .more:after {
   content: '\f101';
+}
+.donate-overlay .modal-body {
+  background-color: #186273;
+  color: #ffffff;
+}
+.donate-overlay .overlay-content:before,
+.donate-overlay .overlay-content:after {
+  content: " ";
+  display: table;
+}
+.donate-overlay .overlay-content:after {
+  clear: both;
+}
+.donate-overlay .overlay-content:before,
+.donate-overlay .overlay-content:after {
+  content: " ";
+  display: table;
+}
+.donate-overlay .overlay-content:after {
+  clear: both;
+}
+.donate-overlay .overlay-content h1,
+.donate-overlay .overlay-content h2 {
+  color: #ffffff;
+  margin: 6px 0 20px;
+}
+.donate-overlay .btn-close {
+  float: right !important;
 }
 header {
   border-top: 5px solid #792a7e;
@@ -3399,6 +3425,9 @@ div.story-list-item .img .ratio img {
   position: absolute;
   width: 150%;
   max-width: none;
+}
+div.story-list-item .caption {
+  padding-bottom: 1px;
 }
 div.story-list-item .caption p:before,
 div.story-list-item .caption p:after {
