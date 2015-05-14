@@ -153,7 +153,7 @@ function initMap() {
     var pb = new progressBar({colorBar: '#c5664f'});
     map.controls[google.maps.ControlPosition.RIGHT].push(pb.getDiv());
     // Construct the polygon.
-    var states = ['Montana', 'Idaho', 'North Dakota', 'Wyoming', 'South Dakota', 'Utah', 'Nebraska', 'California', 'Arizona', 'New Mexico'];
+    var states = ['Montana', 'Idaho', 'North Dakota', 'Wyoming', 'South Dakota', 'Colorado', 'Utah', 'Nebraska', 'California', 'Arizona', 'New Mexico'];
     for (i = 0; i < states.length; i++) {
         bermudaTriangle = new google.maps.Polygon({
             paths: statesobj[states[i]],
