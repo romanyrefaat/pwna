@@ -30,11 +30,17 @@ th {
         vertical-align: middle;
         border-top: 0;
         border-right: @border-solid;
+        &.top{
+            vertical-align: top;
+        }
       }
       > th:last-child,
       > td:last-child {
          border-right: 0;
       }
+      &.top>td{
+            vertical-align: top;
+        }
     }
   }
   // Bottom align for column headings
@@ -352,23 +358,6 @@ table {
     & > .table__column--buttons {
       padding-top: 10px;
       text-align: right;
-    }
-  }
-}
-
-.content__table--highlight {
-    background-color: lighten(@brand-yellow, 30%);
-    & > div{
-        font-family:@font-family-sans-700;
-    }
-    & > .table__column--buttons {
-        font-family:@font-family-sans-300;
-    }
-}
-.national-company-team-list {
-  .table__column--buttons {
-    @media(min-width: @screen-md-min) {
-      width: 200px;
     }
   }
 }

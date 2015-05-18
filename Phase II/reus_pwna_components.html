@@ -31,7 +31,7 @@
     <div class="panel-heading">
         <h4 class="panel-title">@title<span class="pull-right small"><a class="css_view_all" href="@title-link">View All</a></span></h4>
     </div>
-    <div class="list-group">
+    <div class="list-group clearfix">
         @content
     </div>
 </div>
@@ -88,9 +88,13 @@
 <!--/STORY-LIST-ITEM-->
 <!--NEWS-ITEM-->
 <div class="news-item">
-    <a href="@href" target="_self">@title</a> <i class="fa link-ico"></i>
+    <a href="@href" target="_self">@title</a> <i class="fa link-ico"></i> <a href="@pdf" class="lnk_pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
     <span class="author">@author</span>
     <span class="date">@date</span>
+    <span class="addthis_toolbox" addthis:url="@href">
+        <a class="addthis_button_facebook" href="javascript:;"><i class="fa fa-facebook-square fa-lg"></i></a>
+        <a class="addthis_button_twitter" href="javascript:;"><i class="fa fa-twitter-square fa-lg"></i></a>
+    </span>
 </div>
 <!--/NEWS-ITEM-->
 <!--PLANNED-GIVING-FOOTER-->

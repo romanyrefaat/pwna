@@ -1496,6 +1496,20 @@ a.bg-warning:hover {
 a.bg-danger:hover {
   background-color: #e4b9b9;
 }
+.bg-red {
+  color: #ffffff;
+  background-color: #e22427;
+}
+a.bg-red:hover {
+  background-color: #ba191b;
+}
+.bg-orange {
+  color: #ffffff;
+  background-color: #c5664f;
+}
+a.bg-orange:hover {
+  background-color: #a94e38;
+}
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
@@ -3008,6 +3022,14 @@ th {
   border-top: 0;
   border-right: 1px solid #a9a9a9;
 }
+.table > thead > tr > th.top,
+.table > tbody > tr > th.top,
+.table > tfoot > tr > th.top,
+.table > thead > tr > td.top,
+.table > tbody > tr > td.top,
+.table > tfoot > tr > td.top {
+  vertical-align: top;
+}
 .table > thead > tr > th:last-child,
 .table > tbody > tr > th:last-child,
 .table > tfoot > tr > th:last-child,
@@ -3015,6 +3037,11 @@ th {
 .table > tbody > tr > td:last-child,
 .table > tfoot > tr > td:last-child {
   border-right: 0;
+}
+.table > thead > tr.top > td,
+.table > tbody > tr.top > td,
+.table > tfoot > tr.top > td {
+  vertical-align: top;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
@@ -3344,20 +3371,6 @@ table th[class*="col-"] {
   .content__table--odd > .table__column--buttons {
     padding-top: 10px;
     text-align: right;
-  }
-}
-.content__table--highlight {
-  background-color: #ffeca3;
-}
-.content__table--highlight > div {
-  font-family: 'Open Sans', 'sans-serif';
-}
-.content__table--highlight > .table__column--buttons {
-  font-family: 'Open Sans', 'sans-serif';
-}
-@media (min-width: 992px) {
-  .national-company-team-list .table__column--buttons {
-    width: 200px;
   }
 }
 .input-group {
