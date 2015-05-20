@@ -523,6 +523,26 @@ address {
     width: auto;
   }
 }
+@media (max-width: 767px) {
+  .border-right-xs {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .border-right-sm {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .border-right-md {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 1200px) {
+  .border-right-lg {
+    border-right: 1px solid #a9a9a9;
+  }
+}
 .hide {
   display: none !important;
 }
@@ -2375,6 +2395,70 @@ div.story-list-item .caption .more:after {
 }
 .donate-overlay .btn-close {
   float: right !important;
+}
+.panel.with-nav-tabs {
+  border-color: #186273;
+}
+.panel.with-nav-tabs .panel-heading {
+  padding: 5px 5px 0 5px;
+  background-color: #186273;
+  border-color: #186273;
+}
+.panel.with-nav-tabs .nav-tabs {
+  border-bottom: none;
+}
+.panel.with-nav-tabs .nav-tabs > li > a,
+.panel.with-nav-tabs .nav-tabs > .open > a,
+.panel.with-nav-tabs .nav-tabs > li > a:hover,
+.panel.with-nav-tabs .nav-tabs > .open > a:hover,
+.panel.with-nav-tabs .nav-tabs > li > a:focus,
+.panel.with-nav-tabs .nav-tabs > .open > a:focus {
+  text-decoration: none;
+}
+.panel.with-nav-tabs .nav-tabs > li > a,
+.panel.with-nav-tabs .nav-tabs > .open > a,
+.panel.with-nav-tabs .nav-tabs > li > a:hover,
+.panel.with-nav-tabs .nav-tabs > .open > a:hover,
+.panel.with-nav-tabs .nav-tabs > li > a:focus,
+.panel.with-nav-tabs .nav-tabs > .open > a:focus {
+  color: #ffffff;
+  background-color: #186273;
+  border-color: transparent;
+}
+.panel.with-nav-tabs .nav-tabs > li.active > a,
+.panel.with-nav-tabs .nav-tabs > li.active > a:hover,
+.panel.with-nav-tabs .nav-tabs > li.active > a:focus {
+  color: #186273;
+  background-color: #ffffff;
+  border-color: #186273;
+  border-bottom-color: transparent;
+}
+.panel.with-nav-tabs .nav-justified {
+  margin-bottom: -1px;
+}
+.page-content .panel-gallery a,
+.blueimp-gallery a,
+.page-content .panel-gallery a:hover,
+.blueimp-gallery a:hover,
+.page-content .panel-gallery a:focus,
+.blueimp-gallery a:focus {
+  text-decoration: none;
+}
+.panel-gallery .panel-body a {
+  float: left !important;
+  margin: 2px;
+  padding: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #2598b2;
+}
+.panel-gallery .panel-body a img {
+  max-width: 72px;
+  max-height: 72px;
 }
 header {
   border-top: 5px solid #186273;

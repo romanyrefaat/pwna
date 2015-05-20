@@ -150,6 +150,67 @@ a.anchor{
         .pull-right;
     }
 }
+.panel.with-nav-tabs {
+    border-color: @theme-primary-color;
+    .panel-heading {
+        padding: 5px 5px 0 5px;
+        background-color: @theme-primary-color;
+        border-color: @theme-primary-color;
+    }
+    .nav-tabs {
+	border-bottom: none;
+        > li, > .open{
+         > a{
+                .no-decoration;
+                &, &:hover, &:focus{
+                    color: @white;
+                    background-color: @theme-primary-color;
+                    border-color: transparent;
+                }
+            }
+        }
+        > li.active > a{
+            &, &:hover, &:focus{
+                    color: @theme-primary-color;
+                    background-color: @white;
+                    border-color: @theme-primary-color;
+                    border-bottom-color: transparent;
+                }
+        }
+    }
+    .nav-justified {
+	margin-bottom: -1px;
+    }
+}
+.page-content .panel-gallery, .blueimp-gallery{
+    a{
+        .no-decoration;
+    }
+}
+.panel-gallery .panel-body a{
+    .pull-left;
+    margin:2px;
+    padding: 2px;
+    .border-radius(5px);
+    border: 1px solid lighten(@theme-primary-color, 15%);
+    img{
+        max-width: 72px;
+        max-height: 72px;
+    }
+}
+//.blueimp-gallery{  
+//    > .description {
+//        position: absolute;
+//        top: 40px;
+//        left: 15px;
+//        color: #fff;
+//        .small;
+//        display: none;
+//    }
+//    &.blueimp-gallery-controls > .description {
+//            display: block;
+//    }
+//}
 header{
     border-top: 5px solid @theme-header-border-color;
     background-color: #fff;

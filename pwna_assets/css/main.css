@@ -5652,7 +5652,7 @@ tbody.collapse.in {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #337ab7;
+  border-bottom: 1px solid #bbbdbf;
 }
 .nav-tabs > li {
   float: left;
@@ -5665,7 +5665,7 @@ tbody.collapse.in {
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #f9f9f9 #f9f9f9 #337ab7;
+  border-color: #f9f9f9 #f9f9f9 #bbbdbf;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
@@ -7366,6 +7366,26 @@ button.close {
 @media (min-width: 768px) {
   .btn-full-xs {
     width: auto;
+  }
+}
+@media (max-width: 767px) {
+  .border-right-xs {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .border-right-sm {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .border-right-md {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 1200px) {
+  .border-right-lg {
+    border-right: 1px solid #a9a9a9;
   }
 }
 .hide {

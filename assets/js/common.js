@@ -2,6 +2,7 @@
 // ########## PAGE LOAD HANDLERS ##########
 // ########################################
 (function($) {
+    var BASEURL = window.location.protocol === 'https:' ? luminateExtend.global.path.secure + 'SPageServer/' : luminateExtend.global.path.nonsecure + 'PageServer/';
     function getParameterByName(name) {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -180,6 +181,15 @@
             });
         }
     }
+    function pageUrlHashTab() {
+        var hash = window.location.hash;
+        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+        if (hash && $('ul.nav a[href="' + hash + '"]')) {
+            $('html, body').animate({
+                scrollTop: $('ul.nav a[href="' + hash + '"]').parent().offset().top - $('header.fixed').height() - 5
+            }, 200);
+        }
+    }
     $.fn.bindLuminateForm = function(options) {
         var settings = $.extend({
             onBeforeLuminateExtendSubmit: $.noop,
@@ -338,6 +348,7 @@
         }
     };
     headerNavHandlers();
+    pageUrlHashTab();
     $('.js-signup-form').each(function() {
         $(this).bindSignupForm();
     });
@@ -402,11 +413,11 @@
     $(".accordion-content").hide();
 
     //Addthis scroll Y fix
-    $('.addthis_button_compact, .addthis_bubble_style').mousemove(function(e) {
-        $('#at15s').css({
-            'top': e.pageY
-        });
-    });
+//    $('.addthis_button_compact, .addthis_bubble_style').mousemove(function(e) {
+//        $('#at15s').css({
+//            'top': e.pageY
+//        });
+//    });
 
     // jQuery RWD Image Maps
     $('img[usemap]').rwdImageMaps();
@@ -420,7 +431,7 @@
             size: BootstrapDialog.SIZE_SMALL,
             closable: false,
             onshown: function(dialogRef) {
-                var message = $('<div class="overlay-content"></div>').load('/site/PageServer?pagename=reus_pwna_programs&mode=donate&pgwrap=n', function() {
+                var message = $('<div class="overlay-content"></div>').load(BASEURL + '?pagename=reus_pwna_programs&mode=donate&pgwrap=n', function() {
                     var close = $('<a class="btn-close" href="#"><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-close fa-stack-1x fa-inverse"></i></span></a>');
                     message.prepend('<h2>Make a Donation</h2>').prepend(close);
                     var dialog = new BootstrapDialog({

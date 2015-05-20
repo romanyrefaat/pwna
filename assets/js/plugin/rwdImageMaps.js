@@ -57,7 +57,7 @@
                                 height: coordsPercent[3] - coordsPercent[1] + 'px',
                                 'background-size': $that.width() + 'px ' + $that.height() + 'px',
                                 'background-position': coordsPercent[0] * -1 + 'px ' + coordsPercent[1] * -1 + 'px'
-                            }).attr('href', $this.attr('href')).removeClass('hidden').toggleClass('dummy', $this.hasClass('dummy'));
+                            }).attr('href', $this.attr('href')).attr('target', $this.attr('target')).removeClass('hidden').toggleClass('dummy', $this.hasClass('dummy'));
                         });
                     });
                 }).attr('src', $that.attr('src'));

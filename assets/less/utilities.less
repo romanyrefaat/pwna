@@ -160,6 +160,27 @@
   }
 }
 
+.border-right-xs {
+  @media (max-width: @screen-xs-max) {
+    border-right: @border-solid;
+  }
+}
+.border-right-sm {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    border-right: @border-solid;
+  }
+}
+.border-right-md {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    border-right: @border-solid;
+  }
+}
+.border-right-lg {
+  @media (min-width: @screen-lg-min) {
+    border-right: @border-solid;
+  }
+}
+
 // Toggling content
 // -------------------------
 
