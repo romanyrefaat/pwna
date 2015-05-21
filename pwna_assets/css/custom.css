@@ -3152,6 +3152,7 @@ footer .badges .rollover.dummy {
   display: none !important;
 }
 .social-share {
+  float: right !important;
   z-index: 10;
 }
 .social-share a {
