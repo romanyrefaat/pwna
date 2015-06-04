@@ -2865,7 +2865,7 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
 // ########## PAGE LOAD HANDLERS ##########
 // ########################################
 (function($) {
-    var BASEURL = window.location.protocol === 'https:' ? luminateExtend.global.path.secure + 'SPageServer/' : luminateExtend.global.path.nonsecure + 'PageServer/';
+    var BASEURL = document.location.hostname == "localhost" ? '/' : window.location.protocol === 'https:' ? luminateExtend.global.path.secure + 'SPageServer/' : luminateExtend.global.path.nonsecure + 'PageServer/';
     function getParameterByName(name) {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -2884,7 +2884,7 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
     function headerNavHandlers() {
         var navMenu = $('<nav></nav>');
         navMenu.append($('<h2 class="hide"><i class="fa fa-reorder"></i>All Categories</h2>'));
-        navMenu.append($('ul.nav.primary').clone().removeAttr('class').append($('ul.nav.secondary>li').clone()).append($('<li></li>').append($('.js-search-panel form').clone())).append($('<li></li>').append($('header .js-signup-form').clone())).append($('<li></li>').append($('header .social-pages').clone())));
+        navMenu.append($('ul.nav.primary').clone().removeAttr('class').append($('ul.nav.secondary>li').clone()).append($('.js-search-panel').length > 0 ? $('<li></li>').append($('.js-search-panel form').clone()) : '').append($('<li></li>').append($('header .js-signup-form').clone())).append($('<li></li>').append($('header .social-pages').clone())));
         $('.js-signup-toggle', navMenu).remove();
         $('ul.dropdown-menu', navMenu).each(function() {
             $(this).parent().prepend('<h2>' + $(this).parent().find('.dropdown-toggle').text() + '</h2>');
