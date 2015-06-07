@@ -16,6 +16,9 @@ gulp.task('less', function() {
     return gulp.src([
         'less/main.less',
         'less/custom.less',
+        'less/custom-aief.less',
+        'less/custom-npra.less',
+        'less/custom-swra.less',
         'less/custom-rar.less'
     ])
             .pipe(less().on("error", notify.onError(function(error) {

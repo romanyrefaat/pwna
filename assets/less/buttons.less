@@ -57,7 +57,16 @@
         &:extend(.btn.btn-secondary-pwna all);
     }
 }
-.button-submit{
+.button-submit,
+div.responsive button.action-button,
+div.responsive a.next-step, 
+div.responsive button.next-step,
+div.responsive a.cancel-step, 
+div.responsive button.cancel-step,
+div.responsive a.step-button, 
+div.responsive button.step-button,
+#EditCons .Button,
+input[type="button"], input[type="reset"], input[type="submit"]{
     .button-variant(@brand-red; @brand-gray-light; transparent);
     .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     filter: inherit;
