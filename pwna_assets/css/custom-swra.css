@@ -1,3 +1,115 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-overflow-style: scrollbar;
+  height: 100%;
+}
+body {
+  font-family: 'Open Sans', 'sans-serif';
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #000000;
+  background-color: #ffffff;
+  margin: 0;
+  overflow: auto;
+  height: 100%;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a,
+A {
+  color: #c5664f;
+  text-decoration: none;
+}
+a:link,
+A:link,
+a:visited,
+A:visited {
+  color: #c5664f;
+  text-decoration: none;
+}
+a:hover,
+A:hover,
+a:focus,
+A:focus {
+  color: #964531;
+  text-decoration: underline;
+}
+a:focus,
+A:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  outline: 0;
+}
+a:link.link-gray-dotted,
+a.link--gray-dotted {
+  color: #000000;
+  border-bottom: 1px dotted #a9a9a9;
+}
+a:link.link-gray-dotted:hover,
+a.link--gray-dotted:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #a9a9a9;
+}
+figure {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.iframe-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+}
+.iframe-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #a9a9a9;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 h1,
 h2,
 h3,
@@ -3291,6 +3403,29 @@ footer .address a:focus,
 .dropdown-menu-reset a:after {
   color: inherit !important;
 }
+.bg-theme {
+  background-color: #d2eff6;
+}
+a.bg-theme:hover {
+  background-color: #a7e0ed;
+}
+.text-alert {
+  color: #c5664f;
+}
+a.text-alert:hover {
+  color: #a94e38;
+}
+#home-carousel .carousel-caption {
+  background-color: #868a8e;
+  background-color: rgba(134, 138, 142, 0.8);
+  zoom: 1;
+  background-color: transparent\9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc868a8e, endColorstr=#cc868a8e)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc868a8e, endColorstr=#cc868a8e);
+}
+#home-carousel .carousel-caption .btn {
+  color: #186273;
+}
 .pg-container {
   position: relative;
   overflow: hidden;
@@ -3431,6 +3566,7 @@ header a.logo {
 @media (min-width: 992px) {
   header a.logo {
     padding: 15px 0 0;
+    height: 100px;
   }
 }
 header a.logo img {
@@ -3531,8 +3667,13 @@ header .btn.top-donate {
   header .btn.top-donate {
     font-size: 25px !important;
     padding: 4px 0  !important;
-    max-width: 160px;
+    max-width: 150px;
     margin-top: -10px;
+  }
+}
+@media (min-width: 1200px) {
+  header .btn.top-donate {
+    max-width: 160px;
   }
 }
 header .top-signup {
@@ -3847,6 +3988,8 @@ header.fixed .cell2 {
 header.fixed a.logo {
   padding: 2px 0;
   max-width: 185px;
+  min-height: auto;
+  max-height: 52px;
 }
 header.fixed .btn.top-donate {
   margin-top: 5px;
@@ -3855,9 +3998,6 @@ header.fixed .btn.top-donate {
 header.fixed #top-nav {
   margin-top: 0;
   position: static;
-}
-header.fixed #top-nav .navbar-collapse {
-  text-align: left;
 }
 header.fixed .nav-donate {
   float: right !important;
@@ -3894,6 +4034,9 @@ header.fixed nav .navbar-nav > li > a {
     width: 70%;
     position: static;
     font-size: 0px;
+  }
+  header.fixed .cell1 {
+    width: 20%;
   }
   header #top-nav {
     position: absolute;
@@ -4380,7 +4523,7 @@ fieldset[disabled] .banner .caption a.active {
 .panel-pwna-default > .panel-heading,
 .panel-pwna-transparent > .panel-heading {
   color: #c5664f;
-  background-color: transparent;
+  background-color: #ffffff;
   border-color: transparent;
 }
 .panel-pwna-default > .panel-heading + .panel-collapse > .panel-body,
@@ -4389,7 +4532,7 @@ fieldset[disabled] .banner .caption a.active {
 }
 .panel-pwna-default > .panel-heading .badge,
 .panel-pwna-transparent > .panel-heading .badge {
-  color: transparent;
+  color: #ffffff;
   background-color: #c5664f;
 }
 .panel-pwna-default > .panel-footer + .panel-collapse > .panel-body,
@@ -4423,6 +4566,7 @@ fieldset[disabled] .banner .caption a.active {
   color: #186273;
   text-decoration: none;
   font-weight: 700;
+  line-height: 17px;
 }
 .panel-pwna-default .panel-heading a:after,
 .panel-pwna-transparent .panel-heading a:after {
@@ -4578,7 +4722,7 @@ div.story-list-item .caption .more {
   float: right !important;
   font-weight: 700;
   text-decoration: underline;
-  color: #e22427;
+  color: #186273;
 }
 div.story-list-item .caption .more:after {
   float: right;
@@ -4876,6 +5020,13 @@ a.news-item .addthis_toolbox .addthis_button_twitter:hover {
   margin-right: 35px;
   margin-bottom: 25px;
 }
+.hp-announce {
+  background-color: #d2eff6;
+  padding: 15px;
+}
+a.hp-announce:hover {
+  background-color: #a7e0ed;
+}
 .hp-feature {
   max-width: 425px;
   display: block;
@@ -5013,7 +5164,6 @@ div.page-title h1 {
   clear: both;
 }
 .callout img {
-  float: right !important;
   margin-bottom: 30px;
 }
 .callout h2 {
@@ -5075,7 +5225,7 @@ ul.side-nav a:visited:after {
   color: #d89889 !important;
 }
 ul.side-nav a:hover {
-  color: #000000;
+  color: #ffcd0a;
 }
 ul.side-nav a:hover:after {
   padding-left: 10px;
@@ -5122,7 +5272,7 @@ ul.side-nav ul a:after {
   color: inherit !important;
 }
 ul.side-nav ul li a:hover {
-  color: #000000 !important;
+  color: #ffcd0a !important;
 }
 ul.side-nav li {
   padding: 0 30px;
@@ -5152,7 +5302,7 @@ ul.side-nav li.dropdown-submenu > .dropdown-menu li {
   padding-right: 0;
 }
 ul.side-nav li.current > a {
-  color: #000000;
+  color: #ffcd0a;
 }
 .side-box {
   position: relative;
@@ -5166,7 +5316,7 @@ ul.side-nav li.current > a {
   color: inherit;
 }
 .side-box a:hover {
-  color: #000000;
+  color: #ffcd0a;
 }
 #pwna_map {
   height: 0;
@@ -5321,7 +5471,7 @@ ul.side-nav li.current > a {
   margin-bottom: 15px;
 }
 blockquote footer {
-  background-color: #ffffff;
+  background-color: inherit;
 }
 blockquote footer cite {
   display: block;

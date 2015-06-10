@@ -1,18 +1,12 @@
 <h1>Planned Giving</h1>
 <div class="row">
     <div class="col-md-9 col-sm-8 full-print">
-        <p class="pull-right col-md-3 col-sm-3 col-xs-4 text-center small">
-            <img src="../images/content/pagebuilder/Bruce-and-Elizabeth.jpg" class="img-responsive center-block">
-            <strong><a href="PageServer?pagename=pwna_planned_giving_profiles">Learn more</a> about our most devoted Heritage Circle Members.</strong>
-        </p>
-        <p class="text-large">
-            Partnership with Native Americans offers a variety of ways that you can donate to a great cause and help to ensure a brighter future for many Native Americans living in the Northern Plains and Southwest &#8212; while achieving your financial goals.
-        </p>
+        [[E51:reus_[[S80:prefix]]_planned_giving]]
     </div>
     <div class="col-md-3 col-sm-4 side-col">
-        <h4>Contribute</h4>
+        <h4>[[?[[S80:prefix]]::pwna::Contribute::How to Help]]</h4>
         <ul class="side-nav">
-            [[E130:[[T8:[[S51:reus_pwna_sitemap]]]] dup dup "<!--CONTRIBUTE-->" indexof swap "<!--/CONTRIBUTE-->" indexof substring]]
+            [[E130:[[T8:[[E51:reus_[[S80:prefix]]_sitemap]]]] dup dup "<!--[[?[[S80:prefix]]::pwna::CONTRIBUTE::HELP]]-->" indexof swap "<!--/[[?[[S80:prefix]]::pwna::CONTRIBUTE::HELP]]-->" indexof substring]]
         </ul>
     </div>
 </div>
@@ -64,7 +58,7 @@
             "@src" "../pwna_assets/images/contribute/retirement.jpg" replaceall 
             "@more-href" "PageServer?pagename=pwna_planned_giving_retirement" replaceall 
             "@content" [[T8:
-            <p>You can designate Partnership with Native Americans as a beneficiary to receive all or a portion of your retirement account upon your death. <span class="more">Read More</span></p>
+            <p>You can designate [[S80:sitename]] as a beneficiary to receive all or a portion of your retirement account upon your death. <span class="more">Read More</span></p>
             ]] replaceall]]
 
             ]] replaceall]]
@@ -100,7 +94,7 @@
             "@src" "../pwna_assets/images/contribute/stock.jpg" replaceall 
             "@more-href" "PageServer?pagename=pwna_planned_giving_stock_donation" replaceall 
             "@content" [[T8:
-            <p>If the stock the donor is contributing has increased in value from the time of purchase, the donor may avoid paying the capital gains tax by donating the security directly to PWNA. <span class="more">Read More</span></p>
+            <p>If the stock the donor is contributing has increased in value from the time of purchase, the donor may avoid paying the capital gains tax by donating the security directly to <span class="text-uppercase">[[S80:prefix]]</span>. <span class="more">Read More</span></p>
             ]] replaceall]]
 
             ]] replaceall]]
@@ -131,7 +125,7 @@
 "@title" "Membership Benefits" replaceall 
 "@content" [[T8:
 <p class="pull-right col-md-3 col-sm-3 col-xs-4 text-center small">
-    <img src="../images/content/pagebuilder/HeritageCircleLogo.png" class="img-responsive center-block">
+    <img src="../images/content/pagebuilder/HeritageCircleLogo-blank.png" class="img-responsive center-block"/>
 </p>
 <p>
     As a member of The Heritage Circle, you will be periodically informed on our efforts to provide services to American Indians living in need in the areas we serve. You will receive a beautiful framed certificate acknowledging your admission into The Heritage Circle.

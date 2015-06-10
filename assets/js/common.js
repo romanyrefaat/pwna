@@ -11,6 +11,7 @@
     }
     function equalHeights() {
         $('.story-list-item .caption').conformity({mode: 'height'});
+        $('.equal-height').conformity({mode: 'height'});
 //        $('.story-list-item .caption').matchHeight({
 //            byRow: true,
 //            property: 'height',

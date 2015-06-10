@@ -2874,6 +2874,7 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
     }
     function equalHeights() {
         $('.story-list-item .caption').conformity({mode: 'height'});
+        $('.equal-height').conformity({mode: 'height'});
 //        $('.story-list-item .caption').matchHeight({
 //            byRow: true,
 //            property: 'height',

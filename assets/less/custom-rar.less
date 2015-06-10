@@ -9,8 +9,25 @@
 @theme-caption-bg-color: @theme-primary-color;
 @theme-primary-button-color: @brand-purple;
 @theme-primary-button-bg: @brand-gray-light;
+@theme-carousel-caption-bg-color: @theme-primary-color;
+@theme-carousel-button-color: @theme-primary-color;
+@theme-sidecol-primary-color: @theme-primary-color;
 
+@link-color:            @theme-primary-color;
+@link-hover-color:      darken(@link-color, 15%);
 @dropdown-bg: @theme-primary-color;
 @navbar-default-link-active-color: @theme-primary-color;
 
 @import "wrapper.less";
+
+.hp-feature{
+    max-width: 100%;
+    img{
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 24px;
+        color: @gray-dark;
+        font-style: italic;
+    }
+}
