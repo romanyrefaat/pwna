@@ -5519,7 +5519,7 @@ blockquote footer:before {
 }
 .accordion-wrapper .accordion-title.active {
   color: #ffffff;
-  background-color: #c5664f;
+  background-color: #792a7e;
 }
 .accordion-wrapper .accordion-title.active:before {
   content: "\f068";
@@ -5543,4 +5543,67 @@ blockquote footer:before {
   font-size: 24px;
   color: #8c8c8e;
   font-style: italic;
+}
+.buttons_list_lg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+.buttons_list_lg a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-shadow: inset 0 0px 10px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0px 10px rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-family: 'Oswald';
+  text-decoration: none !important;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  padding: 10px;
+  background-color: #792a7e;
+  color: #ffffff;
+}
+.buttons_list_lg a:before,
+.buttons_list_lg a:after {
+  content: " ";
+  display: table;
+}
+.buttons_list_lg a:after {
+  clear: both;
+}
+.buttons_list_lg a:before,
+.buttons_list_lg a:after {
+  content: " ";
+  display: table;
+}
+.buttons_list_lg a:after {
+  clear: both;
+}
+.buttons_list_lg a img {
+  float: left !important;
+  margin-right: 10px;
+  max-width: 80px;
+}
+.buttons_list_lg a span {
+  font-size: 1.1em;
+  color: #ffcd0a;
+  text-shadow: 1px 1px 2px #000000;
+}
+.buttons_list_lg a i.fa {
+  font-size: 1.4em;
+}
+.buttons_list_lg a:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
 }

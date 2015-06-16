@@ -31,3 +31,38 @@
         font-style: italic;
     }
 }
+.buttons_list_lg{
+    .center-block;
+    max-width: 500px;;
+    a{
+        .clearfix;
+        .user-select(none);
+        .box-shadow(inset 0 0px 10px rgba(255,255,255,.8));
+        .border-radius(5px);
+        font-family: @font-family-oswald;
+        text-decoration: none !important;
+        display: block;
+        margin-bottom: 15px;
+        font-size: 1.4em;
+        padding: 10px;
+        background-color: @theme-primary-color;
+        color: @white;
+        //.transition(all 0.05s linear);
+        img{
+            .pull-left;
+            margin-right: 10px;
+            max-width: 80px;
+        }
+        span{
+            font-size: 1.1em;
+            color: @brand-yellow;
+            text-shadow: 1px 1px 2px @black;
+        }
+        i.fa{
+            font-size: 1.4em;
+        }
+        &:hover{
+            .scale(1.02);
+        }
+    }
+}
