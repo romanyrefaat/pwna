@@ -189,6 +189,10 @@ table textarea,
 table select {
   width: 98% !important;
 }
+table input[type="text"],
+table select {
+  margin-bottom: 5px;
+}
 /* ****************************** TRPageResponsive Style Overrides ****************************** */
 div.required-indicator-legend {
   padding: 0 0 5px 0;

@@ -113,10 +113,10 @@ form.sign-up{
     }
 }
 .bg-theme {
-  .bg-variant(lighten(@theme-primary-color, 62%));
+    .bg-variant(lighten(@theme-primary-color, 62%));
 }
 .text-alert {
-  .text-emphasis-variant(@theme-sidecol-primary-color);
+    .text-emphasis-variant(@theme-sidecol-primary-color);
 }
 #home-carousel{
     .carousel-caption{
@@ -249,9 +249,14 @@ header{
         }
     }
     .program-of{
+        .pull-right;
+        max-width: 215px;
         text-align: center;
         display: block;
-        background-color: lighten(@theme-primary-color, 64%);
+        position: relative;
+        overflow: hidden;
+        background-color: @theme-primary-color;
+        padding: 0 5px 5px;
         .no-decoration;
         .border-radiuses (0, 10px, 10px, 0);
         .transition(all 0.2s ease-in-out);
@@ -265,26 +270,52 @@ header{
             padding-bottom: 5px;
             background-color: @theme-primary-color;
             color: @white;
+            z-index: 1;
             &:after{
                 content: '';
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 7px 7px 0 7px;
+                border-width: 14px 13px 0 13px;
                 border-color: @theme-primary-color transparent transparent transparent;
                 position: absolute;
-                bottom: -5px;
+                bottom: -8px;
                 left: 50%;
-                margin-left: -3px;
+                margin-left: -9px;
+                .transition(all 0.2s ease-in-out);
+                z-index: -1;
+            }
+        }
+        .img{
+            position: relative;
+            img{
+                padding: 10px 30px 10px 15px;
+                background-color: @white;
+                .border-radiuses (0, 10px, 10px, 0);
+            }
+            &:after{
+                content: '\f08b';
+                .v-align();
+                position: absolute;
+                right: 0;
+                background-color: @theme-primary-color;
+                color: @white;
+                font-family: 'FontAwesome';
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                .border-radiuses (0, 0, 8px, 8px);
+                text-align: left;
+                padding-left: 5px;
                 .transition(all 0.2s ease-in-out);
             }
         }
-        img{
-            padding: 10px 30px;
-        }
         &:hover{
-            background-color: lighten(@theme-primary-color, 62%);
-            span:after{bottom: -7px;}
+            //span:after{bottom: -12px;}
+            .img:after{
+                padding-left: 8px;
+                color: @brand-yellow;
+            }
         }
     }
     .nav-donate{
@@ -317,8 +348,10 @@ header{
     }
     .top-signup{
         width: 100%;
-        margin: 0 auto;
-        margin-bottom: @margin-small-vertical*3;
+        max-width: 220px;
+        margin: 8px auto 0;
+        text-align: left;
+        color: @theme-primary-color;
         label{
             color: @gray-dark;
             .text-uppercase;
@@ -553,12 +586,6 @@ header{
             width: 100%;
             top:100%;
             left: 0;
-        }
-        .top-signup{
-            max-width: 250px;
-            label{
-                //.text-left;
-            }
         }
     }
 

@@ -18,9 +18,9 @@
     position: relative;
     behavior: url(/pwna_assets/css/PIE.htc);
     &:link
-    &:hover,
-    &:visited,
-    &:focus {
+        &:hover,
+        &:visited,
+        &:focus {
         background: none;
         outline: 0;
         text-decoration: none !important;
@@ -36,7 +36,7 @@
     .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     &:hover{background-color: @brand-gray;}
     &:link,
-    &:visited{
+        &:visited{
         &:extend(.btn.btn-default-pwna all);
     }
     //font-size: 2em;
@@ -45,7 +45,7 @@
     .button-variant(@theme-primary-button-color; @theme-primary-button-bg; transparent);
     .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     &:link,
-    &:visited{
+        &:visited{
         &:extend(.btn.btn-primary-pwna all);
     }
 }
@@ -53,7 +53,7 @@
     .button-variant(@white; @brand-turquoise-lighter; transparent);
     .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
     &:link,
-    &:visited{
+        &:visited{
         &:extend(.btn.btn-secondary-pwna all);
     }
 }
@@ -67,15 +67,17 @@ div.responsive a.step-button,
 div.responsive button.step-button,
 #EditCons .Button,
 input[type="button"], input[type="reset"], input[type="submit"]{
-    .button-variant(@brand-red; @brand-gray-light; transparent);
+    .button-variant(@theme-primary-button-color; @theme-primary-button-bg; transparent);
     .button-size(8px; 24px; @font-size-large; @line-height-large; @border-radius-large);
+    font-family: @font-family-oswald;
+    font-weight: normal;
     filter: inherit;
-	-ms-filer: inherit;
-	background-image: inherit;
-        line-height: inherit;
-	outline: none;
+    -ms-filer: inherit;
+    background-image: none;
+    line-height: inherit;
+    outline: none;
     &:link,
-    &:visited{
-        &:extend(a.button-submit all);
+        &:visited, &:hover{
+        background-image: none;
     }
 }

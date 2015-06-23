@@ -1,0 +1,57 @@
+<!-- Update these two fields -->
+
+[[U0:surveyID=2201]]
+[[U0:LandingPage=http://[[S29:DOMAIN]]/site/TRC/Events/PWNA-RAR?fr_id=1040&pg=champ_mf_center]]
+<h1>SAGE Champion Center</h1>
+<!-- Leave the rest of this code as-is -->
+
+[[U0:LoginPage=http://[[S29:DOMAIN]]/site/PageServer?pagename=[[S334:pagename]]]]
+
+[[?xxnullxx::x[[S1:user_name]]x::
+	<!-- this person is not logged in -->
+	[[?xx[[S80:email_submitted]]xx::xxfalsexx::
+		<!-- this person is requesting their username and password -->
+		[[?[[S80:error]]::true::
+	   	<!-- invalid email address provided -->
+	   		<P>The email address you provided is not valid.  Please try again:</P>
+	   	::
+	   		<P>Enter your email address to receive your username and password:</P>
+	   	]]
+		<form method=post action=Survey>
+			<input type="hidden" name="cons_info_component" id="cons_info_component" value="t" />
+			<input class="textInput" name="cons_email" id="cons_email" type="text" value="Email" onfocus="this.value='';" size="20" /> <input name="ACTION_SUBMIT_SURVEY_RESPONSE" id="ACTION_SUBMIT_SURVEY_RESPONSE" class="submitBtn" type="submit" value="Submit" />
+			<input type="hidden" name="cons_mail_opt_in" id="cons_mail_opt_in" value="t" />
+			<input type="hidden" id="cons_email_opt_in_requested" name="cons_email_opt_in_requested" value="true" />
+			<span style="display:none">
+			<table border="0"><tr><td>
+			<label for="denySubmit">Spam Control Text:</label>&nbsp;
+			<input type="text" name="denySubmit" id="denySubmit" value="" 
+			alt="This field is used to prevent form submission by scripts." />&nbsp;Please leave this field empty
+			</td></tr></table>
+			</span>
+			<input type="hidden" name="SURVEY_ID" id="SURVEY_ID" value="[[S80:surveyID]]" />
+			<input id="ERRORURL" type="hidden" value="http://[[S29:DOMAIN]]/email_submit_error" name="ERRORURL" />
+		</form>
+		Know your username and password?  <a href="http://[[S29:DOMAIN]]/site/PageServer?pagename=[[S334:pagename]]&s_email_submitted=true&s_error=false&s_suppress_msg=true">Log in here</a>
+	::
+   		<!-- this person needs to log in -->
+   		[[?xx[[S80:suppress_msg]]xx::xxfalsexx::<P>We have sent a message containing your username and password to the email address you provided.  Please use this information to login and get started.</P>::<span class="title">Login to your account:</span>
+]]
+   		<form id="LogonForm" name="LogonForm" action="UserLogin" method="post" target="_top">
+			<P align="left"><label for="USERNAME"><strong>Username</strong></label> <input id="USERNAME" title="User Name" style="WIDTH: 100px; HEIGHT: 20px" maxLength="60" size="25" name="USERNAME" /></p>
+			<P align="left"><label for="Password"><strong>Password</strong></label> <input id="Password" title="Password" style="WIDTH: 100px; HEIGHT: 20px; margin-left: 3px;" type="password" maxLength="20" size="25" name="Password" /></p>
+			<p align="left"><input id="login" style="font-size: 16px; margin-left: 75px;" title="Enter your username and password then click here to login." type="submit" alt="Login" value="Login" border="0" /></p>
+			<input id="NEXTURL" type="hidden" value="[[S80:LandingPage]]" name="NEXTURL" />
+		</form>
+			Need to request your password?  <a href="http://[[S29:DOMAIN]]/site/PageServer?pagename=[[S334:pagename]]&s_email_submitted=false&s_error=false">Click here</a>
+
+	]]
+::
+	<!-- This person is logged in -->
+	[[?[[S8]]::https::
+	<!-- don't enable javascript redirect from secure pages -->	
+	::
+	<!-- link text provided in case user has javascript disabled -->
+	<P>Welcome back[[?xx[[S1:first_name]]xx::xxxx::! ::, [[S1:first_name]]!]]  Please <a href="[[S80:LandingPage]]">click here to continue.</P>
+	]]
+]]

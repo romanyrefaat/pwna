@@ -1,6 +1,3 @@
-@import url(//fonts.googleapis.com/css?family=Signika:400,600,700);
-@import url(//fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
 .mobile div.responsive,
 .mobile div.responsive div.ErrorMessage.page-error > span.field-error-text {
   width: auto;
@@ -187,9 +184,14 @@ legend.surveyLegend {
   margin-bottom: 15px;
 }
 table input[type="text"],
+table input[type="password"],
 table textarea,
 table select {
   width: 98% !important;
+}
+table input[type="text"],
+table select {
+  margin-bottom: 5px;
 }
 /* ****************************** TRPageResponsive Style Overrides ****************************** */
 div.required-indicator-legend {
@@ -829,120 +831,6 @@ th {
     border: 1px solid #ddd !important;
   }
 }
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -ms-overflow-style: scrollbar;
-  height: 100%;
-}
-body {
-  font-family: 'Open Sans', 'sans-serif';
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #000000;
-  background-color: #ffffff;
-  margin: 0;
-  overflow: auto;
-  height: 100%;
-}
-input,
-button,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-a,
-A {
-  color: #c5664f;
-  text-decoration: none;
-}
-a:link,
-A:link,
-a:visited,
-A:visited {
-  color: #c5664f;
-  text-decoration: none;
-}
-a:hover,
-A:hover,
-a:focus,
-A:focus {
-  color: #964531;
-  text-decoration: underline;
-}
-a:focus,
-A:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-  outline: 0;
-}
-a:link.link-gray-dotted,
-a.link--gray-dotted {
-  color: #000000;
-  border-bottom: 1px dotted #a9a9a9;
-}
-a:link.link-gray-dotted:hover,
-a.link--gray-dotted:hover {
-  text-decoration: none;
-  border-bottom: 1px solid #a9a9a9;
-}
-figure {
-  margin: 0;
-}
-img {
-  vertical-align: middle;
-}
-.img-responsive,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.iframe-responsive {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 35px;
-  height: 0;
-  overflow: hidden;
-}
-.iframe-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #a9a9a9;
-}
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
 h1,
 h2,
 h3,
@@ -1410,6 +1298,12 @@ small,
 .small {
   font-size: 85%;
 }
+.text-medium {
+  font-size: 1.2em;
+}
+.text-large {
+  font-size: 1.4em;
+}
 .text-del {
   text-decoration: line-through;
 }
@@ -1458,12 +1352,6 @@ a.text-warning:hover {
 a.text-danger:hover {
   color: #843534;
 }
-.text-alert {
-  color: #c5664f;
-}
-a.text-alert:hover {
-  color: #a94e38;
-}
 .bg-primary {
   color: #fff;
   background-color: #337ab7;
@@ -1494,6 +1382,20 @@ a.bg-warning:hover {
 }
 a.bg-danger:hover {
   background-color: #e4b9b9;
+}
+.bg-red {
+  color: #ffffff;
+  background-color: #e22427;
+}
+a.bg-red:hover {
+  background-color: #ba191b;
+}
+.bg-orange {
+  color: #ffffff;
+  background-color: #c5664f;
+}
+a.bg-orange:hover {
+  background-color: #a94e38;
 }
 .page-header {
   padding-bottom: 9px;
@@ -2983,6 +2885,381 @@ select[multiple].form-group-lg div.responsive textarea {
     padding-top: 6px;
   }
 }
+table {
+  max-width: 100%;
+  background-color: transparent;
+}
+th {
+  text-align: left;
+  white-space: nowrap;
+}
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 20px 15px;
+  line-height: 20px;
+  vertical-align: middle;
+  border-top: 0;
+  border-right: 1px solid #a9a9a9;
+}
+.table > thead > tr > th.top,
+.table > tbody > tr > th.top,
+.table > tfoot > tr > th.top,
+.table > thead > tr > td.top,
+.table > tbody > tr > td.top,
+.table > tfoot > tr > td.top {
+  vertical-align: top;
+}
+.table > thead > tr > th:last-child,
+.table > tbody > tr > th:last-child,
+.table > tfoot > tr > th:last-child,
+.table > thead > tr > td:last-child,
+.table > tbody > tr > td:last-child,
+.table > tfoot > tr > td:last-child {
+  border-right: 0;
+}
+.table > thead > tr.top > td,
+.table > tbody > tr.top > td,
+.table > tfoot > tr.top > td {
+  vertical-align: top;
+}
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 0;
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.table > tbody + tbody {
+  border-top: 0;
+}
+.table .table {
+  background-color: transparent;
+}
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 5px;
+}
+.table-bordered {
+  border: 1px solid #a9a9a9;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #a9a9a9;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
+}
+.table-striped > thead > tr > th,
+.table-striped > thead > tr > td {
+  background-color: rgba(0, 0, 0, 0);
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f6f6f6;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: #f7946a;
+}
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell;
+}
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
+  background-color: #f7946a;
+}
+.table-hover > tbody > tr > td.active:hover,
+.table-hover > tbody > tr > th.active:hover,
+.table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr:hover > .active,
+.table-hover > tbody > tr.active:hover > th {
+  background-color: #f68352;
+}
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success,
+.table > tfoot > tr > td.success,
+.table > thead > tr > th.success,
+.table > tbody > tr > th.success,
+.table > tfoot > tr > th.success,
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th {
+  background-color: #dff0d8;
+}
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr:hover > .success,
+.table-hover > tbody > tr.success:hover > th {
+  background-color: #d0e9c6;
+}
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th {
+  background-color: #d9edf7;
+}
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
+.table-hover > tbody > tr.info:hover > th {
+  background-color: #c4e3f3;
+}
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th {
+  background-color: #fcf8e3;
+}
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr:hover > .warning,
+.table-hover > tbody > tr.warning:hover > th {
+  background-color: #faf2cc;
+}
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger,
+.table > tfoot > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > tbody > tr > th.danger,
+.table > tfoot > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > tbody > tr.danger > td,
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th {
+  background-color: #f2dede;
+}
+.table-hover > tbody > tr > td.danger:hover,
+.table-hover > tbody > tr > th.danger:hover,
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr:hover > .danger,
+.table-hover > tbody > tr.danger:hover > th {
+  background-color: #ebcccc;
+}
+@media (max-width: 767px) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .table-responsive > .table {
+    margin-bottom: 0;
+  }
+  .table-responsive > .table > thead > tr > th,
+  .table-responsive > .table > tbody > tr > th,
+  .table-responsive > .table > tfoot > tr > th,
+  .table-responsive > .table > thead > tr > td,
+  .table-responsive > .table > tbody > tr > td,
+  .table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+  .table-responsive > .table-bordered {
+    border: 0;
+  }
+  .table-responsive > .table-bordered > thead > tr > th:first-child,
+  .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+  .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+  }
+  .table-responsive > .table-bordered > thead > tr > th:last-child,
+  .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+  .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+  }
+  .table-responsive > .table-bordered > tbody > tr:last-child > th,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+  .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+  }
+}
+.content__table {
+  display: block;
+  font-family: 'Open Sans', 'sans-serif';
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .content__table {
+    display: table;
+  }
+}
+.content__table--header {
+  background-color: #fcfcfc;
+  display: none;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .content__table--header {
+    display: table-row;
+  }
+  .content__table--header > div {
+    display: table-cell;
+    padding: 20px 15px 15px;
+    vertical-align: middle;
+  }
+}
+.content__table--even,
+.content__table--odd {
+  display: block;
+  padding: 20px 15px;
+}
+@media (min-width: 992px) {
+  .content__table--even,
+  .content__table--odd {
+    display: table-row;
+    padding: 0;
+  }
+  .content__table--even > div,
+  .content__table--odd > div {
+    display: table-cell;
+    padding: 10px;
+    vertical-align: middle;
+  }
+}
+.content__table--loading-row,
+.content__table--no-results-row {
+  display: block;
+  padding: 20px 15px;
+}
+@media (min-width: 992px) {
+  .content__table--loading-row,
+  .content__table--no-results-row {
+    caption-side: bottom;
+    display: table-caption;
+    padding: 0;
+  }
+  .content__table--loading-row > div,
+  .content__table--no-results-row > div {
+    padding: 10px;
+  }
+}
+.content__table--odd {
+  background-color: #fcfcfc;
+}
+.content__table--even,
+.content__table--loading-row,
+.content__table--no-results-row {
+  background-color: #f6f6f6;
+}
+.content__table--header,
+.content__table--even,
+.content__table--odd {
+  font-size: .929em;
+}
+.content__table--header span,
+.content__table--even span,
+.content__table--odd span {
+  font-weight: 700;
+  font-family: 'Open Sans', 'sans-serif';
+}
+.content__table--header > .table__column--buttons,
+.content__table--even > .table__column--buttons,
+.content__table--odd > .table__column--buttons {
+  padding-top: 10px;
+  text-align: center;
+}
+.content__table--header > .table__column--buttons > a,
+.content__table--even > .table__column--buttons > a,
+.content__table--odd > .table__column--buttons > a {
+  margin-left: 10px;
+}
+.content__table--header > .table__column--buttons > a:first-child,
+.content__table--even > .table__column--buttons > a:first-child,
+.content__table--odd > .table__column--buttons > a:first-child {
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  .content__table--header span,
+  .content__table--even span,
+  .content__table--odd span {
+    display: none;
+  }
+  .content__table--header > .table__column--bordered,
+  .content__table--even > .table__column--bordered,
+  .content__table--odd > .table__column--bordered {
+    border-left: 1px solid #a9a9a9;
+  }
+  .content__table--header > .table__column--buttons,
+  .content__table--even > .table__column--buttons,
+  .content__table--odd > .table__column--buttons {
+    padding-top: 10px;
+    text-align: right;
+  }
+}
 .input-group {
   position: relative;
   display: table;
@@ -3711,1298 +3988,6 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
-.button,
-div.responsive .button,
-.Button,
-a.btn,
-button,
-#login-div-content input.uc-button,
-div.responsive #login-div-content input.uc-button,
-#login-div-content button,
-div.responsive #login-div-content button,
-#login-div-content .ft button,
-div.responsive #login-div-content .ft button {
-  border: none;
-  background-image: none;
-  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  font-family: 'Oswald';
-  text-transform: uppercase;
-  text-decoration: none !important;
-  outline: 0;
-  position: relative;
-  behavior: url(/pwna_assets/css/PIE.htc);
-}
-.button:link .button:hover,
-.button:link div.responsive .button:hover,
-.button:link .Button:hover,
-.button:link a.btn:hover,
-.button:link button:hover,
-div.responsive .button:link .button:hover,
-div.responsive .button:link div.responsive .button:hover,
-div.responsive .button:link .Button:hover,
-div.responsive .button:link a.btn:hover,
-div.responsive .button:link button:hover,
-.Button:link .button:hover,
-.Button:link div.responsive .button:hover,
-.Button:link .Button:hover,
-.Button:link a.btn:hover,
-.Button:link button:hover,
-a.btn:link .button:hover,
-a.btn:link div.responsive .button:hover,
-a.btn:link .Button:hover,
-a.btn:link a.btn:hover,
-a.btn:link button:hover,
-button:link .button:hover,
-button:link div.responsive .button:hover,
-button:link .Button:hover,
-button:link a.btn:hover,
-button:link button:hover,
-.button:focus,
-div.responsive .button:focus,
-.Button:focus,
-a.btn:focus,
-button:focus,
-#login-div-content input.uc-button:link #login-div-content input.uc-button:hover,
-#login-div-content input.uc-button:link div.responsive #login-div-content input.uc-button:hover,
-#login-div-content input.uc-button:link .Button:hover,
-#login-div-content input.uc-button:link a.btn:hover,
-#login-div-content input.uc-button:link button:hover,
-div.responsive #login-div-content input.uc-button:link #login-div-content input.uc-button:hover,
-div.responsive #login-div-content input.uc-button:link div.responsive #login-div-content input.uc-button:hover,
-div.responsive #login-div-content input.uc-button:link .Button:hover,
-div.responsive #login-div-content input.uc-button:link a.btn:hover,
-div.responsive #login-div-content input.uc-button:link button:hover,
-.Button:link #login-div-content input.uc-button:hover,
-.Button:link div.responsive #login-div-content input.uc-button:hover,
-a.btn:link #login-div-content input.uc-button:hover,
-a.btn:link div.responsive #login-div-content input.uc-button:hover,
-button:link #login-div-content input.uc-button:hover,
-button:link div.responsive #login-div-content input.uc-button:hover,
-#login-div-content input.uc-button:focus,
-div.responsive #login-div-content input.uc-button:focus,
-#login-div-content button:link #login-div-content button:hover,
-#login-div-content button:link div.responsive #login-div-content button:hover,
-#login-div-content button:link .Button:hover,
-#login-div-content button:link a.btn:hover,
-#login-div-content button:link button:hover,
-div.responsive #login-div-content button:link #login-div-content button:hover,
-div.responsive #login-div-content button:link div.responsive #login-div-content button:hover,
-div.responsive #login-div-content button:link .Button:hover,
-div.responsive #login-div-content button:link a.btn:hover,
-div.responsive #login-div-content button:link button:hover,
-.Button:link #login-div-content button:hover,
-.Button:link div.responsive #login-div-content button:hover,
-a.btn:link #login-div-content button:hover,
-a.btn:link div.responsive #login-div-content button:hover,
-button:link #login-div-content button:hover,
-button:link div.responsive #login-div-content button:hover,
-#login-div-content button:focus,
-div.responsive #login-div-content button:focus,
-#login-div-content .ft button:link #login-div-content .ft button:hover,
-#login-div-content .ft button:link div.responsive #login-div-content .ft button:hover,
-#login-div-content .ft button:link .Button:hover,
-#login-div-content .ft button:link a.btn:hover,
-#login-div-content .ft button:link button:hover,
-div.responsive #login-div-content .ft button:link #login-div-content .ft button:hover,
-div.responsive #login-div-content .ft button:link div.responsive #login-div-content .ft button:hover,
-div.responsive #login-div-content .ft button:link .Button:hover,
-div.responsive #login-div-content .ft button:link a.btn:hover,
-div.responsive #login-div-content .ft button:link button:hover,
-.Button:link #login-div-content .ft button:hover,
-.Button:link div.responsive #login-div-content .ft button:hover,
-a.btn:link #login-div-content .ft button:hover,
-a.btn:link div.responsive #login-div-content .ft button:hover,
-button:link #login-div-content .ft button:hover,
-button:link div.responsive #login-div-content .ft button:hover,
-#login-div-content .ft button:focus,
-div.responsive #login-div-content .ft button:focus {
-  outline: 0;
-  text-decoration: none !important;
-}
-.button .fa-chevron-right,
-div.responsive .button .fa-chevron-right,
-.Button .fa-chevron-right,
-a.btn .fa-chevron-right,
-button .fa-chevron-right,
-#login-div-content input.uc-button .fa-chevron-right,
-div.responsive #login-div-content input.uc-button .fa-chevron-right,
-#login-div-content button .fa-chevron-right,
-div.responsive #login-div-content button .fa-chevron-right,
-#login-div-content .ft button .fa-chevron-right,
-div.responsive #login-div-content .ft button .fa-chevron-right {
-  font-size: 1.5em;
-  margin-left: 5px;
-  vertical-align: text-top;
-}
-a.btn-default-pwna,
-a.btn-default-pwna:link,
-a.btn-default-pwna:visited,
-a.btn-default-pwna:link:visited,
-a.btn-default-pwna:visited:link {
-  color: #ffffff;
-  background-color: #ffcd0a;
-  border-color: transparent;
-  padding: 8px 24px;
-  font-size: 19px;
-  line-height: 1.33;
-  border-radius: 15px;
-}
-a.btn-default-pwna:hover,
-a.btn-default-pwna:focus,
-a.btn-default-pwna.focus,
-a.btn-default-pwna:active,
-a.btn-default-pwna.active,
-.open > .dropdown-togglea.btn-default-pwna,
-a.btn-default-pwna:link:hover,
-a.btn-default-pwna:link:focus,
-a.btn-default-pwna:link.focus,
-a.btn-default-pwna:link:active,
-a.btn-default-pwna:link.active,
-.open > .dropdown-togglea.btn-default-pwna:link,
-a.btn-default-pwna:visited:hover,
-a.btn-default-pwna:visited:focus,
-a.btn-default-pwna:visited.focus,
-a.btn-default-pwna:visited:active,
-a.btn-default-pwna:visited.active,
-.open > .dropdown-togglea.btn-default-pwna:visited,
-a.btn-default-pwna:link:visited:hover,
-a.btn-default-pwna:link:visited:focus,
-a.btn-default-pwna:link:visited.focus,
-a.btn-default-pwna:link:visited:active,
-a.btn-default-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-default-pwna:link:visited,
-a.btn-default-pwna:visited:link:hover,
-a.btn-default-pwna:visited:link:focus,
-a.btn-default-pwna:visited:link.focus,
-a.btn-default-pwna:visited:link:active,
-a.btn-default-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-default-pwna:visited:link {
-  color: #ffffff;
-  background-color: #d6aa00;
-  border-color: rgba(0, 0, 0, 0);
-}
-a.btn-default-pwna:active,
-a.btn-default-pwna.active,
-.open > .dropdown-togglea.btn-default-pwna,
-a.btn-default-pwna:link:active,
-a.btn-default-pwna:link.active,
-.open > .dropdown-togglea.btn-default-pwna:link,
-a.btn-default-pwna:visited:active,
-a.btn-default-pwna:visited.active,
-.open > .dropdown-togglea.btn-default-pwna:visited,
-a.btn-default-pwna:link:visited:active,
-a.btn-default-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-default-pwna:link:visited,
-a.btn-default-pwna:visited:link:active,
-a.btn-default-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-default-pwna:visited:link {
-  background-image: none;
-}
-a.btn-default-pwna.disabled,
-a.btn-default-pwna[disabled],
-fieldset[disabled] a.btn-default-pwna,
-a.btn-default-pwna.disabled:hover,
-a.btn-default-pwna[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:hover,
-a.btn-default-pwna.disabled:focus,
-a.btn-default-pwna[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:focus,
-a.btn-default-pwna.disabled.focus,
-a.btn-default-pwna[disabled].focus,
-fieldset[disabled] a.btn-default-pwna.focus,
-a.btn-default-pwna.disabled:active,
-a.btn-default-pwna[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:active,
-a.btn-default-pwna.disabled.active,
-a.btn-default-pwna[disabled].active,
-fieldset[disabled] a.btn-default-pwna.active,
-a.btn-default-pwna:link.disabled,
-a.btn-default-pwna:link[disabled],
-fieldset[disabled] a.btn-default-pwna:link,
-a.btn-default-pwna:link.disabled:hover,
-a.btn-default-pwna:link[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:link:hover,
-a.btn-default-pwna:link.disabled:focus,
-a.btn-default-pwna:link[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:link:focus,
-a.btn-default-pwna:link.disabled.focus,
-a.btn-default-pwna:link[disabled].focus,
-fieldset[disabled] a.btn-default-pwna:link.focus,
-a.btn-default-pwna:link.disabled:active,
-a.btn-default-pwna:link[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:link:active,
-a.btn-default-pwna:link.disabled.active,
-a.btn-default-pwna:link[disabled].active,
-fieldset[disabled] a.btn-default-pwna:link.active,
-a.btn-default-pwna:visited.disabled,
-a.btn-default-pwna:visited[disabled],
-fieldset[disabled] a.btn-default-pwna:visited,
-a.btn-default-pwna:visited.disabled:hover,
-a.btn-default-pwna:visited[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:visited:hover,
-a.btn-default-pwna:visited.disabled:focus,
-a.btn-default-pwna:visited[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:visited:focus,
-a.btn-default-pwna:visited.disabled.focus,
-a.btn-default-pwna:visited[disabled].focus,
-fieldset[disabled] a.btn-default-pwna:visited.focus,
-a.btn-default-pwna:visited.disabled:active,
-a.btn-default-pwna:visited[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:visited:active,
-a.btn-default-pwna:visited.disabled.active,
-a.btn-default-pwna:visited[disabled].active,
-fieldset[disabled] a.btn-default-pwna:visited.active,
-a.btn-default-pwna:link:visited.disabled,
-a.btn-default-pwna:link:visited[disabled],
-fieldset[disabled] a.btn-default-pwna:link:visited,
-a.btn-default-pwna:link:visited.disabled:hover,
-a.btn-default-pwna:link:visited[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:link:visited:hover,
-a.btn-default-pwna:link:visited.disabled:focus,
-a.btn-default-pwna:link:visited[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:link:visited:focus,
-a.btn-default-pwna:link:visited.disabled.focus,
-a.btn-default-pwna:link:visited[disabled].focus,
-fieldset[disabled] a.btn-default-pwna:link:visited.focus,
-a.btn-default-pwna:link:visited.disabled:active,
-a.btn-default-pwna:link:visited[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:link:visited:active,
-a.btn-default-pwna:link:visited.disabled.active,
-a.btn-default-pwna:link:visited[disabled].active,
-fieldset[disabled] a.btn-default-pwna:link:visited.active,
-a.btn-default-pwna:visited:link.disabled,
-a.btn-default-pwna:visited:link[disabled],
-fieldset[disabled] a.btn-default-pwna:visited:link,
-a.btn-default-pwna:visited:link.disabled:hover,
-a.btn-default-pwna:visited:link[disabled]:hover,
-fieldset[disabled] a.btn-default-pwna:visited:link:hover,
-a.btn-default-pwna:visited:link.disabled:focus,
-a.btn-default-pwna:visited:link[disabled]:focus,
-fieldset[disabled] a.btn-default-pwna:visited:link:focus,
-a.btn-default-pwna:visited:link.disabled.focus,
-a.btn-default-pwna:visited:link[disabled].focus,
-fieldset[disabled] a.btn-default-pwna:visited:link.focus,
-a.btn-default-pwna:visited:link.disabled:active,
-a.btn-default-pwna:visited:link[disabled]:active,
-fieldset[disabled] a.btn-default-pwna:visited:link:active,
-a.btn-default-pwna:visited:link.disabled.active,
-a.btn-default-pwna:visited:link[disabled].active,
-fieldset[disabled] a.btn-default-pwna:visited:link.active {
-  background-color: #ffcd0a;
-  border-color: transparent;
-}
-a.btn-default-pwna .badge,
-a.btn-default-pwna:link .badge,
-a.btn-default-pwna:visited .badge,
-a.btn-default-pwna:link:visited .badge,
-a.btn-default-pwna:visited:link .badge {
-  color: #ffcd0a;
-  background-color: #ffffff;
-}
-a.btn-default-pwna:hover,
-a.btn-default-pwna:link:hover,
-a.btn-default-pwna:visited:hover,
-a.btn-default-pwna:link:visited:hover,
-a.btn-default-pwna:visited:link:hover {
-  background-color: #bbbdbf;
-}
-a.btn-primary-pwna,
-a.btn-primary-pwna:link,
-a.btn-primary-pwna:visited,
-a.btn-primary-pwna:link:visited,
-a.btn-primary-pwna:visited:link {
-  color: #e22427;
-  background-color: #ebebeb;
-  border-color: transparent;
-  padding: 8px 24px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 15px;
-}
-a.btn-primary-pwna:hover,
-a.btn-primary-pwna:focus,
-a.btn-primary-pwna.focus,
-a.btn-primary-pwna:active,
-a.btn-primary-pwna.active,
-.open > .dropdown-togglea.btn-primary-pwna,
-a.btn-primary-pwna:link:hover,
-a.btn-primary-pwna:link:focus,
-a.btn-primary-pwna:link.focus,
-a.btn-primary-pwna:link:active,
-a.btn-primary-pwna:link.active,
-.open > .dropdown-togglea.btn-primary-pwna:link,
-a.btn-primary-pwna:visited:hover,
-a.btn-primary-pwna:visited:focus,
-a.btn-primary-pwna:visited.focus,
-a.btn-primary-pwna:visited:active,
-a.btn-primary-pwna:visited.active,
-.open > .dropdown-togglea.btn-primary-pwna:visited,
-a.btn-primary-pwna:link:visited:hover,
-a.btn-primary-pwna:link:visited:focus,
-a.btn-primary-pwna:link:visited.focus,
-a.btn-primary-pwna:link:visited:active,
-a.btn-primary-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-primary-pwna:link:visited,
-a.btn-primary-pwna:visited:link:hover,
-a.btn-primary-pwna:visited:link:focus,
-a.btn-primary-pwna:visited:link.focus,
-a.btn-primary-pwna:visited:link:active,
-a.btn-primary-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-primary-pwna:visited:link {
-  color: #e22427;
-  background-color: #d2d2d2;
-  border-color: rgba(0, 0, 0, 0);
-}
-a.btn-primary-pwna:active,
-a.btn-primary-pwna.active,
-.open > .dropdown-togglea.btn-primary-pwna,
-a.btn-primary-pwna:link:active,
-a.btn-primary-pwna:link.active,
-.open > .dropdown-togglea.btn-primary-pwna:link,
-a.btn-primary-pwna:visited:active,
-a.btn-primary-pwna:visited.active,
-.open > .dropdown-togglea.btn-primary-pwna:visited,
-a.btn-primary-pwna:link:visited:active,
-a.btn-primary-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-primary-pwna:link:visited,
-a.btn-primary-pwna:visited:link:active,
-a.btn-primary-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-primary-pwna:visited:link {
-  background-image: none;
-}
-a.btn-primary-pwna.disabled,
-a.btn-primary-pwna[disabled],
-fieldset[disabled] a.btn-primary-pwna,
-a.btn-primary-pwna.disabled:hover,
-a.btn-primary-pwna[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:hover,
-a.btn-primary-pwna.disabled:focus,
-a.btn-primary-pwna[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:focus,
-a.btn-primary-pwna.disabled.focus,
-a.btn-primary-pwna[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna.focus,
-a.btn-primary-pwna.disabled:active,
-a.btn-primary-pwna[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:active,
-a.btn-primary-pwna.disabled.active,
-a.btn-primary-pwna[disabled].active,
-fieldset[disabled] a.btn-primary-pwna.active,
-a.btn-primary-pwna:link.disabled,
-a.btn-primary-pwna:link[disabled],
-fieldset[disabled] a.btn-primary-pwna:link,
-a.btn-primary-pwna:link.disabled:hover,
-a.btn-primary-pwna:link[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:link:hover,
-a.btn-primary-pwna:link.disabled:focus,
-a.btn-primary-pwna:link[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:link:focus,
-a.btn-primary-pwna:link.disabled.focus,
-a.btn-primary-pwna:link[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna:link.focus,
-a.btn-primary-pwna:link.disabled:active,
-a.btn-primary-pwna:link[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:link:active,
-a.btn-primary-pwna:link.disabled.active,
-a.btn-primary-pwna:link[disabled].active,
-fieldset[disabled] a.btn-primary-pwna:link.active,
-a.btn-primary-pwna:visited.disabled,
-a.btn-primary-pwna:visited[disabled],
-fieldset[disabled] a.btn-primary-pwna:visited,
-a.btn-primary-pwna:visited.disabled:hover,
-a.btn-primary-pwna:visited[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:visited:hover,
-a.btn-primary-pwna:visited.disabled:focus,
-a.btn-primary-pwna:visited[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:visited:focus,
-a.btn-primary-pwna:visited.disabled.focus,
-a.btn-primary-pwna:visited[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna:visited.focus,
-a.btn-primary-pwna:visited.disabled:active,
-a.btn-primary-pwna:visited[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:visited:active,
-a.btn-primary-pwna:visited.disabled.active,
-a.btn-primary-pwna:visited[disabled].active,
-fieldset[disabled] a.btn-primary-pwna:visited.active,
-a.btn-primary-pwna:link:visited.disabled,
-a.btn-primary-pwna:link:visited[disabled],
-fieldset[disabled] a.btn-primary-pwna:link:visited,
-a.btn-primary-pwna:link:visited.disabled:hover,
-a.btn-primary-pwna:link:visited[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:link:visited:hover,
-a.btn-primary-pwna:link:visited.disabled:focus,
-a.btn-primary-pwna:link:visited[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:link:visited:focus,
-a.btn-primary-pwna:link:visited.disabled.focus,
-a.btn-primary-pwna:link:visited[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna:link:visited.focus,
-a.btn-primary-pwna:link:visited.disabled:active,
-a.btn-primary-pwna:link:visited[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:link:visited:active,
-a.btn-primary-pwna:link:visited.disabled.active,
-a.btn-primary-pwna:link:visited[disabled].active,
-fieldset[disabled] a.btn-primary-pwna:link:visited.active,
-a.btn-primary-pwna:visited:link.disabled,
-a.btn-primary-pwna:visited:link[disabled],
-fieldset[disabled] a.btn-primary-pwna:visited:link,
-a.btn-primary-pwna:visited:link.disabled:hover,
-a.btn-primary-pwna:visited:link[disabled]:hover,
-fieldset[disabled] a.btn-primary-pwna:visited:link:hover,
-a.btn-primary-pwna:visited:link.disabled:focus,
-a.btn-primary-pwna:visited:link[disabled]:focus,
-fieldset[disabled] a.btn-primary-pwna:visited:link:focus,
-a.btn-primary-pwna:visited:link.disabled.focus,
-a.btn-primary-pwna:visited:link[disabled].focus,
-fieldset[disabled] a.btn-primary-pwna:visited:link.focus,
-a.btn-primary-pwna:visited:link.disabled:active,
-a.btn-primary-pwna:visited:link[disabled]:active,
-fieldset[disabled] a.btn-primary-pwna:visited:link:active,
-a.btn-primary-pwna:visited:link.disabled.active,
-a.btn-primary-pwna:visited:link[disabled].active,
-fieldset[disabled] a.btn-primary-pwna:visited:link.active {
-  background-color: #ebebeb;
-  border-color: transparent;
-}
-a.btn-primary-pwna .badge,
-a.btn-primary-pwna:link .badge,
-a.btn-primary-pwna:visited .badge,
-a.btn-primary-pwna:link:visited .badge,
-a.btn-primary-pwna:visited:link .badge {
-  color: #ebebeb;
-  background-color: #e22427;
-}
-a.btn-secondary-pwna,
-a.btn-secondary-pwna:link,
-a.btn-secondary-pwna:visited,
-a.btn-secondary-pwna:link:visited,
-a.btn-secondary-pwna:visited:link {
-  color: #ffffff;
-  background-color: #9caebf;
-  border-color: transparent;
-  padding: 8px 24px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 15px;
-}
-a.btn-secondary-pwna:hover,
-a.btn-secondary-pwna:focus,
-a.btn-secondary-pwna.focus,
-a.btn-secondary-pwna:active,
-a.btn-secondary-pwna.active,
-.open > .dropdown-togglea.btn-secondary-pwna,
-a.btn-secondary-pwna:link:hover,
-a.btn-secondary-pwna:link:focus,
-a.btn-secondary-pwna:link.focus,
-a.btn-secondary-pwna:link:active,
-a.btn-secondary-pwna:link.active,
-.open > .dropdown-togglea.btn-secondary-pwna:link,
-a.btn-secondary-pwna:visited:hover,
-a.btn-secondary-pwna:visited:focus,
-a.btn-secondary-pwna:visited.focus,
-a.btn-secondary-pwna:visited:active,
-a.btn-secondary-pwna:visited.active,
-.open > .dropdown-togglea.btn-secondary-pwna:visited,
-a.btn-secondary-pwna:link:visited:hover,
-a.btn-secondary-pwna:link:visited:focus,
-a.btn-secondary-pwna:link:visited.focus,
-a.btn-secondary-pwna:link:visited:active,
-a.btn-secondary-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-secondary-pwna:link:visited,
-a.btn-secondary-pwna:visited:link:hover,
-a.btn-secondary-pwna:visited:link:focus,
-a.btn-secondary-pwna:visited:link.focus,
-a.btn-secondary-pwna:visited:link:active,
-a.btn-secondary-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-secondary-pwna:visited:link {
-  color: #ffffff;
-  background-color: #7d95ab;
-  border-color: rgba(0, 0, 0, 0);
-}
-a.btn-secondary-pwna:active,
-a.btn-secondary-pwna.active,
-.open > .dropdown-togglea.btn-secondary-pwna,
-a.btn-secondary-pwna:link:active,
-a.btn-secondary-pwna:link.active,
-.open > .dropdown-togglea.btn-secondary-pwna:link,
-a.btn-secondary-pwna:visited:active,
-a.btn-secondary-pwna:visited.active,
-.open > .dropdown-togglea.btn-secondary-pwna:visited,
-a.btn-secondary-pwna:link:visited:active,
-a.btn-secondary-pwna:link:visited.active,
-.open > .dropdown-togglea.btn-secondary-pwna:link:visited,
-a.btn-secondary-pwna:visited:link:active,
-a.btn-secondary-pwna:visited:link.active,
-.open > .dropdown-togglea.btn-secondary-pwna:visited:link {
-  background-image: none;
-}
-a.btn-secondary-pwna.disabled,
-a.btn-secondary-pwna[disabled],
-fieldset[disabled] a.btn-secondary-pwna,
-a.btn-secondary-pwna.disabled:hover,
-a.btn-secondary-pwna[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:hover,
-a.btn-secondary-pwna.disabled:focus,
-a.btn-secondary-pwna[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:focus,
-a.btn-secondary-pwna.disabled.focus,
-a.btn-secondary-pwna[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna.focus,
-a.btn-secondary-pwna.disabled:active,
-a.btn-secondary-pwna[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:active,
-a.btn-secondary-pwna.disabled.active,
-a.btn-secondary-pwna[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna.active,
-a.btn-secondary-pwna:link.disabled,
-a.btn-secondary-pwna:link[disabled],
-fieldset[disabled] a.btn-secondary-pwna:link,
-a.btn-secondary-pwna:link.disabled:hover,
-a.btn-secondary-pwna:link[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:link:hover,
-a.btn-secondary-pwna:link.disabled:focus,
-a.btn-secondary-pwna:link[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:link:focus,
-a.btn-secondary-pwna:link.disabled.focus,
-a.btn-secondary-pwna:link[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna:link.focus,
-a.btn-secondary-pwna:link.disabled:active,
-a.btn-secondary-pwna:link[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:link:active,
-a.btn-secondary-pwna:link.disabled.active,
-a.btn-secondary-pwna:link[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna:link.active,
-a.btn-secondary-pwna:visited.disabled,
-a.btn-secondary-pwna:visited[disabled],
-fieldset[disabled] a.btn-secondary-pwna:visited,
-a.btn-secondary-pwna:visited.disabled:hover,
-a.btn-secondary-pwna:visited[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:visited:hover,
-a.btn-secondary-pwna:visited.disabled:focus,
-a.btn-secondary-pwna:visited[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:visited:focus,
-a.btn-secondary-pwna:visited.disabled.focus,
-a.btn-secondary-pwna:visited[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna:visited.focus,
-a.btn-secondary-pwna:visited.disabled:active,
-a.btn-secondary-pwna:visited[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:visited:active,
-a.btn-secondary-pwna:visited.disabled.active,
-a.btn-secondary-pwna:visited[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna:visited.active,
-a.btn-secondary-pwna:link:visited.disabled,
-a.btn-secondary-pwna:link:visited[disabled],
-fieldset[disabled] a.btn-secondary-pwna:link:visited,
-a.btn-secondary-pwna:link:visited.disabled:hover,
-a.btn-secondary-pwna:link:visited[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:link:visited:hover,
-a.btn-secondary-pwna:link:visited.disabled:focus,
-a.btn-secondary-pwna:link:visited[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:link:visited:focus,
-a.btn-secondary-pwna:link:visited.disabled.focus,
-a.btn-secondary-pwna:link:visited[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna:link:visited.focus,
-a.btn-secondary-pwna:link:visited.disabled:active,
-a.btn-secondary-pwna:link:visited[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:link:visited:active,
-a.btn-secondary-pwna:link:visited.disabled.active,
-a.btn-secondary-pwna:link:visited[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna:link:visited.active,
-a.btn-secondary-pwna:visited:link.disabled,
-a.btn-secondary-pwna:visited:link[disabled],
-fieldset[disabled] a.btn-secondary-pwna:visited:link,
-a.btn-secondary-pwna:visited:link.disabled:hover,
-a.btn-secondary-pwna:visited:link[disabled]:hover,
-fieldset[disabled] a.btn-secondary-pwna:visited:link:hover,
-a.btn-secondary-pwna:visited:link.disabled:focus,
-a.btn-secondary-pwna:visited:link[disabled]:focus,
-fieldset[disabled] a.btn-secondary-pwna:visited:link:focus,
-a.btn-secondary-pwna:visited:link.disabled.focus,
-a.btn-secondary-pwna:visited:link[disabled].focus,
-fieldset[disabled] a.btn-secondary-pwna:visited:link.focus,
-a.btn-secondary-pwna:visited:link.disabled:active,
-a.btn-secondary-pwna:visited:link[disabled]:active,
-fieldset[disabled] a.btn-secondary-pwna:visited:link:active,
-a.btn-secondary-pwna:visited:link.disabled.active,
-a.btn-secondary-pwna:visited:link[disabled].active,
-fieldset[disabled] a.btn-secondary-pwna:visited:link.active {
-  background-color: #9caebf;
-  border-color: transparent;
-}
-a.btn-secondary-pwna .badge,
-a.btn-secondary-pwna:link .badge,
-a.btn-secondary-pwna:visited .badge,
-a.btn-secondary-pwna:link:visited .badge,
-a.btn-secondary-pwna:visited:link .badge {
-  color: #9caebf;
-  background-color: #ffffff;
-}
-.button-submit,
-div.responsive button.action-button,
-div.responsive a.next-step,
-div.responsive button.next-step,
-div.responsive a.cancel-step,
-div.responsive button.cancel-step,
-div.responsive a.step-button,
-div.responsive button.step-button,
-div.responsive button.action-button:hover,
-div.responsive a.next-step:hover,
-div.responsive button.next-step:hover,
-div.responsive a.step-button:hover,
-div.responsive button.step-button:hover,
-div.responsive a.cancel-button:hover,
-div.responsive button.cancel-button:hover,
-#EditCons .Button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-#login-div-content input.uc-button,
-#login-div-content button,
-#login-div-content .ft button {
-  color: #e22427;
-  background-color: #ebebeb;
-  border-color: transparent;
-  padding: 8px 24px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 15px;
-  filter: inherit;
-  -ms-filer: inherit;
-  background-image: inherit;
-  line-height: inherit;
-  outline: none;
-}
-.button-submit:hover,
-.button-submit:focus,
-.button-submit.focus,
-.button-submit:active,
-.button-submit.active,
-.open > .dropdown-toggle.button-submit,
-div.responsive button.action-button:hover,
-div.responsive button.action-button:focus,
-div.responsive button.action-button.focus,
-div.responsive button.action-button:active,
-div.responsive button.action-button.active,
-.open > .dropdown-togglediv.responsive button.action-button,
-div.responsive a.next-step:hover,
-div.responsive a.next-step:focus,
-div.responsive a.next-step.focus,
-div.responsive a.next-step:active,
-div.responsive a.next-step.active,
-.open > .dropdown-togglediv.responsive a.next-step,
-div.responsive button.next-step:hover,
-div.responsive button.next-step:focus,
-div.responsive button.next-step.focus,
-div.responsive button.next-step:active,
-div.responsive button.next-step.active,
-.open > .dropdown-togglediv.responsive button.next-step,
-div.responsive a.cancel-step:hover,
-div.responsive a.cancel-step:focus,
-div.responsive a.cancel-step.focus,
-div.responsive a.cancel-step:active,
-div.responsive a.cancel-step.active,
-.open > .dropdown-togglediv.responsive a.cancel-step,
-div.responsive button.cancel-step:hover,
-div.responsive button.cancel-step:focus,
-div.responsive button.cancel-step.focus,
-div.responsive button.cancel-step:active,
-div.responsive button.cancel-step.active,
-.open > .dropdown-togglediv.responsive button.cancel-step,
-div.responsive a.step-button:hover,
-div.responsive a.step-button:focus,
-div.responsive a.step-button.focus,
-div.responsive a.step-button:active,
-div.responsive a.step-button.active,
-.open > .dropdown-togglediv.responsive a.step-button,
-div.responsive button.step-button:hover,
-div.responsive button.step-button:focus,
-div.responsive button.step-button.focus,
-div.responsive button.step-button:active,
-div.responsive button.step-button.active,
-.open > .dropdown-togglediv.responsive button.step-button,
-div.responsive button.action-button:hover:hover,
-div.responsive button.action-button:hover:focus,
-div.responsive button.action-button:hover.focus,
-div.responsive button.action-button:hover:active,
-div.responsive button.action-button:hover.active,
-.open > .dropdown-togglediv.responsive button.action-button:hover,
-div.responsive a.next-step:hover:hover,
-div.responsive a.next-step:hover:focus,
-div.responsive a.next-step:hover.focus,
-div.responsive a.next-step:hover:active,
-div.responsive a.next-step:hover.active,
-.open > .dropdown-togglediv.responsive a.next-step:hover,
-div.responsive button.next-step:hover:hover,
-div.responsive button.next-step:hover:focus,
-div.responsive button.next-step:hover.focus,
-div.responsive button.next-step:hover:active,
-div.responsive button.next-step:hover.active,
-.open > .dropdown-togglediv.responsive button.next-step:hover,
-div.responsive a.step-button:hover:hover,
-div.responsive a.step-button:hover:focus,
-div.responsive a.step-button:hover.focus,
-div.responsive a.step-button:hover:active,
-div.responsive a.step-button:hover.active,
-.open > .dropdown-togglediv.responsive a.step-button:hover,
-div.responsive button.step-button:hover:hover,
-div.responsive button.step-button:hover:focus,
-div.responsive button.step-button:hover.focus,
-div.responsive button.step-button:hover:active,
-div.responsive button.step-button:hover.active,
-.open > .dropdown-togglediv.responsive button.step-button:hover,
-div.responsive a.cancel-button:hover:hover,
-div.responsive a.cancel-button:hover:focus,
-div.responsive a.cancel-button:hover.focus,
-div.responsive a.cancel-button:hover:active,
-div.responsive a.cancel-button:hover.active,
-.open > .dropdown-togglediv.responsive a.cancel-button:hover,
-div.responsive button.cancel-button:hover:hover,
-div.responsive button.cancel-button:hover:focus,
-div.responsive button.cancel-button:hover.focus,
-div.responsive button.cancel-button:hover:active,
-div.responsive button.cancel-button:hover.active,
-.open > .dropdown-togglediv.responsive button.cancel-button:hover,
-#EditCons .Button:hover,
-#EditCons .Button:focus,
-#EditCons .Button.focus,
-#EditCons .Button:active,
-#EditCons .Button.active,
-.open > .dropdown-toggle#EditCons .Button,
-input[type="button"]:hover,
-input[type="button"]:focus,
-input[type="button"].focus,
-input[type="button"]:active,
-input[type="button"].active,
-.open > .dropdown-toggleinput[type="button"],
-input[type="reset"]:hover,
-input[type="reset"]:focus,
-input[type="reset"].focus,
-input[type="reset"]:active,
-input[type="reset"].active,
-.open > .dropdown-toggleinput[type="reset"],
-input[type="submit"]:hover,
-input[type="submit"]:focus,
-input[type="submit"].focus,
-input[type="submit"]:active,
-input[type="submit"].active,
-.open > .dropdown-toggleinput[type="submit"],
-#login-div-content input.uc-button:hover,
-#login-div-content input.uc-button:focus,
-#login-div-content input.uc-button.focus,
-#login-div-content input.uc-button:active,
-#login-div-content input.uc-button.active,
-.open > .dropdown-toggle#login-div-content input.uc-button,
-#login-div-content button:hover,
-#login-div-content button:focus,
-#login-div-content button.focus,
-#login-div-content button:active,
-#login-div-content button.active,
-.open > .dropdown-toggle#login-div-content button,
-#login-div-content .ft button:hover,
-#login-div-content .ft button:focus,
-#login-div-content .ft button.focus,
-#login-div-content .ft button:active,
-#login-div-content .ft button.active,
-.open > .dropdown-toggle#login-div-content .ft button {
-  color: #e22427;
-  background-color: #d2d2d2;
-  border-color: rgba(0, 0, 0, 0);
-}
-.button-submit:active,
-.button-submit.active,
-.open > .dropdown-toggle.button-submit,
-div.responsive button.action-button:active,
-div.responsive button.action-button.active,
-.open > .dropdown-togglediv.responsive button.action-button,
-div.responsive a.next-step:active,
-div.responsive a.next-step.active,
-.open > .dropdown-togglediv.responsive a.next-step,
-div.responsive button.next-step:active,
-div.responsive button.next-step.active,
-.open > .dropdown-togglediv.responsive button.next-step,
-div.responsive a.cancel-step:active,
-div.responsive a.cancel-step.active,
-.open > .dropdown-togglediv.responsive a.cancel-step,
-div.responsive button.cancel-step:active,
-div.responsive button.cancel-step.active,
-.open > .dropdown-togglediv.responsive button.cancel-step,
-div.responsive a.step-button:active,
-div.responsive a.step-button.active,
-.open > .dropdown-togglediv.responsive a.step-button,
-div.responsive button.step-button:active,
-div.responsive button.step-button.active,
-.open > .dropdown-togglediv.responsive button.step-button,
-div.responsive button.action-button:hover:active,
-div.responsive button.action-button:hover.active,
-.open > .dropdown-togglediv.responsive button.action-button:hover,
-div.responsive a.next-step:hover:active,
-div.responsive a.next-step:hover.active,
-.open > .dropdown-togglediv.responsive a.next-step:hover,
-div.responsive button.next-step:hover:active,
-div.responsive button.next-step:hover.active,
-.open > .dropdown-togglediv.responsive button.next-step:hover,
-div.responsive a.step-button:hover:active,
-div.responsive a.step-button:hover.active,
-.open > .dropdown-togglediv.responsive a.step-button:hover,
-div.responsive button.step-button:hover:active,
-div.responsive button.step-button:hover.active,
-.open > .dropdown-togglediv.responsive button.step-button:hover,
-div.responsive a.cancel-button:hover:active,
-div.responsive a.cancel-button:hover.active,
-.open > .dropdown-togglediv.responsive a.cancel-button:hover,
-div.responsive button.cancel-button:hover:active,
-div.responsive button.cancel-button:hover.active,
-.open > .dropdown-togglediv.responsive button.cancel-button:hover,
-#EditCons .Button:active,
-#EditCons .Button.active,
-.open > .dropdown-toggle#EditCons .Button,
-input[type="button"]:active,
-input[type="button"].active,
-.open > .dropdown-toggleinput[type="button"],
-input[type="reset"]:active,
-input[type="reset"].active,
-.open > .dropdown-toggleinput[type="reset"],
-input[type="submit"]:active,
-input[type="submit"].active,
-.open > .dropdown-toggleinput[type="submit"],
-#login-div-content input.uc-button:active,
-#login-div-content input.uc-button.active,
-.open > .dropdown-toggle#login-div-content input.uc-button,
-#login-div-content button:active,
-#login-div-content button.active,
-.open > .dropdown-toggle#login-div-content button,
-#login-div-content .ft button:active,
-#login-div-content .ft button.active,
-.open > .dropdown-toggle#login-div-content .ft button {
-  background-image: none;
-}
-.button-submit.disabled,
-.button-submit[disabled],
-fieldset[disabled] .button-submit,
-.button-submit.disabled:hover,
-.button-submit[disabled]:hover,
-fieldset[disabled] .button-submit:hover,
-.button-submit.disabled:focus,
-.button-submit[disabled]:focus,
-fieldset[disabled] .button-submit:focus,
-.button-submit.disabled.focus,
-.button-submit[disabled].focus,
-fieldset[disabled] .button-submit.focus,
-.button-submit.disabled:active,
-.button-submit[disabled]:active,
-fieldset[disabled] .button-submit:active,
-.button-submit.disabled.active,
-.button-submit[disabled].active,
-fieldset[disabled] .button-submit.active,
-div.responsive button.action-button.disabled,
-div.responsive button.action-button[disabled],
-fieldset[disabled] div.responsive button.action-button,
-div.responsive button.action-button.disabled:hover,
-div.responsive button.action-button[disabled]:hover,
-fieldset[disabled] div.responsive button.action-button:hover,
-div.responsive button.action-button.disabled:focus,
-div.responsive button.action-button[disabled]:focus,
-fieldset[disabled] div.responsive button.action-button:focus,
-div.responsive button.action-button.disabled.focus,
-div.responsive button.action-button[disabled].focus,
-fieldset[disabled] div.responsive button.action-button.focus,
-div.responsive button.action-button.disabled:active,
-div.responsive button.action-button[disabled]:active,
-fieldset[disabled] div.responsive button.action-button:active,
-div.responsive button.action-button.disabled.active,
-div.responsive button.action-button[disabled].active,
-fieldset[disabled] div.responsive button.action-button.active,
-div.responsive a.next-step.disabled,
-div.responsive a.next-step[disabled],
-fieldset[disabled] div.responsive a.next-step,
-div.responsive a.next-step.disabled:hover,
-div.responsive a.next-step[disabled]:hover,
-fieldset[disabled] div.responsive a.next-step:hover,
-div.responsive a.next-step.disabled:focus,
-div.responsive a.next-step[disabled]:focus,
-fieldset[disabled] div.responsive a.next-step:focus,
-div.responsive a.next-step.disabled.focus,
-div.responsive a.next-step[disabled].focus,
-fieldset[disabled] div.responsive a.next-step.focus,
-div.responsive a.next-step.disabled:active,
-div.responsive a.next-step[disabled]:active,
-fieldset[disabled] div.responsive a.next-step:active,
-div.responsive a.next-step.disabled.active,
-div.responsive a.next-step[disabled].active,
-fieldset[disabled] div.responsive a.next-step.active,
-div.responsive button.next-step.disabled,
-div.responsive button.next-step[disabled],
-fieldset[disabled] div.responsive button.next-step,
-div.responsive button.next-step.disabled:hover,
-div.responsive button.next-step[disabled]:hover,
-fieldset[disabled] div.responsive button.next-step:hover,
-div.responsive button.next-step.disabled:focus,
-div.responsive button.next-step[disabled]:focus,
-fieldset[disabled] div.responsive button.next-step:focus,
-div.responsive button.next-step.disabled.focus,
-div.responsive button.next-step[disabled].focus,
-fieldset[disabled] div.responsive button.next-step.focus,
-div.responsive button.next-step.disabled:active,
-div.responsive button.next-step[disabled]:active,
-fieldset[disabled] div.responsive button.next-step:active,
-div.responsive button.next-step.disabled.active,
-div.responsive button.next-step[disabled].active,
-fieldset[disabled] div.responsive button.next-step.active,
-div.responsive a.cancel-step.disabled,
-div.responsive a.cancel-step[disabled],
-fieldset[disabled] div.responsive a.cancel-step,
-div.responsive a.cancel-step.disabled:hover,
-div.responsive a.cancel-step[disabled]:hover,
-fieldset[disabled] div.responsive a.cancel-step:hover,
-div.responsive a.cancel-step.disabled:focus,
-div.responsive a.cancel-step[disabled]:focus,
-fieldset[disabled] div.responsive a.cancel-step:focus,
-div.responsive a.cancel-step.disabled.focus,
-div.responsive a.cancel-step[disabled].focus,
-fieldset[disabled] div.responsive a.cancel-step.focus,
-div.responsive a.cancel-step.disabled:active,
-div.responsive a.cancel-step[disabled]:active,
-fieldset[disabled] div.responsive a.cancel-step:active,
-div.responsive a.cancel-step.disabled.active,
-div.responsive a.cancel-step[disabled].active,
-fieldset[disabled] div.responsive a.cancel-step.active,
-div.responsive button.cancel-step.disabled,
-div.responsive button.cancel-step[disabled],
-fieldset[disabled] div.responsive button.cancel-step,
-div.responsive button.cancel-step.disabled:hover,
-div.responsive button.cancel-step[disabled]:hover,
-fieldset[disabled] div.responsive button.cancel-step:hover,
-div.responsive button.cancel-step.disabled:focus,
-div.responsive button.cancel-step[disabled]:focus,
-fieldset[disabled] div.responsive button.cancel-step:focus,
-div.responsive button.cancel-step.disabled.focus,
-div.responsive button.cancel-step[disabled].focus,
-fieldset[disabled] div.responsive button.cancel-step.focus,
-div.responsive button.cancel-step.disabled:active,
-div.responsive button.cancel-step[disabled]:active,
-fieldset[disabled] div.responsive button.cancel-step:active,
-div.responsive button.cancel-step.disabled.active,
-div.responsive button.cancel-step[disabled].active,
-fieldset[disabled] div.responsive button.cancel-step.active,
-div.responsive a.step-button.disabled,
-div.responsive a.step-button[disabled],
-fieldset[disabled] div.responsive a.step-button,
-div.responsive a.step-button.disabled:hover,
-div.responsive a.step-button[disabled]:hover,
-fieldset[disabled] div.responsive a.step-button:hover,
-div.responsive a.step-button.disabled:focus,
-div.responsive a.step-button[disabled]:focus,
-fieldset[disabled] div.responsive a.step-button:focus,
-div.responsive a.step-button.disabled.focus,
-div.responsive a.step-button[disabled].focus,
-fieldset[disabled] div.responsive a.step-button.focus,
-div.responsive a.step-button.disabled:active,
-div.responsive a.step-button[disabled]:active,
-fieldset[disabled] div.responsive a.step-button:active,
-div.responsive a.step-button.disabled.active,
-div.responsive a.step-button[disabled].active,
-fieldset[disabled] div.responsive a.step-button.active,
-div.responsive button.step-button.disabled,
-div.responsive button.step-button[disabled],
-fieldset[disabled] div.responsive button.step-button,
-div.responsive button.step-button.disabled:hover,
-div.responsive button.step-button[disabled]:hover,
-fieldset[disabled] div.responsive button.step-button:hover,
-div.responsive button.step-button.disabled:focus,
-div.responsive button.step-button[disabled]:focus,
-fieldset[disabled] div.responsive button.step-button:focus,
-div.responsive button.step-button.disabled.focus,
-div.responsive button.step-button[disabled].focus,
-fieldset[disabled] div.responsive button.step-button.focus,
-div.responsive button.step-button.disabled:active,
-div.responsive button.step-button[disabled]:active,
-fieldset[disabled] div.responsive button.step-button:active,
-div.responsive button.step-button.disabled.active,
-div.responsive button.step-button[disabled].active,
-fieldset[disabled] div.responsive button.step-button.active,
-div.responsive button.action-button:hover.disabled,
-div.responsive button.action-button:hover[disabled],
-fieldset[disabled] div.responsive button.action-button:hover,
-div.responsive button.action-button:hover.disabled:hover,
-div.responsive button.action-button:hover[disabled]:hover,
-fieldset[disabled] div.responsive button.action-button:hover:hover,
-div.responsive button.action-button:hover.disabled:focus,
-div.responsive button.action-button:hover[disabled]:focus,
-fieldset[disabled] div.responsive button.action-button:hover:focus,
-div.responsive button.action-button:hover.disabled.focus,
-div.responsive button.action-button:hover[disabled].focus,
-fieldset[disabled] div.responsive button.action-button:hover.focus,
-div.responsive button.action-button:hover.disabled:active,
-div.responsive button.action-button:hover[disabled]:active,
-fieldset[disabled] div.responsive button.action-button:hover:active,
-div.responsive button.action-button:hover.disabled.active,
-div.responsive button.action-button:hover[disabled].active,
-fieldset[disabled] div.responsive button.action-button:hover.active,
-div.responsive a.next-step:hover.disabled,
-div.responsive a.next-step:hover[disabled],
-fieldset[disabled] div.responsive a.next-step:hover,
-div.responsive a.next-step:hover.disabled:hover,
-div.responsive a.next-step:hover[disabled]:hover,
-fieldset[disabled] div.responsive a.next-step:hover:hover,
-div.responsive a.next-step:hover.disabled:focus,
-div.responsive a.next-step:hover[disabled]:focus,
-fieldset[disabled] div.responsive a.next-step:hover:focus,
-div.responsive a.next-step:hover.disabled.focus,
-div.responsive a.next-step:hover[disabled].focus,
-fieldset[disabled] div.responsive a.next-step:hover.focus,
-div.responsive a.next-step:hover.disabled:active,
-div.responsive a.next-step:hover[disabled]:active,
-fieldset[disabled] div.responsive a.next-step:hover:active,
-div.responsive a.next-step:hover.disabled.active,
-div.responsive a.next-step:hover[disabled].active,
-fieldset[disabled] div.responsive a.next-step:hover.active,
-div.responsive button.next-step:hover.disabled,
-div.responsive button.next-step:hover[disabled],
-fieldset[disabled] div.responsive button.next-step:hover,
-div.responsive button.next-step:hover.disabled:hover,
-div.responsive button.next-step:hover[disabled]:hover,
-fieldset[disabled] div.responsive button.next-step:hover:hover,
-div.responsive button.next-step:hover.disabled:focus,
-div.responsive button.next-step:hover[disabled]:focus,
-fieldset[disabled] div.responsive button.next-step:hover:focus,
-div.responsive button.next-step:hover.disabled.focus,
-div.responsive button.next-step:hover[disabled].focus,
-fieldset[disabled] div.responsive button.next-step:hover.focus,
-div.responsive button.next-step:hover.disabled:active,
-div.responsive button.next-step:hover[disabled]:active,
-fieldset[disabled] div.responsive button.next-step:hover:active,
-div.responsive button.next-step:hover.disabled.active,
-div.responsive button.next-step:hover[disabled].active,
-fieldset[disabled] div.responsive button.next-step:hover.active,
-div.responsive a.step-button:hover.disabled,
-div.responsive a.step-button:hover[disabled],
-fieldset[disabled] div.responsive a.step-button:hover,
-div.responsive a.step-button:hover.disabled:hover,
-div.responsive a.step-button:hover[disabled]:hover,
-fieldset[disabled] div.responsive a.step-button:hover:hover,
-div.responsive a.step-button:hover.disabled:focus,
-div.responsive a.step-button:hover[disabled]:focus,
-fieldset[disabled] div.responsive a.step-button:hover:focus,
-div.responsive a.step-button:hover.disabled.focus,
-div.responsive a.step-button:hover[disabled].focus,
-fieldset[disabled] div.responsive a.step-button:hover.focus,
-div.responsive a.step-button:hover.disabled:active,
-div.responsive a.step-button:hover[disabled]:active,
-fieldset[disabled] div.responsive a.step-button:hover:active,
-div.responsive a.step-button:hover.disabled.active,
-div.responsive a.step-button:hover[disabled].active,
-fieldset[disabled] div.responsive a.step-button:hover.active,
-div.responsive button.step-button:hover.disabled,
-div.responsive button.step-button:hover[disabled],
-fieldset[disabled] div.responsive button.step-button:hover,
-div.responsive button.step-button:hover.disabled:hover,
-div.responsive button.step-button:hover[disabled]:hover,
-fieldset[disabled] div.responsive button.step-button:hover:hover,
-div.responsive button.step-button:hover.disabled:focus,
-div.responsive button.step-button:hover[disabled]:focus,
-fieldset[disabled] div.responsive button.step-button:hover:focus,
-div.responsive button.step-button:hover.disabled.focus,
-div.responsive button.step-button:hover[disabled].focus,
-fieldset[disabled] div.responsive button.step-button:hover.focus,
-div.responsive button.step-button:hover.disabled:active,
-div.responsive button.step-button:hover[disabled]:active,
-fieldset[disabled] div.responsive button.step-button:hover:active,
-div.responsive button.step-button:hover.disabled.active,
-div.responsive button.step-button:hover[disabled].active,
-fieldset[disabled] div.responsive button.step-button:hover.active,
-div.responsive a.cancel-button:hover.disabled,
-div.responsive a.cancel-button:hover[disabled],
-fieldset[disabled] div.responsive a.cancel-button:hover,
-div.responsive a.cancel-button:hover.disabled:hover,
-div.responsive a.cancel-button:hover[disabled]:hover,
-fieldset[disabled] div.responsive a.cancel-button:hover:hover,
-div.responsive a.cancel-button:hover.disabled:focus,
-div.responsive a.cancel-button:hover[disabled]:focus,
-fieldset[disabled] div.responsive a.cancel-button:hover:focus,
-div.responsive a.cancel-button:hover.disabled.focus,
-div.responsive a.cancel-button:hover[disabled].focus,
-fieldset[disabled] div.responsive a.cancel-button:hover.focus,
-div.responsive a.cancel-button:hover.disabled:active,
-div.responsive a.cancel-button:hover[disabled]:active,
-fieldset[disabled] div.responsive a.cancel-button:hover:active,
-div.responsive a.cancel-button:hover.disabled.active,
-div.responsive a.cancel-button:hover[disabled].active,
-fieldset[disabled] div.responsive a.cancel-button:hover.active,
-div.responsive button.cancel-button:hover.disabled,
-div.responsive button.cancel-button:hover[disabled],
-fieldset[disabled] div.responsive button.cancel-button:hover,
-div.responsive button.cancel-button:hover.disabled:hover,
-div.responsive button.cancel-button:hover[disabled]:hover,
-fieldset[disabled] div.responsive button.cancel-button:hover:hover,
-div.responsive button.cancel-button:hover.disabled:focus,
-div.responsive button.cancel-button:hover[disabled]:focus,
-fieldset[disabled] div.responsive button.cancel-button:hover:focus,
-div.responsive button.cancel-button:hover.disabled.focus,
-div.responsive button.cancel-button:hover[disabled].focus,
-fieldset[disabled] div.responsive button.cancel-button:hover.focus,
-div.responsive button.cancel-button:hover.disabled:active,
-div.responsive button.cancel-button:hover[disabled]:active,
-fieldset[disabled] div.responsive button.cancel-button:hover:active,
-div.responsive button.cancel-button:hover.disabled.active,
-div.responsive button.cancel-button:hover[disabled].active,
-fieldset[disabled] div.responsive button.cancel-button:hover.active,
-#EditCons .Button.disabled,
-#EditCons .Button[disabled],
-fieldset[disabled] #EditCons .Button,
-#EditCons .Button.disabled:hover,
-#EditCons .Button[disabled]:hover,
-fieldset[disabled] #EditCons .Button:hover,
-#EditCons .Button.disabled:focus,
-#EditCons .Button[disabled]:focus,
-fieldset[disabled] #EditCons .Button:focus,
-#EditCons .Button.disabled.focus,
-#EditCons .Button[disabled].focus,
-fieldset[disabled] #EditCons .Button.focus,
-#EditCons .Button.disabled:active,
-#EditCons .Button[disabled]:active,
-fieldset[disabled] #EditCons .Button:active,
-#EditCons .Button.disabled.active,
-#EditCons .Button[disabled].active,
-fieldset[disabled] #EditCons .Button.active,
-input[type="button"].disabled,
-input[type="button"][disabled],
-fieldset[disabled] input[type="button"],
-input[type="button"].disabled:hover,
-input[type="button"][disabled]:hover,
-fieldset[disabled] input[type="button"]:hover,
-input[type="button"].disabled:focus,
-input[type="button"][disabled]:focus,
-fieldset[disabled] input[type="button"]:focus,
-input[type="button"].disabled.focus,
-input[type="button"][disabled].focus,
-fieldset[disabled] input[type="button"].focus,
-input[type="button"].disabled:active,
-input[type="button"][disabled]:active,
-fieldset[disabled] input[type="button"]:active,
-input[type="button"].disabled.active,
-input[type="button"][disabled].active,
-fieldset[disabled] input[type="button"].active,
-input[type="reset"].disabled,
-input[type="reset"][disabled],
-fieldset[disabled] input[type="reset"],
-input[type="reset"].disabled:hover,
-input[type="reset"][disabled]:hover,
-fieldset[disabled] input[type="reset"]:hover,
-input[type="reset"].disabled:focus,
-input[type="reset"][disabled]:focus,
-fieldset[disabled] input[type="reset"]:focus,
-input[type="reset"].disabled.focus,
-input[type="reset"][disabled].focus,
-fieldset[disabled] input[type="reset"].focus,
-input[type="reset"].disabled:active,
-input[type="reset"][disabled]:active,
-fieldset[disabled] input[type="reset"]:active,
-input[type="reset"].disabled.active,
-input[type="reset"][disabled].active,
-fieldset[disabled] input[type="reset"].active,
-input[type="submit"].disabled,
-input[type="submit"][disabled],
-fieldset[disabled] input[type="submit"],
-input[type="submit"].disabled:hover,
-input[type="submit"][disabled]:hover,
-fieldset[disabled] input[type="submit"]:hover,
-input[type="submit"].disabled:focus,
-input[type="submit"][disabled]:focus,
-fieldset[disabled] input[type="submit"]:focus,
-input[type="submit"].disabled.focus,
-input[type="submit"][disabled].focus,
-fieldset[disabled] input[type="submit"].focus,
-input[type="submit"].disabled:active,
-input[type="submit"][disabled]:active,
-fieldset[disabled] input[type="submit"]:active,
-input[type="submit"].disabled.active,
-input[type="submit"][disabled].active,
-fieldset[disabled] input[type="submit"].active,
-#login-div-content input.uc-button.disabled,
-#login-div-content input.uc-button[disabled],
-fieldset[disabled] #login-div-content input.uc-button,
-#login-div-content input.uc-button.disabled:hover,
-#login-div-content input.uc-button[disabled]:hover,
-fieldset[disabled] #login-div-content input.uc-button:hover,
-#login-div-content input.uc-button.disabled:focus,
-#login-div-content input.uc-button[disabled]:focus,
-fieldset[disabled] #login-div-content input.uc-button:focus,
-#login-div-content input.uc-button.disabled.focus,
-#login-div-content input.uc-button[disabled].focus,
-fieldset[disabled] #login-div-content input.uc-button.focus,
-#login-div-content input.uc-button.disabled:active,
-#login-div-content input.uc-button[disabled]:active,
-fieldset[disabled] #login-div-content input.uc-button:active,
-#login-div-content input.uc-button.disabled.active,
-#login-div-content input.uc-button[disabled].active,
-fieldset[disabled] #login-div-content input.uc-button.active,
-#login-div-content button.disabled,
-#login-div-content button[disabled],
-fieldset[disabled] #login-div-content button,
-#login-div-content button.disabled:hover,
-#login-div-content button[disabled]:hover,
-fieldset[disabled] #login-div-content button:hover,
-#login-div-content button.disabled:focus,
-#login-div-content button[disabled]:focus,
-fieldset[disabled] #login-div-content button:focus,
-#login-div-content button.disabled.focus,
-#login-div-content button[disabled].focus,
-fieldset[disabled] #login-div-content button.focus,
-#login-div-content button.disabled:active,
-#login-div-content button[disabled]:active,
-fieldset[disabled] #login-div-content button:active,
-#login-div-content button.disabled.active,
-#login-div-content button[disabled].active,
-fieldset[disabled] #login-div-content button.active,
-#login-div-content .ft button.disabled,
-#login-div-content .ft button[disabled],
-fieldset[disabled] #login-div-content .ft button,
-#login-div-content .ft button.disabled:hover,
-#login-div-content .ft button[disabled]:hover,
-fieldset[disabled] #login-div-content .ft button:hover,
-#login-div-content .ft button.disabled:focus,
-#login-div-content .ft button[disabled]:focus,
-fieldset[disabled] #login-div-content .ft button:focus,
-#login-div-content .ft button.disabled.focus,
-#login-div-content .ft button[disabled].focus,
-fieldset[disabled] #login-div-content .ft button.focus,
-#login-div-content .ft button.disabled:active,
-#login-div-content .ft button[disabled]:active,
-fieldset[disabled] #login-div-content .ft button:active,
-#login-div-content .ft button.disabled.active,
-#login-div-content .ft button[disabled].active,
-fieldset[disabled] #login-div-content .ft button.active {
-  background-color: #ebebeb;
-  border-color: transparent;
-}
-.button-submit .badge,
-div.responsive button.action-button .badge,
-div.responsive a.next-step .badge,
-div.responsive button.next-step .badge,
-div.responsive a.cancel-step .badge,
-div.responsive button.cancel-step .badge,
-div.responsive a.step-button .badge,
-div.responsive button.step-button .badge,
-div.responsive button.action-button:hover .badge,
-div.responsive a.next-step:hover .badge,
-div.responsive button.next-step:hover .badge,
-div.responsive a.step-button:hover .badge,
-div.responsive button.step-button:hover .badge,
-div.responsive a.cancel-button:hover .badge,
-div.responsive button.cancel-button:hover .badge,
-#EditCons .Button .badge,
-input[type="button"] .badge,
-input[type="reset"] .badge,
-input[type="submit"] .badge,
-#login-div-content input.uc-button .badge,
-#login-div-content button .badge,
-#login-div-content .ft button .badge {
-  color: #ebebeb;
-  background-color: #e22427;
-}
 .btn-group,
 .btn-group-vertical {
   position: relative;
@@ -5205,145 +4190,6 @@ tbody.collapse.in {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px solid;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
-.dropup,
-.dropdown {
-  position: relative;
-}
-.dropdown-toggle:focus {
-  outline: 0;
-}
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  list-style: none;
-  font-size: 14px;
-  text-align: left;
-  background-color: #c5664f;
-  border: 1px solid #c5664f;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  background-clip: padding-box;
-}
-.dropdown-menu.pull-right {
-  right: 0;
-  left: auto;
-}
-.dropdown-menu .divider {
-  height: 1px;
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #002855;
-}
-.dropdown-menu > li > a {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.42857143;
-  color: #ffffff;
-  white-space: nowrap;
-}
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  text-decoration: none;
-  color: #ffcd0a;
-  background-color: #a94e38;
-}
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-  color: #ffffff;
-  text-decoration: none;
-  outline: 0;
-  background-color: #337ab7;
-}
-.dropdown-menu > .disabled > a,
-.dropdown-menu > .disabled > a:hover,
-.dropdown-menu > .disabled > a:focus {
-  color: #a9a9a9;
-}
-.dropdown-menu > .disabled > a:hover,
-.dropdown-menu > .disabled > a:focus {
-  text-decoration: none;
-  background-color: transparent;
-  background-image: none;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  cursor: not-allowed;
-}
-.open > .dropdown-menu {
-  display: block;
-}
-.open > a {
-  outline: 0;
-}
-.dropdown-menu-right {
-  left: auto;
-  right: 0;
-}
-.dropdown-menu-left {
-  left: 0;
-  right: auto;
-}
-.dropdown-header {
-  display: block;
-  padding: 3px 20px;
-  font-size: 12px;
-  line-height: 1.42857143;
-  color: #a9a9a9;
-  white-space: nowrap;
-}
-.dropdown-backdrop {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 990;
-}
-.pull-right > .dropdown-menu {
-  right: 0;
-  left: auto;
-}
-.dropup .caret,
-.navbar-fixed-bottom .dropdown .caret {
-  border-top: 0;
-  border-bottom: 4px solid;
-  content: "";
-}
-.dropup .dropdown-menu,
-.navbar-fixed-bottom .dropdown .dropdown-menu {
-  top: auto;
-  bottom: 100%;
-  margin-bottom: 2px;
-}
-@media (min-width: 992px) {
-  .navbar-right .dropdown-menu {
-    left: auto;
-    right: 0;
-  }
-  .navbar-right .dropdown-menu-left {
-    left: 0;
-    right: auto;
-  }
-}
 .nav {
   margin-bottom: 0;
   padding-left: 0;
@@ -5389,7 +4235,7 @@ tbody.collapse.in {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #337ab7;
+  border-bottom: 1px solid #bbbdbf;
 }
 .nav-tabs > li {
   float: left;
@@ -5402,7 +4248,7 @@ tbody.collapse.in {
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #f9f9f9 #f9f9f9 #337ab7;
+  border-color: #f9f9f9 #f9f9f9 #bbbdbf;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
@@ -5470,7 +4316,7 @@ tbody.collapse.in {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #337ab7;
+  background-color: #186273;
 }
 .nav-stacked > li {
   float: none;
@@ -5537,811 +4383,6 @@ tbody.collapse.in {
   margin-top: -1px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-}
-.navbar {
-  position: relative;
-  min-height: 52px;
-  margin-bottom: 0;
-  border: 1px solid transparent;
-}
-@media (min-width: 992px) {
-  .navbar {
-    border-radius: 4px;
-  }
-}
-@media (min-width: 992px) {
-  .navbar-header {
-    float: left;
-  }
-}
-.navbar-collapse {
-  overflow-x: visible;
-  padding-right: 15px;
-  padding-left: 15px;
-  border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  -webkit-overflow-scrolling: touch;
-}
-.navbar-collapse.in {
-  overflow-y: auto;
-}
-@media (min-width: 992px) {
-  .navbar-collapse {
-    width: auto;
-    border-top: 0;
-    box-shadow: none;
-  }
-  .navbar-collapse.collapse {
-    display: block !important;
-    visibility: visible !important;
-    height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
-  }
-  .navbar-collapse.in {
-    overflow-y: visible;
-  }
-  .navbar-fixed-top .navbar-collapse,
-  .navbar-static-top .navbar-collapse,
-  .navbar-fixed-bottom .navbar-collapse {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-.navbar-fixed-top .navbar-collapse,
-.navbar-fixed-bottom .navbar-collapse {
-  max-height: 340px;
-}
-@media (max-device-width: 480px) and (orientation: landscape) {
-  .navbar-fixed-top .navbar-collapse,
-  .navbar-fixed-bottom .navbar-collapse {
-    max-height: 200px;
-  }
-}
-.container > .navbar-header,
-.container-fluid > .navbar-header,
-.container > .navbar-collapse,
-.container-fluid > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media (min-width: 992px) {
-  .container > .navbar-header,
-  .container-fluid > .navbar-header,
-  .container > .navbar-collapse,
-  .container-fluid > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-.navbar-static-top {
-  z-index: 1000;
-  border-width: 0 0 1px;
-}
-@media (min-width: 992px) {
-  .navbar-static-top {
-    border-radius: 0;
-  }
-}
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-@media (min-width: 992px) {
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    border-radius: 0;
-  }
-}
-.navbar-fixed-top {
-  top: 0;
-  border-width: 0 0 1px;
-}
-.navbar-fixed-bottom {
-  bottom: 0;
-  margin-bottom: 0;
-  border-width: 1px 0 0;
-}
-.navbar-brand {
-  float: left;
-  padding: 16px 15px;
-  font-size: 18px;
-  line-height: 20px;
-  height: 52px;
-}
-.navbar-brand:hover,
-.navbar-brand:focus {
-  text-decoration: none;
-}
-.navbar-brand > img {
-  display: block;
-}
-@media (min-width: 992px) {
-  .navbar > .container .navbar-brand,
-  .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
-  }
-}
-.navbar-toggle {
-  position: relative;
-  float: right;
-  margin-right: 15px;
-  padding: 9px 10px;
-  margin-top: 9px;
-  margin-bottom: 9px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-.navbar-toggle:focus {
-  outline: 0;
-}
-.navbar-toggle .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-}
-.navbar-toggle .icon-bar + .icon-bar {
-  margin-top: 4px;
-}
-@media (min-width: 992px) {
-  .navbar-toggle {
-    display: none;
-  }
-}
-.navbar-nav {
-  margin: 8px -15px;
-}
-.navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  line-height: 20px;
-}
-@media (max-width: 991px) {
-  .navbar-nav .open .dropdown-menu {
-    position: static;
-    float: none;
-    width: auto;
-    margin-top: 0;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none;
-  }
-  .navbar-nav .open .dropdown-menu > li > a,
-  .navbar-nav .open .dropdown-menu .dropdown-header {
-    padding: 5px 15px 5px 25px;
-  }
-  .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 20px;
-  }
-  .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-image: none;
-  }
-}
-@media (min-width: 992px) {
-  .navbar-nav {
-    float: left;
-    margin: 0;
-  }
-  .navbar-nav > li {
-    float: left;
-  }
-  .navbar-nav > li > a {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-}
-.navbar-form {
-  margin-left: -15px;
-  margin-right: -15px;
-  padding: 10px 15px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-@media (min-width: 768px) {
-  .navbar-form .form-group {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .form-control,
-  .navbar-form select,
-  .navbar-form form input[type="text"],
-  .navbar-form form input[type="number"],
-  .navbar-form form input[type="password"],
-  .navbar-form form textarea,
-  .navbar-form div.responsive input[type="text"],
-  .navbar-form div.responsive input[type="number"],
-  .navbar-form div.responsive input[type="password"],
-  .navbar-form div.responsive textarea {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-  }
-  .navbar-form .form-control-static {
-    display: inline-block;
-  }
-  .navbar-form .input-group {
-    display: inline-table;
-    vertical-align: middle;
-  }
-  .navbar-form .input-group .input-group-addon,
-  .navbar-form .input-group .input-group-btn,
-  .navbar-form .input-group .form-control,
-  .navbar-form .input-group select,
-  .navbar-form .input-group form input[type="text"],
-  .navbar-form .input-group form input[type="number"],
-  .navbar-form .input-group form input[type="password"],
-  .navbar-form .input-group form textarea,
-  .navbar-form .input-group div.responsive input[type="text"],
-  .navbar-form .input-group div.responsive input[type="number"],
-  .navbar-form .input-group div.responsive input[type="password"],
-  .navbar-form .input-group div.responsive textarea {
-    width: auto;
-  }
-  .navbar-form .input-group > .form-control,
-  .navbar-form .input-group > select,
-  .navbar-form .input-group > form input[type="text"],
-  .navbar-form .input-group > form input[type="number"],
-  .navbar-form .input-group > form input[type="password"],
-  .navbar-form .input-group > form textarea,
-  .navbar-form .input-group > div.responsive input[type="text"],
-  .navbar-form .input-group > div.responsive input[type="number"],
-  .navbar-form .input-group > div.responsive input[type="password"],
-  .navbar-form .input-group > div.responsive textarea {
-    width: 100%;
-  }
-  .navbar-form .control-label {
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .radio,
-  .navbar-form .checkbox {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .navbar-form .radio label,
-  .navbar-form .checkbox label,
-  .navbar-form .radio label.FormLabel,
-  .navbar-form .checkbox label.FormLabel {
-    padding-left: 0;
-  }
-  .navbar-form .radio input[type="radio"],
-  .navbar-form .checkbox input[type="checkbox"] {
-    position: relative;
-    margin-left: 0;
-  }
-  .navbar-form .has-feedback .form-control-feedback {
-    top: 0;
-  }
-}
-@media (max-width: 991px) {
-  .navbar-form .form-group {
-    margin-bottom: 5px;
-  }
-  .navbar-form .form-group:last-child {
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 992px) {
-  .navbar-form {
-    width: auto;
-    border: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-}
-.navbar-nav > li > .dropdown-menu {
-  margin-top: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
-.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
-  margin-bottom: 0;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.navbar-btn {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.navbar-btn.btn-sm {
-  margin-top: 11px;
-  margin-bottom: 11px;
-}
-.navbar-btn.btn-xs {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.navbar-text {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-@media (min-width: 992px) {
-  .navbar-text {
-    float: left;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-@media (min-width: 992px) {
-  .navbar-left {
-    float: left !important;
-  }
-  .navbar-right {
-    float: right !important;
-    margin-right: -15px;
-  }
-  .navbar-right ~ .navbar-right {
-    margin-right: 0;
-  }
-}
-.navbar-default {
-  background-color: transparent;
-  border-color: rgba(0, 0, 0, 0);
-}
-.navbar-default .navbar-brand {
-  color: #000000;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #000000;
-  background-color: transparent;
-}
-.navbar-default .navbar-text {
-  color: #777777;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #000000;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #8c8c8e;
-  background-color: transparent;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #e22427;
-  background-color: rgba(0, 0, 0, 0);
-}
-.navbar-default .navbar-nav > .disabled > a,
-.navbar-default .navbar-nav > .disabled > a:hover,
-.navbar-default .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
-  background-color: transparent;
-}
-.navbar-default .navbar-toggle {
-  border-color: #dddddd;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #dddddd;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #cccccc;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: rgba(0, 0, 0, 0);
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  background-color: rgba(0, 0, 0, 0);
-  color: #e22427;
-}
-@media (max-width: 991px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #000000;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #8c8c8e;
-    background-color: transparent;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #e22427;
-    background-color: rgba(0, 0, 0, 0);
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #cccccc;
-    background-color: transparent;
-  }
-}
-.navbar-default .navbar-link {
-  color: #000000;
-}
-.navbar-default .navbar-link:hover {
-  color: #8c8c8e;
-}
-.navbar-default .btn-link {
-  color: #000000;
-}
-.navbar-default .btn-link:hover,
-.navbar-default .btn-link:focus {
-  color: #8c8c8e;
-}
-.navbar-default .btn-link[disabled]:hover,
-fieldset[disabled] .navbar-default .btn-link:hover,
-.navbar-default .btn-link[disabled]:focus,
-fieldset[disabled] .navbar-default .btn-link:focus {
-  color: #cccccc;
-}
-.navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
-}
-.navbar-inverse .navbar-brand {
-  color: #f6f6f6;
-}
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
-  background-color: transparent;
-}
-.navbar-inverse .navbar-text {
-  color: #f6f6f6;
-}
-.navbar-inverse .navbar-nav > li > a {
-  color: #f6f6f6;
-}
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: transparent;
-}
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #080808;
-}
-.navbar-inverse .navbar-nav > .disabled > a,
-.navbar-inverse .navbar-nav > .disabled > a:hover,
-.navbar-inverse .navbar-nav > .disabled > a:focus {
-  color: #444444;
-  background-color: transparent;
-}
-.navbar-inverse .navbar-toggle {
-  border-color: #333333;
-}
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-  background-color: #333333;
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ffffff;
-}
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border-color: #101010;
-}
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #080808;
-  color: #ffffff;
-}
-@media (max-width: 991px) {
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #080808;
-  }
-  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-    background-color: #080808;
-  }
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #f6f6f6;
-  }
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffffff;
-    background-color: transparent;
-  }
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffffff;
-    background-color: #080808;
-  }
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #444444;
-    background-color: transparent;
-  }
-}
-.navbar-inverse .navbar-link {
-  color: #f6f6f6;
-}
-.navbar-inverse .navbar-link:hover {
-  color: #ffffff;
-}
-.navbar-inverse .btn-link {
-  color: #f6f6f6;
-}
-.navbar-inverse .btn-link:hover,
-.navbar-inverse .btn-link:focus {
-  color: #ffffff;
-}
-.navbar-inverse .btn-link[disabled]:hover,
-fieldset[disabled] .navbar-inverse .btn-link:hover,
-.navbar-inverse .btn-link[disabled]:focus,
-fieldset[disabled] .navbar-inverse .btn-link:focus {
-  color: #444444;
-}
-.navbar-toggle {
-  margin: 6px 0;
-  padding: 4px 7px;
-  color: #c5664f;
-}
-.navbar-collapse {
-  text-align: left;
-}
-nav img.logo {
-  padding: 15px;
-}
-nav .navbar-header {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-nav .navbar-nav {
-  vertical-align: top;
-}
-nav .navbar-nav > li > a {
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-family: 'Oswald';
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-nav .navbar-nav .open .dropdown-menu {
-  background-color: #c5664f;
-}
-nav .navbar-nav.print-share {
-  text-align: center;
-}
-nav .navbar-nav.print-share li {
-  display: inline-block;
-}
-.dropdown .dropdown-menu {
-  border: none;
-  border-radius: 0px;
-}
-.dropdown .dropdown-menu li > a {
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.dropdown .dropdown-menu li > a:after {
-  content: "\f105";
-  font-family: 'FontAwesome';
-  padding-left: 8px;
-  padding-right: 2px;
-  font-size: 1.3em;
-  font-weight: 700;
-  color: #d89889;
-}
-.dropdown .dropdown-menu li > a:hover:after {
-  padding-left: 10px;
-  padding-right: 0;
-}
-.navbar-default .navbar-nav.secondary > li {
-  margin: 0 5px;
-}
-.navbar-default .navbar-nav.secondary > li > a {
-  font-size: 16px;
-  font-family: 'Signika';
-  color: #186273;
-  padding: 7px;
-}
-.navbar-default .navbar-nav.secondary > li.active > a {
-  color: #e22427;
-}
-.navbar-default .navbar-nav.secondary > li.dropdown .dropdown-menu {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  position: absolute;
-  background-color: #d2dbe2;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  overflow: hidden;
-}
-.navbar-default .navbar-nav.secondary > li.dropdown .dropdown-menu > li > a {
-  padding: 3px 7px;
-  color: #186273;
-}
-.navbar-default .navbar-nav.secondary > li.dropdown .dropdown-menu > li > a:hover {
-  background: #ebeff2;
-}
-.navbar-default .navbar-nav.secondary > li.dropdown .dropdown-menu > li > a:after {
-  display: none !important;
-}
-.navbar-default .navbar-nav.secondary > li.dropdown .dropdown-menu.programs > li > a {
-  padding: 7px 5px;
-}
-.navbar-default .navbar-nav.secondary > li.dropdown .dropdown-menu.programs > li > a span {
-  display: none !important;
-}
-@media (min-width: 992px) {
-  .navbar-default {
-    border-width: 0px;
-  }
-  .navbar-default .navbar-nav {
-    display: inline-block;
-    float: none;
-  }
-  .navbar-default .navbar-nav:not(.secondary) > li:not(:last-child) > a:after {
-    content: "";
-    width: 1px;
-    height: 70%;
-    background-color: #a9a9a9;
-    position: relative;
-    top: 50%;
-    /*  top: 0%\9;*/
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    position: absolute;
-    right: 0;
-    line-height: 40px;
-  }
-  .navbar-default .navbar-nav > li:not(:first-child) {
-    margin-left: -1px;
-  }
-  .navbar-default .navbar-nav.print-share {
-    margin-right: 10px;
-    margin-left: -90%;
-  }
-  .navbar-default .navbar-nav.print-share a {
-    color: #a9a9a9;
-  }
-  .navbar-default .navbar-nav .dropdown .dropdown-menu {
-    -webkit-box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.7);
-    position: absolute;
-    min-width: 100%;
-    border: none;
-    border-radius: 0px;
-  }
-  .navbar-default .navbar-nav .dropdown.multi-column {
-    position: static;
-  }
-  .navbar-default .navbar-nav .dropdown.multi-column .dropdown-menu {
-    min-width: 685px;
-    padding: 15px 0;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    color: #ffffff;
-  }
-  .navbar-default .navbar-nav .dropdown.multi-column .dropdown-menu .dropdown-header {
-    padding: 3px 20px 3px 5px;
-    font-size: 14px;
-    color: #000000;
-    border-bottom: 1px solid #000000;
-    line-height: 2.14285715;
-    margin-bottom: 5px;
-  }
-  .navbar-default .navbar-nav .dropdown.multi-column .dropdown-menu ul {
-    border-left: 1px solid #ffffff;
-  }
-  .navbar-default .navbar-nav .dropdown.multi-column .dropdown-menu ul > li {
-    list-style: none;
-    white-space: nowrap;
-  }
-  .navbar-default .navbar-nav .dropdown.multi-column .dropdown-menu ul > li a {
-    display: block;
-    padding: 3px 20px 3px 5px;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.42857143;
-    color: #ffffff;
-    white-space: nowrap;
-  }
-  .navbar-default .navbar-nav .dropdown.multi-column .dropdown-menu ul > li a:hover,
-  .navbar-default .navbar-nav .dropdown.multi-column .dropdown-menu ul > li a:focus {
-    text-decoration: none;
-    color: #ffcd0a;
-    background-color: #a94e38;
-  }
-  .navbar-default .navbar-nav .dropdown.multi-column .dropdown-menu ul > li.text a {
-    display: inline-block;
-    padding: 0px;
-    text-decoration: underline;
-  }
-  .navbar-default .navbar-nav .dropdown:hover {
-    z-index: 1;
-  }
-  .navbar-default .navbar-nav .dropdown:hover > a:link,
-  .navbar-default .navbar-nav .dropdown:hover > a:hover,
-  .navbar-default .navbar-nav .dropdown:hover > a:visited {
-    color: #ffffff;
-    background-color: #c5664f;
-    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-    text-shadow: 1px 1px 2px #8c8c8e;
-  }
-  .navbar-default .navbar-nav .dropdown:hover > a:after {
-    background-color: #c5664f !important;
-  }
-  .navbar-default .navbar-nav .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  .navbar-default .navbar-nav .dropdown:hover:before {
-    display: none;
-    position: relative;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    z-index: 2;
-    position: absolute;
-    bottom: -1px;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #333333;
-    border-left: 7px solid transparent;
-    border-bottom-color: #333333;
-    content: '';
-  }
-  .navbar-default .navbar-nav.secondary .dropdown:hover > a {
-    background-color: #d2dbe2;
-    color: #186273;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  .navbar-default .navbar-nav.secondary .dropdown:hover:before {
-    border-bottom-color: #186273;
-  }
-  .navbar-collapse {
-    text-align: center;
-  }
 }
 .alert {
   padding: 15px;
@@ -6472,7 +4513,7 @@ nav .navbar-nav.print-share li {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #fcfbfb;
+  background-color: transparent;
   border: 1px solid #e1e2e1;
 }
 .list-group-item:first-child {
@@ -6518,8 +4559,8 @@ a.list-group-item:focus {
 .list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #186273;
+  border-color: #186273;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -6535,7 +4576,7 @@ a.list-group-item:focus {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #c7ddef;
+  color: #75cee2;
 }
 .list-group-item-success {
   color: #3c763d;
@@ -6632,6 +4673,52 @@ a.list-group-item-danger.active:focus {
 .list-group-item-text {
   margin-bottom: 0;
   line-height: 1.3;
+}
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}
+.badge:empty {
+  display: none;
+}
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+.btn-xs .badge,
+.btn-group-xs > .btn .badge {
+  top: 0;
+  padding: 1px 5px;
+}
+a.badge:hover,
+a.badge:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+  color: #c5664f;
+  background-color: #ffffff;
+}
+.list-group-item > .badge {
+  float: right;
+}
+.list-group-item > .badge + .badge {
+  margin-right: 5px;
+}
+.nav-pills > li > a > .badge {
+  margin-left: 3px;
 }
 .panel {
   margin-bottom: 20px;
@@ -7501,11 +5588,6 @@ button.close {
     left: 50%;
     margin-left: -375px;
   }
-  #home-carousel .item .caption-container > .navbar-header,
-  #home-carousel .item .caption-container > .navbar-collapse {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
 }
 @media (min-width: 768px) and (min-width: 768px) {
   #home-carousel .item .caption-container {
@@ -7520,13 +5602,6 @@ button.close {
 @media (min-width: 768px) and (min-width: 1200px) {
   #home-carousel .item .caption-container {
     width: 1170px;
-  }
-}
-@media (min-width: 768px) and (min-width: 992px) {
-  #home-carousel .item .caption-container > .navbar-header,
-  #home-carousel .item .caption-container > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
   }
 }
 @media (min-width: 992px) {
@@ -7553,23 +5628,27 @@ button.close {
   position: absolute;
 }
 #home-carousel .carousel-indicators li {
-  background-color: transparent;
-  -webkit-border-radius: 0;
-  border-radius: 0;
+  background-color: #bbbdbf;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 2px solid #d5d7d8;
   display: inline-block;
-  width: 21%;
+  width: 15px;
   max-width: 150px;
-  height: auto;
+  height: 15px;
   margin: 0 1%;
 }
 #home-carousel .carousel-indicators li img {
   width: 100%;
-  display: block;
+  display: none;
   opacity: 0.9;
 }
 #home-carousel .carousel-indicators li.active {
-  border-color: #ffcd0a;
-  border-width: 4px;
+  background-color: #ffcd0a;
 }
 #home-carousel .carousel-indicators li.active img {
   opacity: 1;
@@ -7579,13 +5658,6 @@ button.close {
   bottom: auto;
   top: 0;
   left: 15px;
-  background-color: rgba(44, 44, 44, 0.9);
-  background-color: #2c2c2c;
-  background-color: rgba(43, 43, 43, 0.9);
-  zoom: 1;
-  background-color: transparent\9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#e62b2b2b, endColorstr=#e62b2b2b)";
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e62b2b2b, endColorstr=#e62b2b2b);
   padding: 2% 2%;
   text-align: left;
   font-size: 18px;
@@ -7606,7 +5678,6 @@ button.close {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  color: #333333;
   display: table;
 }
 #home-carousel .carousel-caption .btn:hover {
@@ -7642,7 +5713,7 @@ button.close {
     font-size: 18px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #home-carousel .carousel-indicators {
     top: 0;
     bottom: auto;
@@ -7652,7 +5723,7 @@ button.close {
     position: static;
     width: 100%;
     padding: 15px;
-    background-color: #000000;
+    background-color: #868a8e;
     font-size: 14px;
   }
   #home-carousel .carousel-caption h4 {
@@ -7777,12 +5848,6 @@ button.close {
 .btn-group-vertical > .btn-group:after,
 .nav:before,
 .nav:after,
-.navbar:before,
-.navbar:after,
-.navbar-header:before,
-.navbar-header:after,
-.navbar-collapse:before,
-.navbar-collapse:after,
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
@@ -7799,9 +5864,6 @@ button.close {
 .btn-toolbar:after,
 .btn-group-vertical > .btn-group:after,
 .nav:after,
-.navbar:after,
-.navbar-header:after,
-.navbar-collapse:after,
 .panel-body:after,
 .modal-footer:after {
   clear: both;
@@ -7880,6 +5942,26 @@ button.close {
 @media (min-width: 768px) {
   .btn-full-xs {
     width: auto;
+  }
+}
+@media (max-width: 767px) {
+  .border-right-xs {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .border-right-sm {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .border-right-md {
+    border-right: 1px solid #a9a9a9;
+  }
+}
+@media (min-width: 1200px) {
+  .border-right-lg {
+    border-right: 1px solid #a9a9a9;
   }
 }
 .hide {

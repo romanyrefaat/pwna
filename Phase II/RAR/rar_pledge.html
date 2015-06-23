@@ -1,0 +1,105 @@
+[[?[[S8]]::page=thanks::
+<h1>Thank You</h1>
+<p class="text-large">Thank you for signing the pledge.</p>
+<p>Please <a href="Ecard?ecard_id=2221">forward this page to your friends and family</a>.</p>
+::
+<script type="text/javascript" language="Javascript">
+    function checkFormFields() {
+        var consFirstName = document.getElementById('cons_first_name').value;
+        var consLastName = document.getElementById('cons_last_name').value;
+        var consEmail = document.getElementById('cons_email_pledge').value;
+        if (consFirstName == '' || consLastName == '') {
+            if (consEmail.indexOf("@") == -1 || consEmail.indexOf(".") == -1) {
+                alert('Please enter your name and email address to continue.');
+                return false;
+            }
+            else {
+                alert('Please enter your first and last name to continue.');
+                return false;
+            }
+        }
+        else if (consEmail.indexOf("@") == -1 || consEmail.indexOf(".") == -1) {
+            alert('Please enter your email address to continue.');
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function setFullName() {
+        document.getElementById('1749_3600_3_4422').value = document.getElementById('1749_3600_3_4422').getAttribute('data-date') + document.getElementById('cons_first_name').value + ' ' + document.getElementById('cons_last_name').value;
+    }
+</script>
+<h1>Don't just speak up ... Rescue Animal Reservation!</h1>
+[[?[[S8]]::page=error::
+<p class="ErrorMessage">Error: Please review your entries below. Some questions may require answers or require answers in a specific format.</p>
+::]]
+<div class="col-sm-3 col-xs-12 outcome fact theme2 pull-right">
+    <span>Total Pledges:</span>
+    <strong>[[E130:[[T8:[[S28:REPORTING:3600:4420]]]] dup dup "</th>" lastindexof 5 + swap length substring dup dup "<p>" lastindexof 3 + swap length substring dup 0 swap "</p>" lastindexof substring 4386 +]]</strong>
+</div>
+<p class="text-medium">Please <a href="#pledgeform">sign this pledge</a> to treat all reservation animals humanely.</p>
+<br />
+<div id="roar-pledge">
+    <p>There are an estimated 1,500 stray dogs roaming the Navajo Nation, but the real number may be as much as four times higher. And there are many hundreds of stray cats as well.</p>
+    <p>American Indian reservations often face this issue without the resources to manage it.  When we see innocent animals suffering unnecessarily, we don't want to just speak out ... we want to Rescue Animal Reservation.</p>
+    <p>Some people mistakenly think that casinos have ended poverty on the reservations. But that's far from the truth. Most American Indians living on reservations have never even seen a casino, let alone received money from one.</p>
+    <p>Because this problem is so severe, we pledge to:</p>
+    <p>* provide necessities such as pet food, blankets, toys and treats<br />
+        * support mobile spay and neuter clinics<br />
+        * care for stray and orphaned animals, with the goal of adoption into loving homes<br />
+        * tell family and friends about this issue<br /></p>
+    <p>Please add your voice and your support for dogs and cats on American Indian reservations today.</p>
+    <a name="pledgeform" class="anchor"></a>
+    <form method="POST" action="Survey" onsubmit="setFullName();">
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="hidden" name="cons_info_component" id="cons_info_component" value="t" />
+                <p><label for="cons_first_name">First Name:</label><br />
+                    <input type="text" name="cons_first_name" id="cons_first_name" value="[[S1:first_name]]" size="32" maxlength="50"/></p>
+                <p><label for="cons_last_name">Last Name:</label><br />
+                    <input type="text" name="cons_last_name" id="cons_last_name" value="[[S1:last_name]]" size="32" maxlength="50"/></p>
+                <p><label for="cons_email_pledge">Email:</label><br />
+                    <input type="text" name="cons_email" id="cons_email_pledge" value="[[S1:primary_email]]" size="32" maxlength="255" /></p>
+                <input type="hidden" name="cons_mail_opt_in" id="cons_mail_opt_in" value="t" />
+                <input class="hidden" type="checkbox" name="cons_email_opt_in" id="cons_email_opt_in" checked="checked" />
+                <input type="hidden" id="cons_email_opt_in_requested" name="cons_email_opt_in_requested" value="true" />
+                <input class="hidden" type="checkbox" name="s_rememberMe" id="s_rememberMe" checked="checked" />
+                <textarea class="hidden" name="1749_3600_3_4422" id="1749_3600_3_4422" data-date="[[S9:CalDateTime]]"></textarea>
+            </div>
+            <div class="col-sm-6">
+                <p><label for="1749_3600_2_4421">Add your comments (optional):</label><br />
+                    <textarea cols="40" name="1749_3600_2_4421" id="1749_3600_2_4421" onKeyUp="limitArea(this, 255, 'Error: This text area is limited to 255 characters.  Please modify your text accordingly.')"></textarea></p>
+            </div>
+        </div>
+        <span style="display:none"><label for="denySubmit">Spam Control Text:</label>&nbsp;<input type="text" name="denySubmit" id="denySubmit" value="" alt="This field is used to prevent form submission by scripts." />&nbsp;Please leave this field empty</span>
+        <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" id="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign" class="Button" onclick="return checkFormFields()" />
+        <input type="hidden" name="SURVEY_ID" id="SURVEY_ID" value="3600" />
+        <input id="ERRORURL" type="hidden" value="PageServer?pagename=rar_pledge&page=error" name="ERRORURL" />
+    </form>
+    <p>&nbsp;</p>
+</div>
+<div class="full-row">
+    <div class="row">
+        <div class="col-sm-6">
+            [[E130:[[T8:[[S51:reus_pwna_components]]]] dup dup "<!--PANEL-->" indexof swap "<!--/PANEL-->" indexof substring 
+            "css_view_all" "hidden" replaceall 
+            "@title-link" "#" replaceall 
+            "@title" "Recent Signatures" replaceall 
+            "@content" [[T8:
+            [[E130:[[T8:[[S28:REPORTING:3600:4422]]]] [[T8:<p align=left class="ListHeadings">Latest User Responses:</p>]] "" replaceall "<br />&nbsp;" "" replaceall "User Provided No Response" "" replaceall "<p>&nbsp;</p>" "" replaceall "<br />" "" replaceall]]
+            ]] replaceall]]
+        </div>
+        <div class="col-sm-6">
+            [[E130:[[T8:[[S51:reus_pwna_components]]]] dup dup "<!--PANEL-->" indexof swap "<!--/PANEL-->" indexof substring 
+            "css_view_all" "hidden" replaceall 
+            "@title-link" "#" replaceall 
+            "@title" "Recent Comments" replaceall 
+            "@content" [[T8:
+            [[E130:[[T8:[[S28:REPORTING:3600:4421]]]] [[T8:<p align=left class="ListHeadings">Latest User Responses:</p>]] "" replaceall "<br />&nbsp;" "" replaceall "User Provided No Response" "" replaceall "<p>&nbsp;</p>" "" replaceall "<br />" "" replaceall]]
+            ]] replaceall]]
+        </div>
+    </div>
+</div>
+]]

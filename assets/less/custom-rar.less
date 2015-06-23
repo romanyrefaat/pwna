@@ -66,3 +66,42 @@
         }
     }
 }
+/* ****************************** SAGE Overrides ****************************** */
+input.default-submit-hack{
+    padding: 0 !important;
+}
+td.TableHeadings, .ProgressBox{
+    .bg-theme;
+}
+td.TableHeadings{
+    line-height: 35px;
+}
+p.PaddedListHeadingsR a{
+    color: @theme-primary-color;
+}
+.FormBox99, table.FormBox{
+    background-color: @white;
+    border: none;
+}
+.ProgressBox p, .ProgressBoxCurrent p{
+    margin-bottom: 0;
+}
+table.ProgressBox{
+    border-color: @theme-primary-color;
+}
+a.ProgressBox:link, a.ProgressBox:visited{
+    font-size: inherit;
+    color: @theme-primary-color;
+}
+.ProgressBoxCurrent{
+    background-color: @brand-yellow;
+}
+.ErrorMessage{
+    padding: 5px;
+    margin-top: 10px;
+    .bg-variant(@state-danger-bg);
+    color: @state-danger-text;
+    border:1px solid @state-danger-border;
+    .border-radius(5px);
+}
+/* ****************************** SAGE Overrides ****************************** */
