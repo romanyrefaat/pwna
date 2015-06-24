@@ -1,5 +1,6 @@
 @import "variables.less";
 @theme-primary-color: @brand-purple;
+@theme-light-color: lighten(@theme-primary-color, 62%);;
 @theme-header-border-color: @theme-primary-color;
 @theme-header-social-color: @theme-primary-color;
 @theme-footer-bg-color: @theme-primary-color;
@@ -20,17 +21,6 @@
 
 @import "wrapper.less";
 
-.hp-feature{
-    max-width: 100%;
-    img{
-        margin-bottom: 10px;
-    }
-    p{
-        font-size: 24px;
-        color: @gray-dark;
-        font-style: italic;
-    }
-}
 .buttons_list_lg{
     .center-block;
     max-width: 500px;;

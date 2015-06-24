@@ -3444,10 +3444,10 @@ footer .address a:focus,
   color: inherit !important;
 }
 .bg-theme {
-  background-color: #ffffff;
+  background-color: #f8ebe8;
 }
 a.bg-theme:hover {
-  background-color: #e6e6e6;
+  background-color: #ebcac2;
 }
 .text-alert {
   color: #c5664f;
@@ -3456,12 +3456,12 @@ a.text-alert:hover {
   color: #a94e38;
 }
 #home-carousel .carousel-caption {
-  background-color: #868a8e;
-  background-color: rgba(134, 138, 142, 0.8);
+  background-color: #833c2b;
+  background-color: rgba(131, 60, 43, 0.8);
   zoom: 1;
   background-color: transparent\9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc868a8e, endColorstr=#cc868a8e)";
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc868a8e, endColorstr=#cc868a8e);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc833c2b, endColorstr=#cc833c2b)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc833c2b, endColorstr=#cc833c2b);
 }
 #home-carousel .carousel-caption .btn {
   color: #c5664f;
@@ -5122,11 +5122,11 @@ a.news-item .addthis_toolbox .addthis_button_twitter:hover {
   margin-bottom: 25px;
 }
 .hp-announce {
-  background-color: #ffffff;
+  background-color: #f8ebe8;
   padding: 15px;
 }
 a.hp-announce:hover {
-  background-color: #e6e6e6;
+  background-color: #ebcac2;
 }
 .hp-feature {
   max-width: 425px;
@@ -5145,6 +5145,17 @@ a.hp-announce:hover {
 }
 .hp-feature a.btn {
   padding: 15px 22px !important;
+}
+.hp-feature.prog {
+  max-width: 100%;
+}
+.hp-feature.prog img {
+  margin-bottom: 10px;
+}
+.hp-feature.prog p {
+  font-size: 24px;
+  color: #8c8c8e;
+  font-style: italic;
 }
 @media (min-width: 1200px) {
   .hp-inform {

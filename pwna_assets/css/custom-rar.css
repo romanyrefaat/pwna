@@ -5146,6 +5146,17 @@ a.hp-announce:hover {
 .hp-feature a.btn {
   padding: 15px 22px !important;
 }
+.hp-feature.prog {
+  max-width: 100%;
+}
+.hp-feature.prog img {
+  margin-bottom: 10px;
+}
+.hp-feature.prog p {
+  font-size: 24px;
+  color: #8c8c8e;
+  font-style: italic;
+}
 @media (min-width: 1200px) {
   .hp-inform {
     padding: 0 5%;
@@ -5633,17 +5644,6 @@ blockquote footer:before {
 }
 .accordion-wrapper .accordion-content p {
   margin: 15px 0;
-}
-.hp-feature {
-  max-width: 100%;
-}
-.hp-feature img {
-  margin-bottom: 10px;
-}
-.hp-feature p {
-  font-size: 24px;
-  color: #8c8c8e;
-  font-style: italic;
 }
 .buttons_list_lg {
   display: block;
