@@ -901,7 +901,7 @@ footer{
     }
 }
 .panel-pwna-default {
-    .panel-variant(transparent; @theme-sidecol-primary-color; lighten(@theme-sidecol-primary-color, 60%); transparent);
+    .panel-variant(transparent; @theme-sidecol-primary-color; @theme-sidecol-light-color; transparent);
     .box-shadow(none);
     .panel-heading {
         .clearfix;
@@ -1393,7 +1393,7 @@ ul.side-nav{
                 float: none;
                 padding-left: 8px;
                 padding-right: 2px;
-                color: lighten(@brand-orange, 15%) !important;
+                color: lighten(@theme-sidecol-primary-color, 15%) !important;
             }
         }
         &:hover{

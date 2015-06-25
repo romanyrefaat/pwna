@@ -4624,7 +4624,7 @@ fieldset[disabled] .banner .caption a.active {
 .panel-pwna-default > .panel-heading,
 .panel-pwna-transparent > .panel-heading {
   color: #c5664f;
-  background-color: #ffffff;
+  background-color: #fdf9f8;
   border-color: transparent;
 }
 .panel-pwna-default > .panel-heading + .panel-collapse > .panel-body,
@@ -4633,7 +4633,7 @@ fieldset[disabled] .banner .caption a.active {
 }
 .panel-pwna-default > .panel-heading .badge,
 .panel-pwna-transparent > .panel-heading .badge {
-  color: #ffffff;
+  color: #fdf9f8;
   background-color: #c5664f;
 }
 .panel-pwna-default > .panel-footer + .panel-collapse > .panel-body,

@@ -4624,7 +4624,7 @@ fieldset[disabled] .banner .caption a.active {
 .panel-pwna-default > .panel-heading,
 .panel-pwna-transparent > .panel-heading {
   color: #186273;
-  background-color: #c9ecf4;
+  background-color: #e7f6fa;
   border-color: transparent;
 }
 .panel-pwna-default > .panel-heading + .panel-collapse > .panel-body,
@@ -4633,7 +4633,7 @@ fieldset[disabled] .banner .caption a.active {
 }
 .panel-pwna-default > .panel-heading .badge,
 .panel-pwna-transparent > .panel-heading .badge {
-  color: #c9ecf4;
+  color: #e7f6fa;
   background-color: #186273;
 }
 .panel-pwna-default > .panel-footer + .panel-collapse > .panel-body,
@@ -5334,7 +5334,7 @@ ul.side-nav a:visited:after {
   float: none;
   padding-left: 8px;
   padding-right: 2px;
-  color: #d89889 !important;
+  color: #2598b2 !important;
 }
 ul.side-nav a:hover {
   color: #ffcd0a;
