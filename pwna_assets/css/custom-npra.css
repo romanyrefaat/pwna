@@ -3367,6 +3367,7 @@ footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn span {
 .link-white,
 footer .links-group > li > a,
 footer .links-group a.main,
+footer .links-group span.main,
 footer .address a,
 .side-box a {
   color: #ffffff;
@@ -3377,6 +3378,8 @@ footer .links-group > li > a:link,
 footer .links-group > li > a:visited,
 footer .links-group a.main:link,
 footer .links-group a.main:visited,
+footer .links-group span.main:link,
+footer .links-group span.main:visited,
 footer .address a:link,
 footer .address a:visited,
 .side-box a:link,
@@ -3389,6 +3392,8 @@ footer .links-group > li > a:hover,
 footer .links-group > li > a:focus,
 footer .links-group a.main:hover,
 footer .links-group a.main:focus,
+footer .links-group span.main:hover,
+footer .links-group span.main:focus,
 footer .address a:hover,
 footer .address a:focus,
 .side-box a:hover,
@@ -4173,12 +4178,12 @@ footer .container {
   padding: 10px 0 0;
 }
 footer a {
-  color: #ffffff;
+  color: #f8ebe8;
 }
 footer a:link,
 footer a:focus,
 footer a:visited {
-  color: #ffffff;
+  color: #f8ebe8;
 }
 footer a:hover {
   color: #ffffff;
@@ -4243,7 +4248,8 @@ footer .links-group span.main {
   display: inline;
 }
 footer .links-group > li > a,
-footer .links-group a.main {
+footer .links-group a.main,
+footer .links-group span.main {
   line-height: 1.2em;
   font-weight: 700;
   margin-bottom: 10px;
@@ -4326,7 +4332,7 @@ footer .donate {
   text-align: center;
 }
 footer .separator {
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #f8ebe8;
 }
 footer img.logo {
   width: 100%;

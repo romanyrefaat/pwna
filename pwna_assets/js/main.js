@@ -3087,18 +3087,17 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
                 errMessages.push.apply(errMessages, customValidationErrors);
             }
             if (hasErrors) {
+                var errorsList = $('<ul></ul>');
                 if (errMessages.length > 0) {
-                    var errorsList;
                     if (errMessages.length > 1) {
-                        errorsList = $('<ul></ul>');
                         for (var i = 0; i < errMessages.length; i++) {
                             errorsList.append($('<li class="text-danger">' + errMessages[i] + '</li>'));
                         }
                     } else {
-                        errorsList = $('<div class="text-danger">' + errMessages[0] + '</div>');
+                        errorsList.append($('<li class="text-danger">' + errMessages[0] + '</li>'));
                     }
-                    alertError(errorsList);
                 }
+                alertError($('<div><p>There was an error with your submission. Please try again and make sure you have provided a valid value for highlighted fields:</p></div>').append(errorsList));
             } else {
                 settings.onBeforeLuminateExtendSubmit();
                 BootstrapDialog.show({
@@ -3211,8 +3210,58 @@ box-shadow:0px 0px 10px #888; -webkit-box-shadow:0px 0px 10px #888; -moz-box-sha
             window.luminateSubmitForm.bindSignupForm();
         }
     };
+    $.fn.bindContactForm = function() {
+        var elem = $(this);
+        elem.bindLuminateForm({
+            customFormValidation: function() {
+                var errors = [];
+                var firstNameValue = elem.find('input[name="cons_first_name"]').val(),
+                        lastNameValue = elem.find('input[name="cons_last_name"]').val(),
+                        phoneValue = elem.find('input[name="cons_phone"]').val(),
+                        emailValue = elem.find('input[name="cons_email"]').val();
+                if ($.trim(firstNameValue) === '') {
+                    errors.push('Please enter your first name.');
+                }
+                if ($.trim(lastNameValue) === '') {
+                    errors.push('Please enter your last name.');
+                }
+                if ($.trim(emailValue) === '' && $.trim(phoneValue) === '') {
+                    errors.push('Please enter your phone or e-mail.');
+                } else if ($.trim(emailValue) !== '' && (emailValue.indexOf('@') === -1 || emailValue.indexOf('.') === -1)) {
+                    errors.push('Please enter a valid email address.');
+                }
+                return errors;
+            }
+        });
+        return this;
+    }
+    window.submitContactCallback = {
+        error: function(data) {
+            modal2Error(window.luminateSubmitDialog, data.errorResponse.message);
+        },
+        success: function(data) {
+            if (data.submitSurveyResponse.success == 'false') {
+                var surveyErrors = luminateExtend.utils.ensureArray(data.submitSurveyResponse.errors),
+                        errorMessage = '';
+                $.each(surveyErrors, function() {
+                    errorMessage += '<div>' + this.errorMessage + '</div>';
+                });
+                modal2Error(window.luminateSubmitDialog, errorMessage);
+            }
+            else {
+                var thankYouPage = $('<div></div>').load(data.submitSurveyResponse.nextUrl + '&pgwrap=n', function() {
+                    window.luminateSubmitForm.get(0).reset();
+                    modal2Success(window.luminateSubmitDialog, thankYouPage.html());
+                });
+            }
+            window.luminateSubmitForm.bindContactForm();
+        }
+    };
     headerNavHandlers();
     pageUrlHashTab();
+    $('.js-contact-form').each(function() {
+        $(this).bindContactForm();
+    });
     $('.js-signup-form').each(function() {
         $(this).bindSignupForm();
     });

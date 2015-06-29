@@ -14,6 +14,41 @@ div.donation-form-container.responsive {
   border-radius: 0;
   padding: 0;
 }
+.mask {
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.8);
+  zoom: 1;
+  background-color: transparent\9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000);
+}
+.yui-panel-container .yui-overlay {
+  background-color: #fff;
+  padding: 15px;
+  border: 2px solid #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 5px gray;
+  box-shadow: 0 0 5px gray;
+}
+.yui-panel-container .container-close {
+  float: right;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+.yui-panel-container .container-close:after {
+  content: '\f00d';
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+}
 /* ****************************** UserGlobalStyle Style Overrides ****************************** */
 P,
 LI,

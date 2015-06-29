@@ -2,7 +2,193 @@
 <div class="row">
     <div class="col-md-7 col-sm-8">
         <h2>More Information Request</h2>
-        [[S28:EMBED:2640]]
+        <div class="hidden">
+            [[S28:EMBED:3620]]
+        </div>
+        <form class="luminateApi js-contact-form form-horizontal" method="POST" action="https://[[S29:SECURE_DOMAIN]][[S29:SECURE_PATH]]CRSurveyAPI" data-luminateApi='{"callback": "submitContactCallback", "requiresAuth": "true"}'>
+            <input type="hidden" name="method" value="submitSurvey"/>
+            <input type="hidden" name="survey_id" value="3620"/>
+            <input type="hidden" name="question_4460" value="[[S80:prefix]]"/>
+            <div class="text-medium text-bold">Please select which Planned Giving options you would like more information on <span class="text-muted small">(Choose all that apply)</span>:</div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-11 col-xs-12">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Bequests in my Will or Living Trust" name="question_4440"/>
+                            Bequests in my Will or Living Trust
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Life Insurance Plan Donation" name="question_4440"/>
+                            Life Insurance Plan Donation
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Retirement Plan Donation" name="question_4440"/>
+                            Retirement Plan Donation
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Donor-Designated Funds" name="question_4440"/>
+                            Donor-Designated Funds
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Donation of Stock" name="question_4440"/>
+                            Donation of Stock
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Charitable Gift Annuities" name="question_4440"/>
+                            Charitable Gift Annuities
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="text-medium text-bold">Please complete the following information so we may contact you with the answers to your questions.</div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 hidden-xs">
+                    <span class="control-label center-block">&nbsp;</span>
+                    Name:
+                </label>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="cons_title">Title</label>
+                            <select size="1" id="cons_title" name="cons_title" class="form-control">
+                                <option></option>
+                                <option value="Mr." selected="selected">Mr.</option>
+                                <option value="Ms.">Ms.</option>
+                                <option value="Mrs.">Mrs.</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Dr.">Dr.</option>
+                                <option value="Mr. &amp; Mrs.">Mr. &amp; Mrs.</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="cons_first_name">First <span class="visible-xs-inline">Name</span></label>
+                            <input type="text" maxlength="50" value="[[S1:first_name]]" id="cons_first_name" name="cons_first_name" class="required form-control"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="cons_last_name">Last <span class="visible-xs-inline">Name</span></label>
+                            <input type="text" maxlength="50" value="[[S1:last_name]]" id="cons_last_name" name="cons_last_name" class="required form-control"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="cons_email">Email:</label>
+                <div class="col-sm-9">
+                    <input type="text" maxlength="255" value="[[S1:primary_email]]" id="cons_email" name="cons_email" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="cons_phone">Phone Number: </label>
+                <div class="col-sm-9">
+                    <input type="text" maxlength="50" id="cons_phone" name="cons_phone" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="cons_street1">Street 1: </label>
+                <div class="col-sm-9">
+                    <input type="text" maxlength="128" id="cons_street1" name="cons_street1" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="cons_street2">Street 2: </label>
+                <div class="col-sm-9">
+                    <input type="text" maxlength="128" id="cons_street2" name="cons_street2" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3 hidden-xs">
+                    <span class="control-label center-block">&nbsp;</span>
+                    City/State/ZIP:
+                </label>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="cons_city">City</label>
+                            <input type="text" maxlength="64" id="cons_city" name="cons_city" class="form-control"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="cons_first_name">State</label>
+                            [[S103:state:id=cons_state, name=cons_state]]
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="cons_zip_code">Zip</label>
+                            <input type="text" maxlength="40" id="cons_zip_code" name="cons_zip_code" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-medium text-bold">Additional Comments:</div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-11 col-xs-12">
+                    <textarea id="question_4442" name="question_4442" rows="10" cols="50"></textarea>
+                </div>
+            </div>
+            <div class="text-medium text-bold">How do you prefer to be contacted?</div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-11 col-xs-12">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Phone" name="question_4443"/>
+                            Phone
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Email" name="question_4443"/>
+                            Email
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Mail" name="question_4443"/>
+                            Mail
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="text-medium text-bold">If you prefer to be contacted by phone, what is the best time of day to call?</div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-11 col-xs-12">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Before noon" name="question_4444"/>
+                            Before noon
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="After noon" name="question_4444"/>
+                            After noon
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="In the evening" name="question_4444"/>
+                            In the evening
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Anytime" name="question_4444"/>
+                            Anytime
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary-pwna center-block">Submit Request</button>
+            </div>
+        </form>
         <hr/>
         [[E130:[[T8:[[S51:reus_pwna_components]]]] dup dup "<!--PLANNED-GIVING-FOOTER-->" indexof swap "<!--/PLANNED-GIVING-FOOTER-->" indexof substring 
         "css_contact" "hidden" replaceall 

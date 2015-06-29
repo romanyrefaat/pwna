@@ -6,33 +6,71 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="links-group">
-                                <a class="main" href="PageServer?pagename=pwna_who_we_are">Our Services</a>
+                                [[?[[S80:prefix]]::pwna::::
+                                <a class="main" href="PageServer?pagename=[[S80:prefix]]_contact_us">Contact <span class="text-uppercase">[[S80:prefix]]</span></a>
+                                ]]
+                                <a class="main" href="PageServer?pagename=[[?[[S80:prefix]]::pwna::pwna_who_we_are::[[S80:prefix]]_services]]">Our Services</a>
                                 <ul>
-                                    [[E130:[[T8:[[S51:reus_pwna_sitemap]]]] dup dup "<!--SERVICES-->" indexof swap "<!--/SERVICES-->" indexof substring]]
+                                    [[E130:[[T8:[[E51:reus_[[S80:prefix]]_sitemap]]]] dup dup "<!--SERVICES-->" indexof swap "<!--/SERVICES-->" indexof substring]]
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="links-group">
+                                [[?[[S80:prefix]]::pwna::
                                 <a class="main" href="PageServer?pagename=pwna_impact_results">Our Impact & Results</a>
                                 <ul>
                                     [[E130:[[T8:[[S51:reus_pwna_sitemap]]]] dup dup "<!--IMPACT-->" indexof swap "<!--/IMPACT-->" indexof substring]]
                                 </ul>
+                                ::
+                                <a class="main" href="PageServer?pagename=[[S80:prefix]]_success">Success Stories</a>
+                                [[?[[S80:prefix]]::rar::
+                                <a class="main" href="PageServer?pagename=rar_personalpages" class="dropdown-toggle">Sage Page</a>
+                                <ul>
+                                    [[E130:[[T8:[[S51:reus_rar_sitemap]]]] dup dup "<!--SAGE-->" indexof swap "<!--/SAGE-->" indexof substring]]
+                                </ul>
+                                ::]]
+                                [[?[[S80:prefix]]::aief::
+                                <span class="main">Student Applications</span>
+                                <ul>
+                                    <li><a href="DocServer/2015_AIEF_Scholarship_for_Print.pdf?docID=5461">Undergrad Scholarship</a></li>
+                                    <li><a href="DocServer/2015_AIEF_Grad_Scholarship_Application.pdf?docID=5462">Graduate Scholarship</a></li>
+                                </ul>
+                                ::]]
+                                ]]
                             </div>
                         </div>
                         <div class="visible-xs clearfix"></div>
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="links-group">
+                                [[?[[S80:prefix]]::pwna::
                                 <a class="main" href="PageServer?pagename=pwna_contribute">Contribute</a>
                                 <ul>
                                     [[E130:[[T8:[[S51:reus_pwna_sitemap]]]] dup dup "<!--CONTRIBUTE-->" indexof swap "<!--/CONTRIBUTE-->" indexof substring]]
                                 </ul>
+                                ::
+                                <a class="main" href="PageServer?pagename=[[S80:prefix]]_howtohelp">Contribute</a>
+                                <ul>
+                                    [[E130:[[T8:[[E51:reus_[[S80:prefix]]_sitemap]]]] dup dup "<!--HELP-->" indexof swap "<!--/HELP-->" indexof substring]]
+                                </ul>
+                                ]]
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <ul class="links-group">
+                                [[?[[S80:prefix]]::pwna::
                                 [[E130:[[T8:[[S51:reus_pwna_sitemap]]]] dup dup "<!--PROGRAMS-->" indexof swap "<!--/PROGRAMS-->" indexof substring]]
-
+                                ::
+                                <a class="main" href="PageServer?pagename=pwna_home">PWNA</a>
+                                <ul>
+                                    <li><a href="PageServer?pagename=pwna_who_we_are">About Us</a></li>
+                                    <li><a href="PageServer?pagename=pwna_contact_us">Contact</a></li>
+                                    <li><a href="PageServer?pagename=pwna_impact_results">Impact</a></li>
+                                    <li><a href="PageServer?pagename=pwna_services">Services</a></li>
+                                    <li><a href="PageServer?pagename=pwna_resources">Resources</a></li>
+                                    <li><a href="PageServer?pagename=pwna_news">News & Blog</a></li>
+                                </ul>
+                                ]]
                             </ul>
                             <p>
                                 [[?xx::x[[S1:cons_id]]x::
@@ -118,7 +156,7 @@
                                     </a>
                                 </span>
                             </p>
-                            <p class="donate"><a href="PageServer?pagename=pwna_donate" class="btn btn-default-pwna donate js-donate-programs">Donate</a></p>
+                            <p class="donate"><a href="http://[[S29:DOMAIN]]/[[S80:prefix]]_donate" class="btn btn-default-pwna donate[[?[[S80:prefix]]::pwna:: js-donate-programs::]]">Donate</a></p>
                         </div>
                     </div>
                 </div>

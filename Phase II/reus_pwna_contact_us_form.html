@@ -1,0 +1,164 @@
+<p class="text-medium text-bold text-alert">
+    If you need help or just have a question, please contact us through this form.
+</p>
+<form class="luminateApi js-contact-form form-horizontal" method="POST" action="https://[[S29:SECURE_DOMAIN]][[S29:SECURE_PATH]]CRSurveyAPI" data-luminateApi='{"callback": "submitContactCallback", "requiresAuth": "true"}'>
+    <input type="hidden" name="method" value="submitSurvey"/>
+    <input type="hidden" name="survey_id" value="3480"/>
+    <input type="hidden" name="question_4480" value="[[S80:prefix]]"/>
+    <div class="text-medium text-bold"><span class="text-uppercase">[[S80:prefix]]</span> has several options to update your account. Please select which options you would like us to change <span class="text-muted small">(Choose all that apply)</span>:</div>
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-11 col-xs-12">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Change Contact Information (use fields below to enter your new information and input your old information in the comment box)" name="question_4281"/>
+                    Change Contact Information (use fields below to enter your new information and input your old information in the comment box)
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Decrease Mail" name="question_4281"/>
+                    Decrease Mail
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Stop Mail" name="question_4281"/>
+                    Stop Mail
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Decrease Phone Calls" name="question_4281"/>
+                    Decrease Phone Calls
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Stop Phone Calls" name="question_4281"/>
+                    Stop Phone Calls
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Deceased" name="question_4281"/>
+                    Deceased
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Do Not Share My Information" name="question_4281"/>
+                    Do Not Share My Information
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Do Not Send Gifts" name="question_4281"/>
+                    Do Not Send Gifts
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Other (please enter details in comment box below)" name="question_4281"/>
+                    Other (please enter details in comment box below)
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="text-medium text-bold">Please complete the following information so we may contact you with the answers to your questions.</div>
+    <div class="form-group">
+        <label class="control-label col-sm-3 hidden-xs">
+            <span class="control-label center-block">&nbsp;</span>
+            Name:
+        </label>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="cons_first_name">First <span class="visible-xs-inline">Name</span></label>
+                    <input type="text" maxlength="50" value="[[S1:first_name]]" id="cons_first_name" name="cons_first_name" class="required form-control"/>
+                </div>
+                <div class="col-sm-6">
+                    <label for="cons_last_name">Last <span class="visible-xs-inline">Name</span></label>
+                    <input type="text" maxlength="50" value="[[S1:last_name]]" id="cons_last_name" name="cons_last_name" class="required form-control"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="cons_email">Email:</label>
+        <div class="col-sm-9">
+            <input type="text" maxlength="255" value="[[S1:primary_email]]" id="cons_email" name="cons_email" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="cons_phone">Phone Number: </label>
+        <div class="col-sm-9">
+            <input type="text" maxlength="50" id="cons_phone" name="cons_phone" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="cons_street1">Street 1: </label>
+        <div class="col-sm-9">
+            <input type="text" maxlength="128" id="cons_street1" name="cons_street1" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-3" for="cons_street2">Street 2: </label>
+        <div class="col-sm-9">
+            <input type="text" maxlength="128" id="cons_street2" name="cons_street2" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-3 hidden-xs">
+            <span class="control-label center-block">&nbsp;</span>
+            City/State/ZIP:
+        </label>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="cons_city">City</label>
+                    <input type="text" maxlength="64" id="cons_city" name="cons_city" class="form-control"/>
+                </div>
+                <div class="col-sm-4">
+                    <label for="cons_first_name">State</label>
+                    [[S103:state:id=cons_state, name=cons_state]]
+                </div>
+                <div class="col-sm-4">
+                    <label for="cons_zip_code">Zip</label>
+                    <input type="text" maxlength="40" id="cons_zip_code" name="cons_zip_code" class="form-control"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-medium text-bold">Please add any additional instructions or requests. If "Change Contact Information" was selected above, please include your old contact information so we can update your account:</div>
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-11 col-xs-12">
+            <textarea id="question_4283" name="question_4283" rows="10" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="text-medium text-bold">For some requests, we may need to contact you for further information or confirmation. How do you prefer to be contacted?</div>
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-11 col-xs-12">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Phone (Enter preferred phone number above)" name="question_4284"/>
+                    Phone (Enter preferred phone number above)
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Email (Enter valid email address above)" name="question_4284"/>
+                    Email (Enter valid email address above)
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="Mail (Enter physical mailing address above)" name="question_4284"/>
+                    Mail (Enter physical mailing address above)
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary-pwna center-block">Submit Request</button>
+    </div>
+</form>

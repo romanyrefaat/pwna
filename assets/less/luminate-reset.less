@@ -1,15 +1,42 @@
 // Luminate Online responsive stuff
 .mobile div.responsive, 
 .mobile div.responsive div.ErrorMessage.page-error>span.field-error-text {
-  width: auto;
+    width: auto;
 }
 div.responsive div.ErrorMessage.page-error>span.field-error-text {
-  .noBg-noBorder-noPadding;
+    .noBg-noBorder-noPadding;
 }
 
 // Donation forms
 div.donation-form-container.responsive {
-  .noBg-noBorder-noPadding;
+    .noBg-noBorder-noPadding;
+}
+
+.mask{
+    .rgba(#000, 0.8);
+}
+.yui-panel-container{
+    .yui-overlay{
+        background-color: #fff;
+        padding: 15px;
+        border: 2px solid #000;
+        .border-radius(5px);
+        .box-shadow(0 0 5px gray);
+    }
+    .container-close{
+        float: right;
+        width: 16px;
+        height: 16px;
+        position: relative;
+        &:after{
+            content: '\f00d';
+            font-family: 'FontAwesome';
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-indent: 0;
+        }
+    }
 }
 /* ****************************** UserGlobalStyle Style Overrides ****************************** */
 
@@ -77,44 +104,44 @@ div.responsive a{
     color: @link-color;
     text-decoration: none;
     &:link, 
-  &:visited {
-    color: @link-color;
-  }
-  
-  &:hover,
-  &:focus {
-    color: @link-hover-color;
-    text-decoration: underline;
-  }
-  
-  &:focus {
-    .tab-focus();
-  }
+        &:visited {
+        color: @link-color;
+    }
+
+    &:hover,
+        &:focus {
+        color: @link-hover-color;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        .tab-focus();
+    }
 }
 
 // Forms
 label {
-  white-space: normal;
+    white-space: normal;
 }
 label.FormLabel {
-  &:extend(label all);
+    &:extend(label all);
 }
 
 div.appArea, .appArea, .appAreaNowidth
 {
-	width: auto;
-	margin: 0;
+    width: auto;
+    margin: 0;
 }
 
 .ObjTitle,
 .cons-prof h3
 {
-	font-size: inherit;
-	margin: inherit;
-	padding: inherit;
-	border-bottom: inherit;
-	color: inherit;
-        .h3;
+    font-size: inherit;
+    margin: inherit;
+    padding: inherit;
+    border-bottom: inherit;
+    color: inherit;
+    .h3;
 }
 
 /* ****************************** Survey Style Overrides ****************************** */
@@ -123,7 +150,7 @@ legend.surveyLegend{
     margin-bottom: 15px;
 }
 table input[type="text"], table input[type="password"], table textarea, table select{
-width: 98% !important;
+    width: 98% !important;
 }
 table input[type="text"],table select{
     margin-bottom: 5px;
@@ -132,7 +159,7 @@ table input[type="text"],table select{
 
 div.required-indicator-legend
 {
-	padding: 0 0 5px 0;
+    padding: 0 0 5px 0;
 }
 div.custom-wysiwyg-text p{
     white-space: normal;
@@ -155,17 +182,17 @@ select{
 
 div.responsive
 {
-	color: inherit;
-	font-family: inherit; 
-	font-size: inherit;
-	width: inherit;
-	margin: 0;
+    color: inherit;
+    font-family: inherit; 
+    font-size: inherit;
+    width: inherit;
+    margin: 0;
 }
 
 .resp-debug div.responsive
 {
-	border: inherit;
-	border-radius: inherit;
+    border: inherit;
+    border-radius: inherit;
 }
 
 div.responsive textarea, 
@@ -173,44 +200,44 @@ div.responsive input,
 div.responsive select,
 div.responsive option
 {
-	vertical-align: inherit;
+    vertical-align: inherit;
 }
 div.part-type-container input{vertical-align: top !important;}
 
 div.responsive div.ErrorMessage.page-error,
 div.responsive div.ErrorMessage.page-error > span.field-error-text
 {
-	width: auto;
-	padding-bottom: 3px;
-	padding-top: 3px;
+    width: auto;
+    padding-bottom: 3px;
+    padding-top: 3px;
 }
 
 div.responsive input.default-submit-hack
 {
-	width: 0 !important;
-	height: 0 !important;
-	padding: 0 !important;
-	border: 0 !important;
-	margin: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
 }
 
 div.responsive .input-container ul
 {
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 div.responsive a.step-button
 {
- /*	display: inline-block; */
-	text-decoration: none;
-	zoom: 1;
+    /*	display: inline-block; */
+    text-decoration: none;
+    zoom: 1;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin-right: 4px !important;
+    margin-right: 4px !important;
 }
 
 form input[type="text"], 
@@ -221,23 +248,23 @@ div.responsive input[type="text"],
 div.responsive input[type="number"],
 div.responsive input[type="password"],
 div.responsive textarea
-    {
-            border: inherit;
+{
+    border: inherit;
     /*	padding: 5px 7px; */
-            border-radius: inherit;
-            -moz-border-radius: inherit;
-            -webkit-border-radius: inherit;
-            -webkit-box-shadow: inherit;
-            -moz-box-shadow: inherit;
-            box-shadow: inherit;
-            &:extend(.form-control all);
-    }
+    border-radius: inherit;
+    -moz-border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -webkit-box-shadow: inherit;
+    -moz-box-shadow: inherit;
+    box-shadow: inherit;
+    &:extend(.form-control all);
+}
 form textarea,div.responsive textarea{
     height: 82px !important;
 }
 div.responsive .hidden
 {
-	display: none;
+    display: none;
 }
 label.checkbox, label.radio{
     display: inline-block;
@@ -247,33 +274,33 @@ div.responsive div.form-error{
     margin-bottom: 4px;
 }
 #cons_birth_date_date select {
-  float: left;
+    float: left;
 }
 
 #cons_birth_date_MONTH {
-  width: 39%;
-  margin-right: 1%;
+    width: 39%;
+    margin-right: 1%;
 }
 
 #cons_birth_date_DAY {
-  width: 29%;
-  margin-right: 1%;
+    width: 29%;
+    margin-right: 1%;
 }
 
 #cons_birth_date_YEAR {
-  width: 30%;
+    width: 30%;
 }
 div#registration_options_page span.survey-textarea-container textarea{
     max-width: none;
     width: 100%;
 }
 div#cons_info_component_container {
-  div#personal_info_section_one, 
-  div#personal_info_section_two
-  {
-    width: auto;
-    float: none;
-  }
+    div#personal_info_section_one, 
+    div#personal_info_section_two
+    {
+        width: auto;
+        float: none;
+    }
 }
 /* ****************************** Login screen specific styles ****************************** */
 
@@ -311,12 +338,12 @@ div#cons_info_component_container {
         &:extend(.button all);
         &:extend(.button-submit all);
     }
-    
+
     // 640px
     @media(max-width: @screen-md) {
         table, thead, tbody, th, td, tr { 
             display: block; 
-	}
+        }
     }
 }
 
