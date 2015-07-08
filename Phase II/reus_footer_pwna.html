@@ -6,9 +6,6 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="links-group">
-                                [[?[[S80:prefix]]::pwna::::
-                                <a class="main" href="PageServer?pagename=[[S80:prefix]]_contact_us">Contact <span class="text-uppercase">[[S80:prefix]]</span></a>
-                                ]]
                                 <a class="main" href="PageServer?pagename=[[?[[S80:prefix]]::pwna::pwna_who_we_are::[[S80:prefix]]_services]]">Our Services</a>
                                 <ul>
                                     [[E130:[[T8:[[E51:reus_[[S80:prefix]]_sitemap]]]] dup dup "<!--SERVICES-->" indexof swap "<!--/SERVICES-->" indexof substring]]
@@ -25,18 +22,23 @@
                                 ::
                                 <a class="main" href="PageServer?pagename=[[S80:prefix]]_success">Success Stories</a>
                                 [[?[[S80:prefix]]::rar::
-                                <a class="main" href="PageServer?pagename=rar_personalpages" class="dropdown-toggle">Sage Page</a>
-                                <ul>
-                                    [[E130:[[T8:[[S51:reus_rar_sitemap]]]] dup dup "<!--SAGE-->" indexof swap "<!--/SAGE-->" indexof substring]]
-                                </ul>
+                                <div class="links-group">
+                                    <a class="main" href="PageServer?pagename=rar_personalpages" class="dropdown-toggle">Sage Page</a>
+                                    <ul>
+                                        [[E130:[[T8:[[S51:reus_rar_sitemap]]]] dup dup "<!--SAGE-->" indexof swap "<!--/SAGE-->" indexof substring]]
+                                    </ul>
+                                </div>
                                 ::]]
                                 [[?[[S80:prefix]]::aief::
-                                <span class="main">Student Applications</span>
-                                <ul>
-                                    <li><a href="DocServer/2015_AIEF_Scholarship_for_Print.pdf?docID=5461">Undergrad Scholarship</a></li>
-                                    <li><a href="DocServer/2015_AIEF_Grad_Scholarship_Application.pdf?docID=5462">Graduate Scholarship</a></li>
-                                </ul>
+                                <div class="links-group">
+                                    <span class="main">Student Applications</span>
+                                    <ul>
+                                        <li><a href="DocServer/2015_AIEF_Scholarship_for_Print.pdf?docID=5461">Undergrad Scholarship</a></li>
+                                        <li><a href="DocServer/2015_AIEF_Grad_Scholarship_Application.pdf?docID=5462">Graduate Scholarship</a></li>
+                                    </ul>
+                                </div>
                                 ::]]
+                                <a class="main" href="PageServer?pagename=[[S80:prefix]]_contact_us">Contact <span class="text-uppercase">[[S80:prefix]]</span></a>
                                 ]]
                             </div>
                         </div>
@@ -172,7 +174,7 @@
                 </div>
                 <div class="col-md-7 badges">
                     <div class="img">
-                        <img src="../pwna_assets/images/footer_badges.png" usemap="#badges" data-rollover="true" alt="">
+                        <img src="../pwna_assets/images[[?raraiefnpra::[[S80:prefix]]::/[[S80:prefix]]::]]/footer_badges.png" usemap="#badges" data-rollover="true" alt="">
                         <map name="badges">
                             <area alt="BBB Accredited Charity" title="BBB Accredited Charity" href="http://www.give.org/charity-reviews/national/human-services/national-relief-charities-in-sherman-tx-627" shape="rect" coords="0,0,47,81" target="_blank"/>
                             <area alt="CFC" title="CFC" href="http://blog.nrcprograms.org/combined-federal-campaign-cfc-charity-95225/" shape="rect" coords="173,0,264,66" target="_blank"/>

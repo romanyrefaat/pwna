@@ -1450,7 +1450,7 @@ input[type="submit"] {
   font-weight: normal;
   filter: inherit;
   -ms-filer: inherit;
-  background-image: inherit;
+  background-image: none;
   line-height: inherit;
   outline: none;
 }
@@ -1801,6 +1801,44 @@ input[type="reset"] .badge,
 input[type="submit"] .badge {
   color: #ebebeb;
   background-color: #e22427;
+}
+.button-submit:link,
+div.responsive button.action-button:link,
+div.responsive a.next-step:link,
+div.responsive button.next-step:link,
+div.responsive a.cancel-step:link,
+div.responsive button.cancel-step:link,
+div.responsive a.step-button:link,
+div.responsive button.step-button:link,
+#EditCons .Button:link,
+input[type="button"]:link,
+input[type="reset"]:link,
+input[type="submit"]:link,
+.button-submit:visited,
+div.responsive button.action-button:visited,
+div.responsive a.next-step:visited,
+div.responsive button.next-step:visited,
+div.responsive a.cancel-step:visited,
+div.responsive button.cancel-step:visited,
+div.responsive a.step-button:visited,
+div.responsive button.step-button:visited,
+#EditCons .Button:visited,
+input[type="button"]:visited,
+input[type="reset"]:visited,
+input[type="submit"]:visited,
+.button-submit:hover,
+div.responsive button.action-button:hover,
+div.responsive a.next-step:hover,
+div.responsive button.next-step:hover,
+div.responsive a.cancel-step:hover,
+div.responsive button.cancel-step:hover,
+div.responsive a.step-button:hover,
+div.responsive button.step-button:hover,
+#EditCons .Button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-image: none;
 }
 fieldset {
   padding: 0;
@@ -3329,6 +3367,7 @@ footer div.sign-up form.sign-up .input-group-sm > .input-group-btn > .btn span {
 .link-white,
 footer .links-group > li > a,
 footer .links-group a.main,
+footer .links-group span.main,
 footer .address a,
 .side-box a {
   color: #ffffff;
@@ -3339,6 +3378,8 @@ footer .links-group > li > a:link,
 footer .links-group > li > a:visited,
 footer .links-group a.main:link,
 footer .links-group a.main:visited,
+footer .links-group span.main:link,
+footer .links-group span.main:visited,
 footer .address a:link,
 footer .address a:visited,
 .side-box a:link,
@@ -3351,6 +3392,8 @@ footer .links-group > li > a:hover,
 footer .links-group > li > a:focus,
 footer .links-group a.main:hover,
 footer .links-group a.main:focus,
+footer .links-group span.main:hover,
+footer .links-group span.main:focus,
 footer .address a:hover,
 footer .address a:focus,
 .side-box a:hover,
@@ -3575,6 +3618,8 @@ header a.logo img {
   width: 100%;
 }
 header .program-of {
+  float: right !important;
+  max-width: 215px;
   text-align: center;
   display: block;
   position: relative;
@@ -4203,10 +4248,12 @@ footer .links-group span.main {
   display: inline;
 }
 footer .links-group > li > a,
-footer .links-group a.main {
+footer .links-group a.main,
+footer .links-group span.main {
   line-height: 1.2em;
   font-weight: 700;
   margin-bottom: 10px;
+  text-shadow: 0px 0px 2px #000000;
 }
 footer a.nrc {
   font-size: 85%;
@@ -4584,7 +4631,7 @@ fieldset[disabled] .banner .caption a.active {
 .panel-pwna-default > .panel-heading,
 .panel-pwna-transparent > .panel-heading {
   color: #c5664f;
-  background-color: #ffffff;
+  background-color: #fefcfc;
   border-color: transparent;
 }
 .panel-pwna-default > .panel-heading + .panel-collapse > .panel-body,
@@ -4593,7 +4640,7 @@ fieldset[disabled] .banner .caption a.active {
 }
 .panel-pwna-default > .panel-heading .badge,
 .panel-pwna-transparent > .panel-heading .badge {
-  color: #ffffff;
+  color: #fefcfc;
   background-color: #c5664f;
 }
 .panel-pwna-default > .panel-footer + .panel-collapse > .panel-body,
@@ -5105,6 +5152,17 @@ a.hp-announce:hover {
 }
 .hp-feature a.btn {
   padding: 15px 22px !important;
+}
+.hp-feature.prog {
+  max-width: 100%;
+}
+.hp-feature.prog img {
+  margin-bottom: 10px;
+}
+.hp-feature.prog p {
+  font-size: 24px;
+  color: #8c8c8e;
+  font-style: italic;
 }
 @media (min-width: 1200px) {
   .hp-inform {

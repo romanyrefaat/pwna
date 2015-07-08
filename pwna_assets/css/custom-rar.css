@@ -4253,6 +4253,7 @@ footer .links-group span.main {
   line-height: 1.2em;
   font-weight: 700;
   margin-bottom: 10px;
+  text-shadow: 0px 0px 2px #000000;
 }
 footer a.nrc {
   font-size: 85%;
@@ -4362,7 +4363,7 @@ footer .badges .img img {
   width: 100%;
 }
 footer .badges .rollover {
-  background: url('../images/footer_badges_on.png') no-repeat;
+  background: url('../images/rar/footer_badges_on.png') no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
