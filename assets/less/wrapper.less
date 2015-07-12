@@ -214,19 +214,28 @@ a.anchor{
         max-height: 72px;
     }
 }
-//.blueimp-gallery{  
-//    > .description {
-//        position: absolute;
-//        top: 40px;
-//        left: 15px;
-//        color: #fff;
-//        .small;
-//        display: none;
-//    }
-//    &.blueimp-gallery-controls > .description {
-//            display: block;
-//    }
-//}
+.blueimp-gallery{  
+    > .download {
+        &, &:link, &:visited{
+            .opacity(0.8);
+            text-decoration: none;
+            position: absolute;
+            bottom: 32px;
+            left: 15px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 25px;
+            margin: 0 40px 0 0;
+            display: none;
+        }
+        &:hover{
+            .opacity(1);
+        }
+    }
+    &.blueimp-gallery-controls > .download {
+        display: block;
+    }
+}
 header{
     border-top: 5px solid @theme-header-border-color;
     background-color: #fff;

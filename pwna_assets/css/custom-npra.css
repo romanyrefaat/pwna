@@ -3587,6 +3587,28 @@ div.story-list-item .caption .more:after {
   max-width: 72px;
   max-height: 72px;
 }
+.blueimp-gallery > .download,
+.blueimp-gallery > .download:link,
+.blueimp-gallery > .download:visited {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  text-decoration: none;
+  position: absolute;
+  bottom: 32px;
+  left: 15px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0 40px 0 0;
+  display: none;
+}
+.blueimp-gallery > .download:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.blueimp-gallery.blueimp-gallery-controls > .download {
+  display: block;
+}
 header {
   border-top: 5px solid #c5664f;
   background-color: #fff;

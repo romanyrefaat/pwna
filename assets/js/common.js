@@ -523,4 +523,11 @@
     $(window).bind("orientationchange resize", function(event) {
         equalHeights();
     }).trigger('resize');
+    $('#blueimp-gallery').on('slide', function(event, index, slide) {
+        var downloadURL = $(this).data('gallery').list[index].getAttribute('data-download'),
+                node = $(this).find('.download');
+        if (downloadURL) {
+            node.attr('href', downloadURL);
+        }
+    });
 })(jQuery);
