@@ -329,9 +329,12 @@ header{
     }
     .nav-donate{
         .v-align();
-        position: absolute;
+        position: relative;
         right: 0;
         min-width: 160px;
+        @media (min-width: 450px) {
+            position: absolute;
+        }
     }
     .btn.top-donate{
         .pull-right;
