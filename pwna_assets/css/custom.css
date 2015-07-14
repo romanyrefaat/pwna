@@ -875,7 +875,6 @@ button {
   text-decoration: none !important;
   outline: 0;
   position: relative;
-  behavior: url(/pwna_assets/css/PIE.htc);
 }
 .button:link .button:hover,
 .button:link div.responsive .button:hover,

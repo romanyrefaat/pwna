@@ -61,12 +61,12 @@ gulp.task('scripts', function() {
     })))
             .pipe(gulp.dest(dest + 'js'));
 });
-// Compile CSS from Sass files
-gulp.task('images', function() {
-    return gulp.src('images/**/*')
-            .pipe(cache(imagemin({optimizationLevel: 5, progressive: true, interlaced: true})))
-            .pipe(gulp.dest(dest + 'images'));
-});
+
+//gulp.task('images', function() {
+//    return gulp.src('images/**/*')
+//            .pipe(cache(imagemin({optimizationLevel: 5, progressive: true, interlaced: true})))
+//            .pipe(gulp.dest(dest + 'images'));
+//});
 
 gulp.task('map_json', function() {
     xlsxj({
@@ -87,7 +87,7 @@ gulp.task('watch', function() {
     // Watch .js files
     gulp.watch('js/**/*.js', ['scripts']);
     // Watch image files
-    gulp.watch('images/**/*', ['images']);
+    //gulp.watch('images/**/*', ['images']);
 });
 // Default Task
-gulp.task('default', ['less', 'scripts', 'images', 'map_json', 'watch']);
+gulp.task('default', ['less', 'scripts', 'map_json', 'watch']);
