@@ -7,7 +7,6 @@ var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var notify = require('gulp-notify');
 var xlsxj = require("xlsx-to-json");
@@ -62,11 +61,6 @@ gulp.task('scripts', function() {
             .pipe(gulp.dest(dest + 'js'));
 });
 
-//gulp.task('images', function() {
-//    return gulp.src('images/**/*')
-//            .pipe(cache(imagemin({optimizationLevel: 5, progressive: true, interlaced: true})))
-//            .pipe(gulp.dest(dest + 'images'));
-//});
 
 gulp.task('map_json', function() {
     xlsxj({
@@ -86,8 +80,6 @@ gulp.task('watch', function() {
     gulp.watch('less/*.less', ['less']);
     // Watch .js files
     gulp.watch('js/**/*.js', ['scripts']);
-    // Watch image files
-    //gulp.watch('images/**/*', ['images']);
 });
 // Default Task
 gulp.task('default', ['less', 'scripts', 'map_json', 'watch']);
