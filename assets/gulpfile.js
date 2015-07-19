@@ -7,7 +7,6 @@ var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var cache = require('gulp-cache');
 var notify = require('gulp-notify');
 var xlsxj = require("xlsx-to-json");
 
